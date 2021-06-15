@@ -1,0 +1,310 @@
+{
+  "tankActionMapping": {
+    "0": {
+      "$type": "ProvokeTarget",
+      "cooldown": 30.0,
+      "actionName": "Provoke",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Provoke.png"
+    },
+    "1": {
+      "$type": "ApplyStatusOther",
+      "applyToSelfIfNoTarget": true,
+      "cooldown": 15.0,
+      "actionName": "The Blackest Night",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Tbn.png",
+      "applyStatus": "Tbn"
+    },
+    "2": {
+      "$type": "ApplyStatusSelf",
+      "cooldown": 90.0,
+      "actionName": "Rampart",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Rampart.png",
+      "applyStatus": "Rampart"
+    },
+    "3": {
+      "$type": "ApplyStatusSelf",
+      "cooldown": 120.0,
+      "actionName": "Vengeance",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Vengeance.png",
+      "applyStatus": "Vengeance"
+    },
+    "4": {
+      "$type": "ApplyStatusParty",
+      "cooldown": 60.0,
+      "actionName": "Reprisal",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Reprisal.png",
+      "applyStatus": "Reprisal"
+    },
+    "5": {
+      "$type": "ApplyDamageToTarget",
+      "damageAmount": 10000,
+      "aggroModifier": 5,
+      "range": 1.0,
+      "isGlobalCooldown": true,
+      "cooldown": 2.0,
+      "actionName": "Attack",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/DamageAbility.png"
+    }
+  },
+  "shieldHealerActionMapping": {
+    "0": {
+      "$type": "SingleTargetHeal",
+      "healAmount": 40000,
+      "isGlobalCooldown": true,
+      "cooldown": 2.0,
+      "actionName": "Physick",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Physick.png"
+    },
+    "1": {
+      "$type": "AoeHeal",
+      "healAmount": 15000,
+      "isGlobalCooldown": true,
+      "cooldown": 2.0,
+      "actionName": "Not Medica",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Medica.png"
+    },
+    "2": {
+      "$type": "SingleTargetHeal",
+      "healAmount": 30000,
+      "isGlobalCooldown": true,
+      "cooldown": 3.0,
+      "actionName": "Adloquium",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Adloquium.png",
+      "applyStatus": "Adloquium"
+    },
+    "3": {
+      "$type": "AoeHeal",
+      "healAmount": 10000,
+      "isGlobalCooldown": true,
+      "cooldown": 3.0,
+      "actionName": "Succor",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Succor.png",
+      "applyStatus": "Succor"
+    },
+    "4": {
+      "$type": "Revive",
+      "cooldown": 10.0,
+      "actionName": "Raise",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Raise.png"
+    },
+    "5": {
+      "$type": "ApplyDamageToTarget",
+      "damageAmount": 10000,
+      "isGlobalCooldown": true,
+      "cooldown": 2.0,
+      "actionName": "Attack",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/DamageAbility.png"
+    }
+  },
+  "regenHealerActionMapping": {
+    "0": {
+      "$type": "SingleTargetHeal",
+      "healAmount": 70000,
+      "isGlobalCooldown": true,
+      "cooldown": 2.0,
+      "actionName": "Cure",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Cure.png"
+    },
+    "1": {
+      "$type": "AoeHeal",
+      "healAmount": 30000,
+      "isGlobalCooldown": true,
+      "cooldown": 2.0,
+      "actionName": "Medica",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Medica.png"
+    },
+    "2": {
+      "$type": "SingleTargetHeal",
+      "healAmount": 10000,
+      "isGlobalCooldown": true,
+      "cooldown": 3.0,
+      "actionName": "Regen",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Regen.png",
+      "applyStatus": "Regen"
+    },
+    "3": {
+      "$type": "AoeHeal",
+      "healAmount": 5000,
+      "isGlobalCooldown": true,
+      "cooldown": 3.0,
+      "actionName": "Medica II",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Medica2.png",
+      "applyStatus": "Medica2"
+    },
+    "4": {
+      "$type": "Revive",
+      "cooldown": 10.0,
+      "actionName": "Raise",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Raise.png"
+    },
+    "5": {
+      "$type": "ApplyDamageToTarget",
+      "damageAmount": 10000,
+      "isGlobalCooldown": true,
+      "cooldown": 2.0,
+      "actionName": "Attack",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/DamageAbility.png"
+    }
+  },
+  "meleeDpsActionMapping": {
+    "0": {
+      "$type": "ApplyDamageToTarget",
+      "damageAmount": 25000,
+      "range": 1.0,
+      "isGlobalCooldown": true,
+      "cooldown": 2.0,
+      "actionName": "Attack",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/DamageAbility.png"
+    },
+    "1": {
+      "$type": "ApplyStatusParty",
+      "cooldown": 90.0,
+      "actionName": "Feint",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Feint.png",
+      "applyStatus": "Feint"
+    }
+  },
+  "rangedDpsActionMapping": {
+    "0": {
+      "$type": "ApplyDamageToTarget",
+      "damageAmount": 15000,
+      "isGlobalCooldown": true,
+      "cooldown": 2.0,
+      "actionName": "Attack",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/DamageAbility.png"
+    },
+    "1": {
+      "$type": "ApplyStatusParty",
+      "cooldown": 120.0,
+      "actionName": "Tactician",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Tactician.png",
+      "applyStatus": "Tactician"
+    }
+  },
+  "casterDpsActionMapping": {
+    "0": {
+      "$type": "ApplyDamageToTarget",
+      "damageAmount": 25000,
+      "isGlobalCooldown": true,
+      "cooldown": 3.0,
+      "actionName": "Attack",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/DamageAbility.png"
+    },
+    "1": {
+      "$type": "Revive",
+      "isGlobalCooldown": true,
+      "cooldown": 3.0,
+      "actionName": "Raise",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/Raise.png"
+    }
+  },
+  "referenceStatusProperties": {
+    "Invincibility": {
+      "$type": "DamageModifier",
+      "beneficial": true,
+      "statusIconPath": "Mechanics/Resources/Invincibility.png",
+      "statusName": "Invincibility",
+      "statusDescription": "Immune to most damage.",
+      "duration": 5.0
+    },
+    "Raise": {
+      "beneficial": true,
+      "statusIconPath": "Mechanics/Resources/Raise.png",
+      "statusName": "Raise",
+      "statusDescription": "Teetering on the brink of consciousness.",
+      "duration": "Infinity"
+    },
+    "Adloquium": {
+      "$type": "DamageShield",
+      "shieldAmount": 30000.0,
+      "beneficial": true,
+      "statusIconPath": "Mechanics/Resources/Adloquium.png",
+      "statusName": "Adloquium",
+      "statusDescription": "A barrier is nullifying damage.",
+      "duration": 30.0
+    },
+    "Succor": {
+      "$type": "DamageShield",
+      "shieldAmount": 10000.0,
+      "beneficial": true,
+      "statusIconPath": "Mechanics/Resources/Succor.png",
+      "statusName": "Succor",
+      "statusDescription": "A barrier is nullifying damage.",
+      "duration": 30.0
+    },
+    "Regen": {
+      "$type": "HealOverTime",
+      "healAmount": 20000.0,
+      "beneficial": true,
+      "statusIconPath": "Mechanics/Resources/Regen.png",
+      "statusName": "Regen",
+      "statusDescription": "Regenerating HP over time.",
+      "duration": 16.0,
+      "tickInterval": 3.0
+    },
+    "Medica2": {
+      "$type": "HealOverTime",
+      "healAmount": 10000.0,
+      "beneficial": true,
+      "statusIconPath": "Mechanics/Resources/Medica2.png",
+      "statusName": "Medica II",
+      "statusDescription": "Regenerating HP over time.",
+      "duration": 16.0,
+      "tickInterval": 3.0
+    },
+    "Rampart": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 0.8,
+      "beneficial": true,
+      "statusIconPath": "Mechanics/Resources/Rampart.png",
+      "statusName": "Rampart",
+      "statusDescription": "Damage taken is reduced.",
+      "duration": 20.0
+    },
+    "Vengeance": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 0.7,
+      "beneficial": true,
+      "statusIconPath": "Mechanics/Resources/Vengeance.png",
+      "statusName": "Vengeance",
+      "statusDescription": "Damage taken is reduced.",
+      "duration": 15.0
+    },
+    "Reprisal": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 0.9,
+      "beneficial": true,
+      "statusIconPath": "Mechanics/Resources/Reprisal.png",
+      "statusName": "Reprisal",
+      "statusDescription": "Damage taken is reduced.",
+      "duration": 10.0
+    },
+    "Tbn": {
+      "$type": "DamageShield",
+      "shieldAmount": 50000.0,
+      "beneficial": true,
+      "statusIconPath": "Mechanics/Resources/Tbn.png",
+      "statusName": "The Blackest Night",
+      "statusDescription": "A barrier is nullifying damage.",
+      "duration": 7.0
+    },
+    "Tactician": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 0.9,
+      "beneficial": true,
+      "statusIconPath": "Mechanics/Resources/Tactician.png",
+      "statusName": "Tactician",
+      "statusDescription": "Damage taken is reduced.",
+      "duration": 15.0
+    },
+    "Feint": {
+      "$type": "DamageShield",
+      "shieldAmount": 30000.0,
+      "beneficial": true,
+      "statusIconPath": "Mechanics/Resources/Feint.png",
+      "statusName": "Feint",
+      "statusDescription": "A barrier is nullifying damage.",
+      "duration": 10.0
+    }
+  }
+}

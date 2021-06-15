@@ -1,0 +1,3468 @@
+{
+  "referenceMechanicProperties": {
+    "CloudOfDarknessMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitForAggro"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Ground-razing Particle Beam",
+            "duration": 4.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Raidwide1"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "ExecuteRandomEventSequence",
+            "mechanicPoolName": "ProteanStackPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "ExecuteRandomEventSequence",
+            "mechanicPoolName": "BusterPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "ExecuteRandomEventSequence",
+            "mechanicPoolName": "ProteanStackPool",
+            "mechanicIndex": 1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "ExecuteRandomEventSequence",
+            "mechanicPoolName": "BusterPool",
+            "mechanicIndex": 1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": 1.0
+          },
+          {
+            "$type": "SetEnemyBaseSpeed"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 0.0,
+              "y": -1.0
+            },
+            "movementTime": -3.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Empty Plane",
+            "duration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Raidwide2"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "SpawnAllTiles"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-DeathSquare",
+            "position": {
+              "x": 0.0,
+              "y": -1.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TurnRandomCardinal"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "The Art of Darkness",
+            "duration": 10.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "SwipeLR"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "SwipeClonePool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Particle Concentration",
+            "duration": 4.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "CloseTowers",
+            "numberToSpawn": 4
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "FarTowers",
+            "numberToSpawn": 4
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "ExecuteRandomEventSequence",
+            "mechanicPoolName": "ProteanStackPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TurnRandomCardinal"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ParticleBeamFormationA",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 14.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TurnRandomIntercard"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "The Art of Darkness",
+            "duration": 10.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "SwipeLR"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "SwipeClonePool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Particle Concentration",
+            "duration": 4.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "CloseTowers",
+            "numberToSpawn": 4
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "FarTowers",
+            "numberToSpawn": 4
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "ExecuteRandomEventSequence",
+            "mechanicPoolName": "ProteanStackPool",
+            "mechanicIndex": 1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TurnRandomCardinal"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ParticleBeamFormationB",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 14.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Deluge of Darkness",
+            "duration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Raidwide3"
+          },
+          {
+            "$type": "ClearMechanicsWithTag",
+            "mechanicTag": "Tiles"
+          },
+          {
+            "$type": "SetEnemyBaseSpeed",
+            "baseMoveSpeed": 2.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Everlasting Brambles",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "Brambles",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "ReshuffleMechanicPoolIds",
+            "mechanicPoolName": "BusterPool"
+          },
+          {
+            "$type": "ExecuteRandomEventSequence",
+            "mechanicPoolName": "BusterPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Ground-razing Particle Beam",
+            "duration": 4.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Raidwide1"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "MoveRandomCardinal"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": -15.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "ExecuteRandomEventSequence",
+            "mechanicPoolName": "ParticleBeamFormationPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 14.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Everlasting Brambles",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "Brambles",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "ExecuteRandomEventSequence",
+            "mechanicPoolName": "BusterPool",
+            "mechanicIndex": 1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Ground-razing Particle Beam",
+            "duration": 4.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Raidwide1"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "MoveRandomCardinal"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": -15.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "ExecuteRandomEventSequence",
+            "mechanicPoolName": "ParticleBeamFormationPool",
+            "mechanicIndex": 1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 14.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "DualBuster",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": 1.0
+          },
+          {
+            "$type": "SetEnemyBaseSpeed"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 0.0,
+              "y": -1.0
+            },
+            "movementTime": -3.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Empty Plane",
+            "duration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Raidwide2"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "SpawnAllTiles"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-DeathSquare",
+            "position": {
+              "x": 0.0,
+              "y": -1.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TurnRandomCardinal"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "The Art of Darkness",
+            "duration": 10.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "SwipeLR"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "SwipeClonePool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "DualBuster",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Everlasting Brambles",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "Brambles",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TurnRandomIntercard"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "The Art of Darkness",
+            "duration": 10.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "SwipeLR"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "SwipeClonePool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Everlasting Brambles",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "Brambles",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TurnRandomCardinal"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "The Art of Darkness",
+            "duration": 10.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "SwipeLR"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TurnRandomIntercard"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "The Art of Darkness",
+            "duration": 10.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "SwipeLR"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Everlasting Brambles",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "Brambles",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Flood of Darkness",
+            "duration": 30.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 30.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Enrage"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1000.0
+          }
+        ]
+      }
+    },
+    "DualBuster": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Dual Force Particle Beam",
+            "duration": 10.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "LongRangeBuster-1",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AntiTankBuster-1",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 11.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "LongRangeBusterLaser",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AntiTankBusterLaser",
+            "isPositionRelative": true
+          }
+        ]
+      }
+    },
+    "LongRangeBuster": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Long Range Particle Beam",
+            "duration": 10.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "LongRangeBuster-1",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "LongRangeBusterLaser",
+            "isPositionRelative": true
+          }
+        ]
+      }
+    },
+    "LongRangeBuster-1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "colorHtml": "#dc70ff",
+            "spawnOnPlayer": true,
+            "attachToAnchor": true,
+            "isBillboard": true,
+            "visualDuration": 3.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.5
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "LongRangeBusterLaser",
+            "isPositionRelative": true
+          }
+        ]
+      }
+    },
+    "LongRangeBusterLaser": {
+      "isTargeted": true,
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 20.0,
+        "y": 2.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "WildChargeDamageEffect",
+                "damageType": "Magic",
+                "damageAmountFront": 400000.0,
+                "damageAmountBack": 160000.0,
+                "maxStackAmount": 2,
+                "name": "Long-range Particle Beam"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "AntiTankBuster": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Anti Tank Particle Beam",
+            "duration": 10.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AntiTankBuster-1",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AntiTankBusterLaser",
+            "isPositionRelative": true
+          }
+        ]
+      }
+    },
+    "AntiTankBuster-1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.5
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "AntiTankBusterLaser",
+            "isPositionRelative": true
+          }
+        ]
+      }
+    },
+    "AntiTankBusterLaser": {
+      "isTargeted": true,
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 20.0,
+        "y": 2.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Physical",
+                "damageAmount": 200000.0,
+                "name": "Anti-tank Particle Beam"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ParticleBeamFormationA": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Particle Beam Formation A",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Chariot",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Dynamo",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "referenceMechanicName": "WideCone-T",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1
+              ],
+              "classType": "Healer"
+            },
+            "referenceMechanicName": "Chariot-H"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "WideCone",
+            "rotation": 90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "WideCone",
+            "rotation": -90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "ParticleBeamFormationB": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Particle Beam Formation B",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "WideCone",
+            "rotation": 90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "WideCone",
+            "rotation": -90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Chariot",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "referenceMechanicName": "Chariot-T"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1
+              ],
+              "classType": "Healer"
+            },
+            "referenceMechanicName": "WideCone-H",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Dynamo",
+            "isPositionRelative": true
+          }
+        ]
+      }
+    },
+    "Chariot": {
+      "collisionShapeParams": {
+        "x": 3.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Magic",
+                "damageAmount": 200000.0,
+                "name": "Anti-air Particle Beam"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DamageDown"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Chariot-T": {
+      "isTargeted": true,
+      "followSpeed": 100.0,
+      "collisionShapeParams": {
+        "x": 3.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Magic",
+                "damageAmount": 120000.0,
+                "name": "Condensed Anti-air Particle Beam"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Chariot-H": {
+      "isTargeted": true,
+      "followSpeed": 100.0,
+      "collisionShapeParams": {
+        "x": 1.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Magic",
+                "damageAmount": 300000.0,
+                "maxStackAmount": 3,
+                "name": "Heavy Anti-air Particle Beam"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Dynamo": {
+      "collisionShapeParams": {
+        "x": 20.0,
+        "y": 360.0,
+        "z": 3.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Magic",
+                "damageAmount": 200000.0,
+                "name": "Full-perimeter Particle Beam"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DamageDown"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "WideCone": {
+      "collisionShapeParams": {
+        "x": 20.0,
+        "y": 120.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Magic",
+                "damageAmount": 200000.0,
+                "name": "Wide-angle Particle Beam"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DamageDown"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "WideCone-T": {
+      "isTargeted": true,
+      "collisionShapeParams": {
+        "x": 20.0,
+        "y": 30.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Magic",
+                "damageAmount": 120000.0,
+                "name": "Condensed Wide-angle Particle Beam"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "WideCone-H": {
+      "isTargeted": true,
+      "collisionShapeParams": {
+        "x": 20.0,
+        "y": 30.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Magic",
+                "damageAmount": 300000.0,
+                "maxStackAmount": 3,
+                "name": "Heavy Wide-angle Particle Beam"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Tile-Mechanic": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Base",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Warning",
+            "isPositionRelative": true
+          }
+        ]
+      }
+    },
+    "Tile-Base": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 2.0,
+        "y": 2.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#bc74de",
+      "visible": false,
+      "persistentTickInterval": 0.1,
+      "persistentMechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} > 1",
+            "ignoreInvincible": true,
+            "successEvent": {
+              "$type": "ExecuteMultipleEvents",
+              "events": [
+                {
+                  "$type": "SpawnMechanicEvent",
+                  "referenceMechanicName": "Tile-Fail",
+                  "isPositionRelative": true
+                },
+                {
+                  "$type": "PausePersistentEvent",
+                  "duration": 5.0
+                }
+              ]
+            }
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} < 1",
+            "ignoreInvincible": true,
+            "successEvent": {
+              "$type": "ExecuteMultipleEvents",
+              "events": [
+                {
+                  "$type": "ModifyMechanicEvent",
+                  "referenceMechanicName": "Tile-Base"
+                },
+                {
+                  "$type": "ResetMechanicTimer"
+                }
+              ]
+            },
+            "failEvent": {
+              "$type": "ModifyMechanicEvent",
+              "referenceMechanicName": "Tile-Active"
+            }
+          }
+        ]
+      },
+      "mechanicTag": "Tiles"
+    },
+    "Tile-Active": {
+      "visible": true
+    },
+    "Tile-Warning": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 2.0,
+        "y": 2.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#fff600",
+      "visible": false,
+      "persistentTickInterval": 0.1,
+      "persistentMechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} < 1",
+            "ignoreInvincible": true,
+            "successEvent": {
+              "$type": "ExecuteMultipleEvents",
+              "events": [
+                {
+                  "$type": "ModifyMechanicEvent",
+                  "referenceMechanicName": "Tile-Warning"
+                },
+                {
+                  "$type": "ResetMechanicTimer"
+                }
+              ]
+            }
+          },
+          {
+            "$type": "CheckMechanicTimer",
+            "expressionFormat": "{0} > 10",
+            "successEvent": {
+              "$type": "ModifyMechanicEvent",
+              "referenceMechanicName": "Tile-Warning-Visible"
+            }
+          },
+          {
+            "$type": "CheckMechanicTimer",
+            "expressionFormat": "{0} > 15",
+            "successEvent": {
+              "$type": "ExecuteMultipleEvents",
+              "events": [
+                {
+                  "$type": "SpawnMechanicEvent",
+                  "referenceMechanicName": "Tile-Fail",
+                  "isPositionRelative": true
+                },
+                {
+                  "$type": "ModifyMechanicEvent",
+                  "referenceMechanicName": "Tile-Warning"
+                },
+                {
+                  "$type": "PausePersistentEvent",
+                  "duration": 5.0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "mechanicTag": "Tiles"
+    },
+    "Tile-Warning-Visible": {
+      "visible": true
+    },
+    "Tile-Fail": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 2.0,
+        "y": 2.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#FF0000",
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 0.5,
+      "mechanic": {
+        "$type": "WaitEvent",
+        "timeToWait": 5.0
+      },
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      },
+      "mechanicTag": "Tiles"
+    },
+    "Tile-DeathSquare": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 2.0,
+        "y": 2.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#FF0000",
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 0.5,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      },
+      "mechanicTag": "Tiles"
+    },
+    "Swipe-Clone": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/CloudOfDarkness.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 3.0,
+              "y": 3.71010017,
+              "z": 3.0
+            },
+            "colorHtml": "#b429bd",
+            "isRotationRelative": true,
+            "visualDuration": 10.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "SwipeLR"
+          }
+        ]
+      }
+    },
+    "SwipeR-Cast": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/CloudOfDarknessAdd.png",
+            "relativePosition": {
+              "x": 1.5,
+              "y": 1.5,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#b429bd",
+            "isBillboard": true,
+            "visualDuration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.5
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Swipe",
+            "rotation": 90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "SwipeL-Cast": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/CloudOfDarknessAdd.png",
+            "relativePosition": {
+              "x": -1.5,
+              "y": 1.5,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#b429bd",
+            "isBillboard": true,
+            "visualDuration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.5
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Swipe",
+            "rotation": -90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "Swipe": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 20.0,
+        "y": 180.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Magic",
+                "damageAmount": 90000.0,
+                "name": "The Art of Darkness"
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 20.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DamageDown"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ProteanCast": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "The Art of Darkness",
+            "duration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.5
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "ProteanLaser",
+            "isPositionRelative": true
+          }
+        ]
+      }
+    },
+    "ProteanLaser": {
+      "isTargeted": true,
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 20.0,
+        "y": 2.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Magic",
+                "damageAmount": 90000.0,
+                "name": "Multi-pronged Particle Beam"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "PartnerStackCast": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "The Art of Darkness",
+            "duration": 10.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/CloudOfDarknessAdd.png",
+            "relativePosition": {
+              "x": 1.5,
+              "y": 1.5,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#b429bd",
+            "isBillboard": true,
+            "visualDuration": 10.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/CloudOfDarknessAdd.png",
+            "relativePosition": {
+              "x": -1.5,
+              "y": 1.5,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#b429bd",
+            "isBillboard": true,
+            "visualDuration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.5
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "classType": "Dps"
+            },
+            "referenceMechanicName": "PartnerStack",
+            "isPositionRelative": true,
+            "spawnOnTarget": true
+          }
+        ]
+      }
+    },
+    "PartnerStack": {
+      "isTargeted": true,
+      "followSpeed": 100.0,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Magic",
+                "damageAmount": 180000.0,
+                "maxStackAmount": 2,
+                "name": "Hyper-focused Particle Beam"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Tower Fail": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#FF0000",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 120000.0,
+                "name": "Particle Blast"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Tower": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.75,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#FFFF00",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Tower.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.6,
+              "y": 1.13256,
+              "z": 0.6
+            },
+            "colorHtml": "#FFFF00",
+            "isBillboard": true,
+            "visualDuration": 8.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 8.0
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} = 1",
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Tower Fail",
+              "isPositionRelative": true
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "damageType": "Damage",
+              "damageAmount": 5000.0,
+              "name": "Particle Beam"
+            }
+          }
+        ]
+      }
+    },
+    "Brambles": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "persistentTickInterval": 0.3,
+      "persistentActivationDelay": 2.0,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Magic",
+                "damageAmount": 50000.0,
+                "name": "Everlasting Brambles"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10000.0
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 999999.0,
+          "name": "Bleeding"
+        }
+      }
+    },
+    "AutoAttack": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "Damage",
+          "damageAmount": 40000.0
+        }
+      }
+    },
+    "Raidwide1": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "Damage",
+          "damageAmount": 70000.0,
+          "name": "Ground-razing Particle Beam"
+        }
+      }
+    },
+    "Raidwide2": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "Damage",
+          "damageAmount": 100000.0,
+          "name": "Empty Plane"
+        }
+      }
+    },
+    "Raidwide3": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "Damage",
+          "damageAmount": 100000.0,
+          "name": "Deluge of Darkness"
+        }
+      }
+    },
+    "Enrage": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0,
+          "name": "Flood of Darkness"
+        }
+      }
+    },
+    "ArenaBoundary": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 30.0,
+        "y": 270.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#8800FF",
+      "persistentTickInterval": 0.1,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      }
+    },
+    "SpawnAllTiles": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEventsParallel",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": -4.0,
+              "y": -5.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": -4.0,
+              "y": -3.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": -4.0,
+              "y": -1.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": -4.0,
+              "y": 1.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": -4.0,
+              "y": 3.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": -2.0,
+              "y": -5.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": -2.0,
+              "y": -3.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": -2.0,
+              "y": -1.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": -2.0,
+              "y": 1.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": -2.0,
+              "y": 3.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": 0.0,
+              "y": -5.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": 0.0,
+              "y": -3.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": 0.0,
+              "y": 1.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": 0.0,
+              "y": 3.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": 2.0,
+              "y": -5.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": 2.0,
+              "y": -3.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": 2.0,
+              "y": -1.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": 2.0,
+              "y": 1.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": 2.0,
+              "y": 3.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": 4.0,
+              "y": -5.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": 4.0,
+              "y": -3.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": 4.0,
+              "y": -1.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": 4.0,
+              "y": 1.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tile-Mechanic",
+            "position": {
+              "x": 4.0,
+              "y": 3.0
+            }
+          }
+        ]
+      }
+    }
+  },
+  "referenceTetherProperties": {},
+  "mechanicPools": {
+    "SwipeLR": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SwipeL-Cast",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SwipeR-Cast",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "SwipeClonePool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Swipe-Clone",
+        "position": {
+          "x": 5.0,
+          "y": 0.0
+        },
+        "rotation": 90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Swipe-Clone",
+        "position": {
+          "x": -5.0,
+          "y": 0.0
+        },
+        "rotation": -90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "ProteanStackPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "ProteanCast",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "PartnerStackCast",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "BusterPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "LongRangeBuster",
+        "isPositionRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "AntiTankBuster",
+        "isPositionRelative": true
+      }
+    ],
+    "ParticleBeamFormationPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "ParticleBeamFormationA",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "ParticleBeamFormationB",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "TurnRandomCardinal": [
+      {
+        "$type": "SetEnemyMovement",
+        "position": {
+          "x": 1.0,
+          "y": 0.0
+        },
+        "movementTime": -15.0
+      },
+      {
+        "$type": "SetEnemyMovement",
+        "position": {
+          "x": 0.0,
+          "y": 1.0
+        },
+        "movementTime": -15.0
+      },
+      {
+        "$type": "SetEnemyMovement",
+        "position": {
+          "x": -1.0,
+          "y": 0.0
+        },
+        "movementTime": -15.0
+      },
+      {
+        "$type": "SetEnemyMovement",
+        "position": {
+          "x": 0.0,
+          "y": -1.0
+        },
+        "movementTime": -15.0
+      }
+    ],
+    "TurnRandomIntercard": [
+      {
+        "$type": "SetEnemyMovement",
+        "position": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "movementTime": -15.0
+      },
+      {
+        "$type": "SetEnemyMovement",
+        "position": {
+          "x": -1.0,
+          "y": -1.0
+        },
+        "movementTime": -15.0
+      },
+      {
+        "$type": "SetEnemyMovement",
+        "position": {
+          "x": -1.0,
+          "y": 1.0
+        },
+        "movementTime": -15.0
+      },
+      {
+        "$type": "SetEnemyMovement",
+        "position": {
+          "x": 1.0,
+          "y": -1.0
+        },
+        "movementTime": -15.0
+      }
+    ],
+    "MoveRandomCardinal": [
+      {
+        "$type": "SetEnemyMovement",
+        "position": {
+          "x": 5.0,
+          "y": 0.0
+        },
+        "movementTime": 3.0
+      },
+      {
+        "$type": "SetEnemyMovement",
+        "position": {
+          "x": 0.0,
+          "y": 5.0
+        },
+        "movementTime": 3.0
+      },
+      {
+        "$type": "SetEnemyMovement",
+        "position": {
+          "x": -5.0,
+          "y": 0.0
+        },
+        "movementTime": 3.0
+      },
+      {
+        "$type": "SetEnemyMovement",
+        "position": {
+          "x": 0.0,
+          "y": -5.0
+        },
+        "movementTime": 3.0
+      }
+    ],
+    "CloseTowers": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": -2.0,
+          "y": -2.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": -2.0,
+          "y": 0.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": -2.0,
+          "y": 2.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": 0.0,
+          "y": -2.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": 0.0,
+          "y": 2.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": 2.0,
+          "y": -2.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": 2.0,
+          "y": 0.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": 2.0,
+          "y": 2.0
+        }
+      }
+    ],
+    "FarTowers": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": -4.0,
+          "y": -4.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": -4.0,
+          "y": -2.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": -4.0,
+          "y": 0.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": -4.0,
+          "y": 2.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": -4.0,
+          "y": 4.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": -2.0,
+          "y": -4.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": -2.0,
+          "y": 4.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": 0.0,
+          "y": -4.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": 0.0,
+          "y": 4.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": 2.0,
+          "y": -4.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": 2.0,
+          "y": 4.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": 4.0,
+          "y": -4.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": 4.0,
+          "y": -2.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": 4.0,
+          "y": 0.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": 4.0,
+          "y": 2.0
+        }
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": 4.0,
+          "y": 4.0
+        }
+      }
+    ]
+  },
+  "referenceStatusProperties": {
+    "Vuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 1.1,
+      "statusIconPath": "Mechanics/Resources/VulnStack.png",
+      "statusName": "Vulnerability Up",
+      "statusDescription": "Damage taken is increased.",
+      "duration": 45.0,
+      "maxStacks": 16
+    },
+    "DamageDown": {
+      "statusIconPath": "Mechanics/Resources/DamageDown.png",
+      "statusName": "Damage Down",
+      "statusDescription": "Damage dealt is reduced.",
+      "duration": 60.0
+    },
+    "MagicVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 8.0,
+      "damageType": "Magic",
+      "statusIconPath": "Mechanics/Resources/MagicVuln.png",
+      "statusName": "Magic Vulnerability Up",
+      "statusDescription": "Magic damage taken is increased.",
+      "duration": 3.0
+    },
+    "PhysVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 8.0,
+      "damageType": "Physical",
+      "statusIconPath": "Mechanics/Resources/PhysVuln.png",
+      "statusName": "Physical Vulnerability Up",
+      "statusDescription": "Physical damage taken is increased.",
+      "duration": 3.0
+    }
+  },
+  "mechanicEvents": [
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary",
+      "position": {
+        "x": -5.0,
+        "y": 5.0
+      },
+      "rotation": -45.0
+    },
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary",
+      "position": {
+        "x": 5.0,
+        "y": -5.0
+      },
+      "rotation": 135.0
+    },
+    {
+      "$type": "SpawnVisualObject",
+      "textureFilePath": "Mechanics/Resources/ArenaSquare5x5.png",
+      "relativePosition": {
+        "x": 0.0,
+        "y": -0.001,
+        "z": 0.0
+      },
+      "eulerAngles": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 12.9722,
+        "y": 12.9722,
+        "z": 1.0
+      },
+      "visualDuration": "Infinity"
+    },
+    {
+      "$type": "ExecuteMultipleEvents",
+      "events": [
+        {
+          "$type": "WaitEvent",
+          "timeToWait": 1.0
+        },
+        {
+          "$type": "SpawnEnemy",
+          "enemyName": "Cloud of Darkness",
+          "textureFilePath": "Mechanics/Resources/CloudOfDarkness.png",
+          "colorHtml": "#b429bd",
+          "maxHp": 35000000,
+          "baseMoveSpeed": 2.0,
+          "hitboxSize": 4.0,
+          "rotation": 180.0,
+          "visualPosition": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+          },
+          "visualScale": {
+            "x": 3.0,
+            "y": 3.71010017,
+            "z": 3.0
+          },
+          "referenceMechanicName": "CloudOfDarknessMechanics"
+        }
+      ]
+    }
+  ]
+}
