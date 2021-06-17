@@ -1,5 +1,348 @@
 {
   "referenceMechanicProperties": {
+    "ShivaMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitForAggro"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Junction E7S",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Shiva-Outfit-1.png",
+            "relativePosition": {
+              "x": 0.7,
+              "y": 1.3,
+              "z": -0.01
+            },
+            "scale": {
+              "x": 1.5,
+              "y": 1.5,
+              "z": 1.5
+            },
+            "colorHtml": "#52ccff",
+            "attachToAnchor": true,
+            "isRotationRelative": true,
+            "visualDuration": "Infinity"
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Shiva-Outfit-1.png",
+            "relativePosition": {
+              "x": -0.7,
+              "y": 1.3,
+              "z": -0.009
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.5,
+              "y": 1.5,
+              "z": 1.5
+            },
+            "colorHtml": "#5e0066",
+            "attachToAnchor": true,
+            "isRotationRelative": true,
+            "visualDuration": "Infinity"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Light Rampant",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Raidwide1"
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            "tetherIndices": [
+              0,
+              1,
+              1,
+              2,
+              2,
+              3,
+              3,
+              4,
+              4,
+              5
+            ],
+            "referenceTetherName": "LR-Chain"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                2,
+                4
+              ],
+              "dropExtraEvents": true
+            },
+            "referenceMechanicName": "ApplyDebuff-L"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                1,
+                3,
+                5
+              ],
+              "dropExtraEvents": true
+            },
+            "referenceMechanicName": "ApplyDebuff-D"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "TowerSet-1"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Heavenly Strike",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "KnockbackFromCenter"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-SmallOrb-Offset-L",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-LargeOrb-Offset-L",
+            "rotation": 60.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-SmallOrb-Offset-L",
+            "rotation": 120.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-LargeOrb-Offset-L",
+            "rotation": 180.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-SmallOrb-Offset-L",
+            "rotation": 240.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-LargeOrb-Offset-L",
+            "rotation": 300.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "TowerSet-2",
+            "rotation": 30.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "The Path of Darkness",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetIds": [
+                0,
+                1,
+                2
+              ]
+            },
+            "referenceMechanicName": "Protean-D"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "The Path of Darkness",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TowerSet-3-Pool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetIds": [
+                0,
+                1,
+                2
+              ]
+            },
+            "referenceMechanicName": "Protean-D"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TowerSet-4-Pool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "The Path of Dark and Light",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetIds": [
+                0,
+                1,
+                2
+              ]
+            },
+            "referenceMechanicName": "Protean-D"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0,
+                1,
+                2
+              ]
+            },
+            "referenceMechanicName": "Protean-L"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
     "Tower Fail": {
       "collisionShape": "Round",
       "collisionShapeParams": {
@@ -219,7 +562,7 @@
         "events": [
           {
             "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "Tower-1-L",
+            "referenceMechanicName": "Tower-1-D",
             "position": {
               "x": 5.0,
               "y": 0.0
@@ -229,7 +572,7 @@
           },
           {
             "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "Tower-2-L",
+            "referenceMechanicName": "Tower-2-D",
             "position": {
               "x": -5.0,
               "y": 0.0
@@ -283,12 +626,12 @@
     "Aoe-Purple": {
       "colorHtml": "#5e0066"
     },
-    "Protean": {
+    "Protean-D": {
       "isTargeted": true,
       "collisionShape": "Round",
       "collisionShapeParams": {
         "x": 20.0,
-        "y": 60.0,
+        "y": 90.0,
         "z": 0.0,
         "w": 0.0
       },
@@ -341,6 +684,74 @@
               {
                 "$type": "ApplyStatusEffect",
                 "referenceStatusName": "DarkDebuff"
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 4.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Protean-L": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 20.0,
+        "y": 90.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c6e2ff",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Magic",
+                "damageAmount": 40000.0,
+                "name": "The Path of Light"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Astral Effect",
+              "invertStatus": true
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 120000.0,
+                "name": "The Path of Light"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "LightDebuff"
               },
               {
                 "$type": "KnockbackEffect",
@@ -410,7 +821,7 @@
       }
     },
     "OrbFollow": {
-      "followSpeed": 0.5
+      "followSpeed": 0.3
     },
     "SmallOrb-L": {
       "isTargeted": true,
@@ -444,7 +855,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 15.0
+            "timeToWait": 16.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -503,7 +914,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 15.0
+            "timeToWait": 16.0
           },
           {
             "$type": "ModifyMechanicEvent",
@@ -511,7 +922,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 15.0
+            "timeToWait": 16.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -670,8 +1081,8 @@
               {
                 "$type": "DamageEffect",
                 "damageType": "Damage",
-                "damageAmount": 10000.0,
-                "name": "Knockback"
+                "damageAmount": 40000.0,
+                "name": "Heavenly Strike"
               },
               {
                 "$type": "KnockbackEffect",
@@ -699,6 +1110,36 @@
         "effect": {
           "$type": "ApplyStatusEffect",
           "referenceStatusName": "DarkDebuff"
+        }
+      }
+    },
+    "AutoAttack": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "Damage",
+          "damageAmount": 40000.0
+        }
+      }
+    },
+    "Raidwide1": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "Damage",
+          "damageAmount": 80000.0,
+          "name": "Light Rampant"
         }
       }
     },
@@ -1768,183 +2209,24 @@
           "timeToWait": 1.0
         },
         {
-          "$type": "SpawnTethersBetweenPlayers",
-          "targetingScheme": {
-            "$type": "TargetSpecificPlayerIds",
-            "targetIds": [
-              0,
-              1,
-              2,
-              3,
-              4,
-              5
-            ]
-          },
-          "tetherIndices": [
-            0,
-            1,
-            1,
-            2,
-            2,
-            3,
-            3,
-            4,
-            4,
-            5
-          ],
-          "referenceTetherName": "LR-Chain"
-        },
-        {
-          "$type": "SpawnTargetedEvents",
-          "targetingScheme": {
-            "$type": "TargetSpecificPlayerIds",
-            "targetIds": [
-              0,
-              2,
-              4
-            ],
-            "dropExtraEvents": true
-          },
-          "referenceMechanicName": "ApplyDebuff-L"
-        },
-        {
-          "$type": "SpawnTargetedEvents",
-          "targetingScheme": {
-            "$type": "TargetSpecificPlayerIds",
-            "targetIds": [
-              1,
-              3,
-              5
-            ],
-            "dropExtraEvents": true
-          },
-          "referenceMechanicName": "ApplyDebuff-D"
-        },
-        {
-          "$type": "SpawnMechanicEvent",
-          "referenceMechanicName": "TowerSet-1"
-        },
-        {
-          "$type": "WaitEvent",
-          "timeToWait": 6.0
-        },
-        {
-          "$type": "SpawnMechanicEvent",
-          "referenceMechanicName": "KnockbackFromCenter"
-        },
-        {
-          "$type": "WaitEvent",
-          "timeToWait": 4.0
-        },
-        {
-          "$type": "SpawnMechanicEvent",
-          "referenceMechanicName": "Spawn-SmallOrb-Offset-L",
-          "isPositionRelative": true,
-          "isRotationRelative": true
-        },
-        {
-          "$type": "SpawnMechanicEvent",
-          "referenceMechanicName": "Spawn-LargeOrb-Offset-L",
-          "rotation": 60.0,
-          "isPositionRelative": true,
-          "isRotationRelative": true
-        },
-        {
-          "$type": "SpawnMechanicEvent",
-          "referenceMechanicName": "Spawn-SmallOrb-Offset-L",
-          "rotation": 120.0,
-          "isPositionRelative": true,
-          "isRotationRelative": true
-        },
-        {
-          "$type": "SpawnMechanicEvent",
-          "referenceMechanicName": "Spawn-LargeOrb-Offset-L",
+          "$type": "SpawnEnemy",
+          "enemyName": "Shiva",
+          "textureFilePath": "Mechanics/Resources/Shiva.png",
+          "colorHtml": "#0047b1",
+          "maxHp": 35000000,
+          "hitboxSize": 3.0,
           "rotation": 180.0,
-          "isPositionRelative": true,
-          "isRotationRelative": true
-        },
-        {
-          "$type": "SpawnMechanicEvent",
-          "referenceMechanicName": "Spawn-SmallOrb-Offset-L",
-          "rotation": 240.0,
-          "isPositionRelative": true,
-          "isRotationRelative": true
-        },
-        {
-          "$type": "SpawnMechanicEvent",
-          "referenceMechanicName": "Spawn-LargeOrb-Offset-L",
-          "rotation": 300.0,
-          "isPositionRelative": true,
-          "isRotationRelative": true
-        },
-        {
-          "$type": "WaitEvent",
-          "timeToWait": 2.0
-        },
-        {
-          "$type": "SpawnMechanicEvent",
-          "referenceMechanicName": "TowerSet-2",
-          "rotation": 30.0
-        },
-        {
-          "$type": "WaitEvent",
-          "timeToWait": 6.0
-        },
-        {
-          "$type": "SpawnTargetedEvents",
-          "targetingScheme": {
-            "$type": "TargetSpecificProximityPlayers",
-            "targetIds": [
-              0,
-              1,
-              2
-            ]
+          "visualPosition": {
+            "x": 0.0,
+            "y": 1.2,
+            "z": 0.0
           },
-          "referenceMechanicName": "Protean"
-        },
-        {
-          "$type": "WaitEvent",
-          "timeToWait": 6.0
-        },
-        {
-          "$type": "ExecuteRandomEvents",
-          "mechanicPoolName": "TowerSet-3-Pool"
-        },
-        {
-          "$type": "WaitEvent",
-          "timeToWait": 6.0
-        },
-        {
-          "$type": "SpawnTargetedEvents",
-          "targetingScheme": {
-            "$type": "TargetSpecificProximityPlayers",
-            "targetIds": [
-              0,
-              1,
-              2
-            ]
+          "visualScale": {
+            "x": 1.5,
+            "y": 3.0,
+            "z": 1.5
           },
-          "referenceMechanicName": "Protean"
-        },
-        {
-          "$type": "WaitEvent",
-          "timeToWait": 6.0
-        },
-        {
-          "$type": "SpawnTargetedEvents",
-          "targetingScheme": {
-            "$type": "TargetSpecificProximityPlayers",
-            "targetIds": [
-              0,
-              1,
-              2
-            ]
-          },
-          "referenceMechanicName": "Protean"
-        },
-        {
-          "$type": "ExecuteRandomEvents",
-          "mechanicPoolName": "TowerSet-4-Pool"
+          "referenceMechanicName": "ShivaMechanics"
         }
       ]
     }
