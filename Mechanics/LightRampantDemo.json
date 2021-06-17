@@ -965,7 +965,9 @@
       }
     },
     "Chain-Active": {
-      "colorHtml": "#FFFF00"
+      "colorHtml": "#FF6600",
+      "colorHtml2": "#FFFF00",
+      "colorDistanceFunction": "10*{0} - {0}*{0} - 22.75"
     },
     "Orb-Tether": {
       "colorHtml": "#FFFFFF",
