@@ -1,0 +1,1952 @@
+{
+  "referenceMechanicProperties": {
+    "Tower Fail": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#FF0000",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 120000.0,
+                "name": "Tower Fail"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Lightsteeped Fail": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#FFFF00",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "damageType": "Damage",
+              "damageAmount": 800000.0,
+              "name": "Lightsteeped"
+            }
+          }
+        ]
+      }
+    },
+    "Tower-1-Offset-L": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower-1-L",
+        "position": {
+          "x": 6.5,
+          "y": 0.0
+        },
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    },
+    "Tower-1-Offset2-L": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower-1-L",
+        "position": {
+          "x": 3.0,
+          "y": 0.0
+        },
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    },
+    "Tower-1-Offset-D": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower-1-D",
+        "position": {
+          "x": 6.5,
+          "y": 0.0
+        },
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    },
+    "Tower-1-Offset2-D": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower-1-D",
+        "position": {
+          "x": 3.0,
+          "y": 0.0
+        },
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    },
+    "TowerSet-1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-1-Offset-L",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-1-Offset-D",
+            "rotation": 60.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-1-Offset-L",
+            "rotation": 120.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-1-Offset-D",
+            "rotation": 180.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-1-Offset-L",
+            "rotation": 240.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-1-Offset-D",
+            "rotation": 300.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "TowerSet-2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-1-Offset2-L",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-1-Offset2-L",
+            "rotation": 60.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-1-Offset2-L",
+            "rotation": 120.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-1-Offset2-L",
+            "rotation": 180.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-1-Offset2-L",
+            "rotation": 240.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-1-Offset2-L",
+            "rotation": 300.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "TowerSet-3": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-1-L",
+            "position": {
+              "x": 5.0,
+              "y": 0.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-2-L",
+            "position": {
+              "x": -5.0,
+              "y": 0.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-3-D",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "TowerSet-4": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-3-L",
+            "position": {
+              "x": 2.5,
+              "y": 0.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-3-D",
+            "position": {
+              "x": -2.5,
+              "y": 0.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "Aoe-Green": {
+      "colorHtml": "#00FF00"
+    },
+    "Aoe-White": {
+      "colorHtml": "#c6e2ff"
+    },
+    "Aoe-Purple": {
+      "colorHtml": "#5e0066"
+    },
+    "Protean": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 20.0,
+        "y": 60.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Magic",
+                "damageAmount": 40000.0,
+                "name": "The Path of Darkness"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Umbral Effect",
+              "invertStatus": true
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 120000.0,
+                "name": "The Path of Darkness"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 4.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Spawn-SmallOrb-Offset-L": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Spawn-SmallOrb-L",
+        "position": {
+          "x": 8.0,
+          "y": 0.0
+        },
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    },
+    "Spawn-LargeOrb-Offset-L": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Spawn-LargeOrb-L",
+        "position": {
+          "x": 8.0,
+          "y": 0.0
+        },
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    },
+    "Spawn-SmallOrb-L": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificProximityPlayers",
+          "targetNthFarthest": true,
+          "targetIds": [
+            0
+          ]
+        },
+        "referenceMechanicName": "SmallOrb-L",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    },
+    "Spawn-LargeOrb-L": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificProximityPlayers",
+          "targetNthFarthest": true,
+          "targetIds": [
+            0
+          ]
+        },
+        "referenceMechanicName": "LargeOrb-L",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    },
+    "OrbFollow": {
+      "followSpeed": 0.5
+    },
+    "SmallOrb-L": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.3,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c6e2ff",
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 5.0,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTethersToPlayers",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceTetherName": "Orb-Tether"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "OrbFollow"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 15.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "OrbExplode-L",
+            "isPositionRelative": true
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 0",
+        "failEvent": {
+          "$type": "ExecuteMultipleEvents",
+          "events": [
+            {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "OrbPopped-L",
+              "isPositionRelative": true
+            },
+            {
+              "$type": "EndMechanic"
+            }
+          ]
+        }
+      }
+    },
+    "LargeOrb-L": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.6,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c6e2ff",
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 5.0,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTethersToPlayers",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceTetherName": "Orb-Tether"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "OrbFollow"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 15.0
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SmallOrb-L"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 15.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "OrbExplode-L",
+            "isPositionRelative": true
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 0",
+        "failEvent": {
+          "$type": "CheckMechanicTimer",
+          "expressionFormat": "{0} >= 20",
+          "successEvent": {
+            "$type": "ExecuteMultipleEvents",
+            "events": [
+              {
+                "$type": "SpawnMechanicEvent",
+                "referenceMechanicName": "OrbPopped-L",
+                "isPositionRelative": true
+              },
+              {
+                "$type": "EndMechanic"
+              }
+            ]
+          },
+          "failEvent": {
+            "$type": "ExecuteMultipleEvents",
+            "events": [
+              {
+                "$type": "SpawnMechanicEvent",
+                "referenceMechanicName": "OrbExplode-L",
+                "isPositionRelative": true
+              },
+              {
+                "$type": "EndMechanic"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "OrbPopped-L": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c6e2ff",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 5000.0,
+                "name": "Bright Pulse"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Astral Effect",
+              "invertStatus": true
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 120000.0,
+                "name": "Bright Pulse"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 4.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "OrbExplode-L": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c6e2ff",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 100000.0,
+                "name": "Orb Failed"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "KnockbackFromCenter": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 15.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 10000.0,
+                "name": "Knockback"
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 4.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ApplyDebuff-L": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "LightDebuff"
+        }
+      }
+    },
+    "ApplyDebuff-D": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "DarkDebuff"
+        }
+      }
+    },
+    "ArenaBoundary": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 7.0,
+        "w": 0.0
+      },
+      "colorHtml": "#8800FF",
+      "persistentTickInterval": 0.2,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      }
+    },
+    "Tower-1-L": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c6e2ff",
+      "persistentTickInterval": 0.1,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/LimitCut-1.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#c6e2ff",
+            "isBillboard": true,
+            "visualDuration": 12.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} = 1",
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Tower Fail",
+              "isPositionRelative": true
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 5000.0,
+                "name": "Bright Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Astral Effect",
+              "invertStatus": true
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 120000.0,
+                "name": "Bright Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 1",
+        "successEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-Green"
+        },
+        "failEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-White"
+        }
+      }
+    },
+    "Tower-1-D": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "persistentTickInterval": 0.1,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/LimitCut-1.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#5e0066",
+            "isBillboard": true,
+            "visualDuration": 12.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} = 1",
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Tower Fail",
+              "isPositionRelative": true
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 5000.0,
+                "name": "Dark Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Umbral Effect",
+              "invertStatus": true
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 120000.0,
+                "name": "Dark Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 1",
+        "successEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-Green"
+        },
+        "failEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-Purple"
+        }
+      }
+    },
+    "Tower-2-L": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c6e2ff",
+      "persistentTickInterval": 0.1,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/LimitCut-2.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#c6e2ff",
+            "isBillboard": true,
+            "visualDuration": 12.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} = 2",
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Tower Fail",
+              "isPositionRelative": true
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 5000.0,
+                "name": "Bright Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Astral Effect",
+              "invertStatus": true
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 120000.0,
+                "name": "Bright Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 2",
+        "successEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-Green"
+        },
+        "failEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-White"
+        }
+      }
+    },
+    "Tower-2-D": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "persistentTickInterval": 0.1,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/LimitCut-2.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#5e0066",
+            "isBillboard": true,
+            "visualDuration": 12.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} = 2",
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Tower Fail",
+              "isPositionRelative": true
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 5000.0,
+                "name": "Dark Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Umbral Effect",
+              "invertStatus": true
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 120000.0,
+                "name": "Dark Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 2",
+        "successEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-Green"
+        },
+        "failEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-Purple"
+        }
+      }
+    },
+    "Tower-3-L": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c6e2ff",
+      "persistentTickInterval": 0.1,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/LimitCut-3.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#c6e2ff",
+            "isBillboard": true,
+            "visualDuration": 12.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} = 3",
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Tower Fail",
+              "isPositionRelative": true
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 5000.0,
+                "name": "Bright Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Astral Effect",
+              "invertStatus": true
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 120000.0,
+                "name": "Bright Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 3",
+        "successEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-Green"
+        },
+        "failEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-White"
+        }
+      }
+    },
+    "Tower-3-D": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "persistentTickInterval": 0.1,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/LimitCut-3.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#5e0066",
+            "isBillboard": true,
+            "visualDuration": 12.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} = 3",
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Tower Fail",
+              "isPositionRelative": true
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 5000.0,
+                "name": "Dark Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Umbral Effect",
+              "invertStatus": true
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 120000.0,
+                "name": "Dark Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 3",
+        "successEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-Green"
+        },
+        "failEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-Purple"
+        }
+      }
+    },
+    "Tower-4-L": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c6e2ff",
+      "persistentTickInterval": 0.1,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/LimitCut-4.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#c6e2ff",
+            "isBillboard": true,
+            "visualDuration": 12.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} = 4",
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Tower Fail",
+              "isPositionRelative": true
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 5000.0,
+                "name": "Bright Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Astral Effect",
+              "invertStatus": true
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 120000.0,
+                "name": "Bright Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 4",
+        "successEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-Green"
+        },
+        "failEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-White"
+        }
+      }
+    },
+    "Tower-4-D": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "persistentTickInterval": 0.1,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/LimitCut-4.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#5e0066",
+            "isBillboard": true,
+            "visualDuration": 12.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} = 4",
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Tower Fail",
+              "isPositionRelative": true
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 5000.0,
+                "name": "Dark Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "LightDebuff"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Umbral Effect",
+              "invertStatus": true
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 120000.0,
+                "name": "Dark Hunger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DarkDebuff"
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 4",
+        "successEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-Green"
+        },
+        "failEvent": {
+          "$type": "ModifyMechanicEvent",
+          "referenceMechanicName": "Aoe-Purple"
+        }
+      }
+    }
+  },
+  "referenceTetherProperties": {
+    "LR-Chain": {
+      "colorHtml": "#FFFF0055",
+      "tetherDuration": 50.0,
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 9.0,
+      "breakMechanic": {
+        "$type": "ApplyEffectToTetheredPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0,
+          "name": "Chain Break"
+        }
+      },
+      "persistentMechanic": {
+        "$type": "CheckTetherLength",
+        "maxDistance": 7.0,
+        "minDistance": 3.0,
+        "successEvent": {
+          "$type": "ModifyTetherProperties",
+          "referenceTetherName": "Chain-Active"
+        },
+        "failEvent": {
+          "$type": "EndTether",
+          "shouldTriggerBreakEvent": true
+        }
+      }
+    },
+    "Chain-Active": {
+      "colorHtml": "#FF6600",
+      "colorHtml2": "#FFFF00",
+      "colorDistanceFunction": "10*{0} - {0}*{0} - 22.75"
+    },
+    "Orb-Tether": {
+      "colorHtml": "#FFFFFF",
+      "tetherDuration": "Infinity"
+    }
+  },
+  "mechanicPools": {
+    "TowerSet-3-Pool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-3",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-3",
+        "rotation": 45.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-3",
+        "rotation": 90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-3",
+        "rotation": 135.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-3",
+        "rotation": 180.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-3",
+        "rotation": 225.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-3",
+        "rotation": 270.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-3",
+        "rotation": 315.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "TowerSet-4-Pool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-4",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-4",
+        "rotation": 45.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-4",
+        "rotation": 90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-4",
+        "rotation": 135.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-4",
+        "rotation": 180.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-4",
+        "rotation": 225.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-4",
+        "rotation": 270.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-4",
+        "rotation": 315.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ]
+  },
+  "referenceStatusProperties": {
+    "Vuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 1.1,
+      "statusIconPath": "Mechanics/Resources/VulnStack.png",
+      "statusName": "Vulnerability Up",
+      "statusDescription": "Damage taken is increased.",
+      "duration": 45.0,
+      "maxStacks": 16
+    },
+    "MagicVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 4.0,
+      "damageType": "Magic",
+      "statusIconPath": "Mechanics/Resources/MagicVuln.png",
+      "statusName": "Magic Vulnerability Up",
+      "statusDescription": "Magic damage taken is increased.",
+      "duration": 5.0
+    },
+    "Lightsteeped": {
+      "$type": "SpawnMechanicOnReachStacks",
+      "referenceMechanicName": "Lightsteeped Fail",
+      "requiredStacks": 5,
+      "statusIconPath": "Mechanics/Resources/Lightsteeped.png",
+      "statusName": "Lightsteeped",
+      "statusDescription": "Overflowing with energy. Upon reaching 5 stacks, you will deal damage to those nearby.",
+      "duration": 15.0,
+      "maxStacks": 5
+    },
+    "LightDebuff": {
+      "statusIconPath": "Mechanics/Resources/LightDebuff.png",
+      "statusName": "Astral Effect",
+      "statusDescription": "Damage taken from light is increased.",
+      "duration": 15.0
+    },
+    "DarkDebuff": {
+      "statusIconPath": "Mechanics/Resources/DarkDebuff.png",
+      "statusName": "Umbral Effect",
+      "statusDescription": "Damage taken from darkness is increased.",
+      "duration": 15.0
+    }
+  },
+  "mechanicEvents": [
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary"
+    },
+    {
+      "$type": "SpawnVisualObject",
+      "textureFilePath": "Mechanics/Resources/ArenaCircle.png",
+      "relativePosition": {
+        "x": 0.0,
+        "y": -0.001,
+        "z": 0.0
+      },
+      "eulerAngles": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 15.8637,
+        "y": 15.8637,
+        "z": 1.0
+      },
+      "visualDuration": "Infinity"
+    },
+    {
+      "$type": "ExecuteMultipleEvents",
+      "events": [
+        {
+          "$type": "WaitEvent",
+          "timeToWait": 1.0
+        },
+        {
+          "$type": "SpawnTethersBetweenPlayers",
+          "targetingScheme": {
+            "$type": "TargetSpecificPlayerIds",
+            "targetIds": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          },
+          "tetherIndices": [
+            0,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3,
+            4,
+            4,
+            5
+          ],
+          "referenceTetherName": "LR-Chain"
+        },
+        {
+          "$type": "SpawnTargetedEvents",
+          "targetingScheme": {
+            "$type": "TargetSpecificPlayerIds",
+            "targetIds": [
+              0,
+              2,
+              4
+            ],
+            "dropExtraEvents": true
+          },
+          "referenceMechanicName": "ApplyDebuff-L"
+        },
+        {
+          "$type": "SpawnTargetedEvents",
+          "targetingScheme": {
+            "$type": "TargetSpecificPlayerIds",
+            "targetIds": [
+              1,
+              3,
+              5
+            ],
+            "dropExtraEvents": true
+          },
+          "referenceMechanicName": "ApplyDebuff-D"
+        },
+        {
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "TowerSet-1"
+        },
+        {
+          "$type": "WaitEvent",
+          "timeToWait": 6.0
+        },
+        {
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "KnockbackFromCenter"
+        },
+        {
+          "$type": "WaitEvent",
+          "timeToWait": 4.0
+        },
+        {
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "Spawn-SmallOrb-Offset-L",
+          "isPositionRelative": true,
+          "isRotationRelative": true
+        },
+        {
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "Spawn-LargeOrb-Offset-L",
+          "rotation": 60.0,
+          "isPositionRelative": true,
+          "isRotationRelative": true
+        },
+        {
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "Spawn-SmallOrb-Offset-L",
+          "rotation": 120.0,
+          "isPositionRelative": true,
+          "isRotationRelative": true
+        },
+        {
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "Spawn-LargeOrb-Offset-L",
+          "rotation": 180.0,
+          "isPositionRelative": true,
+          "isRotationRelative": true
+        },
+        {
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "Spawn-SmallOrb-Offset-L",
+          "rotation": 240.0,
+          "isPositionRelative": true,
+          "isRotationRelative": true
+        },
+        {
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "Spawn-LargeOrb-Offset-L",
+          "rotation": 300.0,
+          "isPositionRelative": true,
+          "isRotationRelative": true
+        },
+        {
+          "$type": "WaitEvent",
+          "timeToWait": 2.0
+        },
+        {
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "TowerSet-2",
+          "rotation": 30.0
+        },
+        {
+          "$type": "WaitEvent",
+          "timeToWait": 6.0
+        },
+        {
+          "$type": "SpawnTargetedEvents",
+          "targetingScheme": {
+            "$type": "TargetSpecificProximityPlayers",
+            "targetIds": [
+              0,
+              1,
+              2
+            ]
+          },
+          "referenceMechanicName": "Protean"
+        },
+        {
+          "$type": "WaitEvent",
+          "timeToWait": 6.0
+        },
+        {
+          "$type": "ExecuteRandomEvents",
+          "mechanicPoolName": "TowerSet-3-Pool"
+        },
+        {
+          "$type": "WaitEvent",
+          "timeToWait": 6.0
+        },
+        {
+          "$type": "SpawnTargetedEvents",
+          "targetingScheme": {
+            "$type": "TargetSpecificProximityPlayers",
+            "targetIds": [
+              0,
+              1,
+              2
+            ]
+          },
+          "referenceMechanicName": "Protean"
+        },
+        {
+          "$type": "WaitEvent",
+          "timeToWait": 6.0
+        },
+        {
+          "$type": "SpawnTargetedEvents",
+          "targetingScheme": {
+            "$type": "TargetSpecificProximityPlayers",
+            "targetIds": [
+              0,
+              1,
+              2
+            ]
+          },
+          "referenceMechanicName": "Protean"
+        },
+        {
+          "$type": "ExecuteRandomEvents",
+          "mechanicPoolName": "TowerSet-4-Pool"
+        }
+      ]
+    }
+  ]
+}
