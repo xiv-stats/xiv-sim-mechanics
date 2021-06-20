@@ -23,6 +23,28 @@
           },
           {
             "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack-T"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack-T"
+          },
+          {
+            "$type": "WaitEvent",
             "timeToWait": 1.0
           },
           {
@@ -801,6 +823,28 @@
                 0
               ]
             }
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack-N"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack-N"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
