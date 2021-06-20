@@ -8,7 +8,7 @@
           {
             "$type": "SetEnemyAggro",
             "targetingScheme": {
-              "$type": "TargetSpecificProximityPlayers",
+              "$type": "TargetSpecificPlayerIdsByClass",
               "targetIds": [
                 0
               ]
@@ -86,64 +86,9 @@
             "timeToWait": 1.0
           },
           {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetSpecificProximityPlayers",
-              "targetNthFarthest": true,
-              "targetIds": [
-                0
-              ]
-            },
-            "referenceMechanicName": "Liquid Hell",
-            "spawnOnTarget": true
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 1.0
-          },
-          {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetSpecificProximityPlayers",
-              "targetNthFarthest": true,
-              "targetIds": [
-                0
-              ]
-            },
-            "referenceMechanicName": "Liquid Hell",
-            "spawnOnTarget": true
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 1.0
-          },
-          {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetSpecificProximityPlayers",
-              "targetNthFarthest": true,
-              "targetIds": [
-                0
-              ]
-            },
-            "referenceMechanicName": "Liquid Hell",
-            "spawnOnTarget": true
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 1.0
-          },
-          {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetSpecificProximityPlayers",
-              "targetNthFarthest": true,
-              "targetIds": [
-                0
-              ]
-            },
-            "referenceMechanicName": "Liquid Hell",
-            "spawnOnTarget": true
+            "$type": "StartCastBar",
+            "castName": "Generate",
+            "duration": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -158,6 +103,66 @@
             },
             "referenceMechanicName": "Hatch",
             "isPositionRelative": true
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
           },
           {
             "$type": "SetEnemyBaseSpeed",
@@ -180,7 +185,7 @@
           {
             "$type": "StartCastBar",
             "castName": "Twister",
-            "duration": 3.0
+            "duration": 2.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -262,7 +267,7 @@
           {
             "$type": "StartCastBar",
             "castName": "Twister",
-            "duration": 3.0
+            "duration": 2.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -461,52 +466,9 @@
             "timeToWait": 1.0
           },
           {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetSpecificProximityPlayers",
-              "targetNthFarthest": true,
-              "targetIds": [
-                0
-              ]
-            },
-            "referenceMechanicName": "Liquid Hell",
-            "spawnOnTarget": true
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 1.0
-          },
-          {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetSpecificProximityPlayers",
-              "targetNthFarthest": true,
-              "targetIds": [
-                0
-              ]
-            },
-            "referenceMechanicName": "Liquid Hell",
-            "spawnOnTarget": true
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 1.0
-          },
-          {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetSpecificProximityPlayers",
-              "targetNthFarthest": true,
-              "targetIds": [
-                0
-              ]
-            },
-            "referenceMechanicName": "Liquid Hell",
-            "spawnOnTarget": true
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 1.0
+            "$type": "StartCastBar",
+            "castName": "Generate",
+            "duration": 3.0
           },
           {
             "$type": "ReshufflePlayerIds"
@@ -524,6 +486,54 @@
             },
             "referenceMechanicName": "Hatch",
             "isPositionRelative": true
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
           },
           {
             "$type": "SetEnemyBaseSpeed",
@@ -546,7 +556,7 @@
           {
             "$type": "StartCastBar",
             "castName": "Twister",
-            "duration": 3.0
+            "duration": 2.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -628,7 +638,7 @@
           {
             "$type": "StartCastBar",
             "castName": "Twister",
-            "duration": 3.0
+            "duration": 2.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -786,7 +796,7 @@
           {
             "$type": "SetEnemyAggro",
             "targetingScheme": {
-              "$type": "TargetSpecificProximityPlayers",
+              "$type": "TargetSpecificPlayerIdsByClass",
               "targetIds": [
                 0
               ]
@@ -1377,13 +1387,13 @@
       "colorHtml": "#008542",
       "visible": false,
       "persistentTickInterval": 0.1,
-      "persistentActivationDelay": 3.0,
+      "persistentActivationDelay": 2.5,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 2.5
+            "timeToWait": 1.5
           },
           {
             "$type": "ModifyMechanicEvent",
@@ -1512,9 +1522,12 @@
         }
       }
     },
+    "HatchMove": {
+      "followSpeed": 1.2
+    },
     "Hatch": {
       "isTargeted": true,
-      "followSpeed": 0.7,
+      "followSpeed": 0.0,
       "collisionShape": "Round",
       "collisionShapeParams": {
         "x": 0.4,
@@ -1549,7 +1562,15 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 10.0
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "HatchMove"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 20.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -1600,7 +1621,7 @@
     "HatchPopped": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 3.0,
+        "x": 2.0,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
