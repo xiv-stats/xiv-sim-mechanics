@@ -1773,7 +1773,7 @@
     "Chariot": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 3.0,
+        "x": 4.0,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
