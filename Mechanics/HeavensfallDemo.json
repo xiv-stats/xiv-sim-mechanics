@@ -1477,7 +1477,7 @@
         {
           "$type": "ExecuteRandomEvents",
           "mechanicPoolName": "HeavensfallTowerPool",
-          "numberToSpawn": 16
+          "numberToSpawn": 8
         },
         {
           "$type": "WaitEvent",
