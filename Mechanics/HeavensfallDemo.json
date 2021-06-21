@@ -353,12 +353,14 @@
     },
     "TwisterSnapshot": {
       "isTargeted": false,
-      "followSpeed": 0.0,
+      "followSpeed": 0.0
+    },
+    "TwisterVisible": {
       "visible": true
     },
     "Twister": {
       "isTargeted": true,
-      "followSpeed": 1.5,
+      "followSpeed": 100.0,
       "collisionShape": "Round",
       "collisionShapeParams": {
         "x": 0.25,
@@ -369,17 +371,25 @@
       "colorHtml": "#008542",
       "visible": false,
       "persistentTickInterval": 0.1,
-      "persistentActivationDelay": 5.0,
+      "persistentActivationDelay": 2.5,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 1.5
           },
           {
             "$type": "ModifyMechanicEvent",
             "referenceMechanicName": "TwisterSnapshot"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "TwisterVisible"
           },
           {
             "$type": "WaitEvent",
@@ -445,6 +455,10 @@
             "visualDuration": 5.0
           },
           {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
             "$type": "SpawnTargetedEvents",
             "targetingScheme": {
               "$type": "TargetSpecificPlayerIds",
@@ -461,7 +475,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 2.0
           },
           {
             "$type": "ApplyEffectToPlayers",
@@ -858,10 +872,10 @@
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Mechanics-T",
             "position": {
-              "x": 6.46715641,
-              "y": -2.67878413
+              "x": 6.06217766,
+              "y": -3.5
             },
-            "rotation": -67.5,
+            "rotation": -60.0,
             "isPositionRelative": true,
             "isRotationRelative": true
           },
@@ -880,10 +894,10 @@
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Mechanics-B",
             "position": {
-              "x": 6.46715641,
-              "y": 2.67878413
+              "x": 6.06217766,
+              "y": 3.5
             },
-            "rotation": -112.5,
+            "rotation": -120.0,
             "isPositionRelative": true,
             "isRotationRelative": true
           }
@@ -899,10 +913,10 @@
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Mechanics-T",
             "position": {
-              "x": 6.46715641,
-              "y": -2.67878413
+              "x": 5.55347347,
+              "y": -4.26133
             },
-            "rotation": -67.5,
+            "rotation": -52.5,
             "isPositionRelative": true,
             "isRotationRelative": true
           },
@@ -910,10 +924,10 @@
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Mechanics-B",
             "position": {
-              "x": 7.0,
-              "y": 0.0
+              "x": 6.940114,
+              "y": -0.9136834
             },
-            "rotation": -90.0,
+            "rotation": -82.5,
             "isPositionRelative": true,
             "isRotationRelative": true
           },
@@ -940,10 +954,10 @@
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Mechanics-B",
             "position": {
-              "x": 6.46715641,
-              "y": -2.67878413
+              "x": 6.06217766,
+              "y": -3.5
             },
-            "rotation": -67.5,
+            "rotation": -60.0,
             "isPositionRelative": true,
             "isRotationRelative": true
           },
@@ -962,10 +976,10 @@
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Mechanics-T",
             "position": {
-              "x": 6.46715641,
-              "y": 2.67878413
+              "x": 6.06217766,
+              "y": 3.5
             },
-            "rotation": -112.5,
+            "rotation": -120.0,
             "isPositionRelative": true,
             "isRotationRelative": true
           }
@@ -981,10 +995,10 @@
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Mechanics-B",
             "position": {
-              "x": 6.46715641,
-              "y": -2.67878413
+              "x": 5.55347347,
+              "y": -4.26133
             },
-            "rotation": -67.5,
+            "rotation": -52.5,
             "isPositionRelative": true,
             "isRotationRelative": true
           },
@@ -992,10 +1006,10 @@
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Mechanics-T",
             "position": {
-              "x": 7.0,
-              "y": 0.0
+              "x": 6.940114,
+              "y": -0.9136834
             },
-            "rotation": -90.0,
+            "rotation": -82.5,
             "isPositionRelative": true,
             "isRotationRelative": true
           },
@@ -1033,10 +1047,10 @@
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Mechanics-T",
             "position": {
-              "x": 7.0,
-              "y": 0.0
+              "x": 6.940114,
+              "y": 0.9136834
             },
-            "rotation": -90.0,
+            "rotation": -97.5,
             "isPositionRelative": true,
             "isRotationRelative": true
           },
@@ -1044,10 +1058,10 @@
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Mechanics-B",
             "position": {
-              "x": 6.46715641,
-              "y": 2.67878413
+              "x": 5.55347347,
+              "y": 4.26133
             },
-            "rotation": -112.5,
+            "rotation": -127.5,
             "isPositionRelative": true,
             "isRotationRelative": true
           }
@@ -1074,10 +1088,10 @@
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Mechanics-B",
             "position": {
-              "x": 7.0,
-              "y": 0.0
+              "x": 6.940114,
+              "y": 0.9136834
             },
-            "rotation": -90.0,
+            "rotation": -97.5,
             "isPositionRelative": true,
             "isRotationRelative": true
           },
@@ -1085,10 +1099,10 @@
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Mechanics-T",
             "position": {
-              "x": 6.46715641,
-              "y": 2.67878413
+              "x": 5.55347347,
+              "y": 4.26133
             },
-            "rotation": -112.5,
+            "rotation": -127.5,
             "isPositionRelative": true,
             "isRotationRelative": true
           }
@@ -1463,7 +1477,7 @@
         {
           "$type": "ExecuteRandomEvents",
           "mechanicPoolName": "HeavensfallTowerPool",
-          "numberToSpawn": 8
+          "numberToSpawn": 16
         },
         {
           "$type": "WaitEvent",
