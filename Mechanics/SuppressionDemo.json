@@ -546,9 +546,8 @@
               {
                 "$type": "WildChargeDamageEffect",
                 "damageType": "Magic",
-                "damageAmountFront": 500000.0,
-                "damageAmountBack": 120000.0,
-                "maxStackAmount": 2,
+                "damageAmountFront": 200000.0,
+                "damageAmountBack": 40000.0,
                 "name": "Mistral Song"
               }
             ]
@@ -673,12 +672,18 @@
           },
           {
             "$type": "ApplyEffectToPlayers",
-            "effect": {
-              "$type": "DamageEffect",
-              "damageType": "Damage",
-              "damageAmount": 800000.0,
-              "name": "Feather Rain"
-            }
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 800000.0,
+                "name": "Feather Rain"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Windburn"
+              }
+            ]
           }
         ]
       }
@@ -686,7 +691,7 @@
     "Mesohigh": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 2.0,
+        "x": 0.5,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -710,10 +715,20 @@
               {
                 "$type": "DamageEffect",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
+                "damageAmount": 20000.0,
                 "name": "Mesohigh"
               }
-            ]
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Thermal Low"
+            },
+            "failedConditionEffect": {
+              "$type": "DamageEffect",
+              "damageType": "Damage",
+              "damageAmount": 500000.0,
+              "name": "Mesohigh"
+            }
           }
         ]
       }
@@ -721,8 +736,36 @@
     "ClearFeatherlances": {
       "visible": false,
       "mechanic": {
-        "$type": "ClearMechanicsWithTag",
-        "mechanicTag": "Featherlance"
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "SuperCyclone"
+          },
+          {
+            "$type": "ClearMechanicsWithTag",
+            "mechanicTag": "Featherlance"
+          }
+        ]
+      }
+    },
+    "SuperCyclone": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "Damage",
+          "damageAmount": 10000.0,
+          "name": "Super Cyclone"
+        }
       }
     },
     "GaolMechanics": {
@@ -862,7 +905,7 @@
         "enemyName": "Granite Gaol",
         "textureFilePath": "Mechanics/Resources/Gaol.png",
         "colorHtml": "#885300",
-        "maxHp": 1,
+        "maxHp": 330000,
         "hitboxSize": 2.0,
         "isPositionRelative": true,
         "isRotationRelative": true,
@@ -1020,7 +1063,7 @@
         "effect": {
           "$type": "DamageEffect",
           "damageType": "Damage",
-          "damageAmount": 180000.0,
+          "damageAmount": 125000.0,
           "name": "Tank Purge"
         }
       }
@@ -1689,6 +1732,15 @@
       "statusDescription": "The wind is high.",
       "duration": "Infinity",
       "shouldKeepOnDeath": true
+    },
+    "Windburn": {
+      "$type": "DamageOverTime",
+      "damageAmount": 35000.0,
+      "statusIconPath": "Mechanics/Resources/Windburn.png",
+      "statusName": "Windburn",
+      "statusDescription": "Sustaining wind damage over time.",
+      "duration": 18.0,
+      "tickInterval": 3.0
     }
   },
   "mechanicEvents": [
