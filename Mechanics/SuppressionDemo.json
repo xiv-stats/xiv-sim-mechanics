@@ -102,15 +102,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 0.2
-          },
-          {
-            "$type": "ClearMechanicsWithTag",
-            "mechanicTag": "Featherlance"
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 0.8
+            "timeToWait": 1.0
           },
           {
             "$type": "StartCastBar",
@@ -709,14 +701,28 @@
           },
           {
             "$type": "ApplyEffectToPlayers",
-            "effect": {
-              "$type": "DamageEffect",
-              "damageType": "Damage",
-              "damageAmount": 120000.0,
-              "name": "Mesohigh"
-            }
+            "effects": [
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "ThermalLow",
+                "doExpireEvent": true
+              },
+              {
+                "$type": "DamageEffect",
+                "damageType": "Damage",
+                "damageAmount": 120000.0,
+                "name": "Mesohigh"
+              }
+            ]
           }
         ]
+      }
+    },
+    "ClearFeatherlances": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ClearMechanicsWithTag",
+        "mechanicTag": "Featherlance"
       }
     },
     "GaolMechanics": {
@@ -1115,6 +1121,34 @@
         ]
       }
     },
+    "FeatherlanceExplode2": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 10.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#008542",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "damageType": "Damage",
+              "damageAmount": 320000.0,
+              "name": "Featherlance"
+            }
+          }
+        ]
+      }
+    },
     "SpawnFeatherlance": {
       "visible": false,
       "mechanic": {
@@ -1210,8 +1244,12 @@
     "SpawnBosses": {
       "visible": false,
       "mechanic": {
-        "$type": "ExecuteMultipleEventsParallel",
+        "$type": "ExecuteMultipleEvents",
         "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
           {
             "$type": "SpawnEnemy",
             "enemyName": "Ultima Weapon",
@@ -1387,6 +1425,41 @@
         ]
       }
     },
+    "StartButton": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#00ff00",
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 1.0,
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 0",
+        "failEvent": {
+          "$type": "ExecuteMultipleEvents",
+          "events": [
+            {
+              "$type": "ApplyEffectToPlayers",
+              "effect": {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "ThermalLow"
+              }
+            },
+            {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "SpawnBosses"
+            },
+            {
+              "$type": "EndMechanic"
+            }
+          ]
+        }
+      }
+    },
     "ArenaBoundary": {
       "collisionShape": "Round",
       "collisionShapeParams": {
@@ -1428,7 +1501,12 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": "Infinity"
+            "timeToWait": 18.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "FeatherlanceExplode2",
+            "isPositionRelative": true
           }
         ]
       },
@@ -1457,7 +1535,12 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": "Infinity"
+            "timeToWait": 18.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "FeatherlanceExplode2",
+            "isPositionRelative": true
           }
         ]
       },
@@ -1486,7 +1569,12 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": "Infinity"
+            "timeToWait": 18.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "FeatherlanceExplode2",
+            "isPositionRelative": true
           }
         ]
       },
@@ -1515,7 +1603,12 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": "Infinity"
+            "timeToWait": 18.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "FeatherlanceExplode2",
+            "isPositionRelative": true
           }
         ]
       },
@@ -1549,7 +1642,7 @@
     },
     "Mesohigh": {
       "colorHtml": "#00ff60",
-      "tetherDuration": 5.0,
+      "tetherDuration": 5.5,
       "interceptMechanic": {
         "$type": "SwitchTetheredPlayer"
       },
@@ -1587,6 +1680,15 @@
       "statusDescription": "Unable to execute actions.",
       "disableType": 15,
       "duration": "Infinity"
+    },
+    "ThermalLow": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "ClearFeatherlances",
+      "statusIconPath": "Mechanics/Resources/ThermalLow.png",
+      "statusName": "Thermal Low",
+      "statusDescription": "The wind is high.",
+      "duration": "Infinity",
+      "shouldKeepOnDeath": true
     }
   },
   "mechanicEvents": [
@@ -1618,12 +1720,12 @@
       "$type": "ExecuteMultipleEvents",
       "events": [
         {
-          "$type": "WaitEvent",
-          "timeToWait": 5.0
-        },
-        {
           "$type": "SpawnMechanicEvent",
-          "referenceMechanicName": "SpawnBosses"
+          "referenceMechanicName": "StartButton",
+          "position": {
+            "x": 0.0,
+            "y": 3.0
+          }
         }
       ]
     }
