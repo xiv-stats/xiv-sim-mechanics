@@ -1735,7 +1735,7 @@
                 "$type": "DamageEffect",
                 "damageType": "TrueDamage",
                 "damageAmount": 9999999.0,
-                "name": "Hatch"
+                "name": "Deep Hatch"
               }
             ]
           }
