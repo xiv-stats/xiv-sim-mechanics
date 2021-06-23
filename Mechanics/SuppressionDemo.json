@@ -582,13 +582,13 @@
       },
       "colorHtml": "#0d9d1e55",
       "persistentTickInterval": 0.2,
-      "persistentActivationDelay": 3.0,
+      "persistentActivationDelay": 2.0,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 3.0
+            "timeToWait": 2.0
           },
           {
             "$type": "ModifyMechanicEvent",
@@ -596,7 +596,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 12.0
+            "timeToWait": 6.0
           }
         ]
       },
@@ -862,7 +862,7 @@
         "enemyName": "Granite Gaol",
         "textureFilePath": "Mechanics/Resources/Gaol.png",
         "colorHtml": "#885300",
-        "maxHp": 330000,
+        "maxHp": 1,
         "hitboxSize": 2.0,
         "isPositionRelative": true,
         "isRotationRelative": true,
