@@ -1,0 +1,998 @@
+{
+  "referenceMechanicProperties": {
+    "HawkBlasterSequence": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "rotation": 180.0,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "rotation": 45.0,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "rotation": 225.0,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "rotation": 90.0,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "rotation": 270.0,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "rotation": 135.0,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "rotation": 315.0,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlaster"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "rotation": 180.0,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "rotation": 45.0,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "rotation": 225.0,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "rotation": 90.0,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "rotation": 270.0,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "rotation": 135.0,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterOffset",
+            "rotation": 315.0,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlaster"
+          }
+        ]
+      }
+    },
+    "HawkBlasterOffset": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "HawkBlaster",
+        "position": {
+          "x": 5.9,
+          "y": 0.0
+        },
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    },
+    "HawkBlaster": {
+      "collisionShapeParams": {
+        "x": 4.2,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff5a00",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Magic",
+                "damageAmount": 400000.0,
+                "name": "Hawk Blaster"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Spawn-CruiseChaser-LC": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnEnemy",
+        "enemyName": "Cruise Chaser",
+        "textureFilePath": "Mechanics/Resources/CruiseChaser.png",
+        "colorHtml": "#8b4800",
+        "maxHp": 2147483647,
+        "baseMoveSpeed": 2.0,
+        "hitboxSize": 2.0,
+        "isTargetable": false,
+        "showInEnemyList": false,
+        "isVisible": false,
+        "visualPosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "visualScale": {
+          "x": 2.0,
+          "y": 2.0,
+          "z": 2.0
+        },
+        "referenceMechanicName": "LimitCutSequence"
+      }
+    },
+    "LimitCutSequence": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "LimitCutMarker-1"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                1
+              ]
+            },
+            "referenceMechanicName": "LimitCutMarker-2"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2
+              ]
+            },
+            "referenceMechanicName": "LimitCutMarker-3"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                3
+              ]
+            },
+            "referenceMechanicName": "LimitCutMarker-4"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4
+              ]
+            },
+            "referenceMechanicName": "LimitCutMarker-5"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                5
+              ]
+            },
+            "referenceMechanicName": "LimitCutMarker-6"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6
+              ]
+            },
+            "referenceMechanicName": "LimitCutMarker-7"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                7
+              ]
+            },
+            "referenceMechanicName": "LimitCutMarker-8"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterSequence"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.0
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 0.0,
+              "y": -1.0
+            },
+            "moveToTarget": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "moveToTarget": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "movementTime": -1.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyVisible",
+            "visible": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.5
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "AlphaSword",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.5
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                1
+              ]
+            },
+            "referenceMechanicName": "BlasstyCharge",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.45
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 0.0,
+              "y": -1.0
+            },
+            "moveToTarget": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2
+              ]
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "moveToTarget": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2
+              ]
+            },
+            "movementTime": -1.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyVisible",
+            "visible": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.5
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2
+              ]
+            },
+            "referenceMechanicName": "AlphaSword",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.5
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                3
+              ]
+            },
+            "referenceMechanicName": "BlasstyCharge",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.45
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 0.0,
+              "y": -1.0
+            },
+            "moveToTarget": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4
+              ]
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "moveToTarget": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4
+              ]
+            },
+            "movementTime": -1.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyVisible",
+            "visible": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.5
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4
+              ]
+            },
+            "referenceMechanicName": "AlphaSword",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.5
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                5
+              ]
+            },
+            "referenceMechanicName": "BlasstyCharge",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.45
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 0.0,
+              "y": -1.0
+            },
+            "moveToTarget": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6
+              ]
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "moveToTarget": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6
+              ]
+            },
+            "movementTime": -1.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyVisible",
+            "visible": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.5
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6
+              ]
+            },
+            "referenceMechanicName": "AlphaSword",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.5
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                7
+              ]
+            },
+            "referenceMechanicName": "BlasstyCharge",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "SetEnemyVisible"
+          }
+        ]
+      }
+    },
+    "AlphaSword": {
+      "isTargeted": true,
+      "collisionShapeParams": {
+        "x": 10.0,
+        "y": 90.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ffff00",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Physical",
+                "damageAmount": 50000.0,
+                "name": "Alpha Sword"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln"
+              },
+              {
+                "$type": "KnockbackEffect",
+                "canArmsLength": true,
+                "knockbackDistance": 2.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "BlasstyCharge": {
+      "isTargeted": true,
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 40.0,
+        "y": 2.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ffff00",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Physical",
+                "damageAmount": 45000.0,
+                "name": "Super Blassty Charge"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln"
+              },
+              {
+                "$type": "KnockbackEffect",
+                "canArmsLength": true,
+                "knockbackDistance": 10.0
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerFacingAway"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "damageType": "Physical",
+                "damageAmount": 45000.0,
+                "name": "Super Blassty Charge"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ArenaBoundary": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 7.0,
+        "w": 0.0
+      },
+      "colorHtml": "#8800FF",
+      "persistentTickInterval": 0.2,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      }
+    },
+    "LimitCutMarker-1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/LimitCut-1.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "colorHtml": "#0000ff",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 8.0
+      }
+    },
+    "LimitCutMarker-2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/LimitCut-2.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "colorHtml": "#ff0000",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 8.0
+      }
+    },
+    "LimitCutMarker-3": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/LimitCut-3.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "colorHtml": "#0000ff",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 8.0
+      }
+    },
+    "LimitCutMarker-4": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/LimitCut-4.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "colorHtml": "#ff0000",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 8.0
+      }
+    },
+    "LimitCutMarker-5": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/LimitCut-5.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.89,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "colorHtml": "#0000ff",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 8.0
+      }
+    },
+    "LimitCutMarker-6": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/LimitCut-6.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.08,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "colorHtml": "#ff0000",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 8.0
+      }
+    },
+    "LimitCutMarker-7": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/LimitCut-7.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.08,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "colorHtml": "#0000ff",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 8.0
+      }
+    },
+    "LimitCutMarker-8": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/LimitCut-8.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 1.08,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "colorHtml": "#ff0000",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 8.0
+      }
+    }
+  },
+  "referenceTetherProperties": {},
+  "mechanicPools": {
+    "Spawn-Bosses-Pool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses-A"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses-A",
+        "rotation": 120.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses-A",
+        "rotation": 240.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses-B"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses-B",
+        "rotation": 120.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses-B",
+        "rotation": 240.0
+      }
+    ]
+  },
+  "referenceStatusProperties": {
+    "MagicVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 8.0,
+      "damageType": "Magic",
+      "statusIconPath": "Mechanics/Resources/MagicVuln.png",
+      "statusName": "Magic Vulnerability Up",
+      "statusDescription": "Magic damage taken is increased.",
+      "duration": 10.0
+    },
+    "PhysVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 8.0,
+      "damageType": "Physical",
+      "statusIconPath": "Mechanics/Resources/PhysVuln.png",
+      "statusName": "Physical Vulnerability Up",
+      "statusDescription": "Physical damage taken is increased.",
+      "duration": 17.0
+    }
+  },
+  "mechanicEvents": [
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary"
+    },
+    {
+      "$type": "SpawnVisualObject",
+      "textureFilePath": "Mechanics/Resources/ArenaCircle.png",
+      "relativePosition": {
+        "x": 0.0,
+        "y": -0.001,
+        "z": 0.0
+      },
+      "eulerAngles": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 15.8637,
+        "y": 15.8637,
+        "z": 1.0
+      },
+      "visualDuration": "Infinity"
+    },
+    {
+      "$type": "ExecuteMultipleEvents",
+      "events": [
+        {
+          "$type": "WaitEvent",
+          "timeToWait": 2.0
+        },
+        {
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "Spawn-CruiseChaser-LC"
+        }
+      ]
+    }
+  ]
+}
