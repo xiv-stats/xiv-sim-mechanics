@@ -478,7 +478,6 @@
             },
             "colorHtml": "#ff4200",
             "spawnOnPlayer": true,
-            "attachToAnchor": true,
             "isBillboard": true,
             "visualDuration": 4.0
           },
@@ -535,7 +534,6 @@
             },
             "colorHtml": "#00ff6c",
             "spawnOnPlayer": true,
-            "attachToAnchor": true,
             "isBillboard": true,
             "visualDuration": 4.0
           },
@@ -888,7 +886,6 @@
             },
             "colorHtml": "#f0ba00",
             "spawnOnPlayer": true,
-            "attachToAnchor": true,
             "isBillboard": true,
             "visualDuration": 2.0
           },
@@ -1730,7 +1727,7 @@
       "statusIconPath": "Mechanics/Resources/Fetters.png",
       "statusName": "Fetters",
       "statusDescription": "Unable to execute actions.",
-      "disableType": 15,
+      "disableType": 31,
       "duration": "Infinity"
     },
     "ThermalLow": {
@@ -1744,7 +1741,7 @@
     },
     "Windburn": {
       "$type": "DamageOverTime",
-      "damageAmount": 15000.0,
+      "damageAmount": 45000.0,
       "statusIconPath": "Mechanics/Resources/Windburn.png",
       "statusName": "Windburn",
       "statusDescription": "Sustaining wind damage over time.",

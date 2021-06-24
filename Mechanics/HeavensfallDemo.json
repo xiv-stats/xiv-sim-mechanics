@@ -653,7 +653,6 @@
             },
             "colorHtml": "#ff4200",
             "spawnOnPlayer": true,
-            "attachToAnchor": true,
             "visualDuration": 5.0
           },
           {
@@ -676,7 +675,6 @@
             },
             "colorHtml": "#ff4200",
             "spawnOnPlayer": true,
-            "attachToAnchor": true,
             "visualDuration": 5.0
           },
           {

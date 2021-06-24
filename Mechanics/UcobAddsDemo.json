@@ -1600,7 +1600,6 @@
             },
             "colorHtml": "#a800ff",
             "spawnOnPlayer": true,
-            "attachToAnchor": true,
             "isBillboard": true,
             "visualDuration": 5.0
           },
@@ -2053,7 +2052,6 @@
               "y": 1.0,
               "z": 1.0
             },
-            "attachToAnchor": true,
             "isBillboard": true,
             "visualDuration": 5.0
           },
@@ -2119,7 +2117,6 @@
               "y": 1.0,
               "z": 1.0
             },
-            "attachToAnchor": true,
             "isBillboard": true,
             "visualDuration": 5.0
           },
@@ -2197,7 +2194,6 @@
               "y": 1.0,
               "z": 1.0
             },
-            "attachToAnchor": true,
             "isBillboard": true,
             "visualDuration": 5.0
           },
@@ -2273,7 +2269,6 @@
               "y": 1.0,
               "z": 1.0
             },
-            "attachToAnchor": true,
             "isBillboard": true,
             "visualDuration": 5.0
           },

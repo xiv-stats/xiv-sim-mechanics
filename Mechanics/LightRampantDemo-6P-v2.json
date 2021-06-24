@@ -137,7 +137,9 @@
               3,
               4,
               4,
-              5
+              5,
+              5,
+              0
             ],
             "referenceTetherName": "LR-Chain"
           },
@@ -428,11 +430,11 @@
         "isRotationRelative": true
       }
     },
-    "Tower-1-Offset2-L": {
+    "Tower-2-Offset-L": {
       "visible": false,
       "mechanic": {
         "$type": "SpawnMechanicEvent",
-        "referenceMechanicName": "Tower-1-L",
+        "referenceMechanicName": "Tower-2-L",
         "position": {
           "x": 3.0,
           "y": 0.0
@@ -460,7 +462,7 @@
         "$type": "SpawnMechanicEvent",
         "referenceMechanicName": "Tower-1-D",
         "position": {
-          "x": 3.0,
+          "x": 4.0,
           "y": 0.0
         },
         "isPositionRelative": true,
@@ -523,42 +525,21 @@
         "events": [
           {
             "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "Tower-1-Offset2-L",
+            "referenceMechanicName": "Tower-2-Offset-L",
             "isPositionRelative": true,
             "isRotationRelative": true
           },
           {
             "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "Tower-1-Offset2-L",
-            "rotation": 60.0,
-            "isPositionRelative": true,
-            "isRotationRelative": true
-          },
-          {
-            "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "Tower-1-Offset2-L",
+            "referenceMechanicName": "Tower-2-Offset-L",
             "rotation": 120.0,
             "isPositionRelative": true,
             "isRotationRelative": true
           },
           {
             "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "Tower-1-Offset2-L",
-            "rotation": 180.0,
-            "isPositionRelative": true,
-            "isRotationRelative": true
-          },
-          {
-            "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "Tower-1-Offset2-L",
+            "referenceMechanicName": "Tower-2-Offset-L",
             "rotation": 240.0,
-            "isPositionRelative": true,
-            "isRotationRelative": true
-          },
-          {
-            "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "Tower-1-Offset2-L",
-            "rotation": 300.0,
             "isPositionRelative": true,
             "isRotationRelative": true
           }
@@ -572,21 +553,21 @@
         "events": [
           {
             "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "Tower-1-D",
-            "position": {
-              "x": 5.0,
-              "y": 0.0
-            },
+            "referenceMechanicName": "Tower-1-Offset2-D",
             "isPositionRelative": true,
             "isRotationRelative": true
           },
           {
             "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "Tower-2-D",
-            "position": {
-              "x": -5.0,
-              "y": 0.0
-            },
+            "referenceMechanicName": "Tower-1-Offset2-D",
+            "rotation": 120.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-1-Offset2-D",
+            "rotation": 240.0,
             "isPositionRelative": true,
             "isRotationRelative": true
           },
@@ -2006,8 +1987,8 @@
       },
       "persistentMechanic": {
         "$type": "CheckTetherLength",
-        "maxDistance": 80.0,
-        "minDistance": 1.0,
+        "maxDistance": 8.0,
+        "minDistance": 4.0,
         "successEvent": {
           "$type": "ModifyTetherProperties",
           "referenceTetherName": "Chain-Active"

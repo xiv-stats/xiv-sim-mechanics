@@ -499,6 +499,154 @@
           "damageAmount": 9999999.0
         }
       }
+    },
+    "Neurolinks-A": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Neurolink",
+            "position": {
+              "x": 0.0,
+              "y": 3.7
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Neurolink",
+            "position": {
+              "x": 3.2042,
+              "y": -1.85
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Neurolink",
+            "position": {
+              "x": -3.2042,
+              "y": -1.85
+            }
+          }
+        ]
+      }
+    },
+    "Neurolinks-B": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Neurolink",
+            "position": {
+              "x": 0.0,
+              "y": -3.7
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Neurolink",
+            "position": {
+              "x": 3.2042,
+              "y": 1.85
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Neurolink",
+            "position": {
+              "x": -3.2042,
+              "y": 1.85
+            }
+          }
+        ]
+      }
+    },
+    "StartButton-A": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#00ff00",
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 1.0,
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 0",
+        "failEvent": {
+          "$type": "ExecuteMultipleEvents",
+          "events": [
+            {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Neurolinks-A"
+            },
+            {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "StartMechanics"
+            },
+            {
+              "$type": "ClearMechanicsWithTag",
+              "mechanicTag": "StartButton"
+            }
+          ]
+        }
+      },
+      "mechanicTag": "StartButton"
+    },
+    "StartButton-B": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#00ff00",
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 1.0,
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 0",
+        "failEvent": {
+          "$type": "ExecuteMultipleEvents",
+          "events": [
+            {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Neurolinks-B"
+            },
+            {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "StartMechanics"
+            },
+            {
+              "$type": "ClearMechanicsWithTag",
+              "mechanicTag": "StartButton"
+            }
+          ]
+        }
+      },
+      "mechanicTag": "StartButton"
+    },
+    "StartMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Spawn-Bosses-Pool"
+          }
+        ]
+      }
     }
   },
   "referenceTetherProperties": {
@@ -561,7 +709,6 @@
               "y": 1.0,
               "z": 1.0
             },
-            "attachToAnchor": true,
             "isBillboard": true,
             "visualDuration": 6.0
           },
@@ -621,7 +768,6 @@
               "y": 1.0,
               "z": 1.0
             },
-            "attachToAnchor": true,
             "isBillboard": true,
             "visualDuration": 6.0
           },
@@ -681,30 +827,6 @@
       "referenceMechanicName": "ArenaBoundary"
     },
     {
-      "$type": "SpawnMechanicEvent",
-      "referenceMechanicName": "Neurolink",
-      "position": {
-        "x": 0.0,
-        "y": 3.7
-      }
-    },
-    {
-      "$type": "SpawnMechanicEvent",
-      "referenceMechanicName": "Neurolink",
-      "position": {
-        "x": 3.2042,
-        "y": -1.85
-      }
-    },
-    {
-      "$type": "SpawnMechanicEvent",
-      "referenceMechanicName": "Neurolink",
-      "position": {
-        "x": -3.2042,
-        "y": -1.85
-      }
-    },
-    {
       "$type": "SpawnVisualObject",
       "textureFilePath": "Mechanics/Resources/ArenaCircle.png",
       "relativePosition": {
@@ -728,12 +850,20 @@
       "$type": "ExecuteMultipleEvents",
       "events": [
         {
-          "$type": "WaitEvent",
-          "timeToWait": 2.0
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "StartButton-A",
+          "position": {
+            "x": 0.0,
+            "y": 3.0
+          }
         },
         {
-          "$type": "ExecuteRandomEvents",
-          "mechanicPoolName": "Spawn-Bosses-Pool"
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "StartButton-B",
+          "position": {
+            "x": 0.0,
+            "y": -3.0
+          }
         }
       ]
     }

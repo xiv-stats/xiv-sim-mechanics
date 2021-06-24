@@ -1483,7 +1483,6 @@
             },
             "colorHtml": "#dc70ff",
             "spawnOnPlayer": true,
-            "attachToAnchor": true,
             "isBillboard": true,
             "visualDuration": 3.0
           },
