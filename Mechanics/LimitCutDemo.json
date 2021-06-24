@@ -230,7 +230,8 @@
               "$type": "TargetSpecificPlayerIds",
               "targetIds": [
                 0
-              ]
+              ],
+              "dropExtraEvents": true
             },
             "referenceMechanicName": "LimitCutMarker-1"
           },
@@ -240,7 +241,8 @@
               "$type": "TargetSpecificPlayerIds",
               "targetIds": [
                 1
-              ]
+              ],
+              "dropExtraEvents": true
             },
             "referenceMechanicName": "LimitCutMarker-2"
           },
@@ -250,7 +252,8 @@
               "$type": "TargetSpecificPlayerIds",
               "targetIds": [
                 2
-              ]
+              ],
+              "dropExtraEvents": true
             },
             "referenceMechanicName": "LimitCutMarker-3"
           },
@@ -260,7 +263,8 @@
               "$type": "TargetSpecificPlayerIds",
               "targetIds": [
                 3
-              ]
+              ],
+              "dropExtraEvents": true
             },
             "referenceMechanicName": "LimitCutMarker-4"
           },
@@ -270,7 +274,8 @@
               "$type": "TargetSpecificPlayerIds",
               "targetIds": [
                 4
-              ]
+              ],
+              "dropExtraEvents": true
             },
             "referenceMechanicName": "LimitCutMarker-5"
           },
@@ -280,7 +285,8 @@
               "$type": "TargetSpecificPlayerIds",
               "targetIds": [
                 5
-              ]
+              ],
+              "dropExtraEvents": true
             },
             "referenceMechanicName": "LimitCutMarker-6"
           },
@@ -290,7 +296,8 @@
               "$type": "TargetSpecificPlayerIds",
               "targetIds": [
                 6
-              ]
+              ],
+              "dropExtraEvents": true
             },
             "referenceMechanicName": "LimitCutMarker-7"
           },
@@ -300,7 +307,8 @@
               "$type": "TargetSpecificPlayerIds",
               "targetIds": [
                 7
-              ]
+              ],
+              "dropExtraEvents": true
             },
             "referenceMechanicName": "LimitCutMarker-8"
           },
