@@ -316,7 +316,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 4.0
+            "timeToWait": 2.0
           },
           {
             "$type": "StartCastBar",
@@ -341,6 +341,10 @@
             "resetMechanicDepth": true
           },
           {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
             "$type": "ExecuteRandomEventSequence",
             "mechanicPoolName": "UltimaLaser-Pool"
           },
@@ -363,9 +367,16 @@
             "mechanicIndex": 2
           },
           {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
             "$type": "SpawnTargetedEvents",
             "targetingScheme": {
-              "$type": "TargetRandomPlayers"
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0
+              ],
+              "invertCheck": true
             },
             "referenceMechanicName": "FlamingCrush"
           },
@@ -423,7 +434,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.0
+            "timeToWait": 0.5
           },
           {
             "$type": "ApplyEffectToPlayers",
@@ -574,45 +585,43 @@
     "Cyclone": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 3.0,
+        "x": 2.7,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
       },
       "colorHtml": "#0d9d1e55",
-      "persistentTickInterval": 0.2,
-      "persistentActivationDelay": 2.0,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 2.0
+            "timeToWait": 4.0
           },
           {
             "$type": "ModifyMechanicEvent",
             "referenceMechanicName": "Cyclone-Active"
           },
           {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "damageType": "Damage",
+              "damageAmount": 800000.0,
+              "name": "Great Whirlwind"
+            }
+          },
+          {
             "$type": "WaitEvent",
-            "timeToWait": 6.0
+            "timeToWait": 2.0
           }
         ]
-      },
-      "persistentMechanic": {
-        "$type": "ApplyEffectToPlayers",
-        "effect": {
-          "$type": "DamageEffect",
-          "damageType": "Damage",
-          "damageAmount": 800000.0,
-          "name": "Great Whirlwind"
-        }
       }
     },
     "GarudaCone": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 9.0,
+        "x": 8.0,
         "y": 120.0,
         "z": 0.0,
         "w": 0.0
@@ -630,7 +639,7 @@
             "effect": {
               "$type": "DamageEffect",
               "damageType": "Damage",
-              "damageAmount": 800000.0,
+              "damageAmount": 200000.0,
               "name": "Mistral Song"
             }
           }
@@ -676,7 +685,7 @@
               {
                 "$type": "DamageEffect",
                 "damageType": "Damage",
-                "damageAmount": 800000.0,
+                "damageAmount": 35000.0,
                 "name": "Feather Rain"
               },
               {
@@ -869,12 +878,12 @@
             "textureFilePath": "Mechanics/Resources/Mark1.png",
             "relativePosition": {
               "x": 0.0,
-              "y": 0.8,
+              "y": 0.6,
               "z": 0.0
             },
             "scale": {
-              "x": 0.5,
-              "y": 0.5,
+              "x": 0.8,
+              "y": 0.8,
               "z": 1.0
             },
             "colorHtml": "#f0ba00",
@@ -905,7 +914,7 @@
         "enemyName": "Granite Gaol",
         "textureFilePath": "Mechanics/Resources/Gaol.png",
         "colorHtml": "#885300",
-        "maxHp": 330000,
+        "maxHp": 150000,
         "hitboxSize": 2.0,
         "isPositionRelative": true,
         "isRotationRelative": true,
@@ -1531,8 +1540,8 @@
             "$type": "SetEnemyMovementPath",
             "path": {
               "$type": "CircleMovementPath",
-              "degreesPerSecond": 90.0,
-              "radius": 6.0
+              "degreesPerSecond": 45.0,
+              "radius": 6.5
             }
           },
           {
@@ -1564,8 +1573,8 @@
             "$type": "SetEnemyMovementPath",
             "path": {
               "$type": "CircleMovementPath",
-              "degreesPerSecond": 90.0,
-              "radius": 6.0,
+              "degreesPerSecond": 45.0,
+              "radius": 6.5,
               "startAngle": 90.0
             }
           },
@@ -1598,8 +1607,8 @@
             "$type": "SetEnemyMovementPath",
             "path": {
               "$type": "CircleMovementPath",
-              "degreesPerSecond": 90.0,
-              "radius": 6.0,
+              "degreesPerSecond": 45.0,
+              "radius": 6.5,
               "startAngle": 180.0
             }
           },
@@ -1632,8 +1641,8 @@
             "$type": "SetEnemyMovementPath",
             "path": {
               "$type": "CircleMovementPath",
-              "degreesPerSecond": 90.0,
-              "radius": 6.0,
+              "degreesPerSecond": 45.0,
+              "radius": 6.5,
               "startAngle": 270.0
             }
           },
@@ -1664,7 +1673,7 @@
       "persistentActivationDelay": 2.0,
       "persistentMechanic": {
         "$type": "CheckTetherLength",
-        "minDistance": 2.0,
+        "minDistance": 0.5,
         "failEvent": {
           "$type": "ExecuteMultipleTetherEvents",
           "events": [
@@ -1735,7 +1744,7 @@
     },
     "Windburn": {
       "$type": "DamageOverTime",
-      "damageAmount": 35000.0,
+      "damageAmount": 15000.0,
       "statusIconPath": "Mechanics/Resources/Windburn.png",
       "statusName": "Windburn",
       "statusDescription": "Sustaining wind damage over time.",

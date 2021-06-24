@@ -317,8 +317,8 @@
             "timeToWait": 2.0
           },
           {
-            "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "HawkBlasterSequence"
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Hawkblaster-Pool"
           },
           {
             "$type": "WaitEvent",
@@ -913,34 +913,25 @@
   },
   "referenceTetherProperties": {},
   "mechanicPools": {
-    "Spawn-Bosses-Pool": [
+    "Hawkblaster-Pool": [
       {
         "$type": "SpawnMechanicEvent",
-        "referenceMechanicName": "SpawnBosses-A"
+        "referenceMechanicName": "HawkBlasterSequence"
       },
       {
         "$type": "SpawnMechanicEvent",
-        "referenceMechanicName": "SpawnBosses-A",
-        "rotation": 120.0
+        "referenceMechanicName": "HawkBlasterSequence",
+        "rotation": 45.0
       },
       {
         "$type": "SpawnMechanicEvent",
-        "referenceMechanicName": "SpawnBosses-A",
-        "rotation": 240.0
+        "referenceMechanicName": "HawkBlasterSequence",
+        "rotation": 90.0
       },
       {
         "$type": "SpawnMechanicEvent",
-        "referenceMechanicName": "SpawnBosses-B"
-      },
-      {
-        "$type": "SpawnMechanicEvent",
-        "referenceMechanicName": "SpawnBosses-B",
-        "rotation": 120.0
-      },
-      {
-        "$type": "SpawnMechanicEvent",
-        "referenceMechanicName": "SpawnBosses-B",
-        "rotation": 240.0
+        "referenceMechanicName": "HawkBlasterSequence",
+        "rotation": 135.0
       }
     ]
   },
