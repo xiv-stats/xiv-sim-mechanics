@@ -44,6 +44,13 @@
       "cooldown": 2.0,
       "actionName": "Attack",
       "skillIconPath": "Mechanics/Resources/SkillIcons/DamageAbility.png"
+    },
+    "6": {
+      "$type": "ApplyStatusSelf",
+      "cooldown": 120.0,
+      "actionName": "Arm's Length",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/ArmsLength.png",
+      "applyStatus": "ArmsLength"
     }
   },
   "shieldHealerActionMapping": {
@@ -94,6 +101,13 @@
       "cooldown": 2.0,
       "actionName": "Attack",
       "skillIconPath": "Mechanics/Resources/SkillIcons/DamageAbility.png"
+    },
+    "6": {
+      "$type": "ApplyStatusSelf",
+      "cooldown": 120.0,
+      "actionName": "Arm's Length",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/ArmsLength.png",
+      "applyStatus": "ArmsLength"
     }
   },
   "regenHealerActionMapping": {
@@ -144,6 +158,13 @@
       "cooldown": 2.0,
       "actionName": "Attack",
       "skillIconPath": "Mechanics/Resources/SkillIcons/DamageAbility.png"
+    },
+    "6": {
+      "$type": "ApplyStatusSelf",
+      "cooldown": 120.0,
+      "actionName": "Arm's Length",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/ArmsLength.png",
+      "applyStatus": "ArmsLength"
     }
   },
   "meleeDpsActionMapping": {
@@ -162,6 +183,13 @@
       "actionName": "Feint",
       "skillIconPath": "Mechanics/Resources/SkillIcons/Feint.png",
       "applyStatus": "Feint"
+    },
+    "6": {
+      "$type": "ApplyStatusSelf",
+      "cooldown": 120.0,
+      "actionName": "Arm's Length",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/ArmsLength.png",
+      "applyStatus": "ArmsLength"
     }
   },
   "rangedDpsActionMapping": {
@@ -179,6 +207,13 @@
       "actionName": "Tactician",
       "skillIconPath": "Mechanics/Resources/SkillIcons/Tactician.png",
       "applyStatus": "Tactician"
+    },
+    "6": {
+      "$type": "ApplyStatusSelf",
+      "cooldown": 120.0,
+      "actionName": "Arm's Length",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/ArmsLength.png",
+      "applyStatus": "ArmsLength"
     }
   },
   "casterDpsActionMapping": {
@@ -196,6 +231,13 @@
       "cooldown": 3.0,
       "actionName": "Raise",
       "skillIconPath": "Mechanics/Resources/SkillIcons/Raise.png"
+    },
+    "6": {
+      "$type": "ApplyStatusSelf",
+      "cooldown": 120.0,
+      "actionName": "Arm's Length",
+      "skillIconPath": "Mechanics/Resources/SkillIcons/ArmsLength.png",
+      "applyStatus": "ArmsLength"
     }
   },
   "referenceStatusProperties": {
@@ -305,6 +347,13 @@
       "statusName": "Feint",
       "statusDescription": "A barrier is nullifying damage.",
       "duration": 10.0
+    },
+    "ArmsLength": {
+      "beneficial": true,
+      "statusIconPath": "Mechanics/Resources/ArmsLength.png",
+      "statusName": "Arm's Length",
+      "statusDescription": "Damage taken is reduced.",
+      "duration": 6.0
     }
   }
 }
