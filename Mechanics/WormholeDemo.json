@@ -1210,7 +1210,7 @@
       "followSpeed": 10000.0,
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 1.0,
+        "x": 1.5,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -1264,7 +1264,7 @@
       "followSpeed": 10000.0,
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 2.0,
+        "x": 1.5,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -1507,6 +1507,26 @@
         ]
       }
     },
+    "SpawnBosses-B": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-Alex"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-BJ-B"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-CruiseChaser-B"
+          }
+        ]
+      }
+    },
     "ArenaBoundary": {
       "collisionShape": "Round",
       "collisionShapeParams": {
@@ -1718,6 +1738,16 @@
         "$type": "SpawnMechanicEvent",
         "referenceMechanicName": "TowerSet-B"
       }
+    ],
+    "Spawn-Bosses-Pool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses-A"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses-B"
+      }
     ]
   },
   "referenceStatusProperties": {
@@ -1784,8 +1814,8 @@
           "timeToWait": 2.0
         },
         {
-          "$type": "SpawnMechanicEvent",
-          "referenceMechanicName": "SpawnBosses-A"
+          "$type": "ExecuteRandomEvents",
+          "mechanicPoolName": "Spawn-Bosses-Pool"
         }
       ]
     }
