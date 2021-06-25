@@ -374,9 +374,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Inescapable Illumination",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "Inescapable Illumination"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -407,9 +407,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Lightsteeped",
               "damageType": "Damage",
-              "damageAmount": 800000.0,
-              "name": "Lightsteeped"
+              "damageAmount": 800000.0
             }
           }
         ]
@@ -658,9 +658,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "The Path of Darkness",
                 "damageType": "Magic",
-                "damageAmount": 40000.0,
-                "name": "The Path of Darkness"
+                "damageAmount": 40000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -683,9 +683,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "The Path of Darkness",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "The Path of Darkness"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -726,9 +726,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "The Path of Light",
                 "damageType": "Magic",
-                "damageAmount": 40000.0,
-                "name": "The Path of Light"
+                "damageAmount": 40000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -751,9 +751,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "The Path of Light",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "The Path of Light"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -997,9 +997,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Bright Pulse",
                 "damageType": "Damage",
-                "damageAmount": 5000.0,
-                "name": "Bright Pulse"
+                "damageAmount": 5000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1018,9 +1018,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Bright Pulse",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "Bright Pulse"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1060,9 +1060,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Blinding Pulse",
                 "damageType": "Damage",
-                "damageAmount": 100000.0,
-                "name": "Blinding Pulse"
+                "damageAmount": 100000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1090,9 +1090,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Heavenly Strike",
                 "damageType": "Damage",
-                "damageAmount": 40000.0,
-                "name": "Heavenly Strike"
+                "damageAmount": 40000.0
               },
               {
                 "$type": "KnockbackEffect",
@@ -1147,9 +1147,9 @@
         "$type": "ApplyEffectToPlayers",
         "effect": {
           "$type": "DamageEffect",
+          "name": "Light Rampant",
           "damageType": "Damage",
-          "damageAmount": 80000.0,
-          "name": "Light Rampant"
+          "damageAmount": 80000.0
         }
       }
     },
@@ -1220,9 +1220,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Bright Hunger",
                 "damageType": "Damage",
-                "damageAmount": 5000.0,
-                "name": "Bright Hunger"
+                "damageAmount": 5000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1241,9 +1241,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Bright Hunger",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "Bright Hunger"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1322,9 +1322,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Dark Hunger",
                 "damageType": "Damage",
-                "damageAmount": 5000.0,
-                "name": "Dark Hunger"
+                "damageAmount": 5000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1343,9 +1343,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Dark Hunger",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "Dark Hunger"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1424,9 +1424,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Bright Hunger",
                 "damageType": "Damage",
-                "damageAmount": 5000.0,
-                "name": "Bright Hunger"
+                "damageAmount": 5000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1445,9 +1445,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Bright Hunger",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "Bright Hunger"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1526,9 +1526,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Dark Hunger",
                 "damageType": "Damage",
-                "damageAmount": 5000.0,
-                "name": "Dark Hunger"
+                "damageAmount": 5000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1547,9 +1547,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Dark Hunger",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "Dark Hunger"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1628,9 +1628,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Bright Hunger",
                 "damageType": "Damage",
-                "damageAmount": 5000.0,
-                "name": "Bright Hunger"
+                "damageAmount": 5000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1649,9 +1649,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Bright Hunger",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "Bright Hunger"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1730,9 +1730,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Dark Hunger",
                 "damageType": "Damage",
-                "damageAmount": 5000.0,
-                "name": "Dark Hunger"
+                "damageAmount": 5000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1751,9 +1751,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Dark Hunger",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "Dark Hunger"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1832,9 +1832,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Bright Hunger",
                 "damageType": "Damage",
-                "damageAmount": 5000.0,
-                "name": "Bright Hunger"
+                "damageAmount": 5000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1853,9 +1853,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Bright Hunger",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "Bright Hunger"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1934,9 +1934,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Dark Hunger",
                 "damageType": "Damage",
-                "damageAmount": 5000.0,
-                "name": "Dark Hunger"
+                "damageAmount": 5000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1955,9 +1955,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Dark Hunger",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "Dark Hunger"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1999,9 +1999,9 @@
         "$type": "ApplyEffectToTetheredPlayers",
         "effect": {
           "$type": "DamageEffect",
+          "name": "Refulgent Fate",
           "damageType": "TrueDamage",
-          "damageAmount": 9999999.0,
-          "name": "Refulgent Fate"
+          "damageAmount": 9999999.0
         }
       },
       "persistentMechanic": {

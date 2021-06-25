@@ -20,9 +20,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Megaflare",
               "damageType": "Damage",
-              "damageAmount": 90000.0,
-              "name": "Megaflare"
+              "damageAmount": 90000.0
             }
           }
         ]
@@ -85,9 +85,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Heavensfall Cone",
               "damageType": "Damage",
-              "damageAmount": 90000.0,
-              "name": "Heavensfall Cone"
+              "damageAmount": 90000.0
             }
           }
         ]
@@ -123,9 +123,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Heavensfall Cone",
               "damageType": "Damage",
-              "damageAmount": 90000.0,
-              "name": "Heavensfall Cone"
+              "damageAmount": 90000.0
             }
           }
         ]
@@ -165,9 +165,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Heavensfall Cone",
               "damageType": "Damage",
-              "damageAmount": 90000.0,
-              "name": "Heavensfall Cone"
+              "damageAmount": 90000.0
             }
           }
         ]
@@ -203,9 +203,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Heavensfall Cone",
               "damageType": "Damage",
-              "damageAmount": 90000.0,
-              "name": "Heavensfall Cone"
+              "damageAmount": 90000.0
             }
           }
         ]
@@ -304,9 +304,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Divebomb",
                 "damageType": "Damage",
-                "damageAmount": 90000.0,
-                "name": "Divebomb"
+                "damageAmount": 90000.0
               },
               {
                 "$type": "KnockbackEffect",
@@ -338,9 +338,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Twister",
                 "damageType": "Damage",
-                "damageAmount": 90000.0,
-                "name": "Twister"
+                "damageAmount": 90000.0
               },
               {
                 "$type": "KnockbackEffect",
@@ -482,9 +482,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Divebomb",
                 "damageType": "Damage",
-                "damageAmount": 90000.0,
-                "name": "Divebomb"
+                "damageAmount": 90000.0
               },
               {
                 "$type": "KnockbackEffect",
@@ -513,9 +513,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Hypernova",
               "damageType": "Damage",
-              "damageAmount": 10000.0,
-              "name": "Hypernova"
+              "damageAmount": 10000.0
             }
           },
           {
@@ -528,9 +528,9 @@
         "$type": "ApplyEffectToPlayers",
         "effect": {
           "$type": "DamageEffect",
+          "name": "Bleed",
           "damageType": "Damage",
-          "damageAmount": 999999.0,
-          "name": "Bleed"
+          "damageAmount": 999999.0
         }
       }
     },
@@ -689,10 +689,10 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Fireball",
               "damageType": "Damage",
               "damageAmount": 600000.0,
-              "maxStackAmount": 8,
-              "name": "Fireball"
+              "maxStackAmount": 8
             }
           }
         ]
@@ -727,9 +727,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Heavensfall",
                 "damageType": "Damage",
-                "damageAmount": 10000.0,
-                "name": "Heavensfall"
+                "damageAmount": 10000.0
               },
               {
                 "$type": "KnockbackEffect",
@@ -760,9 +760,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Tower Failed",
               "damageType": "Damage",
-              "damageAmount": 9999999.0,
-              "name": "Tower Failed"
+              "damageAmount": 9999999.0
             }
           }
         ]
@@ -834,9 +834,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Megaflare",
               "damageType": "Damage",
-              "damageAmount": 10000.0,
-              "name": "Megaflare"
+              "damageAmount": 10000.0
             }
           }
         ]

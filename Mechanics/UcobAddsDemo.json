@@ -1398,9 +1398,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Twister",
                 "damageType": "Damage",
-                "damageAmount": 90000.0,
-                "name": "Twister"
+                "damageAmount": 90000.0
               },
               {
                 "$type": "KnockbackEffect",
@@ -1501,9 +1501,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Plummet",
               "damageType": "Damage",
-              "damageAmount": 100000.0,
-              "name": "Plummet"
+              "damageAmount": 100000.0
             }
           }
         ]
@@ -1527,9 +1527,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Liquid Hell",
               "damageType": "Damage",
-              "damageAmount": 10000.0,
-              "name": "Liquid Hell"
+              "damageAmount": 10000.0
             }
           },
           {
@@ -1542,9 +1542,9 @@
         "$type": "ApplyEffectToPlayers",
         "effect": {
           "$type": "DamageEffect",
+          "name": "Burns",
           "damageType": "Damage",
-          "damageAmount": 999999.0,
-          "name": "Burns"
+          "damageAmount": 999999.0
         }
       }
     },
@@ -1682,9 +1682,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Hatch",
                 "damageType": "Magic",
-                "damageAmount": 30000.0,
-                "name": "Hatch"
+                "damageAmount": 30000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1698,9 +1698,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Hatch",
                 "damageType": "Magic",
-                "damageAmount": 300000.0,
-                "name": "Hatch"
+                "damageAmount": 300000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1732,9 +1732,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Deep Hatch",
                 "damageType": "TrueDamage",
-                "damageAmount": 9999999.0,
-                "name": "Deep Hatch"
+                "damageAmount": 9999999.0
               }
             ]
           }
@@ -1761,9 +1761,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Lunar Dynamo",
               "damageType": "Damage",
-              "damageAmount": 300000.0,
-              "name": "Lunar Dynamo"
+              "damageAmount": 300000.0
             }
           }
         ]
@@ -1790,9 +1790,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Iron Chariot",
                 "damageType": "Damage",
-                "damageAmount": 180000.0,
-                "name": "Iron Chariot"
+                "damageAmount": 180000.0
               },
               {
                 "$type": "KnockbackEffect",
@@ -1823,10 +1823,10 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Thermionic Beam",
               "damageType": "Damage",
               "damageAmount": 700000.0,
-              "maxStackAmount": 8,
-              "name": "Thermionic Beam"
+              "maxStackAmount": 8
             }
           }
         ]
@@ -1853,9 +1853,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Raven's Dive",
                 "damageType": "Damage",
-                "damageAmount": 40000.0,
-                "name": "Raven's Dive"
+                "damageAmount": 40000.0
               }
             ],
             "condition": {
@@ -1864,9 +1864,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Raven's Dive",
                 "damageType": "Damage",
-                "damageAmount": 40000.0,
-                "name": "Raven's Dive"
+                "damageAmount": 40000.0
               },
               {
                 "$type": "KnockbackEffect",
@@ -1891,9 +1891,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Death Sentence",
                 "damageType": "Slashing",
-                "damageAmount": 120000.0,
-                "name": "Death Sentence"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1918,9 +1918,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Ravensbeak",
                 "damageType": "Piercing",
-                "damageAmount": 120000.0,
-                "name": "Ravensbeak"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1959,9 +1959,9 @@
         "$type": "ApplyEffectToTargetOnly",
         "effect": {
           "$type": "DamageEffect",
+          "name": "Bahamut's Claw",
           "damageType": "Piercing",
-          "damageAmount": 20000.0,
-          "name": "Bahamut's Claw"
+          "damageAmount": 20000.0
         }
       }
     },
@@ -1978,9 +1978,9 @@
         "$type": "ApplyEffectToPlayers",
         "effect": {
           "$type": "DamageEffect",
+          "name": "Megaflare",
           "damageType": "Damage",
-          "damageAmount": 100000.0,
-          "name": "Megaflare"
+          "damageAmount": 100000.0
         }
       }
     },
@@ -1997,9 +1997,9 @@
         "$type": "ApplyEffectToPlayers",
         "effect": {
           "$type": "DamageEffect",
+          "name": "Teraflare",
           "damageType": "TrueDamage",
-          "damageAmount": 9999999.0,
-          "name": "Teraflare"
+          "damageAmount": 9999999.0
         }
       }
     },

@@ -180,9 +180,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Hawk Blaster",
                 "damageType": "Magic",
-                "damageAmount": 400000.0,
-                "name": "Hawk Blaster"
+                "damageAmount": 400000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -637,9 +637,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Alpha Sword",
                 "damageType": "Physical",
-                "damageAmount": 50000.0,
-                "name": "Alpha Sword"
+                "damageAmount": 50000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -682,9 +682,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Super Blassty Charge",
                 "damageType": "Physical",
-                "damageAmount": 45000.0,
-                "name": "Super Blassty Charge"
+                "damageAmount": 45000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -706,9 +706,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Super Blassty Charge",
                 "damageType": "Physical",
-                "damageAmount": 45000.0,
-                "name": "Super Blassty Charge"
+                "damageAmount": 45000.0
               },
               {
                 "$type": "ApplyStatusEffect",

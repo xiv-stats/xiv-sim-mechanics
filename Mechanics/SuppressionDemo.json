@@ -440,9 +440,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Eruption",
               "damageType": "Damage",
-              "damageAmount": 120000.0,
-              "name": "Eruption"
+              "damageAmount": 120000.0
             }
           }
         ]
@@ -493,10 +493,10 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Flaming Crush",
               "damageType": "Damage",
               "damageAmount": 700000.0,
-              "maxStackAmount": 8,
-              "name": "Flaming Crush"
+              "maxStackAmount": 8
             }
           }
         ]
@@ -554,10 +554,10 @@
             "effects": [
               {
                 "$type": "WildChargeDamageEffect",
+                "name": "Mistral Song",
                 "damageType": "Magic",
                 "damageAmountFront": 200000.0,
-                "damageAmountBack": 40000.0,
-                "name": "Mistral Song"
+                "damageAmountBack": 40000.0
               }
             ]
           },
@@ -604,9 +604,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Great Whirlwind",
               "damageType": "Damage",
-              "damageAmount": 800000.0,
-              "name": "Great Whirlwind"
+              "damageAmount": 800000.0
             }
           },
           {
@@ -636,9 +636,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Mistral Song",
               "damageType": "Damage",
-              "damageAmount": 200000.0,
-              "name": "Mistral Song"
+              "damageAmount": 200000.0
             }
           }
         ]
@@ -682,9 +682,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Feather Rain",
                 "damageType": "Damage",
-                "damageAmount": 35000.0,
-                "name": "Feather Rain"
+                "damageAmount": 35000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -721,9 +721,9 @@
               },
               {
                 "$type": "DamageEffect",
+                "name": "Mesohigh",
                 "damageType": "Damage",
-                "damageAmount": 20000.0,
-                "name": "Mesohigh"
+                "damageAmount": 20000.0
               }
             ],
             "condition": {
@@ -732,9 +732,9 @@
             },
             "failedConditionEffect": {
               "$type": "DamageEffect",
+              "name": "Mesohigh",
               "damageType": "Damage",
-              "damageAmount": 500000.0,
-              "name": "Mesohigh"
+              "damageAmount": 500000.0
             }
           }
         ]
@@ -769,9 +769,9 @@
         "$type": "ApplyEffectToPlayers",
         "effect": {
           "$type": "DamageEffect",
+          "name": "Super Cyclone",
           "damageType": "Damage",
-          "damageAmount": 10000.0,
-          "name": "Super Cyclone"
+          "damageAmount": 10000.0
         }
       }
     },
@@ -860,9 +860,9 @@
         "$type": "ApplyEffectToPlayers",
         "effect": {
           "$type": "DamageEffect",
+          "name": "Granite Impact",
           "damageType": "TrueDamage",
-          "damageAmount": 9999999.0,
-          "name": "Granite Impact"
+          "damageAmount": 9999999.0
         }
       }
     },
@@ -1019,9 +1019,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Light Pillar",
               "damageType": "Damage",
-              "damageAmount": 120000.0,
-              "name": "Light Pillar"
+              "damageAmount": 120000.0
             }
           }
         ]
@@ -1047,9 +1047,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Aetherochemical Laser",
               "damageType": "Damage",
-              "damageAmount": 120000.0,
-              "name": "Aetherochemical Laser"
+              "damageAmount": 120000.0
             }
           }
         ]
@@ -1068,9 +1068,9 @@
         "$type": "ApplyEffectToPlayers",
         "effect": {
           "$type": "DamageEffect",
+          "name": "Tank Purge",
           "damageType": "Damage",
-          "damageAmount": 125000.0,
-          "name": "Tank Purge"
+          "damageAmount": 125000.0
         }
       }
     },
@@ -1095,9 +1095,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Landslide",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "Landslide"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "KnockbackEffect",
@@ -1129,9 +1129,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Landslide",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "Landslide"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "KnockbackEffect",
@@ -1162,9 +1162,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Featherlance",
               "damageType": "Damage",
-              "damageAmount": 320000.0,
-              "name": "Featherlance"
+              "damageAmount": 320000.0
             }
           }
         ]
@@ -1190,9 +1190,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Featherlance",
               "damageType": "Damage",
-              "damageAmount": 320000.0,
-              "name": "Featherlance"
+              "damageAmount": 320000.0
             }
           }
         ]

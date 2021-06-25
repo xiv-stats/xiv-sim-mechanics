@@ -725,9 +725,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Eye of the Chakram",
                 "damageType": "Damage",
-                "damageAmount": 300000.0,
-                "name": "Eye of the Chakram"
+                "damageAmount": 300000.0
               },
               {
                 "$type": "KnockbackEffect",
@@ -758,9 +758,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Tower Failed",
               "damageType": "TrueDamage",
-              "damageAmount": 9999999.0,
-              "name": "Tower Failed"
+              "damageAmount": 9999999.0
             }
           }
         ]
@@ -854,9 +854,9 @@
                   "effects": [
                     {
                       "$type": "DamageEffect",
+                      "name": "Repentance",
                       "damageType": "Magic",
-                      "damageAmount": 30000.0,
-                      "name": "Repentance"
+                      "damageAmount": 30000.0
                     },
                     {
                       "$type": "ApplyStatusEffect",
@@ -917,9 +917,9 @@
                   "effects": [
                     {
                       "$type": "DamageEffect",
+                      "name": "Repentance",
                       "damageType": "Magic",
-                      "damageAmount": 30000.0,
-                      "name": "Repentance"
+                      "damageAmount": 30000.0
                     },
                     {
                       "$type": "ApplyStatusEffect",
@@ -980,9 +980,9 @@
                   "effects": [
                     {
                       "$type": "DamageEffect",
+                      "name": "Repentance",
                       "damageType": "Magic",
-                      "damageAmount": 30000.0,
-                      "name": "Repentance"
+                      "damageAmount": 30000.0
                     },
                     {
                       "$type": "ApplyStatusEffect",
@@ -1019,9 +1019,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Sacrament",
               "damageType": "Damage",
-              "damageAmount": 420000.0,
-              "name": "Sacrament"
+              "damageAmount": 420000.0
             }
           }
         ]
@@ -1049,9 +1049,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Alpha Sword",
                 "damageType": "Physical",
-                "damageAmount": 50000.0,
-                "name": "Alpha Sword"
+                "damageAmount": 50000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1094,9 +1094,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Super Blassty Charge",
                 "damageType": "Physical",
-                "damageAmount": 45000.0,
-                "name": "Super Blassty Charge"
+                "damageAmount": 45000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1118,9 +1118,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Super Blassty Charge",
                 "damageType": "Physical",
-                "damageAmount": 45000.0,
-                "name": "Super Blassty Charge"
+                "damageAmount": 45000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1156,9 +1156,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Super Jump",
                 "damageType": "Damage",
-                "damageAmount": 40000.0,
-                "name": "Super Jump"
+                "damageAmount": 40000.0
               }
             ],
             "condition": {
@@ -1167,9 +1167,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Super Jump",
                 "damageType": "Damage",
-                "damageAmount": 40000.0,
-                "name": "Super Jump"
+                "damageAmount": 40000.0
               },
               {
                 "$type": "KnockbackEffect",
@@ -1199,9 +1199,9 @@
         "$type": "ApplyEffectToPlayers",
         "effect": {
           "$type": "DamageEffect",
+          "name": "Apocalyptic Ray",
           "damageType": "Damage",
-          "damageAmount": 400000.0,
-          "name": "Apocalyptic Ray"
+          "damageAmount": 400000.0
         }
       }
     },
@@ -1250,10 +1250,10 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Incinerating Heat",
               "damageType": "Damage",
               "damageAmount": 800000.0,
-              "maxStackAmount": 8,
-              "name": "Incinerating Heat"
+              "maxStackAmount": 8
             }
           }
         ]
@@ -1310,9 +1310,9 @@
               "$type": "ApplyEffectToPlayers",
               "effect": {
                 "$type": "DamageEffect",
+                "name": "Enumeration",
                 "damageType": "TrueDamage",
-                "damageAmount": 9999999.0,
-                "name": "Enumeration"
+                "damageAmount": 9999999.0
               }
             }
           }
@@ -1552,9 +1552,9 @@
         "$type": "ApplyEffectToTargetOnly",
         "effect": {
           "$type": "DamageEffect",
+          "name": "Enumeration",
           "damageType": "TrueDamage",
-          "damageAmount": 9999999.0,
-          "name": "Enumeration"
+          "damageAmount": 9999999.0
         }
       }
     },

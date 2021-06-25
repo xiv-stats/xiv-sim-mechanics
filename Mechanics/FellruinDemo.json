@@ -139,9 +139,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Lunar Dynamo",
               "damageType": "Damage",
-              "damageAmount": 300000.0,
-              "name": "Lunar Dynamo"
+              "damageAmount": 300000.0
             }
           }
         ]
@@ -168,9 +168,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Raven's Dive",
                 "damageType": "Damage",
-                "damageAmount": 40000.0,
-                "name": "Raven's Dive"
+                "damageAmount": 40000.0
               }
             ],
             "condition": {
@@ -179,9 +179,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Raven's Dive",
                 "damageType": "Damage",
-                "damageAmount": 40000.0,
-                "name": "Raven's Dive"
+                "damageAmount": 40000.0
               },
               {
                 "$type": "KnockbackEffect",
@@ -212,9 +212,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Meteor Stream",
               "damageType": "Damage",
-              "damageAmount": 80000.0,
-              "name": "Meteor Stream"
+              "damageAmount": 80000.0
             }
           }
         ]
@@ -241,9 +241,9 @@
             "effects": [
               {
                 "$type": "DamageEffect",
+                "name": "Tempest Wing",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "Tempest Wing"
+                "damageAmount": 120000.0
               }
             ],
             "condition": {
@@ -252,9 +252,9 @@
             "failedConditionEffects": [
               {
                 "$type": "DamageEffect",
+                "name": "Tempest Wing",
                 "damageType": "Damage",
-                "damageAmount": 120000.0,
-                "name": "Tempest Wing"
+                "damageAmount": 120000.0
               },
               {
                 "$type": "KnockbackEffect",
@@ -281,9 +281,9 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
+              "name": "Aetheric Profusion",
               "damageType": "Magic",
-              "damageAmount": 80000.0,
-              "name": "Aetheric Profusion"
+              "damageAmount": 80000.0
             },
             "condition": {
               "$type": "CheckPlayerStatus",
@@ -291,9 +291,9 @@
             },
             "failedConditionEffect": {
               "$type": "DamageEffect",
+              "name": "Aetheric Profusion",
               "damageType": "Magic",
-              "damageAmount": 800000.0,
-              "name": "Aetheric Profusion"
+              "damageAmount": 800000.0
             }
           }
         ]
