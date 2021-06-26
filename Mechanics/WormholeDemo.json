@@ -565,7 +565,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 6.0
+            "timeToWait": 4.0
           },
           {
             "$type": "StartCastBar",
@@ -613,11 +613,11 @@
                 0
               ]
             },
-            "movementTime": -1.0
+            "movementTime": -2.0
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.0
+            "timeToWait": 2.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -627,7 +627,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 12.3
+            "timeToWait": 13.3
           },
           {
             "$type": "StartCastBar",
