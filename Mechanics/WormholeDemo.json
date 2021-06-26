@@ -6,13 +6,17 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
             "$type": "StartCastBar",
             "castName": "Limit Cut",
             "duration": 2.0
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 2.0
+            "timeToWait": 3.5
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -104,7 +108,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 7.55
+            "timeToWait": 5.05
           },
           {
             "$type": "SetEnemyVisible"
@@ -414,7 +418,7 @@
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 7.0
           },
           {
             "$type": "StartCastBar",
@@ -431,7 +435,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 6.0
+            "timeToWait": 5.0
           },
           {
             "$type": "StartCastBar",
@@ -464,7 +468,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 7.0
+            "timeToWait": 8.0
           },
           {
             "$type": "StartCastBar",
@@ -495,8 +499,7 @@
                 0,
                 1
               ],
-              "classType": "Dps",
-              "dropExtraEvents": true
+              "classType": "Dps"
             },
             "referenceMechanicName": "Enumeration",
             "spawnOnTarget": true
@@ -515,7 +518,7 @@
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 2.0
+            "timeToWait": 4.0
           },
           {
             "$type": "StartCastBar",
@@ -524,7 +527,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 4.0
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnEnemy",
@@ -562,7 +565,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 6.0
           },
           {
             "$type": "StartCastBar",
@@ -587,7 +590,8 @@
           {
             "$type": "SpawnTargetedEvents",
             "targetingScheme": {
-              "$type": "TargetSpecificPlayerIds",
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
               "targetIds": [
                 0
               ]
@@ -610,6 +614,10 @@
               ]
             },
             "movementTime": -1.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -669,10 +677,6 @@
             "isPositionRelative": true
           },
           {
-            "$type": "WaitEvent",
-            "timeToWait": 1.0
-          },
-          {
             "$type": "StartCastBar",
             "castName": "Eye of the Chakram",
             "duration": 5.0
@@ -706,7 +710,7 @@
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.0
+            "timeToWait": 0.1
           },
           {
             "$type": "ModifyMechanicEvent",
@@ -818,62 +822,47 @@
     "Tower-A": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 3.0,
+        "x": 2.6,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
       },
       "colorHtml": "#0048ff",
-      "persistentTickInterval": 0.1,
-      "persistentActivationDelay": 10.0,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 15.0
+            "timeToWait": 7.5
           },
           {
-            "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "TowerFail",
-            "isPositionRelative": true
-          }
-        ]
-      },
-      "persistentMechanic": {
-        "$type": "ExecuteMultipleEvents",
-        "events": [
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Repentance",
+                "damageType": "Magic",
+                "damageAmount": 30000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          },
           {
             "$type": "CheckNumberOfPlayers",
             "expressionFormat": "{0} > 0",
-            "successEvent": {
-              "$type": "ExecuteMultipleEvents",
-              "events": [
-                {
-                  "$type": "ApplyEffectToPlayers",
-                  "effects": [
-                    {
-                      "$type": "DamageEffect",
-                      "name": "Repentance",
-                      "damageType": "Magic",
-                      "damageAmount": 30000.0
-                    },
-                    {
-                      "$type": "ApplyStatusEffect",
-                      "referenceStatusName": "MagicVuln"
-                    }
-                  ]
-                },
-                {
-                  "$type": "SpawnMechanicEvent",
-                  "referenceMechanicName": "Tower-B",
-                  "isPositionRelative": true
-                },
-                {
-                  "$type": "EndMechanic"
-                }
-              ]
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "TowerFail",
+              "isPositionRelative": true
             }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-B",
+            "isPositionRelative": true
           }
         ]
       }
@@ -887,56 +876,41 @@
         "w": 0.0
       },
       "colorHtml": "#0048ff",
-      "persistentTickInterval": 0.1,
-      "persistentActivationDelay": 1.0,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 4.2
           },
           {
-            "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "TowerFail",
-            "isPositionRelative": true
-          }
-        ]
-      },
-      "persistentMechanic": {
-        "$type": "ExecuteMultipleEvents",
-        "events": [
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Repentance",
+                "damageType": "Magic",
+                "damageAmount": 30000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          },
           {
             "$type": "CheckNumberOfPlayers",
             "expressionFormat": "{0} > 0",
-            "successEvent": {
-              "$type": "ExecuteMultipleEvents",
-              "events": [
-                {
-                  "$type": "ApplyEffectToPlayers",
-                  "effects": [
-                    {
-                      "$type": "DamageEffect",
-                      "name": "Repentance",
-                      "damageType": "Magic",
-                      "damageAmount": 30000.0
-                    },
-                    {
-                      "$type": "ApplyStatusEffect",
-                      "referenceStatusName": "MagicVuln"
-                    }
-                  ]
-                },
-                {
-                  "$type": "SpawnMechanicEvent",
-                  "referenceMechanicName": "Tower-C",
-                  "isPositionRelative": true
-                },
-                {
-                  "$type": "EndMechanic"
-                }
-              ]
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "TowerFail",
+              "isPositionRelative": true
             }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-C",
+            "isPositionRelative": true
           }
         ]
       }
@@ -950,50 +924,35 @@
         "w": 0.0
       },
       "colorHtml": "#0048ff",
-      "persistentTickInterval": 0.1,
-      "persistentActivationDelay": 1.0,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 4.2
           },
           {
-            "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "TowerFail",
-            "isPositionRelative": true
-          }
-        ]
-      },
-      "persistentMechanic": {
-        "$type": "ExecuteMultipleEvents",
-        "events": [
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Repentance",
+                "damageType": "Magic",
+                "damageAmount": 30000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          },
           {
             "$type": "CheckNumberOfPlayers",
             "expressionFormat": "{0} > 0",
-            "successEvent": {
-              "$type": "ExecuteMultipleEvents",
-              "events": [
-                {
-                  "$type": "ApplyEffectToPlayers",
-                  "effects": [
-                    {
-                      "$type": "DamageEffect",
-                      "name": "Repentance",
-                      "damageType": "Magic",
-                      "damageAmount": 30000.0
-                    },
-                    {
-                      "$type": "ApplyStatusEffect",
-                      "referenceStatusName": "MagicVuln"
-                    }
-                  ]
-                },
-                {
-                  "$type": "EndMechanic"
-                }
-              ]
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "TowerFail",
+              "isPositionRelative": true
             }
           }
         ]
@@ -1076,7 +1035,7 @@
       "collisionShape": "Rectangle",
       "collisionShapeParams": {
         "x": 40.0,
-        "y": 2.0,
+        "y": 4.0,
         "z": 0.0,
         "w": 0.0
       },
@@ -1183,8 +1142,8 @@
     "ApocRay": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 11.0,
-        "y": 100.0,
+        "x": 9.0,
+        "y": 90.0,
         "z": 0.0,
         "w": 0.0
       },
@@ -1299,13 +1258,6 @@
           {
             "$type": "CheckNumberOfPlayers",
             "expressionFormat": "{0} = 3",
-            "successEvent": {
-              "$type": "ApplyEffectToPlayers",
-              "effect": {
-                "$type": "ApplyStatusEffect",
-                "referenceStatusName": "Enumeration"
-              }
-            },
             "failEvent": {
               "$type": "ApplyEffectToPlayers",
               "effect": {
@@ -1404,7 +1356,7 @@
       "visible": false,
       "mechanic": {
         "$type": "SpawnEnemy",
-        "enemyName": "Alexander Prime",
+        "enemyName": "Brute Justice",
         "textureFilePath": "Mechanics/Resources/BruteJustice.png",
         "colorHtml": "#8b4800",
         "maxHp": 2147483647,
@@ -1541,18 +1493,6 @@
         "$type": "ApplyEffectToPlayers",
         "effect": {
           "$type": "DamageEffect",
-          "damageType": "TrueDamage",
-          "damageAmount": 9999999.0
-        }
-      }
-    },
-    "EnumerationOverlap": {
-      "visible": false,
-      "mechanic": {
-        "$type": "ApplyEffectToTargetOnly",
-        "effect": {
-          "$type": "DamageEffect",
-          "name": "Enumeration",
           "damageType": "TrueDamage",
           "damageAmount": 9999999.0
         }
@@ -1759,17 +1699,6 @@
       "statusName": "Magic Vulnerability Up",
       "statusDescription": "Magic damage taken is increased.",
       "duration": 10.0
-    },
-    "Enumeration": {
-      "$type": "CheckConditionOnApply",
-      "condition": {
-        "$type": "CheckPlayerStatus",
-        "statusName": "Magic Vulnerability Up"
-      },
-      "successMechanicName": "EnumerationOverlap",
-      "statusIconPath": "Mechanics/Resources/MagicVuln.png",
-      "statusName": "Magic Vulnerability Up",
-      "duration": 1.0
     },
     "PhysVuln": {
       "$type": "DamageModifier",
