@@ -1,0 +1,961 @@
+{
+  "referenceMechanicProperties": {
+    "TwintaniaMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "NaelMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "ExecuteRandomEventSequence",
+            "mechanicPoolName": "Quote-Pool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.0
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "referenceMechanicName": "SpreadAoe",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "Neurolink": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.4,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#9cff00",
+      "persistentTickInterval": 0.2,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "Neurolink"
+        }
+      }
+    },
+    "HatchMove": {
+      "followSpeed": 1.2
+    },
+    "Hatch": {
+      "isTargeted": true,
+      "followSpeed": 0.0,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.4,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#a800ff",
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 1.0,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "HatchMove"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 20.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HatchExplode",
+            "isPositionRelative": true
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 0",
+        "failEvent": {
+          "$type": "CheckNumberOfPlayers",
+          "expressionFormat": "{0} = 1",
+          "condition": {
+            "$type": "CheckPlayerStatus",
+            "statusName": "Neurolink"
+          },
+          "successEvent": {
+            "$type": "ExecuteMultipleEvents",
+            "events": [
+              {
+                "$type": "SpawnMechanicEvent",
+                "referenceMechanicName": "HatchPopped",
+                "isPositionRelative": true
+              },
+              {
+                "$type": "EndMechanic"
+              }
+            ]
+          },
+          "failEvent": {
+            "$type": "ExecuteMultipleEvents",
+            "events": [
+              {
+                "$type": "SpawnMechanicEvent",
+                "referenceMechanicName": "HatchExplode",
+                "isPositionRelative": true
+              },
+              {
+                "$type": "EndMechanic"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "HatchPopped": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#a800ff",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Hatch",
+                "damageType": "Magic",
+                "damageAmount": 30000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Neurolink"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Hatch",
+                "damageType": "Magic",
+                "damageAmount": 300000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "HatchExplode": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#a800ff",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Deep Hatch",
+                "damageType": "TrueDamage",
+                "damageAmount": 9999999.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "SpreadAoe": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#dcdcdc",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Meteor Stream",
+              "damageType": "Damage",
+              "damageAmount": 80000.0
+            }
+          }
+        ]
+      }
+    },
+    "SetVisible": {
+      "visible": true
+    },
+    "Earthshaker": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 20.0,
+        "y": 90.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c78825",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.6,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.8,
+              "y": 0.8,
+              "z": 1.0
+            },
+            "colorHtml": "#f0ba00",
+            "spawnOnPlayer": true,
+            "isBillboard": true,
+            "visualDuration": 6.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.8
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Earthshaker",
+                "damageType": "Physical",
+                "damageAmount": 80000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln"
+              }
+            ]
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "EarthshakerPuddle",
+            "spawnOnTarget": true
+          }
+        ]
+      }
+    },
+    "EarthshakerPuddle": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c78825",
+      "persistentTickInterval": 0.3,
+      "persistentActivationDelay": 2.0,
+      "mechanic": {
+        "$type": "WaitEvent",
+        "timeToWait": 10.0
+      },
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Sludge",
+          "damageType": "Physical",
+          "damageAmount": 300000.0
+        }
+      }
+    },
+    "ArenaBoundary": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 7.0,
+        "w": 0.0
+      },
+      "colorHtml": "#8800FF",
+      "persistentTickInterval": 0.2,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      }
+    },
+    "Neurolinks-A": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Neurolink",
+            "position": {
+              "x": 0.0,
+              "y": 3.7
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Neurolink",
+            "position": {
+              "x": 3.2042,
+              "y": -1.85
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Neurolink",
+            "position": {
+              "x": -3.2042,
+              "y": -1.85
+            }
+          }
+        ]
+      }
+    },
+    "Neurolinks-B": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Neurolink",
+            "position": {
+              "x": 0.0,
+              "y": -3.7
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Neurolink",
+            "position": {
+              "x": 3.2042,
+              "y": 1.85
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Neurolink",
+            "position": {
+              "x": -3.2042,
+              "y": 1.85
+            }
+          }
+        ]
+      }
+    },
+    "DoubleHatch": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/LimitCut-3.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 0.5
+            },
+            "colorHtml": "#a800ff",
+            "spawnOnPlayer": true,
+            "isBillboard": true,
+            "visualDuration": 5.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "Hatch",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.2
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "Hatch",
+            "isPositionRelative": true
+          }
+        ]
+      }
+    },
+    "StartButton-A": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#00ff00",
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 1.0,
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 0",
+        "failEvent": {
+          "$type": "ExecuteMultipleEvents",
+          "events": [
+            {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Neurolinks-A"
+            },
+            {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "StartMechanics"
+            },
+            {
+              "$type": "ClearMechanicsWithTag",
+              "mechanicTag": "StartButton"
+            }
+          ]
+        }
+      },
+      "mechanicTag": "StartButton"
+    },
+    "StartButton-B": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#00ff00",
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 1.0,
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 0",
+        "failEvent": {
+          "$type": "ExecuteMultipleEvents",
+          "events": [
+            {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Neurolinks-B"
+            },
+            {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "StartMechanics"
+            },
+            {
+              "$type": "ClearMechanicsWithTag",
+              "mechanicTag": "StartButton"
+            }
+          ]
+        }
+      },
+      "mechanicTag": "StartButton"
+    },
+    "StartMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2
+              ]
+            },
+            "referenceMechanicName": "DoubleHatch"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "SpreadAoe",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                1
+              ]
+            },
+            "referenceMechanicName": "SpreadAoe",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2
+              ]
+            },
+            "referenceMechanicName": "SpreadAoe",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                3
+              ]
+            },
+            "referenceMechanicName": "SpreadAoe",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4
+              ]
+            },
+            "referenceMechanicName": "SpreadAoe",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                5
+              ]
+            },
+            "referenceMechanicName": "SpreadAoe",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6
+              ]
+            },
+            "referenceMechanicName": "SpreadAoe",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                7
+              ]
+            },
+            "referenceMechanicName": "SpreadAoe",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "referenceMechanicName": "Earthshaker"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "Earthshaker"
+          }
+        ]
+      }
+    }
+  },
+  "referenceTetherProperties": {},
+  "mechanicPools": {
+    "Spawn-Bosses-Pool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses-A"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses-A",
+        "rotation": 120.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses-A",
+        "rotation": 240.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses-B"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses-B",
+        "rotation": 120.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses-B",
+        "rotation": 240.0
+      }
+    ],
+    "Quote-Pool": [
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Fellruin-In-Spread.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 2.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 4.17,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "isBillboard": true,
+            "visualDuration": 6.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Dynamo",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "moveToTarget": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "movementTime": 0.2
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "Dive",
+            "isPositionRelative": true,
+            "spawnOnTarget": true
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Fellruin-Spread-In.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 2.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 4.17,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "isBillboard": true,
+            "visualDuration": 6.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.0
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "moveToTarget": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "movementTime": 0.2
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "Dive",
+            "isPositionRelative": true,
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Dynamo",
+            "isPositionRelative": true
+          }
+        ]
+      }
+    ]
+  },
+  "referenceStatusProperties": {
+    "Neurolink": {
+      "statusIconPath": "Mechanics/Resources/Neurolink.png",
+      "statusName": "Neurolink",
+      "statusDescription": "Neurolink",
+      "duration": 0.3
+    },
+    "MagicVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 10.0,
+      "damageType": "Magic",
+      "statusIconPath": "Mechanics/Resources/MagicVuln.png",
+      "statusName": "Magic Vulnerability Up",
+      "statusDescription": "Magic damage taken is increased.",
+      "duration": 16.0
+    },
+    "PhysVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 10.0,
+      "damageType": "Physical",
+      "statusIconPath": "Mechanics/Resources/PhysVuln.png",
+      "statusName": "Physical Vulnerability Up",
+      "statusDescription": "Physical damage taken is increased.",
+      "duration": 16.0
+    }
+  },
+  "mechanicEvents": [
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary"
+    },
+    {
+      "$type": "SpawnVisualObject",
+      "textureFilePath": "Mechanics/Resources/ArenaCircle.png",
+      "relativePosition": {
+        "x": 0.0,
+        "y": -0.001,
+        "z": 0.0
+      },
+      "eulerAngles": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 15.8637,
+        "y": 15.8637,
+        "z": 1.0
+      },
+      "visualDuration": "Infinity"
+    },
+    {
+      "$type": "ExecuteMultipleEvents",
+      "events": [
+        {
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "StartButton-A",
+          "position": {
+            "x": 0.0,
+            "y": 3.0
+          }
+        },
+        {
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "StartButton-B",
+          "position": {
+            "x": 0.0,
+            "y": -3.0
+          }
+        }
+      ]
+    }
+  ]
+}
