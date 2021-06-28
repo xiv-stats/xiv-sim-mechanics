@@ -995,13 +995,17 @@
         "w": 0.0
       },
       "colorHtml": "#ffff00",
-      "visible": true,
+      "visible": false,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
             "$type": "WaitEvent",
             "timeToWait": 0.2
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
           },
           {
             "$type": "ApplyEffectToPlayers",
@@ -1040,13 +1044,17 @@
         "w": 0.0
       },
       "colorHtml": "#ffff00",
-      "visible": true,
+      "visible": false,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
             "$type": "WaitEvent",
             "timeToWait": 0.2
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
           },
           {
             "$type": "ApplyEffectToPlayers",

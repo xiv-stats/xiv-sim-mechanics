@@ -166,15 +166,10 @@
         "z": 0.0,
         "w": 0.0
       },
-      "colorHtml": "#ff5a00",
-      "visible": true,
+      "visible": false,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 0.2
-          },
           {
             "$type": "ApplyEffectToPlayers",
             "effects": [
@@ -189,8 +184,31 @@
                 "referenceStatusName": "MagicVuln"
               }
             ]
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HawkBlasterVisual",
+            "isPositionRelative": true
           }
         ]
+      }
+    },
+    "HawkBlasterVisual": {
+      "collisionShapeParams": {
+        "x": 4.2,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff5a00",
+      "visible": true,
+      "mechanic": {
+        "$type": "WaitEvent",
+        "timeToWait": 0.2
       }
     },
     "Spawn-CruiseChaser-LC": {
@@ -615,6 +633,9 @@
         ]
       }
     },
+    "SetVisible": {
+      "visible": true
+    },
     "AlphaSword": {
       "isTargeted": true,
       "collisionShapeParams": {
@@ -624,13 +645,17 @@
         "w": 0.0
       },
       "colorHtml": "#ffff00",
-      "visible": true,
+      "visible": false,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
             "$type": "WaitEvent",
             "timeToWait": 0.2
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
           },
           {
             "$type": "ApplyEffectToPlayers",
@@ -669,13 +694,17 @@
         "w": 0.0
       },
       "colorHtml": "#ffff00",
-      "visible": true,
+      "visible": false,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
             "$type": "WaitEvent",
             "timeToWait": 0.2
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
           },
           {
             "$type": "ApplyEffectToPlayers",
