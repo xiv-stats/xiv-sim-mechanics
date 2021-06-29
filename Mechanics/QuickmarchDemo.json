@@ -882,7 +882,7 @@
   "referenceTetherProperties": {
     "TempestWing": {
       "colorHtml": "#00ff60",
-      "tetherDuration": 6.0,
+      "tetherDuration": 7.0,
       "interceptMechanic": {
         "$type": "SwitchTetheredPlayer"
       },
@@ -919,7 +919,7 @@
         "referenceMechanicName": "SpawnBosses",
         "position": {
           "x": -7.0,
-          "y": 1.0569706E-06
+          "y": 1.05697063E-06
         },
         "rotation": 90.0,
         "isPositionRelative": true,
@@ -929,8 +929,8 @@
         "$type": "SpawnMechanicEvent",
         "referenceMechanicName": "SpawnBosses",
         "position": {
-          "x": -4.9497476,
-          "y": 4.9497476
+          "x": -4.94974756,
+          "y": 4.94974756
         },
         "rotation": 135.0,
         "isPositionRelative": true,
@@ -952,9 +952,9 @@
         "referenceMechanicName": "SpawnBosses",
         "position": {
           "x": 4.949748,
-          "y": 4.9497466
+          "y": 4.94974661
         },
-        "rotation": 225.00002,
+        "rotation": 225.000015,
         "isPositionRelative": true,
         "isRotationRelative": true
       },
@@ -973,10 +973,10 @@
         "$type": "SpawnMechanicEvent",
         "referenceMechanicName": "SpawnBosses",
         "position": {
-          "x": 4.9497457,
+          "x": 4.94974566,
           "y": -4.949749
         },
-        "rotation": 315.00003,
+        "rotation": 315.000031,
         "isPositionRelative": true,
         "isRotationRelative": true
       }
@@ -993,7 +993,6 @@
       "duration": 16.0
     },
     "MegaflareMark": {
-      "statusIconPath": "Mechanics/Resources/Windburn.png",
       "statusName": "Marked for Megaflare",
       "statusDescription": "Chosen to share the Megaflare stack.",
       "duration": 7.0
