@@ -1,0 +1,951 @@
+{
+  "referenceMechanicProperties": {
+    "SnapshotDive": {
+      "isTargeted": false
+    },
+    "SetVisible": {
+      "visible": true
+    },
+    "BahamutMechanics": {
+      "isTargeted": true,
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 14.0,
+        "y": 4.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#0a4d8b",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Bahamut.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#0a4d8b",
+            "isRotationRelative": true,
+            "visualDuration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SnapshotDive"
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#0a4d8b",
+            "spawnOnPlayer": true,
+            "isBillboard": true,
+            "visualDuration": 4.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.8
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Megaflare Dive",
+                "damageType": "Damage",
+                "damageAmount": 90000.0
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 10.0
+              }
+            ]
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "BahamutMechanics2"
+          }
+        ]
+      }
+    },
+    "BahamutMechanics2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TowerPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "MegaflareTarget"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0
+              ],
+              "classType": "Healer"
+            },
+            "referenceMechanicName": "MegaflareTarget"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1
+              ],
+              "classType": "Dps"
+            },
+            "referenceMechanicName": "MegaflareTarget"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetPlayersWithStatusEffect",
+              "numTargets": 1,
+              "statusEffectName": "MegaflareMark"
+            },
+            "referenceMechanicName": "MegaflareStack"
+          }
+        ]
+      }
+    },
+    "NaelMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Nael.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#a917bf",
+            "isRotationRelative": true,
+            "visualDuration": "Infinity"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.9
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetRandomPlayers"
+            },
+            "referenceMechanicName": "Stack",
+            "isPositionRelative": true,
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetRandomPlayers"
+            },
+            "referenceMechanicName": "Hypernova",
+            "isPositionRelative": true,
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.6
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetRandomPlayers"
+            },
+            "referenceMechanicName": "Hypernova",
+            "isPositionRelative": true,
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.6
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetRandomPlayers"
+            },
+            "referenceMechanicName": "Hypernova",
+            "isPositionRelative": true,
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.6
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetRandomPlayers"
+            },
+            "referenceMechanicName": "Hypernova",
+            "isPositionRelative": true,
+            "spawnOnTarget": true
+          }
+        ]
+      }
+    },
+    "Stack": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff60ab",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Thermionic Beam",
+              "damageType": "Damage",
+              "damageAmount": 700000.0,
+              "maxStackAmount": 8
+            }
+          }
+        ]
+      }
+    },
+    "Hypernova": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#352a43",
+      "persistentTickInterval": 0.3,
+      "persistentActivationDelay": 2.0,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Hypernova",
+              "damageType": "Damage",
+              "damageAmount": 10000.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Bleed",
+          "damageType": "Damage",
+          "damageAmount": 999999.0
+        }
+      }
+    },
+    "TwinMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Twintania.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#067743",
+            "isRotationRelative": true,
+            "visualDuration": "Infinity"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          }
+        ]
+      }
+    },
+    "Liquid Hell": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff7200",
+      "persistentTickInterval": 0.3,
+      "persistentActivationDelay": 2.0,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Liquid Hell",
+              "damageType": "Damage",
+              "damageAmount": 10000.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.0
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Burns",
+          "damageType": "Damage",
+          "damageAmount": 999999.0
+        }
+      }
+    },
+    "MegaflareTarget": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "colorHtml": "#ff4200",
+            "spawnOnPlayer": true,
+            "isBillboard": true,
+            "visualDuration": 4.0
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "MegaflareMark"
+            }
+          }
+        ]
+      }
+    },
+    "MegaflareStack": {
+      "isTargeted": true,
+      "followSpeed": 10000.0,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff4200",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Megaflare",
+              "damageType": "Damage",
+              "damageAmount": 350000.0,
+              "maxStackAmount": 4
+            },
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "MegaflareMark"
+            },
+            "failedConditionEffect": {
+              "$type": "DamageEffect",
+              "name": "Megaflare",
+              "damageType": "Damage",
+              "damageAmount": 200000.0
+            }
+          }
+        ]
+      }
+    },
+    "SpawnTowers": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower",
+            "position": {
+              "x": 3.5,
+              "y": 0.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower",
+            "position": {
+              "x": -3.5,
+              "y": 0.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower",
+            "position": {
+              "x": 0.0,
+              "y": 3.5
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower",
+            "position": {
+              "x": 0.0,
+              "y": -3.5
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "Tower Fail": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#FF0000",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Tower Failed",
+              "damageType": "Damage",
+              "damageAmount": 9999999.0
+            }
+          }
+        ]
+      }
+    },
+    "Tower": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#FFFF00",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Tower.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.6,
+              "y": 1.13256,
+              "z": 0.6
+            },
+            "colorHtml": "#FFFF00",
+            "visualDuration": 8.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Tower.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.6,
+              "y": 1.13256,
+              "z": 0.6
+            },
+            "colorHtml": "#FFFF00",
+            "visualDuration": 8.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 8.0
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} = 1",
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Tower Fail",
+              "isPositionRelative": true
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Megaflare",
+              "damageType": "Damage",
+              "damageAmount": 10000.0
+            }
+          }
+        ]
+      }
+    },
+    "ArenaBoundary": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 7.0,
+        "w": 0.0
+      },
+      "colorHtml": "#8800FF",
+      "persistentTickInterval": 0.2,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      }
+    },
+    "SpawnBosses": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetRandomPlayers"
+            },
+            "referenceMechanicName": "BahamutMechanics",
+            "position": {
+              "x": 0.0,
+              "y": 7.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "TwinMechanics",
+            "position": {
+              "x": -6.0,
+              "y": -3.5
+            },
+            "rotation": 60.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "NaelMechanics",
+            "position": {
+              "x": 6.0,
+              "y": -3.5
+            },
+            "rotation": -60.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "SpawnBossesB": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetRandomPlayers"
+            },
+            "referenceMechanicName": "BahamutMechanics",
+            "position": {
+              "x": 0.0,
+              "y": 7.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "NaelMechanics",
+            "position": {
+              "x": -6.0,
+              "y": -3.5
+            },
+            "rotation": 60.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "TwinMechanics",
+            "position": {
+              "x": 6.0,
+              "y": -3.5
+            },
+            "rotation": -60.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    }
+  },
+  "referenceTetherProperties": {},
+  "mechanicPools": {
+    "TowerPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnTowers"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnTowers",
+        "rotation": 45.0
+      }
+    ],
+    "BossPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses",
+        "rotation": 45.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses",
+        "rotation": 90.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses",
+        "rotation": 135.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses",
+        "rotation": 180.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses",
+        "rotation": 225.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses",
+        "rotation": 270.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBosses",
+        "rotation": 315.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBossesB"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBossesB",
+        "rotation": 45.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBossesB",
+        "rotation": 90.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBossesB",
+        "rotation": 135.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBossesB",
+        "rotation": 180.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBossesB",
+        "rotation": 225.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBossesB",
+        "rotation": 270.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnBossesB",
+        "rotation": 315.0
+      }
+    ]
+  },
+  "referenceStatusProperties": {
+    "MegaflareMark": {
+      "statusName": "MegaflareMark",
+      "statusDescription": "Chosen to share the Megaflare stack.",
+      "duration": 7.0
+    }
+  },
+  "mechanicEvents": [
+    {
+      "$type": "SpawnVisualObject",
+      "textureFilePath": "Mechanics/Resources/ArenaCircle.png",
+      "relativePosition": {
+        "x": 0.0,
+        "y": -0.001,
+        "z": 0.0
+      },
+      "eulerAngles": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 15.8637,
+        "y": 15.8637,
+        "z": 1.0
+      },
+      "visualDuration": "Infinity"
+    },
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary"
+    },
+    {
+      "$type": "ExecuteRandomEvents",
+      "mechanicPoolName": "BossPool"
+    }
+  ]
+}
