@@ -12,11 +12,18 @@
           {
             "$type": "StartCastBar",
             "castName": "Limit Cut",
-            "duration": 2.0
+            "duration": 1.0
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 3.5
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -108,14 +115,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.05
-          },
-          {
-            "$type": "SetEnemyVisible"
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 1.45
+            "timeToWait": 8.0
           },
           {
             "$type": "SetEnemyMovement",
@@ -129,11 +129,11 @@
                 0
               ]
             },
-            "movementTime": 0.1
+            "movementTime": 0.01
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 0.1
+            "timeToWait": 0.01
           },
           {
             "$type": "SetEnemyMovement",
@@ -146,16 +146,12 @@
             "movementTime": -1.0
           },
           {
-            "$type": "WaitEvent",
-            "timeToWait": 0.1
-          },
-          {
             "$type": "SetEnemyVisible",
             "visible": true
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 1.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -170,7 +166,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 1.3
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -188,7 +184,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.45
+            "timeToWait": 1.7
           },
           {
             "$type": "SetEnemyMovement",
@@ -202,11 +198,11 @@
                 2
               ]
             },
-            "movementTime": 0.1
+            "movementTime": 0.01
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 0.1
+            "timeToWait": 0.01
           },
           {
             "$type": "SetEnemyMovement",
@@ -219,16 +215,12 @@
             "movementTime": -1.0
           },
           {
-            "$type": "WaitEvent",
-            "timeToWait": 0.1
-          },
-          {
             "$type": "SetEnemyVisible",
             "visible": true
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 1.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -243,7 +235,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 1.3
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -261,7 +253,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.45
+            "timeToWait": 1.7
           },
           {
             "$type": "SetEnemyMovement",
@@ -275,11 +267,11 @@
                 4
               ]
             },
-            "movementTime": 0.1
+            "movementTime": 0.01
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 0.1
+            "timeToWait": 0.01
           },
           {
             "$type": "SetEnemyMovement",
@@ -292,16 +284,12 @@
             "movementTime": -1.0
           },
           {
-            "$type": "WaitEvent",
-            "timeToWait": 0.1
-          },
-          {
             "$type": "SetEnemyVisible",
             "visible": true
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 1.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -316,7 +304,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 1.3
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -334,7 +322,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.45
+            "timeToWait": 1.7
           },
           {
             "$type": "SetEnemyMovement",
@@ -348,11 +336,11 @@
                 6
               ]
             },
-            "movementTime": 0.1
+            "movementTime": 0.01
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 0.1
+            "timeToWait": 0.01
           },
           {
             "$type": "SetEnemyMovement",
@@ -365,16 +353,12 @@
             "movementTime": -1.0
           },
           {
-            "$type": "WaitEvent",
-            "timeToWait": 0.1
-          },
-          {
             "$type": "SetEnemyVisible",
             "visible": true
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 1.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -389,7 +373,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 1.3
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -423,11 +407,11 @@
           {
             "$type": "StartCastBar",
             "castName": "Void of Repentence",
-            "duration": 3.0
+            "duration": 2.5
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 4.5
           },
           {
             "$type": "ExecuteRandomEvents",
@@ -435,7 +419,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 6.5
           },
           {
             "$type": "StartCastBar",
@@ -468,12 +452,12 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 8.0
+            "timeToWait": 7.5
           },
           {
             "$type": "StartCastBar",
             "castName": "Incinerating Heat",
-            "duration": 5.0
+            "duration": 4.5
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -490,6 +474,10 @@
           {
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "ClearVulns"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -518,16 +506,16 @@
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 4.0
+            "timeToWait": 3.5
           },
           {
             "$type": "StartCastBar",
             "castName": "Link-Up",
-            "duration": 3.0
+            "duration": 2.5
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 3.0
+            "timeToWait": 3.5
           },
           {
             "$type": "SpawnEnemy",
@@ -565,12 +553,12 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 4.0
+            "timeToWait": 6.0
           },
           {
             "$type": "StartCastBar",
             "castName": "Super Jump",
-            "duration": 4.0
+            "duration": 3.0
           },
           {
             "$type": "WaitEvent",
@@ -585,7 +573,7 @@
                 0
               ]
             },
-            "movementTime": 0.2
+            "movementTime": 0.5
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -602,7 +590,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 0.2
+            "timeToWait": 0.5
           },
           {
             "$type": "SetEnemyMovement",
@@ -627,12 +615,12 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 13.3
+            "timeToWait": 10.3
           },
           {
             "$type": "StartCastBar",
             "castName": "Missile Command",
-            "duration": 3.0
+            "duration": 2.5
           },
           {
             "$type": "WaitEvent",
@@ -666,7 +654,7 @@
             },
             "colorHtml": "#8b4800",
             "isRotationRelative": true,
-            "visualDuration": 6.0
+            "visualDuration": 8.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -677,13 +665,17 @@
             "isPositionRelative": true
           },
           {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
             "$type": "StartCastBar",
             "castName": "Eye of the Chakram",
-            "duration": 5.0
+            "duration": 5.5
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 5.5
           }
         ]
       }
@@ -718,7 +710,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 4.8
+            "timeToWait": 7.9
           },
           {
             "$type": "ModifyMechanicEvent",
@@ -778,12 +770,12 @@
           {
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Tower-Offset",
-            "rotation": 22.5
+            "rotation": 20.0
           },
           {
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Tower-Offset",
-            "rotation": 202.5
+            "rotation": 200.0
           }
         ]
       }
@@ -796,12 +788,12 @@
           {
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Tower-Offset",
-            "rotation": -22.5
+            "rotation": -20.0
           },
           {
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Tower-Offset",
-            "rotation": -202.5
+            "rotation": -200.0
           }
         ]
       }
@@ -812,7 +804,7 @@
         "$type": "SpawnMechanicEvent",
         "referenceMechanicName": "Tower-A",
         "position": {
-          "x": 4.22,
+          "x": 3.7,
           "y": 0.0
         },
         "isPositionRelative": true,
@@ -822,7 +814,7 @@
     "Tower-A": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 2.6,
+        "x": 2.8,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -833,7 +825,7 @@
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 7.5
+            "timeToWait": 10.0
           },
           {
             "$type": "ApplyEffectToPlayers",
@@ -870,7 +862,7 @@
     "Tower-B": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 2.0,
+        "x": 1.9,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -929,7 +921,7 @@
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 4.2
+            "timeToWait": 3.6
           },
           {
             "$type": "ApplyEffectToPlayers",
@@ -962,7 +954,7 @@
       "collisionShape": "Rectangle",
       "collisionShapeParams": {
         "x": 40.0,
-        "y": 6.0,
+        "y": 5.3,
         "z": 0.0,
         "w": 0.0
       },
@@ -1116,7 +1108,7 @@
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 0.2
+            "timeToWait": 0.5
           },
           {
             "$type": "ApplyEffectToPlayers",
@@ -1207,7 +1199,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 4.5
           },
           {
             "$type": "ModifyMechanicEvent",
@@ -1261,7 +1253,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 4.5
           },
           {
             "$type": "CheckNumberOfPlayers",
@@ -1312,7 +1304,6 @@
         "maxHp": 2147483647,
         "baseMoveSpeed": 2.0,
         "hitboxSize": 3.0,
-        "rotation": 180.0,
         "isTargetable": false,
         "visualPosition": {
           "x": 0.0,
@@ -1327,7 +1318,7 @@
         "referenceMechanicName": "AlexMechanics",
         "position": {
           "x": 0.0,
-          "y": 6.0
+          "y": -7.3
         }
       }
     },
@@ -1341,7 +1332,7 @@
         "maxHp": 2147483647,
         "baseMoveSpeed": 2.0,
         "hitboxSize": 2.0,
-        "rotation": -45.0,
+        "rotation": -135.0,
         "isTargetable": false,
         "visualPosition": {
           "x": 0.0,
@@ -1356,7 +1347,7 @@
         "referenceMechanicName": "BJMechanics",
         "position": {
           "x": 5.0,
-          "y": -5.0
+          "y": 5.0
         }
       }
     },
@@ -1370,7 +1361,7 @@
         "maxHp": 2147483647,
         "baseMoveSpeed": 2.0,
         "hitboxSize": 2.0,
-        "rotation": 45.0,
+        "rotation": 135.0,
         "isTargetable": false,
         "visualPosition": {
           "x": 0.0,
@@ -1385,7 +1376,7 @@
         "referenceMechanicName": "BJMechanics",
         "position": {
           "x": -5.0,
-          "y": -5.0
+          "y": 5.0
         }
       }
     },
@@ -1399,7 +1390,7 @@
         "maxHp": 2147483647,
         "baseMoveSpeed": 2.0,
         "hitboxSize": 2.0,
-        "rotation": 45.0,
+        "rotation": 135.0,
         "isTargetable": false,
         "visualPosition": {
           "x": 0.0,
@@ -1414,7 +1405,7 @@
         "referenceMechanicName": "LimitCutSequence",
         "position": {
           "x": -5.0,
-          "y": -5.0
+          "y": 5.0
         }
       }
     },
@@ -1428,7 +1419,7 @@
         "maxHp": 2147483647,
         "baseMoveSpeed": 2.0,
         "hitboxSize": 2.0,
-        "rotation": -45.0,
+        "rotation": -135.0,
         "isTargetable": false,
         "visualPosition": {
           "x": 0.0,
@@ -1443,7 +1434,7 @@
         "referenceMechanicName": "LimitCutSequence",
         "position": {
           "x": 5.0,
-          "y": -5.0
+          "y": 5.0
         }
       }
     },
@@ -1492,7 +1483,7 @@
       "collisionShapeParams": {
         "x": 25.0,
         "y": 360.0,
-        "z": 7.0,
+        "z": 6.5,
         "w": 0.0
       },
       "colorHtml": "#8800FF",
@@ -1725,7 +1716,7 @@
     },
     {
       "$type": "SpawnVisualObject",
-      "textureFilePath": "Mechanics/Resources/ArenaCircle.png",
+      "textureFilePath": "Mechanics/Resources/ArenaTeaP3.png",
       "relativePosition": {
         "x": 0.0,
         "y": -0.001,
@@ -1737,8 +1728,8 @@
         "z": 0.0
       },
       "scale": {
-        "x": 15.8637,
-        "y": 15.8637,
+        "x": 14.0,
+        "y": 14.0,
         "z": 1.0
       },
       "visualDuration": "Infinity"
