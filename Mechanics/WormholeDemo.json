@@ -1142,7 +1142,7 @@
     "ApocRay": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 9.0,
+        "x": 8.5,
         "y": 90.0,
         "z": 0.0,
         "w": 0.0
