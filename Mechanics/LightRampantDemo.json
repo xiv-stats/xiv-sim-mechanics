@@ -381,7 +381,7 @@
         ]
       }
     },
-    "Tower Fail": {
+    "Tower Fail-L": {
       "collisionShape": "Round",
       "collisionShapeParams": {
         "x": 50.0,
@@ -403,6 +403,40 @@
               {
                 "$type": "DamageEffect",
                 "name": "Inescapable Illumination",
+                "damageType": "Damage",
+                "damageAmount": 120000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Tower Fail-D": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#FF0000",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Inescapable Darkness",
                 "damageType": "Damage",
                 "damageAmount": 120000.0
               },
@@ -1267,7 +1301,7 @@
             "expressionFormat": "{0} = 1",
             "failEvent": {
               "$type": "SpawnMechanicEvent",
-              "referenceMechanicName": "Tower Fail",
+              "referenceMechanicName": "Tower Fail-L",
               "isPositionRelative": true
             }
           },
@@ -1369,7 +1403,7 @@
             "expressionFormat": "{0} = 1",
             "failEvent": {
               "$type": "SpawnMechanicEvent",
-              "referenceMechanicName": "Tower Fail",
+              "referenceMechanicName": "Tower Fail-D",
               "isPositionRelative": true
             }
           },
@@ -1471,7 +1505,7 @@
             "expressionFormat": "{0} = 2",
             "failEvent": {
               "$type": "SpawnMechanicEvent",
-              "referenceMechanicName": "Tower Fail",
+              "referenceMechanicName": "Tower Fail-L",
               "isPositionRelative": true
             }
           },
@@ -1573,7 +1607,7 @@
             "expressionFormat": "{0} = 2",
             "failEvent": {
               "$type": "SpawnMechanicEvent",
-              "referenceMechanicName": "Tower Fail",
+              "referenceMechanicName": "Tower Fail-D",
               "isPositionRelative": true
             }
           },
@@ -1675,7 +1709,7 @@
             "expressionFormat": "{0} = 3",
             "failEvent": {
               "$type": "SpawnMechanicEvent",
-              "referenceMechanicName": "Tower Fail",
+              "referenceMechanicName": "Tower Fail-L",
               "isPositionRelative": true
             }
           },
@@ -1777,7 +1811,7 @@
             "expressionFormat": "{0} = 3",
             "failEvent": {
               "$type": "SpawnMechanicEvent",
-              "referenceMechanicName": "Tower Fail",
+              "referenceMechanicName": "Tower Fail-D",
               "isPositionRelative": true
             }
           },
@@ -1879,7 +1913,7 @@
             "expressionFormat": "{0} = 4",
             "failEvent": {
               "$type": "SpawnMechanicEvent",
-              "referenceMechanicName": "Tower Fail",
+              "referenceMechanicName": "Tower Fail-L",
               "isPositionRelative": true
             }
           },
@@ -1981,7 +2015,7 @@
             "expressionFormat": "{0} = 4",
             "failEvent": {
               "$type": "SpawnMechanicEvent",
-              "referenceMechanicName": "Tower Fail",
+              "referenceMechanicName": "Tower Fail-D",
               "isPositionRelative": true
             }
           },
