@@ -151,7 +151,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.0
+            "timeToWait": 1.03
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -166,7 +166,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.3
+            "timeToWait": 1.43
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -184,7 +184,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.7
+            "timeToWait": 1.63
           },
           {
             "$type": "SetEnemyMovement",
@@ -220,7 +220,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.0
+            "timeToWait": 1.03
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -235,7 +235,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.3
+            "timeToWait": 1.43
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -253,7 +253,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.7
+            "timeToWait": 1.63
           },
           {
             "$type": "SetEnemyMovement",
@@ -289,7 +289,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.0
+            "timeToWait": 1.03
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -304,7 +304,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.3
+            "timeToWait": 1.43
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -322,7 +322,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.7
+            "timeToWait": 1.63
           },
           {
             "$type": "SetEnemyMovement",
@@ -358,7 +358,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.0
+            "timeToWait": 1.03
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -373,7 +373,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.3
+            "timeToWait": 1.43
           },
           {
             "$type": "SpawnTargetedEvents",
