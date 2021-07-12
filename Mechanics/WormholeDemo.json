@@ -690,7 +690,7 @@
       "isTargeted": true,
       "collisionShape": "Rectangle",
       "collisionShapeParams": {
-        "x": 40.0,
+        "x": 23.33,
         "y": 2.0,
         "z": 0.0,
         "w": 0.0
@@ -804,7 +804,7 @@
         "$type": "SpawnMechanicEvent",
         "referenceMechanicName": "Tower-A",
         "position": {
-          "x": 3.7,
+          "x": 4.0,
           "y": 0.0
         },
         "isPositionRelative": true,
@@ -814,7 +814,7 @@
     "Tower-A": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 2.8,
+        "x": 2.67,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -862,7 +862,7 @@
     "Tower-B": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 1.9,
+        "x": 2.0,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -953,8 +953,8 @@
     "Sacrament": {
       "collisionShape": "Rectangle",
       "collisionShapeParams": {
-        "x": 40.0,
-        "y": 5.3,
+        "x": 33.33,
+        "y": 5.33,
         "z": 0.0,
         "w": 0.0
       },
@@ -981,7 +981,7 @@
     "AlphaSword": {
       "isTargeted": true,
       "collisionShapeParams": {
-        "x": 10.0,
+        "x": 8.33,
         "y": 90.0,
         "z": 0.0,
         "w": 0.0
@@ -1030,8 +1030,8 @@
       "isTargeted": true,
       "collisionShape": "Rectangle",
       "collisionShapeParams": {
-        "x": 40.0,
-        "y": 3.0,
+        "x": 16.67,
+        "y": 3.33,
         "z": 0.0,
         "w": 0.0
       },
@@ -1097,7 +1097,7 @@
     "SuperJump": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 1.5,
+        "x": 3.33,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -1142,7 +1142,7 @@
     "ApocRay": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 8.5,
+        "x": 8.33,
         "y": 90.0,
         "z": 0.0,
         "w": 0.0
@@ -1169,7 +1169,7 @@
       "followSpeed": 10000.0,
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 1.5,
+        "x": 1.67,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -1223,7 +1223,7 @@
       "followSpeed": 10000.0,
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 1.5,
+        "x": 1.67,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -1318,7 +1318,7 @@
         "referenceMechanicName": "AlexMechanics",
         "position": {
           "x": 0.0,
-          "y": -7.3
+          "y": -7.33
         }
       }
     },
@@ -1483,7 +1483,7 @@
       "collisionShapeParams": {
         "x": 25.0,
         "y": 360.0,
-        "z": 6.5,
+        "z": 6.67,
         "w": 0.0
       },
       "colorHtml": "#8800FF",
@@ -1728,8 +1728,8 @@
         "z": 0.0
       },
       "scale": {
-        "x": 14.0,
-        "y": 14.0,
+        "x": 14.2,
+        "y": 14.2,
         "z": 1.0
       },
       "visualDuration": "Infinity"
