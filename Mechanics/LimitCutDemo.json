@@ -638,10 +638,6 @@
             "timeToWait": 0.2
           },
           {
-            "$type": "ModifyMechanicEvent",
-            "referenceMechanicName": "SetVisible"
-          },
-          {
             "$type": "ApplyEffectToPlayers",
             "effects": [
               {
@@ -685,10 +681,6 @@
           {
             "$type": "WaitEvent",
             "timeToWait": 0.2
-          },
-          {
-            "$type": "ModifyMechanicEvent",
-            "referenceMechanicName": "SetVisible"
           },
           {
             "$type": "ApplyEffectToPlayers",
