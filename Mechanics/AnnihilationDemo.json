@@ -332,6 +332,10 @@
             "referenceMechanicName": "SetHealerThermals"
           },
           {
+            "$type": "SetEnemyMovement",
+            "movementTime": "-Infinity"
+          },
+          {
             "$type": "ExecuteRandomEvents",
             "mechanicPoolName": "IfritTitanPool"
           },
