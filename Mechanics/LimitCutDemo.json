@@ -629,7 +629,7 @@
         "w": 0.0
       },
       "colorHtml": "#ffff00",
-      "visible": false,
+      "visible": true,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
@@ -674,7 +674,7 @@
         "w": 0.0
       },
       "colorHtml": "#ffff00",
-      "visible": false,
+      "visible": true,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
