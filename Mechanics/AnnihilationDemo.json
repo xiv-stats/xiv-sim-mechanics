@@ -1,0 +1,1358 @@
+{
+  "referenceMechanicProperties": {
+    "GarudaMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.1
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "EyeOfTheStorm",
+            "position": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          },
+          {
+            "$type": "SpawnTethersToPlayers",
+            "targetingScheme": {
+              "$type": "TargetRandomPlayers"
+            },
+            "referenceTetherName": "Mesohigh",
+            "tetherOffset": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetTetheredPlayers"
+            },
+            "referenceMechanicName": "Mesohigh",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.6
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "AH hA heE Ha HA",
+            "duration": 1.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetRandomPlayers",
+              "numTargets": 5
+            },
+            "referenceMechanicName": "SpawnFeatherRain",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 8.4
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "EyeOfTheStorm",
+            "position": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          },
+          {
+            "$type": "SpawnTethersToPlayers",
+            "targetingScheme": {
+              "$type": "TargetRandomPlayers"
+            },
+            "referenceTetherName": "Mesohigh",
+            "tetherOffset": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetTetheredPlayers"
+            },
+            "referenceMechanicName": "Mesohigh",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.6
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "AH hA heE Ha HA",
+            "duration": 1.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetRandomPlayers",
+              "numTargets": 5
+            },
+            "referenceMechanicName": "SpawnFeatherRain",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "IfritMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Ifrit.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 2.0,
+              "y": 2.0,
+              "z": 2.0
+            },
+            "colorHtml": "#ff0000",
+            "isRotationRelative": true,
+            "visualDuration": 19.3
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0
+              ],
+              "invertCheck": true
+            },
+            "referenceMechanicName": "FlamingCrush"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.1
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0
+              ],
+              "classType": "Healer"
+            },
+            "referenceMechanicName": "ApplySearingWind"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.6
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "IfritDash",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "TitanMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Titan.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 2.0,
+              "y": 2.0,
+              "z": 2.0
+            },
+            "colorHtml": "#885300",
+            "isRotationRelative": true,
+            "visualDuration": 25.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "referenceMechanicName": "WeightOfTheLand",
+            "spawnOnTarget": true,
+            "resetMechanicDepth": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 15.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Landslide",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Landslide",
+            "rotation": 45.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Landslide",
+            "rotation": -45.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Landslide-Fast",
+            "rotation": 22.5,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Landslide-Fast",
+            "rotation": -22.5,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Landslide-Fast",
+            "rotation": 67.5,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Landslide-Fast",
+            "rotation": -67.5,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "UltimaMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1
+              ],
+              "classType": "Healer"
+            },
+            "referenceMechanicName": "SetHealerThermals"
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": "-Infinity"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "IfritTitanPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.5
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0
+              ],
+              "classType": "Dps"
+            },
+            "referenceMechanicName": "Aetheroplasm",
+            "position": {
+              "x": 1.5,
+              "y": 2.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.1
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0
+              ],
+              "classType": "Dps"
+            },
+            "referenceMechanicName": "Aetheroplasm",
+            "position": {
+              "x": 1.5,
+              "y": 2.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.1
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0
+              ],
+              "classType": "Dps"
+            },
+            "referenceMechanicName": "Aetheroplasm",
+            "position": {
+              "x": 1.5,
+              "y": 2.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.1
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0
+              ],
+              "classType": "Dps"
+            },
+            "referenceMechanicName": "Aetheroplasm",
+            "position": {
+              "x": 1.5,
+              "y": 2.0
+            }
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Tank Purge",
+            "duration": 4.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Raidwide"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "WeightOfTheLand": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#6e4703",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Weight of the Land",
+              "damageType": "Damage",
+              "damageAmount": 120000.0
+            }
+          },
+          {
+            "$type": "CheckMechanicDepth",
+            "expressionFormat": "{0} < 2",
+            "successEvent": {
+              "$type": "SpawnTargetedEvents",
+              "targetingScheme": {
+                "$type": "TargetExistingTarget"
+              },
+              "referenceMechanicName": "WeightOfTheLand",
+              "spawnOnTarget": true
+            }
+          }
+        ]
+      }
+    },
+    "EyeOfTheStorm": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 4.5,
+        "w": 0.0
+      },
+      "colorHtml": "#0a4d8b",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Eye of the Storm",
+                "damageType": "Damage",
+                "damageAmount": 120000.0
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": -3.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "FlamingCrush": {
+      "isTargeted": true,
+      "followSpeed": 10000.0,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff4200",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "colorHtml": "#ff4200",
+            "spawnOnPlayer": true,
+            "isBillboard": true,
+            "visualDuration": 4.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Flaming Crush",
+              "damageType": "Damage",
+              "damageAmount": 700000.0,
+              "maxStackAmount": 8
+            }
+          }
+        ]
+      }
+    },
+    "SetVisible": {
+      "visible": true
+    },
+    "SetInvisible": {
+      "visible": false
+    },
+    "SpawnFeatherRain": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff9600",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.6
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.4
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Feather Rain",
+                "damageType": "Damage",
+                "damageAmount": 70000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Windburn"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Mesohigh": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#59ce85",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "ThermalLow",
+                "doExpireEvent": true
+              },
+              {
+                "$type": "DamageEffect",
+                "name": "Mesohigh",
+                "damageType": "Damage",
+                "damageAmount": 20000.0
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Thermal Low"
+            },
+            "failedConditionEffect": {
+              "$type": "DamageEffect",
+              "name": "Mesohigh",
+              "damageType": "Damage",
+              "damageAmount": 500000.0
+            }
+          }
+        ]
+      }
+    },
+    "SuperCyclone": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Super Cyclone",
+          "damageType": "Damage",
+          "damageAmount": 10000.0
+        }
+      }
+    },
+    "TickSearingWind": {
+      "isTargeted": true,
+      "followSpeed": 10000.0,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 3.6,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#db2100",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Searing Wind"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Searing Wind",
+                "damageType": "Damage",
+                "damageAmount": 130000.0
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 4.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ApplySearingWind": {
+      "isTargeted": true,
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "SetSearing",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "TickSearingWind",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "TickSearingWind",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "TickSearingWind",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "TickSearingWind",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "TickSearingWind",
+            "spawnOnTarget": true
+          }
+        ]
+      }
+    },
+    "IfritLeft": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "IfritMechanics",
+            "position": {
+              "x": -4.95,
+              "y": -4.95
+            },
+            "rotation": 45.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "TitanMechanics",
+            "position": {
+              "x": 4.95,
+              "y": -4.95
+            },
+            "rotation": -45.0
+          }
+        ]
+      }
+    },
+    "IfritRight": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "TitanMechanics",
+            "position": {
+              "x": -4.95,
+              "y": -4.95
+            },
+            "rotation": 45.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "IfritMechanics",
+            "position": {
+              "x": 4.95,
+              "y": -4.95
+            },
+            "rotation": -45.0
+          }
+        ]
+      }
+    },
+    "IfritDash": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 14.0,
+        "y": 5.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#db2100",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.8
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Crimson Cyclone",
+                "damageType": "Damage",
+                "damageAmount": 180000.0
+              }
+            ]
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetInvisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "IfritAfterburn",
+            "position": {
+              "x": 0.0,
+              "y": -7.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "IfritAfterburn",
+            "position": {
+              "x": -7.0,
+              "y": 0.0
+            },
+            "rotation": 90.0
+          }
+        ]
+      }
+    },
+    "IfritAfterburn": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 14.0,
+        "y": 4.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#db2100",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Crimson Cyclone",
+                "damageType": "Damage",
+                "damageAmount": 180000.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Raidwide": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Tank Purge",
+          "damageType": "Damage",
+          "damageAmount": 125000.0
+        }
+      }
+    },
+    "Landslide": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 40.0,
+        "y": 2.5,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff7e00",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Landslide",
+                "damageType": "Damage",
+                "damageAmount": 120000.0
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 10.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Landslide-Fast": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 40.0,
+        "y": 2.5,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff7e00",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Landslide",
+                "damageType": "Damage",
+                "damageAmount": 120000.0
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 10.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "AetheroplasmMove": {
+      "followSpeed": 0.8
+    },
+    "AetheroplasmExplode": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.6,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#a800ff",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Aetheroplasm",
+              "damageType": "Magic",
+              "damageAmount": 30000.0
+            }
+          }
+        ]
+      }
+    },
+    "SetHealerThermals": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "ThermalLow"
+        }
+      }
+    },
+    "SetSearing": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "SearingWind"
+        }
+      }
+    },
+    "Aetheroplasm": {
+      "isTargeted": true,
+      "followSpeed": 0.0,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.4,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#a880ff",
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 1.5,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.5
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "AetheroplasmMove"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 8.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "AetheroplasmExplode",
+            "isPositionRelative": true
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 0",
+        "failEvent": {
+          "$type": "ExecuteMultipleEvents",
+          "events": [
+            {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "AetheroplasmExplode",
+              "isPositionRelative": true
+            },
+            {
+              "$type": "EndMechanic"
+            }
+          ]
+        }
+      }
+    },
+    "StartButton": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#00ff00",
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 1.0,
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 0",
+        "failEvent": {
+          "$type": "ExecuteMultipleEvents",
+          "events": [
+            {
+              "$type": "ApplyEffectToPlayers",
+              "effect": {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "ThermalLow"
+              }
+            },
+            {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "SpawnBosses"
+            },
+            {
+              "$type": "EndMechanic"
+            }
+          ]
+        }
+      }
+    },
+    "SpawnBosses": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnEnemy",
+            "enemyName": "Ultima Weapon",
+            "textureFilePath": "Mechanics/Resources/UltimaWeapon.png",
+            "colorHtml": "#0072ff",
+            "maxHp": 35000000,
+            "hitboxSize": 6.0,
+            "rotation": 180.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "visualPosition": {
+              "x": 0.0,
+              "y": 2.0,
+              "z": 0.0
+            },
+            "visualScale": {
+              "x": 4.0,
+              "y": 4.0,
+              "z": 4.0
+            },
+            "referenceMechanicName": "UltimaMechanics",
+            "position": {
+              "x": 0.0,
+              "y": 3.5
+            }
+          },
+          {
+            "$type": "SpawnEnemy",
+            "enemyName": "Garuda",
+            "textureFilePath": "Mechanics/Resources/Garuda.png",
+            "colorHtml": "#00ff60",
+            "maxHp": 35000000,
+            "baseMoveSpeed": 2.0,
+            "hitboxSize": 2.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "isTargetable": false,
+            "visualPosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "visualScale": {
+              "x": 2.158,
+              "y": 1.3,
+              "z": 1.3
+            },
+            "referenceMechanicName": "GarudaMechanics",
+            "position": {
+              "x": 0.0,
+              "y": -7.0
+            }
+          }
+        ]
+      }
+    },
+    "ArenaBoundary": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 7.0,
+        "w": 0.0
+      },
+      "colorHtml": "#8800FF",
+      "persistentTickInterval": 0.2,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      }
+    }
+  },
+  "referenceTetherProperties": {
+    "Mesohigh": {
+      "colorHtml": "#00ff60",
+      "tetherDuration": 5.5,
+      "interceptMechanic": {
+        "$type": "SwitchTetheredPlayer"
+      },
+      "retargetRandomPlayerOnDeath": true
+    }
+  },
+  "mechanicPools": {
+    "IfritTitanPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "IfritLeft",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "IfritRight",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ]
+  },
+  "referenceStatusProperties": {
+    "ThermalLow": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "SuperCyclone",
+      "statusIconPath": "Mechanics/Resources/ThermalLow.png",
+      "statusName": "Thermal Low",
+      "statusDescription": "The wind is high.",
+      "duration": "Infinity",
+      "shouldKeepOnDeath": true
+    },
+    "Windburn": {
+      "$type": "DamageOverTime",
+      "damageAmount": 45000.0,
+      "statusIconPath": "Mechanics/Resources/Windburn.png",
+      "statusName": "Windburn",
+      "statusDescription": "Sustaining wind damage over time.",
+      "duration": 18.0,
+      "tickInterval": 3.0
+    },
+    "SearingWind": {
+      "$type": "DamageOverTime",
+      "damageAmount": 20000.0,
+      "statusIconPath": "Mechanics/Resources/SearingWind.png",
+      "statusName": "Searing Wind",
+      "statusDescription": "Ignited by white-hot embers and scorching those nearby. Sustaining fire damage over time.",
+      "duration": 31.0,
+      "tickInterval": 3.0
+    }
+  },
+  "mechanicEvents": [
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary"
+    },
+    {
+      "$type": "SpawnVisualObject",
+      "textureFilePath": "Mechanics/Resources/ArenaCircle.png",
+      "relativePosition": {
+        "x": 0.0,
+        "y": -0.001,
+        "z": 0.0
+      },
+      "eulerAngles": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 15.8637,
+        "y": 15.8637,
+        "z": 1.0
+      },
+      "visualDuration": "Infinity"
+    },
+    {
+      "$type": "ExecuteMultipleEvents",
+      "events": [
+        {
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "StartButton",
+          "position": {
+            "x": 0.0,
+            "y": 3.0
+          }
+        }
+      ]
+    }
+  ]
+}
