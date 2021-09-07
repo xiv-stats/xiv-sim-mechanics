@@ -152,7 +152,7 @@
         "$type": "SpawnMechanicEvent",
         "referenceMechanicName": "HawkBlaster",
         "position": {
-          "x": 5.9,
+          "x": 4.75,
           "y": 0.0
         },
         "isPositionRelative": true,
@@ -161,7 +161,7 @@
     },
     "HawkBlaster": {
       "collisionShapeParams": {
-        "x": 4.2,
+        "x": 3.3333,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -199,7 +199,7 @@
     },
     "HawkBlasterVisual": {
       "collisionShapeParams": {
-        "x": 4.2,
+        "x": 3.3333,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -629,7 +629,6 @@
         "w": 0.0
       },
       "colorHtml": "#ffff00",
-      "visible": true,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
@@ -669,12 +668,11 @@
       "collisionShape": "Rectangle",
       "collisionShapeParams": {
         "x": 40.0,
-        "y": 3.0,
+        "y": 3.33,
         "z": 0.0,
         "w": 0.0
       },
       "colorHtml": "#ffff00",
-      "visible": true,
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
@@ -733,7 +731,7 @@
       "collisionShapeParams": {
         "x": 25.0,
         "y": 360.0,
-        "z": 7.0,
+        "z": 6.6667,
         "w": 0.0
       },
       "colorHtml": "#8800FF",
@@ -979,8 +977,8 @@
         "z": 0.0
       },
       "scale": {
-        "x": 15.8637,
-        "y": 15.8637,
+        "x": 15.1082,
+        "y": 15.1082,
         "z": 1.0
       },
       "visualDuration": "Infinity"
