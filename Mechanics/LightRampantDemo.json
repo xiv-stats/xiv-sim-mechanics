@@ -20,8 +20,20 @@
             "timeToWait": 1.0
           },
           {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 0.0,
+              "y": -1.0
+            },
+            "movementTime": -200.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
             "$type": "StartCastBar",
-            "castName": "Junction E7S",
+            "castName": "Light Rampant",
             "duration": 5.0
           },
           {
@@ -68,114 +80,55 @@
             "visualDuration": "Infinity"
           },
           {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetNthHighestAggro"
-            },
-            "referenceMechanicName": "AutoAttack"
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 3.0
-          },
-          {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetNthHighestAggro"
-            },
-            "referenceMechanicName": "AutoAttack"
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 3.0
-          },
-          {
-            "$type": "SetEnemyMovement",
-            "position": {
-              "x": 0.0,
-              "y": -1.0
-            },
-            "movementTime": -200.0
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 2.0
-          },
-          {
-            "$type": "StartCastBar",
-            "castName": "Light Rampant",
-            "duration": 5.0
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 5.0
-          },
-          {
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "Raidwide1"
           },
           {
             "$type": "SpawnTethersBetweenPlayers",
             "targetingScheme": {
-              "$type": "TargetSpecificPlayerIds",
+              "$type": "TargetSpecificPlayerIdsByClass",
               "targetIds": [
                 0,
                 1,
                 2,
-                3,
-                4,
-                5,
-                6,
-                7
-              ]
+                3
+              ],
+              "classType": "Dps"
+            },
+            "targetingScheme2": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "classType": "Dps",
+              "invertCheck": true
             },
             "tetherIndices": [
               0,
+              0,
+              0,
+              1,
+              1,
               1,
               1,
               2,
               2,
+              2,
+              2,
               3,
               3,
-              4,
-              4,
-              5,
-              5,
-              6,
-              6,
-              7,
-              7,
+              3,
+              3,
               0
             ],
             "referenceTetherName": "LR-Chain"
           },
           {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetSpecificPlayerIds",
-              "targetIds": [
-                0,
-                2,
-                4,
-                6
-              ],
-              "dropExtraEvents": true
-            },
-            "referenceMechanicName": "ApplyDebuff-L"
-          },
-          {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetSpecificPlayerIds",
-              "targetIds": [
-                1,
-                3,
-                5,
-                7
-              ],
-              "dropExtraEvents": true
-            },
-            "referenceMechanicName": "ApplyDebuff-D"
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Debuff-Pool"
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -188,11 +141,11 @@
           {
             "$type": "StartCastBar",
             "castName": "Heavenly Strike",
-            "duration": 5.0
+            "duration": 8.0
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 8.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -200,7 +153,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 4.0
+            "timeToWait": 1.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -377,6 +330,80 @@
           {
             "$type": "WaitEvent",
             "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "Debuffs-1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "classType": "Dps"
+            },
+            "referenceMechanicName": "ApplyDebuff-L"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "classType": "Dps",
+              "invertCheck": true
+            },
+            "referenceMechanicName": "ApplyDebuff-D"
+          }
+        ]
+      }
+    },
+    "Debuffs-2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "classType": "Dps"
+            },
+            "referenceMechanicName": "ApplyDebuff-D"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "classType": "Dps",
+              "invertCheck": true
+            },
+            "referenceMechanicName": "ApplyDebuff-L"
           }
         ]
       }
@@ -2084,7 +2111,7 @@
       "colorHtml": "#FFFF0055",
       "tetherDuration": 50.0,
       "persistentTickInterval": 0.1,
-      "persistentActivationDelay": 9.0,
+      "persistentActivationDelay": 12.0,
       "breakMechanic": {
         "$type": "ApplyEffectToTetheredPlayers",
         "effect": {
@@ -2119,6 +2146,16 @@
     }
   },
   "mechanicPools": {
+    "Debuff-Pool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Debuffs-1"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Debuffs-2"
+      }
+    ],
     "TowerSet-3-Pool": [
       {
         "$type": "SpawnMechanicEvent",
