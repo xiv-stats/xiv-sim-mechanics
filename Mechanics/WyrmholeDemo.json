@@ -1,0 +1,1454 @@
+{
+  "referenceMechanicProperties": {
+    "NidhoggMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitForAggro"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SetEnemyBaseSpeed"
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Dive from Grace",
+            "duration": 5.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Debuffs1"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Debuffs2"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "InOutPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.5
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "StackPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 11.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "InOutPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.5
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "StackPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "Group1-A": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "Spineshatter-1"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                1
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "Elusive-1"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "HiJump-1"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                3
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "HiJump-3"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "HiJump-3"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                5
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "HiJump-3"
+          }
+        ]
+      }
+    },
+    "Group1-B": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "HiJump-1"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                1
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "HiJump-1"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "HiJump-1"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                3
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "Spineshatter-3"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "Elusive-3"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                5
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "HiJump-3"
+          }
+        ]
+      }
+    },
+    "Group2-A": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "Spineshatter-2"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                7
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "Elusive-2"
+          }
+        ]
+      }
+    },
+    "Group2-B": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "HiJump-2"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                7
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "HiJump-2"
+          }
+        ]
+      }
+    },
+    "TowerAddMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "moveToTarget": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetIds": [
+                0
+              ]
+            },
+            "movementTime": -1.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Geirskogul",
+            "duration": 4.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.3
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Geirskogul",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "AutoAttack": {
+      "isTargeted": true,
+      "followSpeed": 0.0,
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 20.0,
+        "y": 1.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#FF0000",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Attack",
+              "damageType": "Damage",
+              "damageAmount": 30000.0
+            }
+          }
+        ]
+      }
+    },
+    "Geirskogul": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 20.666666,
+        "y": 2.66666675,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ffae00",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Geirskogul",
+              "damageType": "Physical",
+              "damageAmount": 999999.0
+            }
+          }
+        ]
+      }
+    },
+    "Stack": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff0060",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Eye of the Tyrant",
+              "damageType": "Magic",
+              "damageAmount": 600000.0,
+              "maxStackAmount": 8
+            }
+          }
+        ]
+      }
+    },
+    "Stack-Close": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificProximityPlayers",
+          "targetIds": [
+            0
+          ]
+        },
+        "referenceMechanicName": "Stack",
+        "spawnOnTarget": true
+      }
+    },
+    "Stack-Far": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificProximityPlayers",
+          "targetNthFarthest": true,
+          "targetIds": [
+            0
+          ]
+        },
+        "referenceMechanicName": "Stack",
+        "spawnOnTarget": true
+      }
+    },
+    "Chariot": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c800a0",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Chariot",
+              "damageType": "Damage",
+              "damageAmount": 999999.0
+            }
+          }
+        ]
+      }
+    },
+    "Dynamo": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 10.0,
+        "y": 360.0,
+        "z": 2.5,
+        "w": 0.0
+      },
+      "colorHtml": "#c800a0",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Dynamo",
+              "damageType": "Damage",
+              "damageAmount": 999999.0
+            }
+          }
+        ]
+      }
+    },
+    "InOut": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Lash and Gnash",
+            "duration": 8.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Dynamo",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Chariot",
+            "isPositionRelative": true
+          }
+        ]
+      }
+    },
+    "OutIn": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Gnash and Lash",
+            "duration": 8.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Chariot",
+            "isPositionRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Dynamo",
+            "isPositionRelative": true
+          }
+        ]
+      }
+    },
+    "Tower-Spineshatter": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower-HiJump",
+        "position": {
+          "x": 0.0,
+          "y": 4.0
+        },
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    },
+    "Tower-Elusive": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower-HiJump",
+        "position": {
+          "x": 0.0,
+          "y": -4.0
+        },
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    },
+    "Tower-HiJump": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "Tower": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.66666663,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#FFFF00",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/LimitCut-1.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#FFFF00",
+            "isBillboard": true,
+            "visualDuration": 2.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} = 1",
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "TowerFail",
+              "isPositionRelative": true
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Darkdragon Dive",
+                "damageType": "Magic",
+                "damageAmount": 40000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln"
+              }
+            ]
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-TowerAdd",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "TowerFail": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#FF0000",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Tower Failed",
+              "damageType": "TrueDamage",
+              "damageAmount": 9999999.0
+            }
+          }
+        ]
+      }
+    },
+    "Spawn-Nidhogg": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnEnemy",
+        "enemyName": "Nidhogg",
+        "textureFilePath": "Mechanics/Resources/Estinien.png",
+        "colorHtml": "#ff0060",
+        "maxHp": 2147483647,
+        "baseMoveSpeed": 3.0,
+        "hitboxSize": 6.67,
+        "rotation": 180.0,
+        "visualPosition": {
+          "x": 0.0,
+          "y": 1.5,
+          "z": 0.0
+        },
+        "visualScale": {
+          "x": 3.0,
+          "y": 3.0,
+          "z": 3.0
+        },
+        "referenceMechanicName": "NidhoggMechanics",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        }
+      }
+    },
+    "Spawn-TowerAdd": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnEnemy",
+        "enemyName": "Nidhogg",
+        "textureFilePath": "Mechanics/Resources/Estinien.png",
+        "colorHtml": "#ff0060",
+        "maxHp": 2147483647,
+        "rotation": 180.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true,
+        "isTargetable": false,
+        "visualPosition": {
+          "x": 0.0,
+          "y": 1.5,
+          "z": 0.0
+        },
+        "visualScale": {
+          "x": 2.0,
+          "y": 2.0,
+          "z": 2.0
+        },
+        "referenceMechanicName": "TowerAddMechanics"
+      }
+    },
+    "ArenaBoundary": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 30.0,
+        "y": 270.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#8800FF",
+      "persistentTickInterval": 0.2,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      }
+    },
+    "HiJump-1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Line-1"
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "HiJump-1"
+            }
+          }
+        ]
+      }
+    },
+    "HiJump-2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Line-2"
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "HiJump-2"
+            }
+          }
+        ]
+      }
+    },
+    "HiJump-3": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Line-3"
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "HiJump-3"
+            }
+          }
+        ]
+      }
+    },
+    "HiJump-AOE": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.66666663,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff0060",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "Tower-HiJump",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Dive",
+                "damageType": "Physical",
+                "damageAmount": 40000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln",
+                "overrideDuration": 3.0
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerIsMechanicTarget"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Dive",
+                "damageType": "Physical",
+                "damageAmount": 40000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln",
+                "overrideDuration": 3.0
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 10.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Spineshatter-1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Line-1"
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Spineshatter-1"
+            }
+          }
+        ]
+      }
+    },
+    "Spineshatter-2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Line-2"
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Spineshatter-2"
+            }
+          }
+        ]
+      }
+    },
+    "Spineshatter-3": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Line-3"
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Spineshatter-3"
+            }
+          }
+        ]
+      }
+    },
+    "Spineshatter-AOE": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.66666663,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff0060",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "Tower-Spineshatter",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Dive",
+                "damageType": "Physical",
+                "damageAmount": 40000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln",
+                "overrideDuration": 3.0
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerIsMechanicTarget"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Dive",
+                "damageType": "Physical",
+                "damageAmount": 40000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln",
+                "overrideDuration": 3.0
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 10.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Elusive-1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Line-1"
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Elusive-1"
+            }
+          }
+        ]
+      }
+    },
+    "Elusive-2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Line-2"
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Elusive-2"
+            }
+          }
+        ]
+      }
+    },
+    "Elusive-3": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Line-3"
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Elusive-3"
+            }
+          }
+        ]
+      }
+    },
+    "Elusive-AOE": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.66666663,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff0060",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "Tower-Elusive",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Dive",
+                "damageType": "Physical",
+                "damageAmount": 40000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln",
+                "overrideDuration": 3.0
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerIsMechanicTarget"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Dive",
+                "damageType": "Physical",
+                "damageAmount": 40000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln",
+                "overrideDuration": 3.0
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 10.0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "referenceTetherProperties": {},
+  "mechanicPools": {
+    "InOutPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "InOut",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "OutIn",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "StackPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Stack-Close"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Stack-Far"
+      }
+    ],
+    "Debuffs1": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Group1-A"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Group1-B"
+      }
+    ],
+    "Debuffs2": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Group2-A"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Group2-B"
+      }
+    ]
+  },
+  "referenceStatusProperties": {
+    "MagicVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 10.0,
+      "damageType": "Magic",
+      "statusIconPath": "Mechanics/Resources/MagicVuln.png",
+      "statusName": "Magic Vulnerability Up",
+      "statusDescription": "Magic damage taken is increased.",
+      "duration": 13.0
+    },
+    "PhysVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 10.0,
+      "damageType": "Physical",
+      "statusIconPath": "Mechanics/Resources/PhysVuln.png",
+      "statusName": "Physical Vulnerability Up",
+      "statusDescription": "Physical damage taken is increased.",
+      "duration": 8.0
+    },
+    "HiJump-1": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "HiJump-AOE",
+      "statusIconPath": "Mechanics/Resources/HiJump.png",
+      "statusName": "Hi Jump Target",
+      "statusDescription": "Soon to be on the receiving end of a Dark High Jump.",
+      "duration": 10.0
+    },
+    "Elusive-1": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Elusive-AOE",
+      "statusIconPath": "Mechanics/Resources/Elusive.png",
+      "statusName": "Elusive Jump Target",
+      "statusDescription": "Soon to be on the receiving end of a Dark Elusive Jump.",
+      "duration": 10.0
+    },
+    "Spineshatter-1": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Spineshatter-AOE",
+      "statusIconPath": "Mechanics/Resources/Spineshatter.png",
+      "statusName": "Spineshatter Dive Target",
+      "statusDescription": "Soon to be on the receiving end of a Dark Spineshatter Dive.",
+      "duration": 10.0
+    },
+    "Line-1": {
+      "statusIconPath": "Mechanics/Resources/Line1.png",
+      "statusName": "First in Line",
+      "statusDescription": "Marked as target #1.",
+      "duration": 15.0
+    },
+    "HiJump-2": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "HiJump-AOE",
+      "statusIconPath": "Mechanics/Resources/HiJump.png",
+      "statusName": "Hi Jump Target",
+      "statusDescription": "Soon to be on the receiving end of a Dark High Jump.",
+      "duration": 20.0
+    },
+    "Elusive-2": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Elusive-AOE",
+      "statusIconPath": "Mechanics/Resources/Elusive.png",
+      "statusName": "Elusive Jump Target",
+      "statusDescription": "Soon to be on the receiving end of a Dark Elusive Jump.",
+      "duration": 20.0
+    },
+    "Spineshatter-2": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Spineshatter-AOE",
+      "statusIconPath": "Mechanics/Resources/Spineshatter.png",
+      "statusName": "Spineshatter Dive Target",
+      "statusDescription": "Soon to be on the receiving end of a Dark Spineshatter Dive.",
+      "duration": 20.0
+    },
+    "Line-2": {
+      "statusIconPath": "Mechanics/Resources/Line2.png",
+      "statusName": "Second in Line",
+      "statusDescription": "Marked as target #2.",
+      "duration": 25.0
+    },
+    "HiJump-3": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "HiJump-AOE",
+      "statusIconPath": "Mechanics/Resources/HiJump.png",
+      "statusName": "Hi Jump Target",
+      "statusDescription": "Soon to be on the receiving end of a Dark High Jump.",
+      "duration": 30.0
+    },
+    "Elusive-3": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Elusive-AOE",
+      "statusIconPath": "Mechanics/Resources/Elusive.png",
+      "statusName": "Elusive Jump Target",
+      "statusDescription": "Soon to be on the receiving end of a Dark Elusive Jump.",
+      "duration": 30.0
+    },
+    "Spineshatter-3": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Spineshatter-AOE",
+      "statusIconPath": "Mechanics/Resources/Spineshatter.png",
+      "statusName": "Spineshatter Dive Target",
+      "statusDescription": "Soon to be on the receiving end of a Dark Spineshatter Dive.",
+      "duration": 30.0
+    },
+    "Line-3": {
+      "statusIconPath": "Mechanics/Resources/Line3.png",
+      "statusName": "Third in Line",
+      "statusDescription": "Marked as target #3.",
+      "duration": 35.0
+    }
+  },
+  "mechanicEvents": [
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary",
+      "position": {
+        "x": -6.67,
+        "y": 6.67
+      },
+      "rotation": -45.0
+    },
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary",
+      "position": {
+        "x": 6.67,
+        "y": -6.67
+      },
+      "rotation": 135.0
+    },
+    {
+      "$type": "SpawnVisualObject",
+      "textureFilePath": "Mechanics/Resources/ArenaSquare4x4.png",
+      "relativePosition": {
+        "x": 0.0,
+        "y": -0.001,
+        "z": 0.0
+      },
+      "eulerAngles": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 17.2,
+        "y": 17.2,
+        "z": 1.0
+      },
+      "visualDuration": "Infinity"
+    },
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "Spawn-Nidhogg"
+    }
+  ]
+}
