@@ -427,7 +427,7 @@
             "effect": {
               "$type": "DamageEffect",
               "name": "Eye of the Tyrant",
-              "damageType": "Magic",
+              "damageType": "Damage",
               "damageAmount": 600000.0,
               "maxStackAmount": 8
             }
