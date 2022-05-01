@@ -1,0 +1,1438 @@
+{
+  "referenceMechanicProperties": {
+    "ThordanMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Wrath of the Heavens (short cast bar)",
+            "duration": 2.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "LightningDebuff-Delayed"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                1
+              ]
+            },
+            "referenceMechanicName": "LightningDebuff-Delayed"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2
+              ]
+            },
+            "referenceMechanicName": "LiquidHellSequence"
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Adds1Pool"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2
+              ]
+            },
+            "referenceMechanicName": "Defamation",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.8
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                3
+              ]
+            },
+            "referenceMechanicName": "DivebombTarget"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "SetEnemyVisible",
+            "visible": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Ascalon's Mercy Revealed",
+            "duration": 3.3
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.1
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetAllPlayers"
+            },
+            "referenceMechanicName": "Protean"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "SpawnAdds1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-Twintania",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-Knight1",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-Knight2",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-Dragon1",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-Dragon2",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Adds2Pool"
+          }
+        ]
+      }
+    },
+    "LightningDebuff-Delayed": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.0
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Chain Lightning",
+                "damageType": "Damage",
+                "damageAmount": 40000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Lightning"
+              }
+            ]
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "LiquidHellSequence": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 15.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "Liquid Hell",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "TwintaniaMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Twisting Dive",
+            "duration": 6.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Divebomb",
+            "position": {
+              "x": 0.0,
+              "y": 13.33
+            },
+            "rotation": 180.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 13.0
+          }
+        ]
+      }
+    },
+    "Knight1-Mechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "SpiralThrust",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnTethersToPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceTetherName": "SpiralThrustTether",
+            "tetherOffset": {
+              "x": 0.0,
+              "y": 0.5,
+              "z": 0.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.0
+          }
+        ]
+      }
+    },
+    "Knight2-Mechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                1
+              ]
+            },
+            "referenceMechanicName": "SpiralThrust",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnTethersToPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                1
+              ]
+            },
+            "referenceTetherName": "SpiralThrustTether",
+            "tetherOffset": {
+              "x": 0.0,
+              "y": 0.5,
+              "z": 0.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.0
+          }
+        ]
+      }
+    },
+    "Knight3-Mechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.3
+          },
+          {
+            "$type": "SetEnemyAggro",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0
+              ]
+            },
+            "aggroAmount": 100
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Altar Flare",
+            "duration": 3.5
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "Altar Flare",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.75
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "Altar Flare",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.75
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "Altar Flare",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.75
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "Altar Flare",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.0
+          }
+        ]
+      }
+    },
+    "Knight4-Mechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Empty Dimension",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.8
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Dynamo",
+            "isPositionRelative": true
+          }
+        ]
+      }
+    },
+    "Dragon1-Mechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.3
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "moveToTarget": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                3
+              ]
+            },
+            "movementTime": -0.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Cauterize",
+            "duration": 6.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.8
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Divebomb2",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "Dragon2-Mechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.3
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "moveToTarget": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                3
+              ]
+            },
+            "movementTime": -0.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Cauterize",
+            "duration": 6.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.8
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Divebomb2",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "Spawn2ndKnights": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-Knight3",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-Knight4",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "Divebomb": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 20.0,
+        "y": 3.33,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#99daff",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Twintania.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 2.0,
+              "y": 2.0,
+              "z": 2.0
+            },
+            "colorHtml": "#99daff",
+            "isRotationRelative": true,
+            "visualDuration": 6.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetAllPlayers"
+            },
+            "referenceMechanicName": "Twister",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.8
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "Visible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Twisting Dive",
+                "damageType": "Damage",
+                "damageAmount": 90000.0
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 10.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Divebomb2": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 16.0,
+        "y": 6.67,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#64439b",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Cauterize",
+                "damageType": "Damage",
+                "damageAmount": 300000.0
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 10.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "DivebombTarget": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/Chakram.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 0.8,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 1.0
+        },
+        "colorHtml": "#699500",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 6.0
+      }
+    },
+    "SpiralThrust": {
+      "isTargeted": true,
+      "followSpeed": 0.0,
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 17.333334,
+        "y": 5.33333349,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ffae00",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.8
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "Visible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Spiral Thrust (Pretend this is proximity)",
+                "damageType": "Damage",
+                "damageAmount": 90000.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Dynamo": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 10.0,
+        "y": 360.0,
+        "z": 2.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e00c8",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Dynamo",
+              "damageType": "Damage",
+              "damageAmount": 999999.0
+            }
+          }
+        ]
+      }
+    },
+    "Protean": {
+      "isTargeted": true,
+      "followSpeed": 0.0,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 10.0,
+        "y": 30.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ffae00",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Ascalon's Mercy Revealed",
+                "damageType": "Damage",
+                "damageAmount": 50000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Spawn-Thordan": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnEnemy",
+        "enemyName": "King Thordan",
+        "textureFilePath": "Mechanics/Resources/Thordan.png",
+        "colorHtml": "#30015d",
+        "maxHp": 2147483647,
+        "hitboxSize": 3.0,
+        "rotation": 180.0,
+        "isTargetable": false,
+        "visualPosition": {
+          "x": 0.0,
+          "y": 1.5,
+          "z": 0.0
+        },
+        "visualScale": {
+          "x": 3.0,
+          "y": 3.0,
+          "z": 3.0
+        },
+        "referenceMechanicName": "ThordanMechanics",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        }
+      }
+    },
+    "Spawn-Twintania": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnEnemy",
+        "enemyName": "Vedrfolnir",
+        "textureFilePath": "Mechanics/Resources/Twintania.png",
+        "maxHp": 2147483647,
+        "hitboxSize": 2.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true,
+        "isTargetable": false,
+        "isVisible": false,
+        "referenceMechanicName": "TwintaniaMechanics",
+        "position": {
+          "x": 0.0,
+          "y": -6.67
+        }
+      }
+    },
+    "Spawn-Knight1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnEnemy",
+        "enemyName": "Ser Knight1",
+        "textureFilePath": "Mechanics/Resources/Knight.png",
+        "colorHtml": "#8c38ff",
+        "maxHp": 2147483647,
+        "hitboxSize": 2.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true,
+        "isTargetable": false,
+        "visualPosition": {
+          "x": 0.0,
+          "y": 0.5,
+          "z": 0.0
+        },
+        "visualScale": {
+          "x": -1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "referenceMechanicName": "Knight1-Mechanics",
+        "position": {
+          "x": 3.335,
+          "y": 5.77622
+        }
+      }
+    },
+    "Spawn-Knight2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnEnemy",
+        "enemyName": "Ser Knight2",
+        "textureFilePath": "Mechanics/Resources/Knight.png",
+        "colorHtml": "#8c38ff",
+        "maxHp": 2147483647,
+        "hitboxSize": 2.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true,
+        "isTargetable": false,
+        "visualPosition": {
+          "x": 0.0,
+          "y": 0.5,
+          "z": 0.0
+        },
+        "visualScale": {
+          "x": -1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "referenceMechanicName": "Knight2-Mechanics",
+        "position": {
+          "x": -3.335,
+          "y": 5.77622
+        }
+      }
+    },
+    "Spawn-Knight3": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnEnemy",
+        "enemyName": "Ser Charibert",
+        "textureFilePath": "Mechanics/Resources/Charibert.png",
+        "colorHtml": "#c42e00",
+        "maxHp": 2147483647,
+        "hitboxSize": 2.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true,
+        "isTargetable": false,
+        "visualPosition": {
+          "x": 0.0,
+          "y": 0.5,
+          "z": 0.0
+        },
+        "visualScale": {
+          "x": -1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "referenceMechanicName": "Knight3-Mechanics",
+        "position": {
+          "x": 0.0,
+          "y": 3.335
+        }
+      }
+    },
+    "Spawn-Knight4": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnEnemy",
+        "enemyName": "Ser Grinnaux",
+        "textureFilePath": "Mechanics/Resources/Grinnaux.png",
+        "colorHtml": "#5e00c8",
+        "maxHp": 2147483647,
+        "hitboxSize": 2.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true,
+        "isTargetable": false,
+        "visualPosition": {
+          "x": 0.0,
+          "y": 0.5,
+          "z": 0.0
+        },
+        "visualScale": {
+          "x": -1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "referenceMechanicName": "Knight4-Mechanics",
+        "position": {
+          "x": 0.0,
+          "y": -3.335
+        }
+      }
+    },
+    "Spawn-Dragon1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnEnemy",
+        "enemyName": "Darkscale",
+        "textureFilePath": "Mechanics/Resources/Twintania.png",
+        "colorHtml": "#64439b",
+        "maxHp": 2147483647,
+        "hitboxSize": 2.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true,
+        "isTargetable": false,
+        "visualPosition": {
+          "x": 0.0,
+          "y": 0.5,
+          "z": 0.0
+        },
+        "visualScale": {
+          "x": -1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "referenceMechanicName": "Dragon1-Mechanics",
+        "position": {
+          "x": -6.67,
+          "y": 0.0
+        }
+      }
+    },
+    "Spawn-Dragon2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnEnemy",
+        "enemyName": "Vidofnir",
+        "textureFilePath": "Mechanics/Resources/Twintania.png",
+        "colorHtml": "#99daff",
+        "maxHp": 2147483647,
+        "hitboxSize": 2.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true,
+        "isTargetable": false,
+        "visualPosition": {
+          "x": 0.0,
+          "y": 0.5,
+          "z": 0.0
+        },
+        "visualScale": {
+          "x": -1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "referenceMechanicName": "Dragon2-Mechanics",
+        "position": {
+          "x": 6.67,
+          "y": 0.0
+        }
+      }
+    },
+    "Altar Flare": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.67,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c42e00",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Altar Flare",
+              "damageType": "Damage",
+              "damageAmount": 999999.0
+            }
+          }
+        ]
+      }
+    },
+    "Liquid Hell": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff7200",
+      "persistentTickInterval": 0.3,
+      "persistentActivationDelay": 3.0,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Liquid Hell",
+              "damageType": "Damage",
+              "damageAmount": 10000.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.0
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Burns",
+          "damageType": "Damage",
+          "damageAmount": 999999.0
+        }
+      }
+    },
+    "Twister Explode": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 3.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#008542",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Twister",
+                "damageType": "Damage",
+                "damageAmount": 90000.0
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 10.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "TwisterSnapshot": {
+      "isTargeted": false,
+      "followSpeed": 0.0
+    },
+    "Visible": {
+      "visible": true
+    },
+    "Twister": {
+      "isTargeted": true,
+      "followSpeed": 100.0,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.25,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#008542",
+      "visible": false,
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 2.5,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.5
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "TwisterSnapshot"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "Visible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} = 0",
+            "failEvent": {
+              "$type": "ExecuteMultipleEvents",
+              "events": [
+                {
+                  "$type": "SpawnMechanicEvent",
+                  "referenceMechanicName": "Twister Explode",
+                  "isPositionRelative": true
+                },
+                {
+                  "$type": "EndMechanic"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "Lightning-AOE": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.66666663,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c30bff",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "condition": {
+              "$type": "CheckPlayerIsMechanicTarget"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Chain Lightning",
+                "damageType": "Lightning",
+                "damageAmount": 999999.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Defamation": {
+      "isTargeted": true,
+      "followSpeed": 10000.0,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 8.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#0b89ff",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Chakram.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "colorHtml": "#0b89ff",
+            "spawnOnPlayer": true,
+            "isBillboard": true,
+            "visualDuration": 6.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.8
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "Visible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Skyward Leap",
+                "damageType": "Damage",
+                "damageAmount": 50000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ArenaBoundary": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 6.67,
+        "w": 0.0
+      },
+      "colorHtml": "#8800FF",
+      "persistentTickInterval": 0.2,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      }
+    }
+  },
+  "referenceTetherProperties": {
+    "SpiralThrustTether": {
+      "colorHtml": "#ffae00",
+      "tetherDuration": 6.0
+    }
+  },
+  "mechanicPools": {
+    "Adds1Pool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnAdds1",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnAdds1",
+        "rotation": 90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnAdds1",
+        "rotation": 180.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnAdds1",
+        "rotation": 270.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "Adds2Pool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Spawn2ndKnights",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Spawn2ndKnights",
+        "rotation": 180.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ]
+  },
+  "referenceStatusProperties": {
+    "MagicVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 10.0,
+      "damageType": "Magic",
+      "statusIconPath": "Mechanics/Resources/MagicVuln.png",
+      "statusName": "Magic Vulnerability Up",
+      "statusDescription": "Magic damage taken is increased.",
+      "duration": 13.0
+    },
+    "PhysVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 10.0,
+      "damageType": "Physical",
+      "statusIconPath": "Mechanics/Resources/PhysVuln.png",
+      "statusName": "Physical Vulnerability Up",
+      "statusDescription": "Physical damage taken is increased.",
+      "duration": 4.0
+    },
+    "Lightning": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Lightning-AOE",
+      "statusIconPath": "Mechanics/Resources/LightningPlus.png",
+      "statusName": "Thunderstruck",
+      "statusDescription": "Body is accumulating charge. Will inflict lightning damage to those nearby when this effect expires.",
+      "duration": 16.0
+    }
+  },
+  "mechanicEvents": [
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary"
+    },
+    {
+      "$type": "SpawnVisualObject",
+      "textureFilePath": "Mechanics/Resources/ArenaCircle.png",
+      "relativePosition": {
+        "x": 0.0,
+        "y": -0.001,
+        "z": 0.0
+      },
+      "eulerAngles": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 15.2,
+        "y": 15.2,
+        "z": 1.0
+      },
+      "visualDuration": "Infinity"
+    },
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "Spawn-Thordan"
+    }
+  ]
+}
