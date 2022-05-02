@@ -62,7 +62,16 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 6.0
+            "timeToWait": 4.9
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "",
+            "duration": 100000.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.1
           },
           {
             "$type": "ExecuteRandomEvents",
@@ -70,11 +79,22 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 9.5
+            "timeToWait": 7.9
           },
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "StackPool"
+            "$type": "StartCastBar",
+            "castName": "",
+            "duration": 100000.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.6
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stack-Target",
+            "isPositionRelative": true,
+            "isRotationRelative": true
           },
           {
             "$type": "WaitEvent",
@@ -86,11 +106,22 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 9.5
+            "timeToWait": 7.9
           },
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "StackPool"
+            "$type": "StartCastBar",
+            "castName": "",
+            "duration": 100000.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.6
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stack-Target",
+            "isPositionRelative": true,
+            "isRotationRelative": true
           },
           {
             "$type": "WaitEvent",
@@ -435,30 +466,20 @@
         ]
       }
     },
-    "Stack-Close": {
+    "Stack-Target": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 30.0,
+        "y": 45.0,
+        "z": 0.0,
+        "w": 0.0
+      },
       "visible": false,
       "mechanic": {
         "$type": "SpawnTargetedEvents",
         "targetingScheme": {
-          "$type": "TargetSpecificProximityPlayers",
-          "targetIds": [
-            0
-          ]
-        },
-        "referenceMechanicName": "Stack",
-        "spawnOnTarget": true
-      }
-    },
-    "Stack-Far": {
-      "visible": false,
-      "mechanic": {
-        "$type": "SpawnTargetedEvents",
-        "targetingScheme": {
-          "$type": "TargetSpecificProximityPlayers",
-          "targetNthFarthest": true,
-          "targetIds": [
-            0
-          ]
+          "$type": "TargetPlayersInsideAoe",
+          "totalTargetsNeeded": 1
         },
         "referenceMechanicName": "Stack",
         "spawnOnTarget": true
