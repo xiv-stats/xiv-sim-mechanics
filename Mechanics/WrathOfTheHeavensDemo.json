@@ -31,16 +31,6 @@
             "referenceMechanicName": "LightningDebuff-Delayed"
           },
           {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetSpecificPlayerIds",
-              "targetIds": [
-                2
-              ]
-            },
-            "referenceMechanicName": "LiquidHellSequence"
-          },
-          {
             "$type": "ReshufflePlayerIds"
           },
           {
@@ -64,6 +54,10 @@
             },
             "referenceMechanicName": "Defamation",
             "spawnOnTarget": true
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "LiquidHellPool"
           },
           {
             "$type": "WaitEvent",
@@ -202,7 +196,14 @@
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 15.0
+            "timeToWait": 13.0
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "LiquidHellTarget"
+            }
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -385,11 +386,12 @@
           {
             "$type": "SetEnemyAggro",
             "targetingScheme": {
-              "$type": "TargetSpecificProximityPlayers",
-              "targetNthFarthest": true,
-              "targetIds": [
-                0
-              ]
+              "$type": "TargetAllPlayers",
+              "targetCondition": {
+                "$type": "CheckPlayerStatus",
+                "statusName": "LiquidHellTarget",
+                "invertStatus": true
+              }
             },
             "aggroAmount": 100
           },
@@ -1375,6 +1377,58 @@
         "isPositionRelative": true,
         "isRotationRelative": true
       }
+    ],
+    "LiquidHellPool": [
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            3
+          ]
+        },
+        "referenceMechanicName": "LiquidHellSequence"
+      },
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            3
+          ]
+        },
+        "referenceMechanicName": "LiquidHellSequence"
+      },
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            3
+          ]
+        },
+        "referenceMechanicName": "LiquidHellSequence"
+      },
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            3
+          ]
+        },
+        "referenceMechanicName": "LiquidHellSequence"
+      },
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            3
+          ]
+        },
+        "referenceMechanicName": "LiquidHellSequence"
+      }
     ]
   },
   "referenceStatusProperties": {
@@ -1403,6 +1457,10 @@
       "statusName": "Thunderstruck",
       "statusDescription": "Body is accumulating charge. Will inflict lightning damage to those nearby when this effect expires.",
       "duration": 16.0
+    },
+    "LiquidHellTarget": {
+      "statusName": "LiquidHellTarget",
+      "duration": 99.0
     }
   },
   "mechanicEvents": [
