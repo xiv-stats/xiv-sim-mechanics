@@ -71,7 +71,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.1
+            "timeToWait": 1.9
           },
           {
             "$type": "ExecuteRandomEvents",
@@ -79,7 +79,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 7.9
+            "timeToWait": 7.5
           },
           {
             "$type": "StartCastBar",
@@ -88,7 +88,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.6
+            "timeToWait": 1.1
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -98,7 +98,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 11.0
+            "timeToWait": 13.0
           },
           {
             "$type": "ExecuteRandomEvents",
@@ -106,7 +106,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 7.9
+            "timeToWait": 7.5
           },
           {
             "$type": "StartCastBar",
@@ -115,7 +115,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.6
+            "timeToWait": 1.1
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -345,7 +345,7 @@
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 2.0
+            "timeToWait": 1.5
           },
           {
             "$type": "SetEnemyMovement",
@@ -359,7 +359,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.0
+            "timeToWait": 0.8
           },
           {
             "$type": "StartCastBar",
@@ -413,7 +413,7 @@
       "collisionShape": "Rectangle",
       "collisionShapeParams": {
         "x": 20.666666,
-        "y": 2.66666675,
+        "y": 2.6666667,
         "z": 0.0,
         "w": 0.0
       },
@@ -488,7 +488,7 @@
     "Chariot": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 2.5,
+        "x": 2.6666667,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -505,7 +505,7 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
-              "name": "Chariot",
+              "name": "Gnashing Wheel",
               "damageType": "Damage",
               "damageAmount": 999999.0
             }
@@ -516,9 +516,9 @@
     "Dynamo": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 10.0,
+        "x": 13.333333,
         "y": 360.0,
-        "z": 2.5,
+        "z": 2.6666667,
         "w": 0.0
       },
       "colorHtml": "#c800a0",
@@ -533,7 +533,7 @@
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
-              "name": "Dynamo",
+              "name": "Lashing Wheel",
               "damageType": "Damage",
               "damageAmount": 999999.0
             }
@@ -549,11 +549,11 @@
           {
             "$type": "StartCastBar",
             "castName": "Lash and Gnash",
-            "duration": 8.0
+            "duration": 7.6
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 12.0
+            "timeToWait": 11.6
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -562,7 +562,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 3.0
+            "timeToWait": 2.8
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -580,11 +580,11 @@
           {
             "$type": "StartCastBar",
             "castName": "Gnash and Lash",
-            "duration": 8.0
+            "duration": 7.6
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 12.0
+            "timeToWait": 11.6
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -593,7 +593,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 3.0
+            "timeToWait": 2.8
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -610,7 +610,7 @@
         "referenceMechanicName": "Tower-HiJump",
         "position": {
           "x": 0.0,
-          "y": 4.0
+          "y": 4.5
         },
         "isPositionRelative": true,
         "isRotationRelative": true
@@ -623,7 +623,7 @@
         "referenceMechanicName": "Tower-HiJump",
         "position": {
           "x": 0.0,
-          "y": -4.0
+          "y": -4.5
         },
         "isPositionRelative": true,
         "isRotationRelative": true
@@ -643,6 +643,16 @@
             "referenceMechanicName": "Tower",
             "isPositionRelative": true,
             "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.56
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Spawn-TowerAdd",
+            "isPositionRelative": true,
+            "isRotationRelative": true
           }
         ]
       }
@@ -650,7 +660,7 @@
     "Tower": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 1.66666663,
+        "x": 1.6666666,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -674,15 +684,15 @@
             },
             "colorHtml": "#FFFF00",
             "isBillboard": true,
-            "visualDuration": 2.0
+            "visualDuration": 1.8
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 2.0
+            "timeToWait": 1.8
           },
           {
             "$type": "CheckNumberOfPlayers",
-            "expressionFormat": "{0} = 1",
+            "expressionFormat": "{0} > 0",
             "failEvent": {
               "$type": "SpawnMechanicEvent",
               "referenceMechanicName": "TowerFail",
@@ -707,12 +717,6 @@
                 "referenceStatusName": "PhysVuln"
               }
             ]
-          },
-          {
-            "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "Spawn-TowerAdd",
-            "isPositionRelative": true,
-            "isRotationRelative": true
           }
         ]
       }
@@ -754,17 +758,17 @@
         "colorHtml": "#ff0060",
         "maxHp": 2147483647,
         "baseMoveSpeed": 3.0,
-        "hitboxSize": 6.67,
+        "hitboxSize": 7.0,
         "rotation": 180.0,
         "visualPosition": {
           "x": 0.0,
-          "y": 1.5,
+          "y": 1.75,
           "z": 0.0
         },
         "visualScale": {
-          "x": 3.0,
-          "y": 3.0,
-          "z": 3.0
+          "x": 3.5,
+          "y": 3.5,
+          "z": 3.5
         },
         "referenceMechanicName": "NidhoggMechanics",
         "position": {
@@ -787,13 +791,13 @@
         "isTargetable": false,
         "visualPosition": {
           "x": 0.0,
-          "y": 1.5,
+          "y": 1.75,
           "z": 0.0
         },
         "visualScale": {
-          "x": 2.0,
-          "y": 2.0,
-          "z": 2.0
+          "x": 2.5,
+          "y": 2.5,
+          "z": 2.5
         },
         "referenceMechanicName": "TowerAddMechanics"
       }
@@ -817,6 +821,69 @@
         }
       }
     },
+    "JumpMarker-1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/LimitCut-1.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "colorHtml": "#0000ff",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 5.0
+      }
+    },
+    "JumpMarker-2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/LimitCut-2.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "colorHtml": "#ff0000",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 5.0
+      }
+    },
+    "JumpMarker-3": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/LimitCut-3.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "colorHtml": "#0000ff",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 5.0
+      }
+    },
     "HiJump-1": {
       "visible": false,
       "mechanic": {
@@ -830,8 +897,15 @@
             }
           },
           {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "JumpMarker-1"
+          },
+          {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 5.5
           },
           {
             "$type": "ApplyEffectToTargetOnly",
@@ -856,8 +930,15 @@
             }
           },
           {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "JumpMarker-2"
+          },
+          {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 5.5
           },
           {
             "$type": "ApplyEffectToTargetOnly",
@@ -882,8 +963,15 @@
             }
           },
           {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "JumpMarker-3"
+          },
+          {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 5.5
           },
           {
             "$type": "ApplyEffectToTargetOnly",
@@ -898,7 +986,7 @@
     "HiJump-AOE": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 1.66666663,
+        "x": 1.6666666,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -981,8 +1069,15 @@
             }
           },
           {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "JumpMarker-1"
+          },
+          {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 5.5
           },
           {
             "$type": "ApplyEffectToTargetOnly",
@@ -1007,8 +1102,15 @@
             }
           },
           {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "JumpMarker-2"
+          },
+          {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 5.5
           },
           {
             "$type": "ApplyEffectToTargetOnly",
@@ -1033,8 +1135,15 @@
             }
           },
           {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "JumpMarker-3"
+          },
+          {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 5.5
           },
           {
             "$type": "ApplyEffectToTargetOnly",
@@ -1049,7 +1158,7 @@
     "Spineshatter-AOE": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 1.66666663,
+        "x": 1.6666666,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -1132,8 +1241,15 @@
             }
           },
           {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "JumpMarker-1"
+          },
+          {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 5.5
           },
           {
             "$type": "ApplyEffectToTargetOnly",
@@ -1158,8 +1274,15 @@
             }
           },
           {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "JumpMarker-2"
+          },
+          {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 5.5
           },
           {
             "$type": "ApplyEffectToTargetOnly",
@@ -1184,8 +1307,15 @@
             }
           },
           {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "JumpMarker-3"
+          },
+          {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 5.5
           },
           {
             "$type": "ApplyEffectToTargetOnly",
@@ -1200,7 +1330,7 @@
     "Elusive-AOE": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 1.66666663,
+        "x": 1.6666666,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -1433,8 +1563,8 @@
       "$type": "SpawnMechanicEvent",
       "referenceMechanicName": "ArenaBoundary",
       "position": {
-        "x": -6.67,
-        "y": 6.67
+        "x": -8.666667,
+        "y": 8.666667
       },
       "rotation": -45.0
     },
@@ -1442,8 +1572,8 @@
       "$type": "SpawnMechanicEvent",
       "referenceMechanicName": "ArenaBoundary",
       "position": {
-        "x": 6.67,
-        "y": -6.67
+        "x": 8.666667,
+        "y": -8.666667
       },
       "rotation": 135.0
     },
@@ -1461,8 +1591,8 @@
         "z": 0.0
       },
       "scale": {
-        "x": 17.2,
-        "y": 17.2,
+        "x": 23.0,
+        "y": 23.0,
         "z": 1.0
       },
       "visualDuration": "Infinity"
