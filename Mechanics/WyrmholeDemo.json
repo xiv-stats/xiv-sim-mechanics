@@ -413,7 +413,7 @@
       "collisionShape": "Rectangle",
       "collisionShapeParams": {
         "x": 20.666666,
-        "y": 2.6666667,
+        "y": 2.66666675,
         "z": 0.0,
         "w": 0.0
       },
@@ -488,7 +488,7 @@
     "Chariot": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 2.6666667,
+        "x": 2.66666675,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -518,7 +518,7 @@
       "collisionShapeParams": {
         "x": 13.333333,
         "y": 360.0,
-        "z": 2.6666667,
+        "z": 2.66666675,
         "w": 0.0
       },
       "colorHtml": "#c800a0",
@@ -660,7 +660,7 @@
     "Tower": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 1.6666666,
+        "x": 1.66666663,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -986,7 +986,7 @@
     "HiJump-AOE": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 1.6666666,
+        "x": 1.66666663,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -1158,7 +1158,7 @@
     "Spineshatter-AOE": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 1.6666666,
+        "x": 1.66666663,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -1330,7 +1330,7 @@
     "Elusive-AOE": {
       "collisionShape": "Round",
       "collisionShapeParams": {
-        "x": 1.6666666,
+        "x": 1.66666663,
         "y": 360.0,
         "z": 0.0,
         "w": 0.0
@@ -1473,7 +1473,9 @@
       "statusIconPath": "Mechanics/Resources/HiJump.png",
       "statusName": "Hi Jump Target",
       "statusDescription": "Soon to be on the receiving end of a Dark High Jump.",
-      "duration": 10.0
+      "duration": 10.0,
+      "shouldKeepOnDeath": true,
+      "allowDuplicates": true
     },
     "Elusive-1": {
       "$type": "SpawnMechanicOnExpire",
@@ -1481,7 +1483,9 @@
       "statusIconPath": "Mechanics/Resources/Elusive.png",
       "statusName": "Elusive Jump Target",
       "statusDescription": "Soon to be on the receiving end of a Dark Elusive Jump.",
-      "duration": 10.0
+      "duration": 10.0,
+      "shouldKeepOnDeath": true,
+      "allowDuplicates": true
     },
     "Spineshatter-1": {
       "$type": "SpawnMechanicOnExpire",
@@ -1489,13 +1493,17 @@
       "statusIconPath": "Mechanics/Resources/Spineshatter.png",
       "statusName": "Spineshatter Dive Target",
       "statusDescription": "Soon to be on the receiving end of a Dark Spineshatter Dive.",
-      "duration": 10.0
+      "duration": 10.0,
+      "shouldKeepOnDeath": true,
+      "allowDuplicates": true
     },
     "Line-1": {
       "statusIconPath": "Mechanics/Resources/Line1.png",
       "statusName": "First in Line",
       "statusDescription": "Marked as target #1.",
-      "duration": 15.0
+      "duration": 15.0,
+      "shouldKeepOnDeath": true,
+      "allowDuplicates": true
     },
     "HiJump-2": {
       "$type": "SpawnMechanicOnExpire",
@@ -1503,7 +1511,9 @@
       "statusIconPath": "Mechanics/Resources/HiJump.png",
       "statusName": "Hi Jump Target",
       "statusDescription": "Soon to be on the receiving end of a Dark High Jump.",
-      "duration": 20.0
+      "duration": 20.0,
+      "shouldKeepOnDeath": true,
+      "allowDuplicates": true
     },
     "Elusive-2": {
       "$type": "SpawnMechanicOnExpire",
@@ -1511,7 +1521,9 @@
       "statusIconPath": "Mechanics/Resources/Elusive.png",
       "statusName": "Elusive Jump Target",
       "statusDescription": "Soon to be on the receiving end of a Dark Elusive Jump.",
-      "duration": 20.0
+      "duration": 20.0,
+      "shouldKeepOnDeath": true,
+      "allowDuplicates": true
     },
     "Spineshatter-2": {
       "$type": "SpawnMechanicOnExpire",
@@ -1519,13 +1531,17 @@
       "statusIconPath": "Mechanics/Resources/Spineshatter.png",
       "statusName": "Spineshatter Dive Target",
       "statusDescription": "Soon to be on the receiving end of a Dark Spineshatter Dive.",
-      "duration": 20.0
+      "duration": 20.0,
+      "shouldKeepOnDeath": true,
+      "allowDuplicates": true
     },
     "Line-2": {
       "statusIconPath": "Mechanics/Resources/Line2.png",
       "statusName": "Second in Line",
       "statusDescription": "Marked as target #2.",
-      "duration": 25.0
+      "duration": 25.0,
+      "shouldKeepOnDeath": true,
+      "allowDuplicates": true
     },
     "HiJump-3": {
       "$type": "SpawnMechanicOnExpire",
@@ -1533,7 +1549,9 @@
       "statusIconPath": "Mechanics/Resources/HiJump.png",
       "statusName": "Hi Jump Target",
       "statusDescription": "Soon to be on the receiving end of a Dark High Jump.",
-      "duration": 30.0
+      "duration": 30.0,
+      "shouldKeepOnDeath": true,
+      "allowDuplicates": true
     },
     "Elusive-3": {
       "$type": "SpawnMechanicOnExpire",
@@ -1541,7 +1559,9 @@
       "statusIconPath": "Mechanics/Resources/Elusive.png",
       "statusName": "Elusive Jump Target",
       "statusDescription": "Soon to be on the receiving end of a Dark Elusive Jump.",
-      "duration": 30.0
+      "duration": 30.0,
+      "shouldKeepOnDeath": true,
+      "allowDuplicates": true
     },
     "Spineshatter-3": {
       "$type": "SpawnMechanicOnExpire",
@@ -1549,13 +1569,17 @@
       "statusIconPath": "Mechanics/Resources/Spineshatter.png",
       "statusName": "Spineshatter Dive Target",
       "statusDescription": "Soon to be on the receiving end of a Dark Spineshatter Dive.",
-      "duration": 30.0
+      "duration": 30.0,
+      "shouldKeepOnDeath": true,
+      "allowDuplicates": true
     },
     "Line-3": {
       "statusIconPath": "Mechanics/Resources/Line3.png",
       "statusName": "Third in Line",
       "statusDescription": "Marked as target #3.",
-      "duration": 35.0
+      "duration": 35.0,
+      "shouldKeepOnDeath": true,
+      "allowDuplicates": true
     }
   },
   "mechanicEvents": [
