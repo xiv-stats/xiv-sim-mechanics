@@ -271,7 +271,7 @@
         "z": 0.0,
         "w": 0.0
       },
-      "colorHtml": "#5e00c8",
+      "colorHtml": "#f39c12",
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
@@ -299,7 +299,7 @@
         "z": 2.0,
         "w": 0.0
       },
-      "colorHtml": "#5e00c8",
+      "colorHtml": "#f39c12",
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
@@ -327,7 +327,7 @@
         "z": 4.0,
         "w": 0.0
       },
-      "colorHtml": "#5e00c8",
+      "colorHtml": "#f39c12",
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
@@ -355,7 +355,7 @@
         "z": 6.0,
         "w": 0.0
       },
-      "colorHtml": "#5e00c8",
+      "colorHtml": "#f39c12",
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
@@ -383,7 +383,7 @@
         "z": 8.0,
         "w": 0.0
       },
-      "colorHtml": "#5e00c8",
+      "colorHtml": "#f39c12",
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
@@ -598,13 +598,6 @@
             "isRotationRelative": true
           },
           {
-            "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "Spawn Vidofnir",
-            "rotation": 270.0,
-            "isPositionRelative": true,
-            "isRotationRelative": true
-          },
-          {
             "$type": "ExecuteRandomEvents",
             "mechanicPoolName": "Adds1ZephirinPool"
           },
@@ -675,38 +668,16 @@
             "isRotationRelative": true
           },
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Adds1Vedrfolnir1Pool"
-          }
-        ]
-      }
-    },
-    "Spawn Zephirin Add Pool 2": {
-      "visible": false,
-      "mechanic": {
-        "$type": "ExecuteMultipleEvents",
-        "events": [
-          {
             "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "Spawn Zephirin",
+            "referenceMechanicName": "Spawn Vedrfolnir",
+            "rotation": 240.0,
             "isPositionRelative": true,
             "isRotationRelative": true
           },
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Adds1Vedrfolnir2Pool"
-          }
-        ]
-      }
-    },
-    "Spawn Vedrfolnir Add Pool": {
-      "visible": false,
-      "mechanic": {
-        "$type": "ExecuteMultipleEvents",
-        "events": [
-          {
             "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "Spawn Vedrfolnir",
+            "referenceMechanicName": "Spawn Vidofnir",
+            "rotation": 210.0,
             "isPositionRelative": true,
             "isRotationRelative": true
           }
@@ -1883,16 +1854,6 @@
     ],
     "Adds1ZephirinPool": [
       {
-        "$type": "ExecuteRandomEvents",
-        "mechanicPoolName": "Adds1Zephirin1Pool"
-      },
-      {
-        "$type": "ExecuteRandomEvents",
-        "mechanicPoolName": "Adds1Zephirin2Pool"
-      }
-    ],
-    "Adds1Zephirin1Pool": [
-      {
         "$type": "SpawnMechanicEvent",
         "referenceMechanicName": "Spawn Zephirin Add Pool 1",
         "rotation": 60.0,
@@ -1902,48 +1863,6 @@
         "$type": "SpawnMechanicEvent",
         "referenceMechanicName": "Spawn Zephirin Add Pool 1",
         "rotation": 240.0,
-        "isRotationRelative": true
-      }
-    ],
-    "Adds1Zephirin2Pool": [
-      {
-        "$type": "SpawnMechanicEvent",
-        "referenceMechanicName": "Spawn Zephirin Add Pool 2",
-        "rotation": 120.0,
-        "isRotationRelative": true
-      },
-      {
-        "$type": "SpawnMechanicEvent",
-        "referenceMechanicName": "Spawn Zephirin Add Pool 2",
-        "rotation": 300.0,
-        "isRotationRelative": true
-      }
-    ],
-    "Adds1Vedrfolnir1Pool": [
-      {
-        "$type": "SpawnMechanicEvent",
-        "referenceMechanicName": "Spawn Vedrfolnir Add Pool",
-        "rotation": 60.0,
-        "isRotationRelative": true
-      },
-      {
-        "$type": "SpawnMechanicEvent",
-        "referenceMechanicName": "Spawn Vedrfolnir Add Pool",
-        "rotation": 240.0,
-        "isRotationRelative": true
-      }
-    ],
-    "Adds1Vedrfolnir2Pool": [
-      {
-        "$type": "SpawnMechanicEvent",
-        "referenceMechanicName": "Spawn Vedrfolnir Add Pool",
-        "rotation": 120.0,
-        "isRotationRelative": true
-      },
-      {
-        "$type": "SpawnMechanicEvent",
-        "referenceMechanicName": "Spawn Vedrfolnir Add Pool",
-        "rotation": 300.0,
         "isRotationRelative": true
       }
     ],
