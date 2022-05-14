@@ -805,7 +805,7 @@
                 "$type": "DamageEffect",
                 "name": "Ascalon's Mercy Revealed",
                 "damageType": "Damage",
-                "damageAmount": 50000.0
+                "damageAmount": 20000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1084,7 +1084,7 @@
             "effect": {
               "$type": "DamageEffect",
               "name": "Liquid Hell",
-              "damageType": "Damage",
+              "damageType": "Magic",
               "damageAmount": 10000.0
             }
           },
@@ -1312,7 +1312,7 @@
       "collisionShapeParams": {
         "x": 25.0,
         "y": 360.0,
-        "z": 6.67,
+        "z": 7.0,
         "w": 0.0
       },
       "colorHtml": "#8800FF",
