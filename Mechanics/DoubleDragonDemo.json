@@ -1,0 +1,3778 @@
+{
+  "referenceMechanicProperties": {
+    "NidhoggMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": "-Infinity"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Dread Wyrmsbreath",
+            "duration": 6.3
+          },
+          {
+            "$type": "SpawnTethersToPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1,
+                2
+              ],
+              "invertCheck": true
+            },
+            "referenceTetherName": "FireTether",
+            "tetherOffset": {
+              "x": 0.0,
+              "y": 2.0,
+              "z": 0.0
+            }
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "DarkOrbPending"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "NidMouthPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.8
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1,
+                2
+              ],
+              "invertCheck": true
+            },
+            "referenceMechanicName": "FireProtean",
+            "position": {
+              "x": -7.333,
+              "y": 0.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/Nidhogg.png"
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.1
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0
+              ],
+              "classType": "Dps"
+            },
+            "referenceMechanicName": "ApplyMortalVow",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.2
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Akh Afah",
+            "duration": 8.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.8
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0
+              ],
+              "classType": "Healer"
+            },
+            "referenceMechanicName": "AkhAfah",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.4
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "NidDiveSequence1"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "NidDive",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.3
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.2
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Wroth Flames",
+            "duration": 2.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "ApplySpreading"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                1
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "ApplySpreading"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "ApplySpreading"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                3
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "ApplySpreading"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "ApplyEntangled"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                5
+              ],
+              "targetLivingOnly": false
+            },
+            "referenceMechanicName": "ApplyEntangled"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "CrossOrbsPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.3
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Akh Morn",
+            "duration": 8.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.8
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "AkhMorn",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.55
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "AkhMorn",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.55
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "AkhMorn",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.55
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "AkhMorn",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.65
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "NidWingPool"
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.5
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.15
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.8
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Akh Afah",
+            "duration": 8.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.8
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0
+              ],
+              "classType": "Healer"
+            },
+            "referenceMechanicName": "AkhAfah",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.7
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "NidWingPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 11.6
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.1
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.1
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.1
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Dread Wyrmsbreath",
+            "duration": 6.3
+          },
+          {
+            "$type": "SpawnTethersToPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1,
+                2
+              ],
+              "invertCheck": true
+            },
+            "referenceTetherName": "FireTether",
+            "tetherOffset": {
+              "x": 0.0,
+              "y": 2.0,
+              "z": 0.0
+            }
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "DarkOrbPending"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "NidMouthPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.8
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                0,
+                1,
+                2
+              ],
+              "invertCheck": true
+            },
+            "referenceMechanicName": "FireProtean",
+            "position": {
+              "x": -7.333,
+              "y": 0.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/Nidhogg.png"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "NidDiveSequence2"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.5
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "NidDive",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "HraesvelgrMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": "-Infinity"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Great Wyrmsbreath",
+            "duration": 6.3
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HraesDonut"
+          },
+          {
+            "$type": "SpawnTethersToPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                3,
+                4,
+                5
+              ],
+              "invertCheck": true
+            },
+            "referenceTetherName": "IceTether",
+            "tetherOffset": {
+              "x": 0.0,
+              "y": 2.0,
+              "z": 0.0
+            }
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "LightOrbPending"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "HraesMouthPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.8
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                3,
+                4,
+                5
+              ],
+              "invertCheck": true
+            },
+            "referenceMechanicName": "IceProtean",
+            "position": {
+              "x": 7.333,
+              "y": 0.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/Hraesvelgr.png"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.3
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Akh Afah",
+            "duration": 8.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.8
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                1
+              ],
+              "classType": "Healer"
+            },
+            "referenceMechanicName": "AkhAfah",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.8
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "HraesWingPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Hallowed Wings",
+            "duration": 7.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.9
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.1
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.1
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HraesDiveSequence1"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HraesDive",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.5
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.1
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.1
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.1
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.1
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.1
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Akh Afah",
+            "duration": 8.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.8
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                1
+              ],
+              "classType": "Healer"
+            },
+            "referenceMechanicName": "AkhAfah",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.7
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Hallowed Wings",
+            "duration": 7.5
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "HraesWingPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 12.6
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.1
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.1
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.1
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Great Wyrmsbreath",
+            "duration": 6.3
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HraesDonut"
+          },
+          {
+            "$type": "SpawnTethersToPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                3,
+                4,
+                5
+              ],
+              "invertCheck": true
+            },
+            "referenceTetherName": "IceTether",
+            "tetherOffset": {
+              "x": 0.0,
+              "y": 2.0,
+              "z": 0.0
+            }
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "LightOrbPending"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "HraesMouthPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.8
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIdsByClass",
+              "targetIds": [
+                3,
+                4,
+                5
+              ],
+              "invertCheck": true
+            },
+            "referenceMechanicName": "IceProtean",
+            "position": {
+              "x": 7.333,
+              "y": 0.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/Hraesvelgr.png"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HraesDiveSequence2"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.5
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HraesDive",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "HallowedWings": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 16.0,
+        "y": 7.333,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#80ffff",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Hallowed Wings",
+                "damageType": "Damage",
+                "damageAmount": 999999.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "HallowedPlume": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 3.333,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#00ffff",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Hallowed Plume",
+                "damageType": "Damage",
+                "damageAmount": 190000.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "IceProtean": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 30.0,
+        "y": 20.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#00ffff",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Ice Breath",
+                "damageType": "Ice",
+                "damageAmount": 50000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "IceVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Boiling"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Ice Breath",
+                "damageType": "Ice",
+                "damageAmount": 50000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "IceVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Freezing"
+              }
+            ]
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.01
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Boiling"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Boiling"
+            }
+          }
+        ]
+      }
+    },
+    "FireProtean": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 30.0,
+        "y": 20.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff0000",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Fire Breath",
+                "damageType": "Fire",
+                "damageAmount": 50000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "FireVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Freezing"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Fire Breath",
+                "damageType": "Fire",
+                "damageAmount": 50000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "FireVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PhysVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Boiling"
+              }
+            ]
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.01
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Freezing"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Freezing"
+            }
+          }
+        ]
+      }
+    },
+    "LightBreathPending": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.8
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "LightBreath",
+            "position": {
+              "x": 7.333,
+              "y": 0.0
+            },
+            "rotation": 270.0
+          }
+        ]
+      },
+      "mechanicTag": "Breath"
+    },
+    "DarkBreathPending": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.8
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "DarkBreath",
+            "position": {
+              "x": -7.333,
+              "y": 0.0
+            },
+            "rotation": 90.0
+          }
+        ]
+      },
+      "mechanicTag": "Breath"
+    },
+    "LightBreath": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 30.0,
+        "y": 40.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c6e2ff",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Light Breath",
+                "damageType": "TrueDamage",
+                "damageAmount": 999999.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "DarkBreath": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 30.0,
+        "y": 40.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#8e3096",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Dark Breath",
+                "damageType": "TrueDamage",
+                "damageAmount": 999999.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "NidMouthClosed": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/Nidhogg.png"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "CheckBothClosedNid"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "ClearMechanicsWithTag",
+            "mechanicTag": "Orb"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "SoloBusterPending"
+          }
+        ]
+      },
+      "mechanicTag": "Mouth"
+    },
+    "NidMouthOpen": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/NidhoggMouthOpen.png"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "DarkBreathPending"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.01
+          },
+          {
+            "$type": "ClearMechanicsWithTag",
+            "mechanicTag": "Check"
+          }
+        ]
+      },
+      "mechanicTag": "Mouth"
+    },
+    "HraesMouthClosed": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/Hraesvelgr.png"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "CheckBothClosedHraes"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "ClearMechanicsWithTag",
+            "mechanicTag": "Orb"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "SoloBusterPending"
+          }
+        ]
+      },
+      "mechanicTag": "Mouth"
+    },
+    "HraesMouthOpen": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/HraesvelgrMouthOpen.png"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "LightBreathPending"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.01
+          },
+          {
+            "$type": "ClearMechanicsWithTag",
+            "mechanicTag": "Check"
+          }
+        ]
+      },
+      "mechanicTag": "Mouth"
+    },
+    "CheckBothClosedNid": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.02
+          },
+          {
+            "$type": "ClearMechanicsWithTag",
+            "mechanicTag": "Mouth"
+          },
+          {
+            "$type": "ClearMechanicsWithTag",
+            "mechanicTag": "Breath"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "NidMouthOpen"
+          }
+        ]
+      },
+      "mechanicTag": "Check"
+    },
+    "CheckBothClosedHraes": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.02
+          },
+          {
+            "$type": "ClearMechanicsWithTag",
+            "mechanicTag": "Mouth"
+          },
+          {
+            "$type": "ClearMechanicsWithTag",
+            "mechanicTag": "Breath"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HraesMouthOpen"
+          }
+        ]
+      },
+      "mechanicTag": "Check"
+    },
+    "DarkOrbPending": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "ClearMechanicsWithTag",
+            "mechanicTag": "Solo"
+          },
+          {
+            "$type": "ClearMechanicsWithTag",
+            "mechanicTag": "Breath"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.8
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "DarkOrb",
+            "spawnOnTarget": true
+          }
+        ]
+      },
+      "mechanicTag": "Orb"
+    },
+    "LightOrbPending": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "ClearMechanicsWithTag",
+            "mechanicTag": "Solo"
+          },
+          {
+            "$type": "ClearMechanicsWithTag",
+            "mechanicTag": "Breath"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.8
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "LightOrb",
+            "spawnOnTarget": true
+          }
+        ]
+      },
+      "mechanicTag": "Orb"
+    },
+    "DarkOrb": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#5e0066",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Dark Orb",
+                "damageType": "Magic",
+                "damageAmount": 70000.0
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "LightDot"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Sustained Light Damage"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Dark Orb",
+                "damageType": "Magic",
+                "damageAmount": 70000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DarkDot"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "LightOrb": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c6e2ff",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Light Orb",
+                "damageType": "Magic",
+                "damageAmount": 70000.0
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "DarkDot"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Sustained Dark Damage"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Light Orb",
+                "damageType": "Magic",
+                "damageAmount": 70000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "LightDot"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "SoloBusterPending": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.8
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "SoloBuster",
+            "spawnOnTarget": true
+          }
+        ]
+      },
+      "mechanicTag": "Solo"
+    },
+    "SoloBuster": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 5.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#aaaaaa",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Staggering Breath",
+                "damageType": "Magic",
+                "damageAmount": 200000.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "HraesDiveSequence1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "SetEnemyTargetability"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "HraesDivePool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.7
+          },
+          {
+            "$type": "SetEnemyVisible",
+            "visible": true
+          },
+          {
+            "$type": "SetEnemyTargetability",
+            "isTargetable": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.2
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Cauterize",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "SetEnemyTargetability"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 7.333,
+              "y": 0.0
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": -1.0
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": "-Infinity"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.5
+          },
+          {
+            "$type": "SetEnemyVisible",
+            "visible": true
+          },
+          {
+            "$type": "SetEnemyTargetability",
+            "isTargetable": true
+          }
+        ]
+      }
+    },
+    "HraesDiveSequence2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "SetEnemyTargetability"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.666,
+              "y": 7.333
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.666,
+              "y": 0.0
+            },
+            "movementTime": "-Infinity"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.6
+          },
+          {
+            "$type": "SetEnemyVisible",
+            "visible": true
+          },
+          {
+            "$type": "SetEnemyTargetability",
+            "isTargetable": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.3
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Cauterize",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "SetEnemyTargetability"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 0.0,
+              "y": -7.333
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": "-Infinity"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.4
+          },
+          {
+            "$type": "SetEnemyVisible",
+            "visible": true
+          },
+          {
+            "$type": "SetEnemyTargetability",
+            "isTargetable": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Touchdown"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.5
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Revenge of the Horde",
+            "duration": 25.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 25.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Enrage"
+          }
+        ]
+      }
+    },
+    "NidDiveSequence1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "SetEnemyTargetability"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "NidDivePool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.7
+          },
+          {
+            "$type": "SetEnemyVisible",
+            "visible": true
+          },
+          {
+            "$type": "SetEnemyTargetability",
+            "isTargetable": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.2
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Cauterize",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "SetEnemyTargetability"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -7.333,
+              "y": 0.0
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": -1.0
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": "-Infinity"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.4
+          },
+          {
+            "$type": "SetEnemyVisible",
+            "visible": true
+          },
+          {
+            "$type": "SetEnemyTargetability",
+            "isTargetable": true
+          }
+        ]
+      }
+    },
+    "NidDiveSequence2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "SetEnemyTargetability"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.666,
+              "y": 7.333
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.666,
+              "y": 0.0
+            },
+            "movementTime": "-Infinity"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.6
+          },
+          {
+            "$type": "SetEnemyVisible",
+            "visible": true
+          },
+          {
+            "$type": "SetEnemyTargetability",
+            "isTargetable": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.3
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Cauterize",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "SetEnemyTargetability"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 0.0,
+              "y": -7.0
+            },
+            "movementTime": "-Infinity"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.4
+          },
+          {
+            "$type": "SetEnemyVisible",
+            "visible": true
+          },
+          {
+            "$type": "SetEnemyTargetability",
+            "isTargetable": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Touchdown"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.5
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Revenge of the Horde",
+            "duration": 25.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 25.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Enrage"
+          }
+        ]
+      }
+    },
+    "NidDive": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 16.0,
+        "y": 7.333,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#8e3096",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Cauterize",
+                "damageType": "Damage",
+                "damageAmount": 40000.0
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Deep Freeze"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Deep Freeze"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Cauterize",
+                "damageType": "Damage",
+                "damageAmount": 200000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Burns"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "HraesDive": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 16.0,
+        "y": 7.333,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#c6e2ff",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Cauterize",
+                "damageType": "Damage",
+                "damageAmount": 40000.0
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Pyretic"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Pyretic"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Cauterize",
+                "damageType": "Damage",
+                "damageAmount": 200000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Frostbite"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "MortalVowTarget": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetExistingTarget"
+        },
+        "referenceMechanicName": "SpreadMortalVow",
+        "spawnOnTarget": true
+      }
+    },
+    "ApplyMortalVow": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.666,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#808000",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Mortal Vow",
+                "damageType": "MortalVow",
+                "damageAmount": 20000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MortalVow"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "SpreadMortalVow": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.666,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#808000",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Nidhogg enraged :(",
+                "damageType": "TrueDamage",
+                "damageAmount": 999999.0
+              }
+            ],
+            "condition": {
+              "$type": "CheckMultipleConditions",
+              "conditions": [
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "Mortal Atonement"
+                },
+                {
+                  "$type": "CheckPlayerIsMechanicTarget",
+                  "invertStatus": true
+                }
+              ],
+              "requireAll": true
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MortalAtonement"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerIsMechanicTarget"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Mortal Vow",
+                "damageType": "MortalVow",
+                "damageAmount": 20000.0
+              }
+            ]
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MortalVow"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Mortal Atonement",
+              "invertStatus": true
+            }
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} > 1",
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "NidEnrage"
+            }
+          }
+        ]
+      }
+    },
+    "CheckNidEnrage": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Nidhogg enraged :(",
+          "damageType": "TrueDamage",
+          "damageAmount": 999999.0
+        },
+        "condition": {
+          "$type": "CheckPlayerStatus",
+          "statusNames": [
+            "Mortal Atonement",
+            "Mortal Vow"
+          ]
+        }
+      }
+    },
+    "NidEnrage": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Nidhogg enraged :(",
+          "damageType": "TrueDamage",
+          "damageAmount": 999999.0
+        }
+      }
+    },
+    "Enrage": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Revenge of the Horde",
+          "damageType": "TrueDamage",
+          "damageAmount": 999999.0
+        }
+      }
+    },
+    "HraesDonut": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 13.0,
+        "y": 360.0,
+        "z": 6.67,
+        "w": 0.0
+      },
+      "colorHtml": "#ff9600",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.0
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "ChangeColor"
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Swirling Blizzard",
+                "damageType": "TrueDamage",
+                "damageAmount": 999999.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "AkhAfah": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.333,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff4200",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Akh Afah (pretend boss health is equal)",
+                "damageType": "Magic",
+                "damageAmount": 360000.0,
+                "maxStackAmount": 8
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "AkhMorn": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.333,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff2000",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Akh Morn",
+              "damageType": "Magic",
+              "damageAmount": 360000.0,
+              "maxStackAmount": 8
+            }
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "AkhMornPuddle",
+            "spawnOnTarget": true
+          }
+        ]
+      }
+    },
+    "AkhMornPuddle": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.666,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff2000",
+      "persistentTickInterval": 0.3,
+      "persistentActivationDelay": 2.0,
+      "mechanic": {
+        "$type": "WaitEvent",
+        "timeToWait": 14.0
+      },
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Poop",
+          "damageType": "Damage",
+          "damageAmount": 300000.0
+        }
+      }
+    },
+    "SpawnCrossOrbs": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "CrossOrbs",
+            "position": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "CrossOrbs",
+            "position": {
+              "x": 4.5,
+              "y": -4.5
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "CrossOrbs",
+            "position": {
+              "x": -4.5,
+              "y": 4.5
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "CrossOrbs": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/NidOrbs.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 2.0,
+              "y": 2.0,
+              "z": 2.0
+            },
+            "colorHtml": "#ff4200",
+            "isBillboard": true,
+            "visualDuration": 12.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 11.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "CrossOrbsSnapshot",
+            "position": {
+              "x": 0.0,
+              "y": -14.0
+            },
+            "isPositionRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "CrossOrbsSnapshot",
+            "position": {
+              "x": -14.0,
+              "y": 0.0
+            },
+            "rotation": 90.0,
+            "isPositionRelative": true
+          }
+        ]
+      }
+    },
+    "CrossOrbsSnapshot": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 28.0,
+        "y": 6.43,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff9600",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Flame Blast",
+                "damageType": "Damage",
+                "damageAmount": 200000.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "HotWing": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Hot Wing",
+            "duration": 6.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.3
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HotWingSnapshot",
+            "position": {
+              "x": -7.333,
+              "y": -4.6
+            },
+            "rotation": 90.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HotWingSnapshot",
+            "position": {
+              "x": -7.333,
+              "y": 4.6
+            },
+            "rotation": 90.0
+          }
+        ]
+      }
+    },
+    "HotWingSnapshot": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 16.0,
+        "y": 6.4,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff9600",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Hot Wing",
+                "damageType": "Damage",
+                "damageAmount": 999999.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "HotTail": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Hot Tail",
+            "duration": 6.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.3
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HotTailSnapshot",
+            "position": {
+              "x": -7.333,
+              "y": 0.0
+            },
+            "rotation": 90.0
+          }
+        ]
+      }
+    },
+    "HotTailSnapshot": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 16.0,
+        "y": 5.133,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff9600",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Hot Tail",
+                "damageType": "Damage",
+                "damageAmount": 999999.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "EntangledFlamesSnapshot": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.333,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff8000",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Entangled Flames",
+                "damageType": "Fire",
+                "damageAmount": 100000.0,
+                "maxStackAmount": 2
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "FireVuln"
+              }
+            ]
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} = 2",
+            "failEvent": {
+              "$type": "ApplyEffectToPlayers",
+              "effects": [
+                {
+                  "$type": "DamageEffect",
+                  "name": "Entangled Pyre",
+                  "damageType": "Fire",
+                  "damageAmount": 999999.0
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "SpreadingFlamesSnapshot": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.666,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff8000",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Spreading Flames",
+                "damageType": "Fire",
+                "damageAmount": 50000.0
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerIsMechanicTarget"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Entangled Pyre",
+                "damageType": "Fire",
+                "damageAmount": 999999.0
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 10.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Touchdown": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "ProximityDamageEffect",
+                "name": "Touchdown",
+                "damageType": "Physical",
+                "maxDamageAmount": 100000.0,
+                "minDamageAmount": 30000.0,
+                "maxDistance": 15.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ApplyFreeze": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "Frozen"
+        }
+      }
+    },
+    "ApplyBoil": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "Pyretic"
+        }
+      }
+    },
+    "ApplySpreading": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "SpreadingFlames"
+        }
+      }
+    },
+    "ApplyEntangled": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "EntangledFlames"
+        }
+      }
+    },
+    "AutoAttack": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Wyrmclaw",
+          "damageType": "Physical",
+          "damageAmount": 40000.0
+        }
+      }
+    },
+    "SetVisible": {
+      "visible": true
+    },
+    "SetInvisible": {
+      "visible": false
+    },
+    "ChangeColor": {
+      "colorHtml": "#80ffff"
+    },
+    "ArenaBoundary": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 30.0,
+        "y": 270.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#8800ff",
+      "persistentTickInterval": 0.2,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      }
+    }
+  },
+  "referenceTetherProperties": {
+    "FireTether": {
+      "colorHtml": "#ff00ff",
+      "colorHtml2": "#ff2000",
+      "colorDistanceFunction": "100000*{0} - 800000",
+      "tetherDuration": 7.0,
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 6.9,
+      "breakMechanic": {
+        "$type": "ApplyEffectToTetheredPlayers",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "FireVuln"
+        }
+      },
+      "persistentMechanic": {
+        "$type": "CheckTetherLength",
+        "minDistance": 8.0,
+        "failEvent": {
+          "$type": "EndTether",
+          "shouldTriggerBreakEvent": true
+        }
+      }
+    },
+    "IceTether": {
+      "colorHtml": "#ff00ff",
+      "colorHtml2": "#00ffff",
+      "colorDistanceFunction": "100000*{0} - 800000",
+      "tetherDuration": 7.0,
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 6.9,
+      "breakMechanic": {
+        "$type": "ApplyEffectToTetheredPlayers",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "IceVuln"
+        }
+      },
+      "persistentMechanic": {
+        "$type": "CheckTetherLength",
+        "minDistance": 8.0,
+        "failEvent": {
+          "$type": "EndTether",
+          "shouldTriggerBreakEvent": true
+        }
+      }
+    }
+  },
+  "mechanicPools": {
+    "NidDivePool": [
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.666,
+              "y": 7.333
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.666,
+              "y": -7.333
+            },
+            "movementTime": "-Infinity"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.666,
+              "y": 7.333
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.666,
+              "y": -7.333
+            },
+            "movementTime": "-Infinity"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.666,
+              "y": -7.333
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.666,
+              "y": 7.333
+            },
+            "movementTime": "-Infinity"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.666,
+              "y": -7.333
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.666,
+              "y": 7.333
+            },
+            "movementTime": "-Infinity"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          }
+        ]
+      }
+    ],
+    "NidMouthPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "NidMouthOpen"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "NidMouthClosed"
+      }
+    ],
+    "NidWingPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "HotWing"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "HotTail"
+      }
+    ],
+    "HraesDivePool": [
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.666,
+              "y": -7.333
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.666,
+              "y": 0.0
+            },
+            "movementTime": "-Infinity"
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 0.0,
+              "y": -7.333
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": "-Infinity"
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.666,
+              "y": -7.333
+            },
+            "movementTime": 0.1
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.666,
+              "y": 0.0
+            },
+            "movementTime": "-Infinity"
+          }
+        ]
+      }
+    ],
+    "HraesMouthPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "HraesMouthOpen"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "HraesMouthClosed"
+      }
+    ],
+    "HraesWingPool": [
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/HraesvelgrUpLeft.png"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.3
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HallowedWings",
+            "position": {
+              "x": 7.333,
+              "y": 3.666
+            },
+            "rotation": 270.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.4
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "referenceMechanicName": "HallowedPlume",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.4
+          },
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/Hraesvelgr.png"
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/HraesvelgrUpRight.png"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.3
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HallowedWings",
+            "position": {
+              "x": 7.333,
+              "y": -3.666
+            },
+            "rotation": 270.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.4
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "referenceMechanicName": "HallowedPlume",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.4
+          },
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/Hraesvelgr.png"
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/HraesvelgrDownLeft.png"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.3
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HallowedWings",
+            "position": {
+              "x": 7.333,
+              "y": 3.666
+            },
+            "rotation": 270.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.4
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "referenceMechanicName": "HallowedPlume",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.4
+          },
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/Hraesvelgr.png"
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/HraesvelgrDownRight.png"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.3
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HallowedWings",
+            "position": {
+              "x": 7.333,
+              "y": -3.666
+            },
+            "rotation": 270.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.4
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "referenceMechanicName": "HallowedPlume",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.4
+          },
+          {
+            "$type": "SetEnemyTexture",
+            "filePath": "Mechanics/Resources/Hraesvelgr.png"
+          }
+        ]
+      }
+    ],
+    "CrossOrbsPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnCrossOrbs",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnCrossOrbs",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 90.0,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnCrossOrbs",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 180.0,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnCrossOrbs",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 270.0,
+        "isRotationRelative": true
+      }
+    ]
+  },
+  "referenceStatusProperties": {
+    "IceVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 10.0,
+      "damageType": "Ice",
+      "statusIconPath": "Mechanics/Resources/IceVuln.png",
+      "statusName": "Ice Resistance Down II",
+      "statusDescription": "Ice resistance is significantly reduced.",
+      "duration": 3.0
+    },
+    "FireVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 10.0,
+      "damageType": "Fire",
+      "statusIconPath": "Mechanics/Resources/FireVuln.png",
+      "statusName": "Fire Resistance Down II",
+      "statusDescription": "Fire resistance is significantly reduced.",
+      "duration": 3.0
+    },
+    "PhysVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 10.0,
+      "damageType": "Physical",
+      "statusIconPath": "Mechanics/Resources/PhysVuln.png",
+      "statusName": "Physical Vulnerability Up",
+      "statusDescription": "Physical damage taken is increased.",
+      "duration": 10.0
+    },
+    "MagicVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 10.0,
+      "damageType": "Magic",
+      "statusIconPath": "Mechanics/Resources/MagicVuln.png",
+      "statusName": "Magic Vulnerability Up",
+      "statusDescription": "Magic damage taken is increased.",
+      "duration": 3.0
+    },
+    "MortalVow": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "SpreadMortalVow",
+      "statusIconPath": "Mechanics/Resources/MortalVow.png",
+      "statusName": "Mortal Vow",
+      "statusDescription": "Condemned by Nidhogg's vow to avenge his brood-sister.",
+      "duration": 35.0,
+      "shouldKeepOnDeath": true
+    },
+    "MortalAtonement": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 100.0,
+      "damageType": "MortalVow",
+      "statusIconPath": "Mechanics/Resources/MortalAtonement.png",
+      "statusName": "Mortal Atonement",
+      "statusDescription": "No longer able to receive Mortal Vow.",
+      "duration": 100.0,
+      "shouldKeepOnDeath": true
+    },
+    "EntangledFlames": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "EntangledFlamesSnapshot",
+      "statusIconPath": "Mechanics/Resources/EntangledFlames.png",
+      "statusName": "Entangled Flames",
+      "statusDescription": "Caught in Hraesvelgr's entangled flames.",
+      "duration": 24.0
+    },
+    "SpreadingFlames": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "SpreadingFlamesSnapshot",
+      "statusIconPath": "Mechanics/Resources/SpreadingFlames.png",
+      "statusName": "Spreading Flames",
+      "statusDescription": "Caught in Nidhogg's spreading flames.",
+      "duration": 24.0
+    },
+    "Freezing": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "ApplyFreeze",
+      "statusIconPath": "Mechanics/Resources/Freezing.png",
+      "statusName": "Freezing",
+      "statusDescription": "Body is slowly turning to ice. Will experience a Deep Freeze when this effect expires.",
+      "duration": 11.0
+    },
+    "Boiling": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "ApplyBoil",
+      "statusIconPath": "Mechanics/Resources/Boiling.png",
+      "statusName": "Boiling",
+      "statusDescription": "Body is slowly heating up. Will become Pyretic when this effect expires.",
+      "duration": 11.0
+    },
+    "Frozen": {
+      "$type": "SpeedModifier",
+      "statusIconPath": "Mechanics/Resources/Frozen.png",
+      "statusName": "Deep Freeze",
+      "statusDescription": "Frozen solid and unable to execute actions.",
+      "disableType": 7,
+      "duration": 30.0
+    },
+    "Pyretic": {
+      "$type": "SpeedModifier",
+      "statusIconPath": "Mechanics/Resources/Pyretic.png",
+      "statusName": "Pyretic",
+      "statusDescription": "Fire-aspected damage is taken with every action.",
+      "disableType": 7,
+      "duration": 30.0
+    },
+    "Burns": {
+      "$type": "DamageOverTime",
+      "damageAmount": 30000.0,
+      "statusIconPath": "Mechanics/Resources/Burns.png",
+      "statusName": "Burns",
+      "statusDescription": "Sustaining fire damage over time.",
+      "duration": 27.0,
+      "tickInterval": 3.0
+    },
+    "Frostbite": {
+      "$type": "DamageOverTime",
+      "damageAmount": 30000.0,
+      "statusIconPath": "Mechanics/Resources/Frostbite.png",
+      "statusName": "Frostbite",
+      "statusDescription": "Sustaining ice damage over time.",
+      "duration": 27.0,
+      "tickInterval": 3.0
+    },
+    "LightDot": {
+      "$type": "DamageOverTime",
+      "damageAmount": 100000.0,
+      "statusIconPath": "Mechanics/Resources/LightDot.png",
+      "statusName": "Sustained Light Damage",
+      "statusDescription": "Light is causing damage over time.",
+      "duration": 30.0,
+      "tickInterval": 3.0
+    },
+    "DarkDot": {
+      "$type": "DamageOverTime",
+      "damageAmount": 100000.0,
+      "statusIconPath": "Mechanics/Resources/DarkDot.png",
+      "statusName": "Sustained Dark Damage",
+      "statusDescription": "Darkness is causing damage over time.",
+      "duration": 30.0,
+      "tickInterval": 3.0
+    }
+  },
+  "mechanicEvents": [
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary",
+      "position": {
+        "x": -7.333,
+        "y": 7.333
+      },
+      "rotation": -45.0
+    },
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary",
+      "position": {
+        "x": 7.333,
+        "y": -7.333
+      },
+      "rotation": 135.0
+    },
+    {
+      "$type": "SpawnVisualObject",
+      "textureFilePath": "Mechanics/Resources/ArenaSquare4x4.png",
+      "relativePosition": {
+        "x": 0.0,
+        "y": -0.001,
+        "z": 0.0
+      },
+      "eulerAngles": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 23.0,
+        "y": 23.0,
+        "z": 1.0
+      },
+      "visualDuration": "Infinity"
+    },
+    {
+      "$type": "ExecuteMultipleEvents",
+      "events": [
+        {
+          "$type": "WaitEvent",
+          "timeToWait": 1.0
+        },
+        {
+          "$type": "SpawnEnemy",
+          "enemyName": "Nidhogg",
+          "textureFilePath": "Mechanics/Resources/Nidhogg.png",
+          "colorHtml": "#111111",
+          "maxHp": 35000000,
+          "hitboxSize": 17.6,
+          "rotation": 90.0,
+          "visualPosition": {
+            "x": 0.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "visualScale": {
+            "x": 6.0,
+            "y": 6.0,
+            "z": 6.0
+          },
+          "referenceMechanicName": "NidhoggMechanics",
+          "position": {
+            "x": -7.333,
+            "y": 0.0
+          }
+        },
+        {
+          "$type": "SpawnEnemy",
+          "enemyName": "Hraesvelgr",
+          "textureFilePath": "Mechanics/Resources/Hraesvelgr.png",
+          "colorHtml": "#0047b1",
+          "maxHp": 35000000,
+          "hitboxSize": 17.6,
+          "rotation": 270.0,
+          "visualPosition": {
+            "x": 0.0,
+            "y": 2.0,
+            "z": 0.0
+          },
+          "visualScale": {
+            "x": 6.0,
+            "y": 6.0,
+            "z": 6.0
+          },
+          "referenceMechanicName": "HraesvelgrMechanics",
+          "position": {
+            "x": 7.333,
+            "y": 0.0
+          }
+        }
+      ]
+    }
+  ]
+}
