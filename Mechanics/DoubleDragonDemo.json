@@ -2962,12 +2962,10 @@
             "$type": "ApplyEffectToPlayers",
             "effects": [
               {
-                "$type": "ProximityDamageEffect",
+                "$type": "DamageEffect",
                 "name": "Touchdown",
                 "damageType": "Physical",
-                "maxDamageAmount": 100000.0,
-                "minDamageAmount": 30000.0,
-                "maxDistance": 15.0
+                "damageAmount": 50000.0
               }
             ]
           }
