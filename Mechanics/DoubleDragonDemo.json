@@ -95,10 +95,6 @@
             "timeToWait": 0.2
           },
           {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/Nidhogg.png"
-          },
-          {
             "$type": "ReshufflePlayerIds"
           },
           {
@@ -521,10 +517,6 @@
             "timeToWait": 0.2
           },
           {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/Nidhogg.png"
-          },
-          {
             "$type": "WaitEvent",
             "timeToWait": 3.0
           },
@@ -601,10 +593,6 @@
             "duration": 6.3
           },
           {
-            "$type": "SpawnMechanicEvent",
-            "referenceMechanicName": "HraesDonut"
-          },
-          {
             "$type": "SpawnTethersToPlayers",
             "targetingScheme": {
               "$type": "TargetSpecificPlayerIdsByClass",
@@ -634,6 +622,10 @@
             "mechanicPoolName": "HraesMouthPool"
           },
           {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HraesDonut"
+          },
+          {
             "$type": "WaitEvent",
             "timeToWait": 6.8
           },
@@ -657,10 +649,6 @@
           {
             "$type": "WaitEvent",
             "timeToWait": 0.2
-          },
-          {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/Hraesvelgr.png"
           },
           {
             "$type": "WaitEvent",
@@ -969,10 +957,6 @@
           {
             "$type": "WaitEvent",
             "timeToWait": 0.2
-          },
-          {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/Hraesvelgr.png"
           },
           {
             "$type": "WaitEvent",
@@ -1344,10 +1328,6 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/Nidhogg.png"
-          },
-          {
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "CheckBothClosedNid"
           },
@@ -1375,10 +1355,6 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/NidhoggMouthOpen.png"
-          },
-          {
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "DarkBreathPending"
           },
@@ -1389,6 +1365,27 @@
           {
             "$type": "ClearMechanicsWithTag",
             "mechanicTag": "Check"
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/NidhoggMouthOpen.png",
+            "relativePosition": {
+              "x": -7.332,
+              "y": 2.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 6.0,
+              "y": 6.0,
+              "z": 6.0
+            },
+            "colorHtml": "#111111",
+            "visualDuration": 7.0
           }
         ]
       },
@@ -1398,10 +1395,6 @@
       "mechanic": {
         "$type": "ExecuteMultipleEvents",
         "events": [
-          {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/Hraesvelgr.png"
-          },
           {
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "CheckBothClosedHraes"
@@ -1430,10 +1423,6 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/HraesvelgrMouthOpen.png"
-          },
-          {
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "LightBreathPending"
           },
@@ -1444,6 +1433,27 @@
           {
             "$type": "ClearMechanicsWithTag",
             "mechanicTag": "Check"
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/HraesvelgrMouthOpen.png",
+            "relativePosition": {
+              "x": 7.332,
+              "y": 2.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 270.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 6.0,
+              "y": 6.0,
+              "z": 6.0
+            },
+            "colorHtml": "#0047b1",
+            "visualDuration": 7.0
           }
         ]
       },
@@ -1455,7 +1465,7 @@
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 0.02
+            "timeToWait": 0.05
           },
           {
             "$type": "ClearMechanicsWithTag",
@@ -1464,6 +1474,10 @@
           {
             "$type": "ClearMechanicsWithTag",
             "mechanicTag": "Breath"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.01
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -1479,7 +1493,7 @@
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 0.02
+            "timeToWait": 0.05
           },
           {
             "$type": "ClearMechanicsWithTag",
@@ -1488,6 +1502,10 @@
           {
             "$type": "ClearMechanicsWithTag",
             "mechanicTag": "Breath"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.01
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -3312,8 +3330,25 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/HraesvelgrUpLeft.png"
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/HraesvelgrUpLeft.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 2.0,
+              "z": 0.001
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 6.0,
+              "y": 6.0,
+              "z": 6.0
+            },
+            "colorHtml": "#0047b1",
+            "visualDuration": 8.1
           },
           {
             "$type": "WaitEvent",
@@ -3348,10 +3383,6 @@
           {
             "$type": "WaitEvent",
             "timeToWait": 0.4
-          },
-          {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/Hraesvelgr.png"
           }
         ]
       },
@@ -3359,8 +3390,25 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/HraesvelgrUpRight.png"
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/HraesvelgrUpRight.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 2.0,
+              "z": 0.001
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 6.0,
+              "y": 6.0,
+              "z": 6.0
+            },
+            "colorHtml": "#0047b1",
+            "visualDuration": 8.1
           },
           {
             "$type": "WaitEvent",
@@ -3395,10 +3443,6 @@
           {
             "$type": "WaitEvent",
             "timeToWait": 0.4
-          },
-          {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/Hraesvelgr.png"
           }
         ]
       },
@@ -3406,8 +3450,25 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/HraesvelgrDownLeft.png"
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/HraesvelgrDownLeft.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 2.0,
+              "z": 0.001
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 6.0,
+              "y": 6.0,
+              "z": 6.0
+            },
+            "colorHtml": "#0047b1",
+            "visualDuration": 8.1
           },
           {
             "$type": "WaitEvent",
@@ -3441,10 +3502,6 @@
           {
             "$type": "WaitEvent",
             "timeToWait": 0.4
-          },
-          {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/Hraesvelgr.png"
           }
         ]
       },
@@ -3452,8 +3509,25 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/HraesvelgrDownRight.png"
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/HraesvelgrDownRight.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 2.0,
+              "z": 0.001
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 6.0,
+              "y": 6.0,
+              "z": 6.0
+            },
+            "colorHtml": "#0047b1",
+            "visualDuration": 8.1
           },
           {
             "$type": "WaitEvent",
@@ -3487,10 +3561,6 @@
           {
             "$type": "WaitEvent",
             "timeToWait": 0.4
-          },
-          {
-            "$type": "SetEnemyTexture",
-            "filePath": "Mechanics/Resources/Hraesvelgr.png"
           }
         ]
       }
