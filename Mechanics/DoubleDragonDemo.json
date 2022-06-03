@@ -203,7 +203,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 3.0
+            "timeToWait": 2.5
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -273,7 +273,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 0.5
+            "timeToWait": 1.0
           },
           {
             "$type": "ExecuteRandomEvents",
@@ -1062,7 +1062,7 @@
       "collisionShape": "Round",
       "collisionShapeParams": {
         "x": 30.0,
-        "y": 20.0,
+        "y": 13.0,
         "z": 0.0,
         "w": 0.0
       },
@@ -1143,7 +1143,7 @@
       "collisionShape": "Round",
       "collisionShapeParams": {
         "x": 30.0,
-        "y": 20.0,
+        "y": 13.0,
         "z": 0.0,
         "w": 0.0
       },
@@ -1265,7 +1265,7 @@
       "collisionShape": "Round",
       "collisionShapeParams": {
         "x": 30.0,
-        "y": 40.0,
+        "y": 30.0,
         "z": 0.0,
         "w": 0.0
       },
@@ -1296,7 +1296,7 @@
       "collisionShape": "Round",
       "collisionShapeParams": {
         "x": 30.0,
-        "y": 40.0,
+        "y": 30.0,
         "z": 0.0,
         "w": 0.0
       },
@@ -1370,7 +1370,7 @@
             "$type": "SpawnVisualObject",
             "textureFilePath": "Mechanics/Resources/NidhoggMouthOpen.png",
             "relativePosition": {
-              "x": -7.332,
+              "x": -7.33,
               "y": 2.0,
               "z": 0.0
             },
@@ -1438,7 +1438,7 @@
             "$type": "SpawnVisualObject",
             "textureFilePath": "Mechanics/Resources/HraesvelgrMouthOpen.png",
             "relativePosition": {
-              "x": 7.332,
+              "x": 7.33,
               "y": 2.0,
               "z": 0.0
             },
@@ -2185,7 +2185,7 @@
               },
               {
                 "$type": "RemoveStatusEffect",
-                "referenceStatusName": "Deep Freeze"
+                "referenceStatusName": "Frozen"
               }
             ],
             "condition": {
@@ -3333,7 +3333,7 @@
             "relativePosition": {
               "x": 0.0,
               "y": 2.0,
-              "z": 0.001
+              "z": 0.003
             },
             "eulerAngles": {
               "x": 0.0,
@@ -3393,7 +3393,7 @@
             "relativePosition": {
               "x": 0.0,
               "y": 2.0,
-              "z": 0.001
+              "z": 0.003
             },
             "eulerAngles": {
               "x": 0.0,
@@ -3453,7 +3453,7 @@
             "relativePosition": {
               "x": 0.0,
               "y": 2.0,
-              "z": 0.001
+              "z": 0.003
             },
             "eulerAngles": {
               "x": 0.0,
@@ -3512,7 +3512,7 @@
             "relativePosition": {
               "x": 0.0,
               "y": 2.0,
-              "z": 0.001
+              "z": 0.003
             },
             "eulerAngles": {
               "x": 0.0,
@@ -3667,7 +3667,7 @@
       "statusIconPath": "Mechanics/Resources/EntangledFlames.png",
       "statusName": "Entangled Flames",
       "statusDescription": "Caught in Hraesvelgr's entangled flames.",
-      "duration": 24.0
+      "duration": 25.0
     },
     "SpreadingFlames": {
       "$type": "SpawnMechanicOnExpire",
@@ -3675,7 +3675,7 @@
       "statusIconPath": "Mechanics/Resources/SpreadingFlames.png",
       "statusName": "Spreading Flames",
       "statusDescription": "Caught in Nidhogg's spreading flames.",
-      "duration": 24.0
+      "duration": 25.0
     },
     "Freezing": {
       "$type": "SpawnMechanicOnExpire",
