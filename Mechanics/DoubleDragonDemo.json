@@ -86,7 +86,7 @@
             },
             "referenceMechanicName": "FireProtean",
             "position": {
-              "x": -7.333,
+              "x": -7.333333,
               "y": 0.0
             }
           },
@@ -508,7 +508,7 @@
             },
             "referenceMechanicName": "FireProtean",
             "position": {
-              "x": -7.333,
+              "x": -7.333333,
               "y": 0.0
             }
           },
@@ -642,7 +642,7 @@
             },
             "referenceMechanicName": "IceProtean",
             "position": {
-              "x": 7.333,
+              "x": 7.333333,
               "y": 0.0
             }
           },
@@ -950,7 +950,7 @@
             },
             "referenceMechanicName": "IceProtean",
             "position": {
-              "x": 7.333,
+              "x": 7.333333,
               "y": 0.0
             }
           },
@@ -1231,7 +1231,7 @@
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "LightBreath",
             "position": {
-              "x": 7.333,
+              "x": 7.333333,
               "y": 0.0
             },
             "rotation": 270.0
@@ -1252,7 +1252,7 @@
             "$type": "SpawnMechanicEvent",
             "referenceMechanicName": "DarkBreath",
             "position": {
-              "x": -7.333,
+              "x": -7.333333,
               "y": 0.0
             },
             "rotation": 90.0
@@ -1370,7 +1370,7 @@
             "$type": "SpawnVisualObject",
             "textureFilePath": "Mechanics/Resources/NidhoggMouthOpen.png",
             "relativePosition": {
-              "x": -7.33,
+              "x": -7.3,
               "y": 2.0,
               "z": 0.0
             },
@@ -1438,7 +1438,7 @@
             "$type": "SpawnVisualObject",
             "textureFilePath": "Mechanics/Resources/HraesvelgrMouthOpen.png",
             "relativePosition": {
-              "x": 7.33,
+              "x": 7.3,
               "y": 2.0,
               "z": 0.0
             },
@@ -1792,7 +1792,7 @@
           {
             "$type": "SetEnemyMovement",
             "position": {
-              "x": 7.333,
+              "x": 7.333333,
               "y": 0.0
             },
             "movementTime": 0.1
@@ -2003,7 +2003,7 @@
           {
             "$type": "SetEnemyMovement",
             "position": {
-              "x": -7.333,
+              "x": -7.333333,
               "y": 0.0
             },
             "movementTime": 0.1
@@ -3333,7 +3333,7 @@
             "relativePosition": {
               "x": 0.0,
               "y": 2.0,
-              "z": 0.003
+              "z": 0.033
             },
             "eulerAngles": {
               "x": 0.0,
@@ -3393,7 +3393,7 @@
             "relativePosition": {
               "x": 0.0,
               "y": 2.0,
-              "z": 0.003
+              "z": 0.033
             },
             "eulerAngles": {
               "x": 0.0,
@@ -3453,7 +3453,7 @@
             "relativePosition": {
               "x": 0.0,
               "y": 2.0,
-              "z": 0.003
+              "z": 0.033
             },
             "eulerAngles": {
               "x": 0.0,
@@ -3512,7 +3512,7 @@
             "relativePosition": {
               "x": 0.0,
               "y": 2.0,
-              "z": 0.003
+              "z": 0.033
             },
             "eulerAngles": {
               "x": 0.0,
