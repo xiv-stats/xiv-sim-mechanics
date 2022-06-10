@@ -110,7 +110,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 4.1
+            "timeToWait": 5.1
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -126,7 +126,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 3.2
+            "timeToWait": 2.2
           },
           {
             "$type": "StartCastBar",
@@ -3648,7 +3648,7 @@
       "statusIconPath": "Mechanics/Resources/MortalVow.png",
       "statusName": "Mortal Vow",
       "statusDescription": "Condemned by Nidhogg's vow to avenge his brood-sister.",
-      "duration": 35.0,
+      "duration": 34.0,
       "shouldKeepOnDeath": true
     },
     "MortalAtonement": {
@@ -3657,7 +3657,7 @@
       "damageType": "MortalVow",
       "statusIconPath": "Mechanics/Resources/MortalAtonement.png",
       "statusName": "Mortal Atonement",
-      "statusDescription": "No longer able to receive Mortal Vow.",
+      "statusDescription": "No longer condemned by Nidhogg's Mortal Vow.",
       "duration": 100.0,
       "shouldKeepOnDeath": true
     },
