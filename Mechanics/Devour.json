@@ -1,0 +1,4591 @@
+{
+  "referenceMechanicProperties": {
+    "ArenaBoundarySide": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 2.0,
+        "y": 14.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#8800ff",
+      "persistentTickInterval": 0.1,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      }
+    },
+    "ArenaBoundary": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ArenaBoundarySide",
+            "position": {
+              "x": 0.0,
+              "y": 5.0
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ArenaBoundarySide",
+            "position": {
+              "x": 5.0,
+              "y": 0.0
+            },
+            "rotation": 90.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ArenaBoundarySide",
+            "position": {
+              "x": 0.0,
+              "y": -5.0
+            },
+            "rotation": 180.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ArenaBoundarySide",
+            "position": {
+              "x": -5.0,
+              "y": 0.0
+            },
+            "rotation": 270.0
+          }
+        ]
+      }
+    },
+    "ArenaFloor": {
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/ArenaCircle.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": -0.001,
+          "z": 0.0
+        },
+        "eulerAngles": {
+          "x": 90.0,
+          "y": 90.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 10.0,
+          "y": 10.0,
+          "z": 1.0
+        },
+        "visualDuration": "Infinity"
+      }
+    },
+    "Stampede": {
+      "collisionShapeParams": {
+        "x": 3.9,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#fff600",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Starving Stampede",
+              "damageType": "TrueDamage",
+              "damageAmount": 9999999.0
+            }
+          }
+        ]
+      }
+    },
+    "CirclesMouth-1": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.9
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "Circles-1": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnEnemy",
+            "enemyName": "Mouth",
+            "textureFilePath": "Mechanics/Resources/Teeth.png",
+            "colorHtml": "#ff0000",
+            "maxHp": 10,
+            "baseMoveSpeed": 50.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "isTargetable": false,
+            "showInEnemyList": false,
+            "visualPosition": {
+              "x": 0.0,
+              "y": 1.4,
+              "z": 0.0
+            },
+            "visualScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "referenceMechanicName": "CirclesMouth-1",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 15.599999
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          }
+        ]
+      }
+    },
+    "CirclesMouth-2": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.9
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "Circles-2": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnEnemy",
+            "enemyName": "Mouth",
+            "textureFilePath": "Mechanics/Resources/Teeth.png",
+            "colorHtml": "#ff0000",
+            "maxHp": 10,
+            "baseMoveSpeed": 50.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "isTargetable": false,
+            "showInEnemyList": false,
+            "visualPosition": {
+              "x": 0.0,
+              "y": 1.4,
+              "z": 0.0
+            },
+            "visualScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "referenceMechanicName": "CirclesMouth-2",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 15.599999
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          }
+        ]
+      }
+    },
+    "CirclesMouth-3": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.9
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "Circles-3": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnEnemy",
+            "enemyName": "Mouth",
+            "textureFilePath": "Mechanics/Resources/Teeth.png",
+            "colorHtml": "#ff0000",
+            "maxHp": 10,
+            "baseMoveSpeed": 50.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "isTargetable": false,
+            "showInEnemyList": false,
+            "visualPosition": {
+              "x": 0.0,
+              "y": 1.4,
+              "z": 0.0
+            },
+            "visualScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "referenceMechanicName": "CirclesMouth-3",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 15.599999
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          }
+        ]
+      }
+    },
+    "CirclesMouth-4": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.9
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "Circles-4": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnEnemy",
+            "enemyName": "Mouth",
+            "textureFilePath": "Mechanics/Resources/Teeth.png",
+            "colorHtml": "#ff0000",
+            "maxHp": 10,
+            "baseMoveSpeed": 50.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "isTargetable": false,
+            "showInEnemyList": false,
+            "visualPosition": {
+              "x": 0.0,
+              "y": 1.4,
+              "z": 0.0
+            },
+            "visualScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "referenceMechanicName": "CirclesMouth-4",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 15.599999
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          }
+        ]
+      }
+    },
+    "ZigzagMouth-1": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.9
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "Zigzag-1": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnEnemy",
+            "enemyName": "Mouth",
+            "textureFilePath": "Mechanics/Resources/Teeth.png",
+            "colorHtml": "#ff0000",
+            "maxHp": 10,
+            "baseMoveSpeed": 50.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "isTargetable": false,
+            "showInEnemyList": false,
+            "visualPosition": {
+              "x": 0.0,
+              "y": 1.4,
+              "z": 0.0
+            },
+            "visualScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "referenceMechanicName": "ZigzagMouth-1",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 15.599999
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          }
+        ]
+      }
+    },
+    "ZigzagMouth-2": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.9
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "Zigzag-2": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnEnemy",
+            "enemyName": "Mouth",
+            "textureFilePath": "Mechanics/Resources/Teeth.png",
+            "colorHtml": "#ff0000",
+            "maxHp": 10,
+            "baseMoveSpeed": 50.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "isTargetable": false,
+            "showInEnemyList": false,
+            "visualPosition": {
+              "x": 0.0,
+              "y": 1.4,
+              "z": 0.0
+            },
+            "visualScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "referenceMechanicName": "ZigzagMouth-2",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 15.599999
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          }
+        ]
+      }
+    },
+    "ZigzagMouth-3": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.9
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "Zigzag-3": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnEnemy",
+            "enemyName": "Mouth",
+            "textureFilePath": "Mechanics/Resources/Teeth.png",
+            "colorHtml": "#ff0000",
+            "maxHp": 10,
+            "baseMoveSpeed": 50.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "isTargetable": false,
+            "showInEnemyList": false,
+            "visualPosition": {
+              "x": 0.0,
+              "y": 1.4,
+              "z": 0.0
+            },
+            "visualScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "referenceMechanicName": "ZigzagMouth-3",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 15.599999
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          }
+        ]
+      }
+    },
+    "ZigzagMouth-4": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.15
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            },
+            "movementTime": 0.95
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.9
+          },
+          {
+            "$type": "SetEnemyVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "Zigzag-4": {
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 16.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": 2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 18.499998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 19.699999
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 20.899998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": 3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 22.099998
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": 2.0,
+              "y": 0.8,
+              "z": -3.3333333
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 23.3
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1Blue.png",
+            "relativePosition": {
+              "x": -3.3333333,
+              "y": 0.8,
+              "z": -2.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 24.5
+          },
+          {
+            "$type": "SpawnEnemy",
+            "enemyName": "Mouth",
+            "textureFilePath": "Mechanics/Resources/Teeth.png",
+            "colorHtml": "#ff0000",
+            "maxHp": 10,
+            "baseMoveSpeed": 50.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "isTargetable": false,
+            "showInEnemyList": false,
+            "visualPosition": {
+              "x": 0.0,
+              "y": 1.4,
+              "z": 0.0
+            },
+            "visualScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "referenceMechanicName": "ZigzagMouth-4",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            }
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 15.599999
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": 2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": 3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": 2.0,
+              "y": -3.3333333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Stampede",
+            "position": {
+              "x": -3.3333333,
+              "y": -2.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.2
+          }
+        ]
+      }
+    }
+  },
+  "referenceTetherProperties": {},
+  "mechanicPools": {
+    "DevourPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Circles-1"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Circles-2"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Circles-3"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Circles-4"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Zigzag-1"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Zigzag-2"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Zigzag-3"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Zigzag-4"
+      }
+    ]
+  },
+  "referenceStatusProperties": {},
+  "mechanicEvents": [
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaFloor",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      }
+    },
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary",
+      "position": {
+        "x": 0.0,
+        "y": 0.0
+      }
+    },
+    {
+      "$type": "ExecuteRandomEvents",
+      "mechanicPoolName": "DevourPool"
+    }
+  ]
+}
