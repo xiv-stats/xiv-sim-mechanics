@@ -1,0 +1,2105 @@
+{
+  "referenceMechanicProperties": {
+    "OmegaMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ApplyPlaystations"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "EyePool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "VulnManager"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "OmegaSpawnPool"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "SecondOmegaPool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 26.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "CleanupVuln"
+          }
+        ]
+      }
+    },
+    "ApplyPlaystations": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "referenceMechanicName": "ApplyTriangle"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplyCircle"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                5
+              ]
+            },
+            "referenceMechanicName": "ApplySquare"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplyX"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TetherPool"
+          }
+        ]
+      }
+    },
+    "ApplyTriangle": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/PS-Tri.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "colorHtml": "#00ff00",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 5.0
+      }
+    },
+    "ApplyCircle": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/PS-Circle.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "colorHtml": "#ff0000",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 5.0
+      }
+    },
+    "ApplySquare": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/PS-Square.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "colorHtml": "#ff00ff",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 5.0
+      }
+    },
+    "ApplyX": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnVisualObject",
+        "textureFilePath": "Mechanics/Resources/PS-X.png",
+        "relativePosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 0.5,
+          "z": 0.5
+        },
+        "colorHtml": "#0000ff",
+        "spawnOnPlayer": true,
+        "isBillboard": true,
+        "visualDuration": 5.0
+      }
+    },
+    "SpawnFirstOmegas": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "MiddleOmega",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "FirstGirl",
+            "position": {
+              "x": -3.4,
+              "y": 0.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "FirstGuy",
+            "position": {
+              "x": 3.4,
+              "y": 0.0
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "SpawnSecondOmegaInter": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "SideOmega",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.5
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "CardOmegas"
+          }
+        ]
+      }
+    },
+    "SpawnSecondOmegaCard": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "SideOmega",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.5
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "InterOmegas"
+          }
+        ]
+      }
+    },
+    "MiddleOmega": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#777777",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/OmegaM.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.9,
+              "z": 1.0
+            },
+            "colorHtml": "#111111",
+            "isRotationRelative": true,
+            "isBillboard": true,
+            "visualDuration": 5.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.5
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/OmegaM.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.9,
+              "z": 1.0
+            },
+            "colorHtml": "#777777",
+            "isRotationRelative": true,
+            "isBillboard": true,
+            "visualDuration": 2.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.5
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetInvisible"
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/OmegaF.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.9,
+              "z": 1.0
+            },
+            "colorHtml": "#777777",
+            "isRotationRelative": true,
+            "isBillboard": true,
+            "visualDuration": 2.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/OmegaF.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.9,
+              "z": 1.0
+            },
+            "colorHtml": "#111111",
+            "isRotationRelative": true,
+            "isBillboard": true,
+            "visualDuration": 7.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "KnockbackFromCenter",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "SideOmega": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#777777",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/OmegaF.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.9,
+              "z": 1.0
+            },
+            "colorHtml": "#111111",
+            "isRotationRelative": true,
+            "isBillboard": true,
+            "visualDuration": 5.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.5
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/OmegaF.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.9,
+              "z": 1.0
+            },
+            "colorHtml": "#777777",
+            "isRotationRelative": true,
+            "isBillboard": true,
+            "visualDuration": 2.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.5
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetInvisible"
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/OmegaM.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.9,
+              "z": 1.0
+            },
+            "colorHtml": "#777777",
+            "isRotationRelative": true,
+            "isBillboard": true,
+            "visualDuration": 2.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/OmegaM.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.9,
+              "z": 1.0
+            },
+            "colorHtml": "#111111",
+            "isRotationRelative": true,
+            "isBillboard": true,
+            "visualDuration": 12.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.5
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Chariot",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "FirstGuy": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteRandomEvents",
+        "mechanicPoolName": "FirstGuyPool"
+      }
+    },
+    "FirstGirl": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteRandomEvents",
+        "mechanicPoolName": "FirstGirlPool"
+      }
+    },
+    "ChariotGuy": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/OmegaM.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.9,
+              "z": 1.0
+            },
+            "colorHtml": "#111111",
+            "isRotationRelative": true,
+            "isBillboard": true,
+            "visualDuration": 8.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Chariot",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "ChariotGuyLong": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/OmegaM.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.9,
+              "z": 1.0
+            },
+            "colorHtml": "#111111",
+            "isRotationRelative": true,
+            "isBillboard": true,
+            "visualDuration": 20.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 16.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Chariot",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "DynamoGuy": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/OmegaM-Shield.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.9,
+              "z": 1.0
+            },
+            "colorHtml": "#111111",
+            "isRotationRelative": true,
+            "isBillboard": true,
+            "visualDuration": 8.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Dynamo",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "PlusGirl": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/OmegaF.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.9,
+              "z": 1.0
+            },
+            "colorHtml": "#111111",
+            "isRotationRelative": true,
+            "isBillboard": true,
+            "visualDuration": 8.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Plus",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "HotWingGirl": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/OmegaF-Blade.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.9,
+              "z": 1.0
+            },
+            "colorHtml": "#111111",
+            "isRotationRelative": true,
+            "isBillboard": true,
+            "visualDuration": 8.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HotWing",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "Dynamo": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 8.0,
+        "y": 360.0,
+        "z": 3.6666667,
+        "w": 0.0
+      },
+      "colorHtml": "#ff9600",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.8
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.7
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Beyond Strength",
+              "damageType": "Damage",
+              "damageAmount": 300000.0
+            }
+          }
+        ]
+      }
+    },
+    "Chariot": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 3.6666667,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff9600",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.8
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.7
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Efficient Bladework",
+              "damageType": "Damage",
+              "damageAmount": 300000.0
+            }
+          }
+        ]
+      }
+    },
+    "Plus": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "PlusSnapshot",
+            "position": {
+              "x": -7.333,
+              "y": 0.0
+            },
+            "rotation": 90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "PlusSnapshot",
+            "position": {
+              "x": 0.0,
+              "y": -7.333
+            },
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "PlusSnapshot": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 3.5,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff9600",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.8
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.7
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Optimized Blizzard III",
+              "damageType": "Damage",
+              "damageAmount": 300000.0
+            }
+          }
+        ]
+      }
+    },
+    "HotWing": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HotWingSnapshot",
+            "position": {
+              "x": -7.333,
+              "y": 4.9
+            },
+            "rotation": 90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "HotWingSnapshot",
+            "position": {
+              "x": -7.333,
+              "y": -4.9
+            },
+            "rotation": 90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "HotWingSnapshot": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 19.0,
+        "y": 6.4,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff9600",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.8
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.7
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Superliminal Steel",
+                "damageType": "Damage",
+                "damageAmount": 999999.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "SpawnEye": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 20.0,
+        "y": 5.25,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#0a4d8b",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/SkyEye.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 180.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 4.0,
+              "y": 4.0,
+              "z": 4.0
+            },
+            "isRotationRelative": true,
+            "visualDuration": 17.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 13.3
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "Spread",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Eyeball Laser",
+                "damageType": "Damage",
+                "damageAmount": 500000.0
+              }
+            ]
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "FirstStackPool"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "SecondStackPool"
+          }
+        ]
+      }
+    },
+    "Stack": {
+      "isTargeted": true,
+      "followSpeed": 10000.0,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#eeeeee",
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "colorHtml": "#ff4200",
+            "spawnOnPlayer": true,
+            "visualDuration": 8.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Spotlight",
+                "damageType": "Magic",
+                "damageAmount": 320000.0,
+                "maxStackAmount": 4
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Spread": {
+      "isTargeted": true,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#eeeeee",
+      "visible": true,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Optimized Fire III",
+                "damageType": "Magic",
+                "damageAmount": 80000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "KnockbackFromCenter": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 15.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Discharger",
+                "damageType": "Damage",
+                "damageAmount": 20000.0
+              },
+              {
+                "$type": "KnockbackEffect",
+                "knockbackDistance": 5.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "SetVisible": {
+      "visible": true
+    },
+    "SetInvisible": {
+      "visible": false
+    },
+    "TryRemoveVuln": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Vuln"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "VulnPending"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "ClearVulnPending"
+              }
+            ],
+            "condition": {
+              "$type": "CheckMultipleConditions",
+              "conditions": [
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "Vulnerability Up"
+                },
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "ClearVulnPending"
+                }
+              ],
+              "requireAll": true
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "VulnPending"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "ClearVulnPending"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "TryAddVuln": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Vuln"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "VulnPending"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "ClearVulnPending"
+              }
+            ],
+            "condition": {
+              "$type": "CheckMultipleConditions",
+              "conditions": [
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "Vulnerability Up",
+                  "invertStatus": true
+                },
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "VulnPending"
+                }
+              ],
+              "requireAll": true
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "VulnPending"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "ClearVulnPending"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "CleanupVuln": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Vuln"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "VulnPending"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "ClearVulnPending"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "AssignFarTethers": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "tetherIndices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "referenceTetherName": "FarChain"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplyFar"
+          }
+        ]
+      }
+    },
+    "AssignMidTethers": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "tetherIndices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "referenceTetherName": "MidChain"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplyMid"
+          }
+        ]
+      }
+    },
+    "ApplyFar": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "FarGlitch"
+        }
+      }
+    },
+    "ApplyMid": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "MidGlitch"
+        }
+      }
+    },
+    "ArenaBoundary": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 7.0,
+        "w": 0.0
+      },
+      "colorHtml": "#8800FF",
+      "persistentTickInterval": 0.2,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      }
+    },
+    "VulnManager": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "persistentTickInterval": 0.1,
+      "mechanic": {
+        "$type": "WaitEvent",
+        "timeToWait": 30.0
+      },
+      "persistentMechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "TryAddVuln"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "TryRemoveVuln"
+          }
+        ]
+      }
+    },
+    "CardOmegas": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ChariotGuyLong",
+            "position": {
+              "x": 5.299947E-08,
+              "y": -4.4444447
+            }
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ChariotGuyLong",
+            "position": {
+              "x": -4.4444447,
+              "y": 6.710925E-07
+            },
+            "rotation": 90.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ChariotGuyLong",
+            "position": {
+              "x": 3.3554625E-07,
+              "y": 4.4444447
+            },
+            "rotation": 180.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ChariotGuyLong",
+            "position": {
+              "x": 4.4444447,
+              "y": 0.0
+            },
+            "rotation": 270.0
+          }
+        ]
+      }
+    },
+    "InterOmegas": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ChariotGuyLong",
+            "position": {
+              "x": -3.142697,
+              "y": -3.1426966
+            },
+            "rotation": 45.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ChariotGuyLong",
+            "position": {
+              "x": -3.1426969,
+              "y": 3.1426969
+            },
+            "rotation": 135.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ChariotGuyLong",
+            "position": {
+              "x": 3.1426973,
+              "y": 3.1426964
+            },
+            "rotation": 225.00002
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ChariotGuyLong",
+            "position": {
+              "x": 3.1426957,
+              "y": -3.1426978
+            },
+            "rotation": 315.00003
+          }
+        ]
+      }
+    }
+  },
+  "referenceTetherProperties": {
+    "MidChain": {
+      "colorHtml": "#DDDDDD55",
+      "tetherDuration": 28.0,
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 1.0,
+      "persistentMechanic": {
+        "$type": "CheckTetherLength",
+        "maxDistance": 8.3,
+        "minDistance": 6.5,
+        "successEvent": {
+          "$type": "ApplyEffectToTetheredPlayers",
+          "effect": {
+            "$type": "ApplyStatusEffect",
+            "referenceStatusName": "ClearVulnPending"
+          }
+        },
+        "failEvent": {
+          "$type": "ApplyEffectToTetheredPlayers",
+          "effect": {
+            "$type": "ApplyStatusEffect",
+            "referenceStatusName": "VulnPending"
+          }
+        }
+      }
+    },
+    "FarChain": {
+      "colorHtml": "#DDDDDD55",
+      "tetherDuration": 28.0,
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 1.0,
+      "persistentMechanic": {
+        "$type": "CheckTetherLength",
+        "maxDistance": 99.0,
+        "minDistance": 12.0,
+        "successEvent": {
+          "$type": "ApplyEffectToTetheredPlayers",
+          "effect": {
+            "$type": "ApplyStatusEffect",
+            "referenceStatusName": "ClearVulnPending"
+          }
+        },
+        "failEvent": {
+          "$type": "ApplyEffectToTetheredPlayers",
+          "effect": {
+            "$type": "ApplyStatusEffect",
+            "referenceStatusName": "VulnPending"
+          }
+        }
+      }
+    }
+  },
+  "mechanicPools": {
+    "TetherPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "AssignFarTethers"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "AssignMidTethers"
+      }
+    ],
+    "OmegaSpawnPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnFirstOmegas",
+        "rotation": 22.5,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnFirstOmegas",
+        "rotation": 67.5,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnFirstOmegas",
+        "rotation": 112.5,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnFirstOmegas",
+        "rotation": 157.5,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnFirstOmegas",
+        "rotation": 202.5,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnFirstOmegas",
+        "rotation": 247.5,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnFirstOmegas",
+        "rotation": 292.5,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnFirstOmegas",
+        "rotation": 337.5,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "FirstGuyPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "ChariotGuy",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "DynamoGuy",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "FirstGirlPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "HotWingGirl",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "PlusGirl",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "FirstStackPool": [
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            0
+          ]
+        },
+        "referenceMechanicName": "Stack",
+        "spawnOnTarget": true
+      },
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            2
+          ]
+        },
+        "referenceMechanicName": "Stack",
+        "spawnOnTarget": true
+      },
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            4
+          ]
+        },
+        "referenceMechanicName": "Stack",
+        "spawnOnTarget": true
+      },
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            6
+          ]
+        },
+        "referenceMechanicName": "Stack",
+        "spawnOnTarget": true
+      }
+    ],
+    "SecondStackPool": [
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            1
+          ]
+        },
+        "referenceMechanicName": "Stack",
+        "spawnOnTarget": true
+      },
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            3
+          ]
+        },
+        "referenceMechanicName": "Stack",
+        "spawnOnTarget": true
+      },
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            5
+          ]
+        },
+        "referenceMechanicName": "Stack",
+        "spawnOnTarget": true
+      },
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            7
+          ]
+        },
+        "referenceMechanicName": "Stack",
+        "spawnOnTarget": true
+      }
+    ],
+    "EyePool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnEye",
+        "position": {
+          "x": 9.5399045E-08,
+          "y": -8.0
+        },
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnEye",
+        "position": {
+          "x": -5.6568546,
+          "y": -5.6568537
+        },
+        "rotation": 45.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnEye",
+        "position": {
+          "x": -8.0,
+          "y": 1.2079664E-06
+        },
+        "rotation": 90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnEye",
+        "position": {
+          "x": -5.656854,
+          "y": 5.656854
+        },
+        "rotation": 135.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnEye",
+        "position": {
+          "x": 6.039832E-07,
+          "y": 8.0
+        },
+        "rotation": 180.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnEye",
+        "position": {
+          "x": 5.656855,
+          "y": 5.656853
+        },
+        "rotation": 225.00002,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnEye",
+        "position": {
+          "x": 8.0,
+          "y": 0.0
+        },
+        "rotation": 270.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnEye",
+        "position": {
+          "x": 5.6568522,
+          "y": -5.656856
+        },
+        "rotation": 315.00003,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "SecondOmegaPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSecondOmegaCard",
+        "position": {
+          "x": 5.299947E-08,
+          "y": -4.4444447
+        },
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSecondOmegaInter",
+        "position": {
+          "x": -3.142697,
+          "y": -3.1426966
+        },
+        "rotation": 45.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSecondOmegaCard",
+        "position": {
+          "x": -4.4444447,
+          "y": 6.710925E-07
+        },
+        "rotation": 90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSecondOmegaInter",
+        "position": {
+          "x": -3.1426969,
+          "y": 3.1426969
+        },
+        "rotation": 135.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSecondOmegaCard",
+        "position": {
+          "x": 3.3554625E-07,
+          "y": 4.4444447
+        },
+        "rotation": 180.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSecondOmegaInter",
+        "position": {
+          "x": 3.1426973,
+          "y": 3.1426964
+        },
+        "rotation": 225.00002,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSecondOmegaCard",
+        "position": {
+          "x": 4.4444447,
+          "y": 0.0
+        },
+        "rotation": 270.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSecondOmegaInter",
+        "position": {
+          "x": 3.1426957,
+          "y": -3.1426978
+        },
+        "rotation": 315.00003,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ]
+  },
+  "referenceStatusProperties": {
+    "Vuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 5.0,
+      "statusIconPath": "Mechanics/Resources/VulnStack.png",
+      "statusName": "Vulnerability Up",
+      "statusDescription": "Damage taken is increased.",
+      "duration": 60.0,
+      "maxStacks": 16
+    },
+    "MagicVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 4.0,
+      "damageType": "Magic",
+      "statusIconPath": "Mechanics/Resources/MagicVuln.png",
+      "statusName": "Magic Vulnerability Up",
+      "statusDescription": "Magic damage taken is increased.",
+      "duration": 2.0
+    },
+    "MidGlitch": {
+      "statusIconPath": "Mechanics/Resources/MidGlitch.png",
+      "statusName": "Mid Glitch",
+      "statusDescription": "Damage taken is increased when too far from or too close to partner.",
+      "duration": 28.0
+    },
+    "FarGlitch": {
+      "statusIconPath": "Mechanics/Resources/FarGlitch.png",
+      "statusName": "Remote Glitch",
+      "statusDescription": "Damage taken is increased when too close to partner.",
+      "duration": 28.0
+    },
+    "VulnPending": {
+      "statusName": "VulnPending",
+      "statusDescription": "Vuln needs applying.",
+      "duration": 28.0
+    },
+    "ClearVulnPending": {
+      "statusName": "ClearVulnPending",
+      "statusDescription": "Vuln needs clearing.",
+      "duration": 28.0
+    }
+  },
+  "mechanicEvents": [
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary"
+    },
+    {
+      "$type": "SpawnVisualObject",
+      "textureFilePath": "Mechanics/Resources/ArenaCircleMF.png",
+      "relativePosition": {
+        "x": 0.0,
+        "y": -0.001,
+        "z": 0.0
+      },
+      "eulerAngles": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 15.85,
+        "y": 15.85,
+        "z": 1.0
+      },
+      "visualDuration": "Infinity"
+    },
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "OmegaMechanics"
+    }
+  ]
+}
