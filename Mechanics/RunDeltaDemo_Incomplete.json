@@ -1,0 +1,2222 @@
+{
+  "referenceMechanicProperties": {
+    "ArenaBoundary": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 6.67,
+        "w": 0.0
+      },
+      "colorHtml": "#8800FF",
+      "persistentTickInterval": 0.2,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      }
+    },
+    "StartButton": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#00ff00",
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 1.0,
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 0",
+        "failEvent": {
+          "$type": "ExecuteMultipleEvents",
+          "events": [
+            {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Timeline"
+            },
+            {
+              "$type": "ClearMechanicsWithTag",
+              "mechanicTag": "StartButton"
+            }
+          ]
+        }
+      },
+      "mechanicTag": "StartButton"
+    },
+    "Timeline": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "SpawnBosses"
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "tetherIndices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "referenceTetherName": "Chain-Blue"
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "tetherIndices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "referenceTetherName": "Chain-Green"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplyBlueTether"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplyGreenTether"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Oversampled-Player-Pool"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                1
+              ]
+            },
+            "referenceMechanicName": "ApplyNearWorld"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2
+              ]
+            },
+            "referenceMechanicName": "ApplyDistantWorld"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1,
+                2,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplyBlueFist",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                5,
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplyYellowFist",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Spinny-Pool-0"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Spinny-Pool-1"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Spinny-Pool-2"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Spinny-Pool-3"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Spinny-Pool-4"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Spinny-Pool-5"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 6.0
+          }
+        ]
+      }
+    },
+    "EyeMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": -1.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 16.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Eye Laser",
+            "duration": 4.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 4.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "EyeLaser",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "FinalOmegaMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": -1.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 22.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Oversampled-Pool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "OmegaMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SetEnemyMovement",
+            "movementTime": -1.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 36.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "SwivelCannon-Pool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "OmegaMMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 22.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "BeyondDefense-Pool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.8
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "PilePitch",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "BeyondDefense1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Beyond Defense",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "moveToTarget": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetIds": [
+                0
+              ]
+            },
+            "movementTime": 0.2
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetIds": [
+                0
+              ]
+            },
+            "referenceMechanicName": "BeyondDefense",
+            "spawnOnTarget": true
+          }
+        ]
+      }
+    },
+    "BeyondDefense2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Beyond Defense",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "moveToTarget": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetIds": [
+                1
+              ]
+            },
+            "movementTime": 0.2
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetIds": [
+                1
+              ]
+            },
+            "referenceMechanicName": "BeyondDefense",
+            "spawnOnTarget": true
+          }
+        ]
+      }
+    },
+    "ApplyBlueFist": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "BlueFistVfx",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "BlueFistTarget"
+            }
+          }
+        ]
+      }
+    },
+    "BlueFistVfx": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": -0.8
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "colorHtml": "#008aff",
+            "visualDuration": 12.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": -0.8
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "colorHtml": "#008aff",
+            "visualDuration": 12.0
+          }
+        ]
+      }
+    },
+    "ApplyYellowFist": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetExistingTarget"
+            },
+            "referenceMechanicName": "YellowFistVfx",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "YellowFistTarget"
+            }
+          }
+        ]
+      }
+    },
+    "YellowFistVfx": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": -0.8
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "colorHtml": "#ff9000",
+            "visualDuration": 12.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Mark1.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": -0.8
+            },
+            "eulerAngles": {
+              "x": 0.0,
+              "y": 90.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 1.0
+            },
+            "colorHtml": "#ff9000",
+            "visualDuration": 12.0
+          }
+        ]
+      }
+    },
+    "Oversampled-PlayerRight": {
+      "isTargeted": true,
+      "followSpeed": 10.0,
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 22.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Screens.png",
+            "relativePosition": {
+              "x": 1.0,
+              "y": 0.5,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#0486ff",
+            "spawnOnPlayer": true,
+            "isBillboard": true,
+            "visualDuration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Oversampled-Target-Player",
+            "rotation": 90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "Oversampled-PlayerLeft": {
+      "isTargeted": true,
+      "followSpeed": 10.0,
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 22.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Screens.png",
+            "relativePosition": {
+              "x": -1.0,
+              "y": 0.5,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "colorHtml": "#0486ff",
+            "spawnOnPlayer": true,
+            "isBillboard": true,
+            "visualDuration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Oversampled-Target-Player",
+            "rotation": -90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "Oversampled-Target-Player": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 50.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetPlayersInsideAoe",
+              "totalTargetsNeeded": 2
+            },
+            "referenceMechanicName": "Oversampled",
+            "spawnOnTarget": true
+          }
+        ]
+      }
+    },
+    "Oversampled-Target": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 50.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Oversampled Wave Cannon",
+            "duration": 10.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Screens.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 3.0,
+              "z": 3.0
+            },
+            "scale": {
+              "x": 3.0,
+              "y": 3.0,
+              "z": 3.0
+            },
+            "colorHtml": "#0486ff",
+            "visualDuration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetPlayersInsideAoe",
+              "totalTargetsNeeded": 2
+            },
+            "referenceMechanicName": "Oversampled",
+            "spawnOnTarget": true
+          }
+        ]
+      }
+    },
+    "Oversampled": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.33,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#9ccfff",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Oversampled Wave Cannon",
+                "damageType": "Magic",
+                "damageAmount": 50000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DoomStack"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "BeyondDefense": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.66,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#fff600",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Beyond Defense",
+                "damageType": "Magic",
+                "damageAmount": 50000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DoomStack"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "PilePitch": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#cc90ff",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Pile Pitch",
+                "damageType": "Magic",
+                "damageAmount": 200000.0,
+                "maxStackAmount": 3
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DoomStack"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Patch": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#00000088",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Patch",
+                "damageType": "Magic",
+                "damageAmount": 50000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "FistAoeBlue": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#008aff",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.8
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Fist AOE",
+                "damageType": "Physical",
+                "damageAmount": 999999.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "FistAoeYellow": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff9000",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.8
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Fist AOE",
+                "damageType": "Physical",
+                "damageAmount": 999999.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "NearWorldSmall": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.33,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#00ff00",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Hello Near World",
+                "damageType": "Magic",
+                "damageAmount": 30000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln",
+                "overrideDuration": 5.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DynamisNear"
+              }
+            ]
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisibleFalse"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.6
+          },
+          {
+            "$type": "CheckMechanicDepth",
+            "expressionFormat": "{0} < 2",
+            "successEvent": {
+              "$type": "SpawnTargetedEvents",
+              "targetingScheme": {
+                "$type": "TargetSpecificProximityPlayers",
+                "targetIds": [
+                  1
+                ],
+                "targetCondition": {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "DynamisNear",
+                  "invertStatus": true
+                },
+                "fallbackTargetingScheme": {
+                  "$type": "TargetSpecificProximityPlayers",
+                  "targetIds": [
+                    1
+                  ]
+                },
+                "totalTargetsNeeded": 1
+              },
+              "referenceMechanicName": "NearWorldSmall",
+              "isPositionRelative": true,
+              "isRotationRelative": true,
+              "spawnOnTarget": true
+            }
+          }
+        ]
+      }
+    },
+    "NearWorldLarge": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.66,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#00ff00",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Hello Near World",
+                "damageType": "Magic",
+                "damageAmount": 30000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln",
+                "overrideDuration": 5.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DynamisNear"
+              }
+            ]
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisibleFalse"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.6
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetIds": [
+                1
+              ],
+              "targetCondition": {
+                "$type": "CheckPlayerStatus",
+                "statusName": "DynamisNear",
+                "invertStatus": true
+              },
+              "fallbackTargetingScheme": {
+                "$type": "TargetSpecificProximityPlayers",
+                "targetIds": [
+                  1
+                ]
+              },
+              "totalTargetsNeeded": 1
+            },
+            "referenceMechanicName": "NearWorldSmall",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true,
+            "resetMechanicDepth": true
+          }
+        ]
+      }
+    },
+    "DistantWorldSmall": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.33,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#0000ff",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Hello Distant World",
+                "damageType": "Magic",
+                "damageAmount": 30000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln",
+                "overrideDuration": 5.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DynamisFar"
+              }
+            ]
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisibleFalse"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.6
+          },
+          {
+            "$type": "CheckMechanicDepth",
+            "expressionFormat": "{0} < 2",
+            "successEvent": {
+              "$type": "SpawnTargetedEvents",
+              "targetingScheme": {
+                "$type": "TargetSpecificProximityPlayers",
+                "targetNthFarthest": true,
+                "targetIds": [
+                  0
+                ],
+                "targetCondition": {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "DynamisFar",
+                  "invertStatus": true
+                },
+                "fallbackTargetingScheme": {
+                  "$type": "TargetSpecificProximityPlayers",
+                  "targetNthFarthest": true,
+                  "targetIds": [
+                    0
+                  ]
+                },
+                "totalTargetsNeeded": 1
+              },
+              "referenceMechanicName": "DistantWorldSmall",
+              "isPositionRelative": true,
+              "isRotationRelative": true,
+              "spawnOnTarget": true
+            }
+          }
+        ]
+      }
+    },
+    "DistantWorldLarge": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.66,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#0000ff",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Hello Distant World",
+                "damageType": "Magic",
+                "damageAmount": 30000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln",
+                "overrideDuration": 5.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DynamisFar"
+              }
+            ]
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisibleFalse"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.6
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetNthFarthest": true,
+              "targetIds": [
+                0
+              ],
+              "targetCondition": {
+                "$type": "CheckPlayerStatus",
+                "statusName": "DynamisFar",
+                "invertStatus": true
+              },
+              "fallbackTargetingScheme": {
+                "$type": "TargetSpecificProximityPlayers",
+                "targetNthFarthest": true,
+                "targetIds": [
+                  0
+                ]
+              },
+              "totalTargetsNeeded": 1
+            },
+            "referenceMechanicName": "DistantWorldSmall",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true,
+            "resetMechanicDepth": true
+          }
+        ]
+      }
+    },
+    "SetVisible": {
+      "visible": true
+    },
+    "SetVisibleFalse": {
+      "visible": false
+    },
+    "SpinnyLaserAddCW": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/ArrowCircle.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.5,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": -90.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 3.0,
+              "y": 3.0,
+              "z": 3.0
+            },
+            "colorHtml": "#ff9000",
+            "visualDuration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "moveToTarget": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetIds": [
+                0
+              ]
+            },
+            "movementTime": -0.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "SpinnyIndicatorCW",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "SpinnyLaserAddCCW": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/ArrowCircle.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.5,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 90.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 3.0,
+              "y": 3.0,
+              "z": 3.0
+            },
+            "colorHtml": "#008aff",
+            "visualDuration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.5
+          },
+          {
+            "$type": "SetEnemyMovement",
+            "moveToTarget": {
+              "$type": "TargetSpecificProximityPlayers",
+              "targetIds": [
+                0
+              ]
+            },
+            "movementTime": -0.5
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "SpinnyIndicatorCCW",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "SpawnSpinnyCW": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnEnemy",
+        "enemyName": "Spinny",
+        "textureFilePath": "Mechanics/Resources/Hand.png",
+        "colorHtml": "#000000",
+        "maxHp": 35000000,
+        "hitboxSize": 10.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true,
+        "isTargetable": false,
+        "visualPosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "visualScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "referenceMechanicName": "SpinnyLaserAddCW",
+        "position": {
+          "x": 0.0,
+          "y": 6.66
+        }
+      }
+    },
+    "SpawnSpinnyCCW": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnEnemy",
+        "enemyName": "Spinny",
+        "textureFilePath": "Mechanics/Resources/Hand.png",
+        "colorHtml": "#000000",
+        "maxHp": 35000000,
+        "hitboxSize": 10.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true,
+        "isTargetable": false,
+        "visualPosition": {
+          "x": 0.0,
+          "y": 1.0,
+          "z": 0.0
+        },
+        "visualScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "referenceMechanicName": "SpinnyLaserAddCCW",
+        "position": {
+          "x": 0.0,
+          "y": 6.66
+        }
+      }
+    },
+    "EyeLaser": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 30.0,
+        "y": 5.33,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff0000",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Eye Laser",
+                "damageType": "Magic",
+                "damageAmount": 999999.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "SwivelCannon-Cast": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Swivel Cannon",
+            "duration": 10.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Screens.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 3.0,
+              "z": 3.0
+            },
+            "scale": {
+              "x": 3.0,
+              "y": 3.0,
+              "z": 3.0
+            },
+            "colorHtml": "#ff9000",
+            "visualDuration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "SwivelCannon",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "SwivelCannon": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 210.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff9000",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Swivel Cannon",
+                "damageType": "Magic",
+                "damageAmount": 999999.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "SpinnyIndicatorCCW": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 30.0,
+        "y": 2.66,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff9000",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Spinny Laser",
+                "damageType": "Magic",
+                "damageAmount": 999999.0
+              }
+            ]
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "SpinnyLaserCCW",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "resetMechanicDepth": true
+          }
+        ]
+      }
+    },
+    "SpinnyIndicatorCW": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 30.0,
+        "y": 2.66,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff9000",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Spinny Laser",
+                "damageType": "Magic",
+                "damageAmount": 999999.0
+              }
+            ]
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "SpinnyLaserCW",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "resetMechanicDepth": true
+          }
+        ]
+      }
+    },
+    "SpinnyLaserCCW": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 30.0,
+        "y": 2.66,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff9000",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Spinny Laser",
+                "damageType": "Magic",
+                "damageAmount": 999999.0
+              }
+            ]
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisibleFalse"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "CheckMechanicDepth",
+            "expressionFormat": "{0} < 6",
+            "successEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "SpinnyLaserCCW",
+              "rotation": -15.0,
+              "isPositionRelative": true,
+              "isRotationRelative": true
+            }
+          }
+        ]
+      }
+    },
+    "SpinnyLaserCW": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 30.0,
+        "y": 2.66,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff9000",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Spinny Laser",
+                "damageType": "Magic",
+                "damageAmount": 999999.0
+              }
+            ]
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisibleFalse"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.1
+          },
+          {
+            "$type": "CheckMechanicDepth",
+            "expressionFormat": "{0} < 6",
+            "successEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "SpinnyLaserCW",
+              "rotation": 15.0,
+              "isPositionRelative": true,
+              "isRotationRelative": true
+            }
+          }
+        ]
+      }
+    },
+    "SpawnBosses": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnEnemy",
+            "enemyName": "FinalOmega",
+            "textureFilePath": "Mechanics/Resources/UltimaWeapon.png",
+            "colorHtml": "#0a4d8b",
+            "maxHp": 35000000,
+            "hitboxSize": 10.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "isTargetable": false,
+            "visualPosition": {
+              "x": 0.0,
+              "y": 2.0,
+              "z": 0.0
+            },
+            "visualScale": {
+              "x": 4.0,
+              "y": 4.0,
+              "z": 4.0
+            },
+            "referenceMechanicName": "FinalOmegaMechanics",
+            "position": {
+              "x": 0.0,
+              "y": 6.66
+            }
+          },
+          {
+            "$type": "SpawnEnemy",
+            "enemyName": "Optical Unit",
+            "textureFilePath": "Mechanics/Resources/Eye.png",
+            "colorHtml": "#0a4d8b",
+            "maxHp": 35000000,
+            "hitboxSize": 10.0,
+            "rotation": 90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "isTargetable": false,
+            "visualPosition": {
+              "x": 0.0,
+              "y": 2.0,
+              "z": 0.0
+            },
+            "visualScale": {
+              "x": 4.0,
+              "y": 4.0,
+              "z": 4.0
+            },
+            "referenceMechanicName": "EyeMechanics",
+            "position": {
+              "x": 6.66,
+              "y": 0.0
+            }
+          },
+          {
+            "$type": "SpawnEnemy",
+            "enemyName": "Omega-M",
+            "textureFilePath": "Mechanics/Resources/OmegaM.png",
+            "colorHtml": "#0a4d8b",
+            "maxHp": 35000000,
+            "hitboxSize": 10.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "isTargetable": false,
+            "visualPosition": {
+              "x": 0.0,
+              "y": 1.5,
+              "z": 0.0
+            },
+            "visualScale": {
+              "x": 2.0,
+              "y": 2.0,
+              "z": 2.0
+            },
+            "referenceMechanicName": "OmegaMMechanics",
+            "position": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          },
+          {
+            "$type": "SpawnEnemy",
+            "enemyName": "Omega",
+            "textureFilePath": "Mechanics/Resources/Omega.png",
+            "colorHtml": "#0a4d8b",
+            "maxHp": 35000000,
+            "hitboxSize": 10.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "isTargetable": false,
+            "visualPosition": {
+              "x": 0.0,
+              "y": 1.5,
+              "z": 0.0
+            },
+            "visualScale": {
+              "x": 2.0,
+              "y": 2.0,
+              "z": 2.0
+            },
+            "referenceMechanicName": "OmegaMechanics",
+            "position": {
+              "x": 0.0,
+              "y": -6.66
+            }
+          }
+        ]
+      }
+    },
+    "ApplyGreenTether": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "GreenTether"
+        }
+      }
+    },
+    "ApplyBlueTether": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "BlueTether"
+        }
+      }
+    },
+    "ApplyNearWorld": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "NearWorld"
+        }
+      }
+    },
+    "ApplyDistantWorld": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "DistantWorld"
+        }
+      }
+    },
+    "ApplyDoom": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effects": [
+          {
+            "$type": "ApplyStatusEffect",
+            "referenceStatusName": "Doom"
+          },
+          {
+            "$type": "RemoveStatusEffect",
+            "referenceStatusName": "DoomStack"
+          }
+        ]
+      }
+    },
+    "Doom": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Doom",
+          "damageType": "TrueDamage",
+          "damageAmount": 1E+08
+        }
+      }
+    }
+  },
+  "referenceTetherProperties": {
+    "Chain-Blue": {
+      "colorHtml": "#0000ff55",
+      "tetherDuration": 30.0,
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 18.0,
+      "breakMechanic": {
+        "$type": "SpawnMechanicOnTetheredPlayers",
+        "referenceMechanicName": "Patch"
+      },
+      "persistentMechanic": {
+        "$type": "CheckTetherLength",
+        "maxDistance": 2.66,
+        "minDistance": -1.0,
+        "successEvent": {
+          "$type": "ModifyTetherProperties",
+          "referenceTetherName": "Chain-Blue-Active"
+        },
+        "failEvent": {
+          "$type": "EndTether",
+          "shouldTriggerBreakEvent": true
+        }
+      }
+    },
+    "Chain-Blue-Active": {
+      "colorHtml": "#0000ff"
+    },
+    "Chain-Green": {
+      "colorHtml": "#00ff0055",
+      "tetherDuration": 54.0,
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 18.0,
+      "breakMechanic": {
+        "$type": "SpawnMechanicOnTetheredPlayers",
+        "referenceMechanicName": "Patch"
+      },
+      "persistentMechanic": {
+        "$type": "CheckTetherLength",
+        "maxDistance": 999.0,
+        "minDistance": 2.66,
+        "successEvent": {
+          "$type": "ModifyTetherProperties",
+          "referenceTetherName": "Chain-Green-Active"
+        },
+        "failEvent": {
+          "$type": "EndTether",
+          "shouldTriggerBreakEvent": true
+        }
+      }
+    },
+    "Chain-Green-Active": {
+      "colorHtml": "#00ff00"
+    }
+  },
+  "mechanicPools": {
+    "Oversampled-Pool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Oversampled-Target",
+        "rotation": 90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Oversampled-Target",
+        "rotation": -90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "Oversampled-Player-Pool": [
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            0
+          ]
+        },
+        "referenceMechanicName": "Oversampled-PlayerLeft",
+        "rotation": 90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            0
+          ]
+        },
+        "referenceMechanicName": "Oversampled-PlayerRight",
+        "rotation": -90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "BeyondDefense-Pool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "BeyondDefense1",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "BeyondDefense2",
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "SwivelCannon-Pool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SwivelCannon-Cast",
+        "rotation": 90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SwivelCannon-Cast",
+        "rotation": -90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "Spinny-Pool-0": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSpinnyCW",
+        "rotation": 30.0,
+        "isPositionRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSpinnyCCW",
+        "rotation": 30.0,
+        "isPositionRelative": true
+      }
+    ],
+    "Spinny-Pool-1": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSpinnyCW",
+        "rotation": 90.0,
+        "isPositionRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSpinnyCCW",
+        "rotation": 90.0,
+        "isPositionRelative": true
+      }
+    ],
+    "Spinny-Pool-2": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSpinnyCW",
+        "rotation": 150.0,
+        "isPositionRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSpinnyCCW",
+        "rotation": 150.0,
+        "isPositionRelative": true
+      }
+    ],
+    "Spinny-Pool-3": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSpinnyCW",
+        "rotation": 210.0,
+        "isPositionRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSpinnyCCW",
+        "rotation": 210.0,
+        "isPositionRelative": true
+      }
+    ],
+    "Spinny-Pool-4": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSpinnyCW",
+        "rotation": 270.0,
+        "isPositionRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSpinnyCCW",
+        "rotation": 270.0,
+        "isPositionRelative": true
+      }
+    ],
+    "Spinny-Pool-5": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSpinnyCW",
+        "rotation": 330.0,
+        "isPositionRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnSpinnyCCW",
+        "rotation": 330.0,
+        "isPositionRelative": true
+      }
+    ]
+  },
+  "referenceStatusProperties": {
+    "DoomStack": {
+      "$type": "SpawnMechanicOnReachStacks",
+      "referenceMechanicName": "ApplyDoom",
+      "requiredStacks": 2,
+      "statusIconPath": "Mechanics/Resources/DoomStack.png",
+      "statusName": "Twice-come Ruin",
+      "statusDescription": "Too many stacks will result in Doom.",
+      "duration": 5.0,
+      "maxStacks": 2
+    },
+    "Doom": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Doom",
+      "statusIconPath": "Mechanics/Resources/Doom.png",
+      "statusName": "Doom",
+      "statusDescription": "Certain death when counter reaches zero.",
+      "duration": 3.0
+    },
+    "MagicVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 10.0,
+      "damageType": "Magic",
+      "statusIconPath": "Mechanics/Resources/MagicVuln.png",
+      "statusName": "Magic Vulnerability Up",
+      "statusDescription": "Magic damage taken is increased.",
+      "duration": 1.0
+    },
+    "BlueFistTarget": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "FistAoeBlue",
+      "statusName": "Blue Fist Target (Fake)",
+      "statusDescription": "Fists aren't supported yet so just pretend.",
+      "duration": 12.0
+    },
+    "YellowFistTarget": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "FistAoeYellow",
+      "statusName": "Yellow Fist Target (Fake)",
+      "statusDescription": "Fists aren't supported yet so just pretend.",
+      "duration": 12.0
+    },
+    "GreenTether": {
+      "statusIconPath": "Mechanics/Resources/NearTether1.png",
+      "statusName": "Green Tether",
+      "duration": 18.0,
+      "allowDuplicates": true
+    },
+    "BlueTether": {
+      "statusIconPath": "Mechanics/Resources/FarTether1.png",
+      "statusName": "Blue Tether",
+      "duration": 18.0,
+      "allowDuplicates": true
+    },
+    "NearWorld": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "NearWorldLarge",
+      "statusIconPath": "Mechanics/Resources/NearWorld.png",
+      "statusName": "Hello Near World",
+      "statusDescription": "",
+      "duration": 44.0
+    },
+    "DistantWorld": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "DistantWorldLarge",
+      "statusIconPath": "Mechanics/Resources/DistantWorld.png",
+      "statusName": "Hello Distant World",
+      "statusDescription": "",
+      "duration": 44.0
+    },
+    "DynamisNear": {
+      "statusIconPath": "Mechanics/Resources/NisiA.png",
+      "statusName": "DynamisNear",
+      "statusDescription": "Hidden debuff to prevent being targeted by near world",
+      "duration": 99.0
+    },
+    "DynamisFar": {
+      "statusIconPath": "Mechanics/Resources/NisiD.png",
+      "statusName": "DynamisFar",
+      "statusDescription": "Hidden debuff to prevent being targeted by far world",
+      "duration": 99.0
+    }
+  },
+  "mechanicEvents": [
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary"
+    },
+    {
+      "$type": "SpawnVisualObject",
+      "textureFilePath": "Mechanics/Resources/ArenaCircle.png",
+      "relativePosition": {
+        "x": 0.0,
+        "y": -0.001,
+        "z": 0.0
+      },
+      "eulerAngles": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 15.0931,
+        "y": 15.0931,
+        "z": 1.0
+      },
+      "visualDuration": "Infinity"
+    },
+    {
+      "$type": "ExecuteMultipleEvents",
+      "events": [
+        {
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "StartButton",
+          "position": {
+            "x": 0.0,
+            "y": 3.0
+          }
+        }
+      ]
+    }
+  ]
+}

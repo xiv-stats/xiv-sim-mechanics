@@ -1,0 +1,1031 @@
+{
+  "referenceMechanicProperties": {
+    "OmegaMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitForAggro"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Circle Program",
+            "duration": 5.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 5.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "referenceMechanicName": "Looper-1"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2,
+                3
+              ]
+            },
+            "referenceMechanicName": "Looper-2"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                5
+              ]
+            },
+            "referenceMechanicName": "Looper-3"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "Looper-4"
+          },
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 3.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetNthHighestAggro"
+            },
+            "referenceMechanicName": "AutoAttack"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Towers-Pool"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "SpawnTethersToPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "referenceTetherName": "Blaster",
+            "tetherOffset": {
+              "x": 0.0,
+              "y": 1.0,
+              "z": 0.0
+            }
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Blaster",
+            "duration": 8.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "",
+            "duration": 100000.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetTetheredPlayers"
+            },
+            "referenceMechanicName": "TetherAoe",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetTetheredPlayers"
+            },
+            "referenceMechanicName": "TetherAoe",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetTetheredPlayers"
+            },
+            "referenceMechanicName": "TetherAoe",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetTetheredPlayers"
+            },
+            "referenceMechanicName": "TetherAoe",
+            "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "TetherAoe": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 5.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#614879",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Blaster",
+                "damageType": "Damage",
+                "damageAmount": 60000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "HpDown"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DoomStack"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerIsMechanicTarget"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Blaster",
+                "damageType": "TrueDamage",
+                "damageAmount": 999999.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "HpDown"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DoomStack"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ArenaBoundary": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 6.67,
+        "w": 0.0
+      },
+      "colorHtml": "#8800FF",
+      "persistentTickInterval": 0.2,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      }
+    },
+    "Tower Fail": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#FF0000",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Tower Failed",
+              "damageType": "Damage",
+              "damageAmount": 9999999.0
+            }
+          }
+        ]
+      }
+    },
+    "Tower": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#FFFF00",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} = 1",
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "Tower Fail",
+              "isPositionRelative": true
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Circle Program",
+                "damageType": "Damage",
+                "damageAmount": 60000.0
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Looper-1"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Looper-1"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Looper-2"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Looper-2"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Looper-3"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Looper-3"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Looper-4"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Looper-4"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Line-1"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Line-1"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Line-2"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Line-2"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Line-3"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Line-3"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Line-4"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "Line-4"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Circle Program"
+            },
+            "failedConditionEffect": {
+              "$type": "DamageEffect",
+              "name": "Circle Program",
+              "damageType": "Damage",
+              "damageAmount": 120000.0
+            }
+          }
+        ]
+      }
+    },
+    "Tower-Offset": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Tower",
+        "position": {
+          "x": 4.5,
+          "y": 0.0
+        },
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    },
+    "TowerSet-A": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "rotation": 90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "rotation": 180.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "rotation": 270.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "rotation": 90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "rotation": 180.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "rotation": 270.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "TowerSet-B": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "rotation": 180.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "rotation": 90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "rotation": 270.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "rotation": 180.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "rotation": 90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Tower-Offset",
+            "rotation": 270.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "Looper": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Circle Program",
+          "damageType": "TrueDamage",
+          "damageAmount": 1E+08
+        }
+      }
+    },
+    "ApplyDoom": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effects": [
+          {
+            "$type": "ApplyStatusEffect",
+            "referenceStatusName": "Doom"
+          },
+          {
+            "$type": "RemoveStatusEffect",
+            "referenceStatusName": "DoomStack"
+          }
+        ]
+      }
+    },
+    "Doom": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Doom",
+          "damageType": "TrueDamage",
+          "damageAmount": 1E+08
+        }
+      }
+    },
+    "AutoAttack": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "Damage",
+          "damageAmount": 100000.0
+        }
+      }
+    },
+    "StartButton": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#00ff00",
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 1.0,
+      "persistentMechanic": {
+        "$type": "CheckNumberOfPlayers",
+        "expressionFormat": "{0} = 0",
+        "failEvent": {
+          "$type": "ExecuteMultipleEvents",
+          "events": [
+            {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "SpawnBosses"
+            },
+            {
+              "$type": "ClearMechanicsWithTag",
+              "mechanicTag": "StartButton"
+            }
+          ]
+        }
+      },
+      "mechanicTag": "StartButton"
+    },
+    "SpawnBosses": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnEnemy",
+            "enemyName": "Omega",
+            "textureFilePath": "Mechanics/Resources/Omega.png",
+            "colorHtml": "#0a4d8b",
+            "maxHp": 35000000,
+            "baseMoveSpeed": 2.0,
+            "hitboxSize": 10.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "visualPosition": {
+              "x": 0.0,
+              "y": 1.5,
+              "z": 0.0
+            },
+            "visualScale": {
+              "x": 4.0,
+              "y": 4.0,
+              "z": 4.0
+            },
+            "referenceMechanicName": "OmegaMechanics",
+            "position": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        ]
+      }
+    },
+    "Looper-1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Looper-1"
+            }
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Line-1"
+            }
+          }
+        ]
+      }
+    },
+    "Looper-2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Looper-2"
+            }
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Line-2"
+            }
+          }
+        ]
+      }
+    },
+    "Looper-3": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Looper-3"
+            }
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Line-3"
+            }
+          }
+        ]
+      }
+    },
+    "Looper-4": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Looper-4"
+            }
+          },
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "Line-4"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "referenceTetherProperties": {
+    "Blaster": {
+      "colorHtml": "#ff8400",
+      "tetherDuration": 99.0,
+      "interceptMechanic": {
+        "$type": "SwitchTetheredPlayer"
+      },
+      "retargetRandomPlayerOnDeath": true,
+      "tetherTag": "Blaster",
+      "oneTetherPerPlayer": true
+    }
+  },
+  "mechanicPools": {
+    "Towers-Pool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-A",
+        "rotation": 45.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-B",
+        "rotation": 45.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-A",
+        "rotation": 75.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-B",
+        "rotation": 75.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-A",
+        "rotation": 105.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-B",
+        "rotation": 105.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-A",
+        "rotation": 135.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-B",
+        "rotation": 135.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-A",
+        "rotation": 165.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-B",
+        "rotation": 165.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-A",
+        "rotation": 195.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-B",
+        "rotation": 195.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-A",
+        "rotation": 225.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-B",
+        "rotation": 225.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-A",
+        "rotation": 255.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-B",
+        "rotation": 255.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-A",
+        "rotation": 285.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-B",
+        "rotation": 285.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-A",
+        "rotation": 315.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-B",
+        "rotation": 315.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-A",
+        "rotation": 345.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-B",
+        "rotation": 345.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-A",
+        "rotation": 375.0
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "TowerSet-B",
+        "rotation": 375.0
+      }
+    ]
+  },
+  "referenceStatusProperties": {
+    "HpDown": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 100.0,
+      "statusIconPath": "Mechanics/Resources/HpDown.png",
+      "statusName": "HP Down",
+      "statusDescription": "This is actually just a vuln.",
+      "duration": 10.0
+    },
+    "DoomStack": {
+      "$type": "SpawnMechanicOnReachStacks",
+      "referenceMechanicName": "ApplyDoom",
+      "requiredStacks": 2,
+      "statusIconPath": "Mechanics/Resources/DoomStack.png",
+      "statusName": "Twice-come Ruin",
+      "statusDescription": "Too many stacks will result in Doom.",
+      "duration": 40.0,
+      "maxStacks": 2
+    },
+    "Doom": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Doom",
+      "statusIconPath": "Mechanics/Resources/Doom.png",
+      "statusName": "Doom",
+      "statusDescription": "Certain death when counter reaches zero.",
+      "duration": 3.0
+    },
+    "Looper-1": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Looper",
+      "statusIconPath": "Mechanics/Resources/Looper.png",
+      "statusName": "Circle Program",
+      "statusDescription": "Certain death if not cleansed by a tower.",
+      "duration": 17.0,
+      "allowDuplicates": true
+    },
+    "Line-1": {
+      "statusIconPath": "Mechanics/Resources/Line1.png",
+      "statusName": "First in Line",
+      "statusDescription": "Marked as target #1.",
+      "duration": 17.0,
+      "allowDuplicates": true
+    },
+    "Looper-2": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Looper",
+      "statusIconPath": "Mechanics/Resources/Looper.png",
+      "statusName": "Circle Program",
+      "statusDescription": "Certain death if not cleansed by a tower.",
+      "duration": 27.0,
+      "allowDuplicates": true
+    },
+    "Line-2": {
+      "statusIconPath": "Mechanics/Resources/Line2.png",
+      "statusName": "Second in Line",
+      "statusDescription": "Marked as target #2.",
+      "duration": 27.0,
+      "allowDuplicates": true
+    },
+    "Looper-3": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Looper",
+      "statusIconPath": "Mechanics/Resources/Looper.png",
+      "statusName": "Circle Program",
+      "statusDescription": "Certain death if not cleansed by a tower.",
+      "duration": 37.0,
+      "allowDuplicates": true
+    },
+    "Line-3": {
+      "statusIconPath": "Mechanics/Resources/Line3.png",
+      "statusName": "Third in Line",
+      "statusDescription": "Marked as target #3.",
+      "duration": 37.0,
+      "allowDuplicates": true
+    },
+    "Looper-4": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Looper",
+      "statusIconPath": "Mechanics/Resources/Looper.png",
+      "statusName": "Circle Program",
+      "statusDescription": "Certain death if not cleansed by a tower.",
+      "duration": 47.0,
+      "allowDuplicates": true
+    },
+    "Line-4": {
+      "statusIconPath": "Mechanics/Resources/Line4.png",
+      "statusName": "Fourth in Line",
+      "statusDescription": "Marked as target #4.",
+      "duration": 47.0,
+      "allowDuplicates": true
+    }
+  },
+  "mechanicEvents": [
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary"
+    },
+    {
+      "$type": "SpawnVisualObject",
+      "textureFilePath": "Mechanics/Resources/ArenaCircle.png",
+      "relativePosition": {
+        "x": 0.0,
+        "y": -0.001,
+        "z": 0.0
+      },
+      "eulerAngles": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 15.0931,
+        "y": 15.0931,
+        "z": 1.0
+      },
+      "visualDuration": "Infinity"
+    },
+    {
+      "$type": "ExecuteMultipleEvents",
+      "events": [
+        {
+          "$type": "SpawnMechanicEvent",
+          "referenceMechanicName": "StartButton",
+          "position": {
+            "x": 0.0,
+            "y": 3.0
+          }
+        }
+      ]
+    }
+  ]
+}
