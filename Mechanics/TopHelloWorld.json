@@ -752,7 +752,7 @@
                 "$type": "DamageEffect",
                 "name": "Critical Overflow Bug",
                 "damageType": "Magic",
-                "damageAmount": 80000.0
+                "damageAmount": 50000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -771,7 +771,7 @@
                 "$type": "DamageEffect",
                 "name": "Critical Overflow Bug",
                 "damageType": "Magic",
-                "damageAmount": 80000.0
+                "damageAmount": 50000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -807,12 +807,23 @@
             "timeToWait": 0.2
           },
           {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} > 1",
+            "failEvent": {
+              "$type": "ApplyEffectToPlayers",
+              "effect": {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            }
+          },
+          {
             "$type": "ApplyEffectToPlayers",
             "effect": {
               "$type": "DamageEffect",
               "name": "Critical Synchronization Bug",
               "damageType": "Magic",
-              "damageAmount": 160000.0,
+              "damageAmount": 100000.0,
               "maxStackAmount": 2
             }
           },
@@ -1133,6 +1144,35 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PatchPenalty"
+              }
+            ],
+            "condition": {
+              "$type": "CheckMultipleConditions",
+              "conditions": [
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "Remote Regression",
+                  "invertStatus": true
+                },
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "Local Regression",
+                  "invertStatus": true
+                },
+                {
+                  "$type": "CheckPlayerIsMechanicTarget"
+                }
+              ],
+              "requireAll": true
+            },
+            "failedConditionEffects": []
+          },
+          {
             "$type": "WaitEvent",
             "timeToWait": 0.2
           },
@@ -1152,16 +1192,54 @@
               {
                 "$type": "ApplyStatusEffect",
                 "referenceStatusName": "DoomStack"
-              },
-              {
-                "$type": "RemoveStatusEffect",
-                "referenceStatusName": "NearTether"
-              },
+              }
+            ]
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
               {
                 "$type": "RemoveStatusEffect",
                 "referenceStatusName": "FarTether"
               }
-            ]
+            ],
+            "condition": {
+              "$type": "CheckMultipleConditions",
+              "conditions": [
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "Remote Regression"
+                },
+                {
+                  "$type": "CheckPlayerIsMechanicTarget"
+                }
+              ],
+              "requireAll": true
+            },
+            "failedConditionEffects": []
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "NearTether"
+              }
+            ],
+            "condition": {
+              "$type": "CheckMultipleConditions",
+              "conditions": [
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "Local Regression"
+                },
+                {
+                  "$type": "CheckPlayerIsMechanicTarget"
+                }
+              ],
+              "requireAll": true
+            },
+            "failedConditionEffects": []
           }
         ]
       }
@@ -1182,6 +1260,23 @@
           "name": "Hello World",
           "damageType": "Magic",
           "damageAmount": 80000.0
+        }
+      }
+    },
+    "GlobalVuln": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "MagicVuln"
         }
       }
     },
@@ -1690,7 +1785,7 @@
     },
     "Chain-Blue": {
       "colorHtml": "#0000ff",
-      "tetherDuration": 10.0,
+      "tetherDuration": 10.1,
       "persistentTickInterval": 0.1,
       "persistentActivationDelay": 0.1,
       "breakMechanic": {
@@ -1722,7 +1817,7 @@
     },
     "Chain-Green": {
       "colorHtml": "#00ff00",
-      "tetherDuration": 10.0,
+      "tetherDuration": 10.1,
       "persistentTickInterval": 0.1,
       "persistentActivationDelay": 0.1,
       "breakMechanic": {
@@ -1967,6 +2062,13 @@
       "referenceMechanicName": "BlueRotChaser",
       "statusName": "Blue Rot Spread",
       "statusDescription": "Helper status to spread rot.",
+      "duration": 0.1
+    },
+    "PatchPenalty": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "GlobalVuln",
+      "statusName": "Patch Penalty",
+      "statusDescription": "Didn't pop patch in time.",
       "duration": 0.1
     },
     "SmellyDefamation": {
