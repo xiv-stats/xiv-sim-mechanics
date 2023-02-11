@@ -1189,7 +1189,7 @@
                 "$type": "DamageEffect",
                 "name": "Discharger",
                 "damageType": "Damage",
-                "damageAmount": 20000.0
+                "damageAmount": 500.0
               },
               {
                 "$type": "KnockbackEffect",
@@ -2079,7 +2079,7 @@
     },
     {
       "$type": "SpawnVisualObject",
-      "textureFilePath": "Mechanics/Resources/ArenaCircleMF.png",
+      "textureFilePath": "Mechanics/Resources/ArenaCircleMFMarkers.png",
       "relativePosition": {
         "x": 0.0,
         "y": -0.001,
