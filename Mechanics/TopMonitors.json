@@ -1,0 +1,505 @@
+{
+  "referenceMechanicProperties": {
+    "OmegaMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Oversampled-Pool"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Oversampled-Player-Pool-1"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Oversampled-Player-Pool-2"
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "Oversampled-Player-Pool-3"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "SpawnOmega": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnEnemy",
+        "enemyName": "Omega",
+        "textureFilePath": "Mechanics/Resources/FinalOmega.png",
+        "colorHtml": "#30015d",
+        "maxHp": 2147483647,
+        "hitboxSize": 14.0,
+        "rotation": 180.0,
+        "visualPosition": {
+          "x": 0.0,
+          "y": 1.5,
+          "z": 0.0
+        },
+        "visualScale": {
+          "x": 3.0,
+          "y": 3.0,
+          "z": 3.0
+        },
+        "referenceMechanicName": "OmegaMechanics",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        }
+      }
+    },
+    "SetVisible": {
+      "visible": true
+    },
+    "SetInvisible": {
+      "visible": false
+    },
+    "Oversampled-PlayerRight": {
+      "isTargeted": true,
+      "followSpeed": 10.0,
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "OversampledDebuff"
+            }
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/OversampledFloorTest.png",
+            "relativePosition": {
+              "x": 21.59,
+              "y": 0.1,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 90.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 45.5,
+              "y": 2.9,
+              "z": 1.5
+            },
+            "colorHtml": "#0486ff",
+            "spawnOnPlayer": true,
+            "isRotationRelative": true,
+            "visualDuration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Oversampled-Target-Player",
+            "rotation": 90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "Oversampled-PlayerLeft": {
+      "isTargeted": true,
+      "followSpeed": 10.0,
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToTargetOnly",
+            "effect": {
+              "$type": "ApplyStatusEffect",
+              "referenceStatusName": "OversampledDebuff"
+            }
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/OversampledFloorTest.png",
+            "relativePosition": {
+              "x": -21.59,
+              "y": 0.1,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 90.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 45.5,
+              "y": 2.9,
+              "z": 1.5
+            },
+            "colorHtml": "#0486ff",
+            "spawnOnPlayer": true,
+            "isRotationRelative": true,
+            "visualDuration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Oversampled-Target-Player",
+            "rotation": -90.0,
+            "isPositionRelative": true,
+            "isRotationRelative": true
+          }
+        ]
+      }
+    },
+    "Oversampled-Target-Player": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 50.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetPlayersInsideAoe",
+              "totalTargetsNeeded": 2
+            },
+            "referenceMechanicName": "Oversampled",
+            "spawnOnTarget": true
+          }
+        ]
+      }
+    },
+    "Oversampled-Target": {
+      "collisionShape": "Rectangle",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 50.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "StartCastBar",
+            "castName": "Oversampled Wave Cannon",
+            "duration": 10.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/Screens.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 3.0,
+              "z": 3.0
+            },
+            "scale": {
+              "x": 3.0,
+              "y": 3.0,
+              "z": 3.0
+            },
+            "colorHtml": "#0486ff",
+            "visualDuration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 10.0
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetPlayersInsideAoe",
+              "totalTargetsNeeded": 2
+            },
+            "referenceMechanicName": "Oversampled",
+            "spawnOnTarget": true
+          }
+        ]
+      }
+    },
+    "Oversampled": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.33,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#9ccfff",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Oversampled Wave Cannon",
+                "damageType": "Magic",
+                "damageAmount": 50000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DoomStack"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ApplyDoom": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effects": [
+          {
+            "$type": "ApplyStatusEffect",
+            "referenceStatusName": "Doom"
+          },
+          {
+            "$type": "RemoveStatusEffect",
+            "referenceStatusName": "DoomStack"
+          }
+        ]
+      }
+    },
+    "Doom": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Doom",
+          "damageType": "TrueDamage",
+          "damageAmount": 100000000.0
+        }
+      }
+    },
+    "ArenaBoundary": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 7.0,
+        "w": 0.0
+      },
+      "colorHtml": "#8800FF",
+      "persistentTickInterval": 0.2,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      }
+    }
+  },
+  "referenceTetherProperties": {},
+  "mechanicPools": {
+    "Oversampled-Pool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Oversampled-Target",
+        "rotation": 90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "Oversampled-Target",
+        "rotation": -90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "Oversampled-Player-Pool-1": [
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            0
+          ]
+        },
+        "referenceMechanicName": "Oversampled-PlayerLeft",
+        "rotation": 90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            0
+          ]
+        },
+        "referenceMechanicName": "Oversampled-PlayerRight",
+        "rotation": -90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "Oversampled-Player-Pool-2": [
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            1
+          ]
+        },
+        "referenceMechanicName": "Oversampled-PlayerLeft",
+        "rotation": 90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            1
+          ]
+        },
+        "referenceMechanicName": "Oversampled-PlayerRight",
+        "rotation": -90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ],
+    "Oversampled-Player-Pool-3": [
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            2
+          ]
+        },
+        "referenceMechanicName": "Oversampled-PlayerLeft",
+        "rotation": 90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetSpecificPlayerIds",
+          "targetIds": [
+            2
+          ]
+        },
+        "referenceMechanicName": "Oversampled-PlayerRight",
+        "rotation": -90.0,
+        "isPositionRelative": true,
+        "isRotationRelative": true
+      }
+    ]
+  },
+  "referenceStatusProperties": {
+    "MagicVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 10.0,
+      "damageType": "Magic",
+      "statusIconPath": "Mechanics/Resources/MagicVuln.png",
+      "statusName": "Magic Vulnerability Up",
+      "statusDescription": "Magic damage taken is increased.",
+      "duration": 1.0,
+      "maxStacks": 16
+    },
+    "DoomStack": {
+      "$type": "SpawnMechanicOnReachStacks",
+      "referenceMechanicName": "ApplyDoom",
+      "requiredStacks": 2,
+      "statusIconPath": "Mechanics/Resources/DoomStack.png",
+      "statusName": "Twice-come Ruin",
+      "statusDescription": "Too many stacks will result in Doom.",
+      "duration": 1.0,
+      "maxStacks": 2
+    },
+    "Doom": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Doom",
+      "statusIconPath": "Mechanics/Resources/Doom.png",
+      "statusName": "Doom",
+      "statusDescription": "Certain death when counter reaches zero.",
+      "duration": 3.0
+    },
+    "OversampledDebuff": {
+      "statusIconPath": "Mechanics/Resources/Oversampled.png",
+      "statusName": "Oversampled Wave Cannon Ready",
+      "statusDescription": "Preparing to fire an oversampled wave cannon.",
+      "duration": 10.0
+    }
+  },
+  "mechanicEvents": [
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary"
+    },
+    {
+      "$type": "SpawnVisualObject",
+      "textureFilePath": "Mechanics/Resources/ArenaCircleFinalMarkers.png",
+      "relativePosition": {
+        "x": 0.0,
+        "y": -0.001,
+        "z": 0.0
+      },
+      "eulerAngles": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 15.85,
+        "y": 15.85,
+        "z": 1.0
+      },
+      "visualDuration": "Infinity"
+    },
+    {
+      "$type": "WaitEvent",
+      "timeToWait": 1.0
+    },
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "SpawnOmega"
+    }
+  ]
+}
