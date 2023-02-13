@@ -1475,7 +1475,7 @@
             "enemyName": "Omega-F",
             "textureFilePath": "Mechanics/Resources/OmegaF.png",
             "colorHtml": "#0a4d8b",
-            "maxHp": 15000000,
+            "maxHp": 12000000,
             "baseMoveSpeed": 2.0,
             "hitboxSize": 3.0,
             "isPositionRelative": true,
