@@ -2639,12 +2639,16 @@
             },
             "referenceMechanicName": "Oversampled",
             "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
           }
         ]
-      }
+      },
+      "mechanicTag": "Oversampled-Target-1"
     },
     "Oversampled-PlayerRight-1": {
-      "isTargeted": true,
       "followSpeed": 10.0,
       "visible": false,
       "mechanic": {
@@ -2687,13 +2691,13 @@
             "referenceMechanicName": "Oversampled-Player-Target-1",
             "rotation": 90.0,
             "isPositionRelative": true,
-            "isRotationRelative": true
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           }
         ]
       }
     },
     "Oversampled-PlayerLeft-1": {
-      "isTargeted": true,
       "followSpeed": 10.0,
       "visible": false,
       "mechanic": {
@@ -2736,7 +2740,8 @@
             "referenceMechanicName": "Oversampled-Player-Target-1",
             "rotation": -90.0,
             "isPositionRelative": true,
-            "isRotationRelative": true
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           }
         ]
       }
@@ -2785,12 +2790,16 @@
             },
             "referenceMechanicName": "Oversampled",
             "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
           }
         ]
-      }
+      },
+      "mechanicTag": "Oversampled-Target-2"
     },
     "Oversampled-PlayerRight-2": {
-      "isTargeted": true,
       "followSpeed": 10.0,
       "visible": false,
       "mechanic": {
@@ -2833,13 +2842,13 @@
             "referenceMechanicName": "Oversampled-Player-Target-2",
             "rotation": 90.0,
             "isPositionRelative": true,
-            "isRotationRelative": true
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           }
         ]
       }
     },
     "Oversampled-PlayerLeft-2": {
-      "isTargeted": true,
       "followSpeed": 10.0,
       "visible": false,
       "mechanic": {
@@ -2882,7 +2891,8 @@
             "referenceMechanicName": "Oversampled-Player-Target-2",
             "rotation": -90.0,
             "isPositionRelative": true,
-            "isRotationRelative": true
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           }
         ]
       }
@@ -2931,12 +2941,16 @@
             },
             "referenceMechanicName": "Oversampled",
             "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
           }
         ]
-      }
+      },
+      "mechanicTag": "Oversampled-Target-3"
     },
     "Oversampled-PlayerRight-3": {
-      "isTargeted": true,
       "followSpeed": 10.0,
       "visible": false,
       "mechanic": {
@@ -2979,13 +2993,13 @@
             "referenceMechanicName": "Oversampled-Player-Target-3",
             "rotation": 90.0,
             "isPositionRelative": true,
-            "isRotationRelative": true
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           }
         ]
       }
     },
     "Oversampled-PlayerLeft-3": {
-      "isTargeted": true,
       "followSpeed": 10.0,
       "visible": false,
       "mechanic": {
@@ -3028,7 +3042,8 @@
             "referenceMechanicName": "Oversampled-Player-Target-3",
             "rotation": -90.0,
             "isPositionRelative": true,
-            "isRotationRelative": true
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           }
         ]
       }
@@ -3077,12 +3092,16 @@
             },
             "referenceMechanicName": "Oversampled",
             "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
           }
         ]
-      }
+      },
+      "mechanicTag": "Oversampled-Target-4"
     },
     "Oversampled-PlayerRight-4": {
-      "isTargeted": true,
       "followSpeed": 10.0,
       "visible": false,
       "mechanic": {
@@ -3125,13 +3144,13 @@
             "referenceMechanicName": "Oversampled-Player-Target-4",
             "rotation": 90.0,
             "isPositionRelative": true,
-            "isRotationRelative": true
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           }
         ]
       }
     },
     "Oversampled-PlayerLeft-4": {
-      "isTargeted": true,
       "followSpeed": 10.0,
       "visible": false,
       "mechanic": {
@@ -3174,7 +3193,8 @@
             "referenceMechanicName": "Oversampled-Player-Target-4",
             "rotation": -90.0,
             "isPositionRelative": true,
-            "isRotationRelative": true
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           }
         ]
       }
@@ -3223,12 +3243,16 @@
             },
             "referenceMechanicName": "Oversampled",
             "spawnOnTarget": true
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
           }
         ]
-      }
+      },
+      "mechanicTag": "Oversampled-Target-5"
     },
     "Oversampled-PlayerRight-5": {
-      "isTargeted": true,
       "followSpeed": 10.0,
       "visible": false,
       "mechanic": {
@@ -3271,13 +3295,13 @@
             "referenceMechanicName": "Oversampled-Player-Target-5",
             "rotation": 90.0,
             "isPositionRelative": true,
-            "isRotationRelative": true
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           }
         ]
       }
     },
     "Oversampled-PlayerLeft-5": {
-      "isTargeted": true,
       "followSpeed": 10.0,
       "visible": false,
       "mechanic": {
@@ -3320,7 +3344,8 @@
             "referenceMechanicName": "Oversampled-Player-Target-5",
             "rotation": -90.0,
             "isPositionRelative": true,
-            "isRotationRelative": true
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           }
         ]
       }
@@ -3345,7 +3370,10 @@
                 0
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-5"
+            "referenceMechanicName": "Oversampled-LeftRight-5",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -3355,7 +3383,10 @@
                 1
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-1"
+            "referenceMechanicName": "Oversampled-LeftRight-1",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -3365,7 +3396,10 @@
                 2
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-1"
+            "referenceMechanicName": "Oversampled-LeftRight-1",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -3375,7 +3409,10 @@
                 3
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-1"
+            "referenceMechanicName": "Oversampled-LeftRight-1",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           }
         ]
       }
@@ -3393,7 +3430,10 @@
                 0
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-4"
+            "referenceMechanicName": "Oversampled-LeftRight-4",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -3403,7 +3443,10 @@
                 1
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-2"
+            "referenceMechanicName": "Oversampled-LeftRight-2",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -3413,7 +3456,10 @@
                 2
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-1"
+            "referenceMechanicName": "Oversampled-LeftRight-1",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -3423,7 +3469,10 @@
                 3
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-1"
+            "referenceMechanicName": "Oversampled-LeftRight-1",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           }
         ]
       }
@@ -3441,7 +3490,10 @@
                 0
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-3"
+            "referenceMechanicName": "Oversampled-LeftRight-3",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -3451,7 +3503,10 @@
                 1
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-3"
+            "referenceMechanicName": "Oversampled-LeftRight-3",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -3461,7 +3516,10 @@
                 2
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-1"
+            "referenceMechanicName": "Oversampled-LeftRight-1",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -3471,7 +3529,10 @@
                 3
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-1"
+            "referenceMechanicName": "Oversampled-LeftRight-1",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           }
         ]
       }
@@ -3489,7 +3550,10 @@
                 0
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-3"
+            "referenceMechanicName": "Oversampled-LeftRight-3",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -3499,7 +3563,10 @@
                 1
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-2"
+            "referenceMechanicName": "Oversampled-LeftRight-2",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -3509,7 +3576,10 @@
                 2
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-2"
+            "referenceMechanicName": "Oversampled-LeftRight-2",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -3519,7 +3589,10 @@
                 3
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-1"
+            "referenceMechanicName": "Oversampled-LeftRight-1",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           }
         ]
       }
@@ -3537,7 +3610,10 @@
                 0
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-2"
+            "referenceMechanicName": "Oversampled-LeftRight-2",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -3547,7 +3623,10 @@
                 1
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-2"
+            "referenceMechanicName": "Oversampled-LeftRight-2",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -3557,7 +3636,10 @@
                 2
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-2"
+            "referenceMechanicName": "Oversampled-LeftRight-2",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -3567,7 +3649,10 @@
                 3
               ]
             },
-            "referenceMechanicName": "Oversampled-LeftRight-2"
+            "referenceMechanicName": "Oversampled-LeftRight-2",
+            "isPositionRelative": true,
+            "isRotationRelative": true,
+            "spawnOnTarget": true
           }
         ]
       }
@@ -6746,7 +6831,6 @@
           "$type": "TargetExistingTarget"
         },
         "referenceMechanicName": "Oversampled-PlayerLeft-1",
-        "rotation": 90.0,
         "isPositionRelative": true,
         "isRotationRelative": true
       },
@@ -6756,7 +6840,6 @@
           "$type": "TargetExistingTarget"
         },
         "referenceMechanicName": "Oversampled-PlayerRight-1",
-        "rotation": -90.0,
         "isPositionRelative": true,
         "isRotationRelative": true
       }
@@ -6768,7 +6851,6 @@
           "$type": "TargetExistingTarget"
         },
         "referenceMechanicName": "Oversampled-PlayerLeft-2",
-        "rotation": 90.0,
         "isPositionRelative": true,
         "isRotationRelative": true
       },
@@ -6778,7 +6860,6 @@
           "$type": "TargetExistingTarget"
         },
         "referenceMechanicName": "Oversampled-PlayerRight-2",
-        "rotation": -90.0,
         "isPositionRelative": true,
         "isRotationRelative": true
       }
@@ -6790,7 +6871,6 @@
           "$type": "TargetExistingTarget"
         },
         "referenceMechanicName": "Oversampled-PlayerLeft-3",
-        "rotation": 90.0,
         "isPositionRelative": true,
         "isRotationRelative": true
       },
@@ -6800,7 +6880,6 @@
           "$type": "TargetExistingTarget"
         },
         "referenceMechanicName": "Oversampled-PlayerRight-3",
-        "rotation": -90.0,
         "isPositionRelative": true,
         "isRotationRelative": true
       }
@@ -6812,7 +6891,6 @@
           "$type": "TargetExistingTarget"
         },
         "referenceMechanicName": "Oversampled-PlayerLeft-4",
-        "rotation": 90.0,
         "isPositionRelative": true,
         "isRotationRelative": true
       },
@@ -6822,7 +6900,6 @@
           "$type": "TargetExistingTarget"
         },
         "referenceMechanicName": "Oversampled-PlayerRight-4",
-        "rotation": -90.0,
         "isPositionRelative": true,
         "isRotationRelative": true
       }
@@ -6834,7 +6911,6 @@
           "$type": "TargetExistingTarget"
         },
         "referenceMechanicName": "Oversampled-PlayerLeft-5",
-        "rotation": 90.0,
         "isPositionRelative": true,
         "isRotationRelative": true
       },
@@ -6844,7 +6920,6 @@
           "$type": "TargetExistingTarget"
         },
         "referenceMechanicName": "Oversampled-PlayerRight-5",
-        "rotation": -90.0,
         "isPositionRelative": true,
         "isRotationRelative": true
       }
@@ -7416,7 +7491,7 @@
       "duration": "Infinity"
     },
     "PantoVuln-Alpha": {
-      "statusIconPath": "Mechanics/Resources/VulnBlueAlpha.png",
+      "statusIconPath": "Mechanics/Resources/VulnAlpha.png",
       "statusName": "Security Vulnerability Alpha",
       "duration": 25.0
     },
@@ -7449,7 +7524,7 @@
       "duration": "Infinity"
     },
     "PantoVuln-Beta": {
-      "statusIconPath": "Mechanics/Resources/VulnYellowBeta.png",
+      "statusIconPath": "Mechanics/Resources/VulnBeta.png",
       "statusName": "Security Vulnerability Beta",
       "duration": 25.0
     },
