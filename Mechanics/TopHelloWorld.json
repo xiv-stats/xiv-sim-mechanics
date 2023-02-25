@@ -1,0 +1,2199 @@
+{
+  "referenceMechanicProperties": {
+    "OmegaMechanics": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ReshufflePlayerIds"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 1.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Hello World",
+            "duration": 2.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "Raidwide"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "ApplyDebuffs"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 14.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TowerPool"
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Latent Defect",
+            "duration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 21.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TowerPool"
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Latent Defect",
+            "duration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 21.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TowerPool"
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Latent Defect",
+            "duration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 21.0
+          },
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "TowerPool"
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Latent Defect",
+            "duration": 10.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 21.0
+          },
+          {
+            "$type": "StartCastBar",
+            "castName": "Critical Error",
+            "duration": 7.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 7.0
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "CriticalError"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": "Infinity"
+          }
+        ]
+      }
+    },
+    "ApplyDebuffs": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ExecuteRandomEvents",
+            "mechanicPoolName": "RotPool"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplySmellyStack"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentDna"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplySmellyDefamation"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetAllPlayers"
+            },
+            "referenceMechanicName": "ApplyLatent"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                5
+              ]
+            },
+            "referenceMechanicName": "ApplyFar1"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplyFar2"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "referenceMechanicName": "ApplyFar3"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplyFar4"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "referenceMechanicName": "ApplyNear1"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplyNear2"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                5
+              ]
+            },
+            "referenceMechanicName": "ApplyNear3"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplyNear4"
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "TetherManager"
+          }
+        ]
+      }
+    },
+    "RedIsDefamation": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplySmellyPinkRot"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplySmellyBlueRot"
+          }
+        ]
+      }
+    },
+    "BlueIsDefamation": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplySmellyPinkRot"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplySmellyBlueRot"
+          }
+        ]
+      }
+    },
+    "TetherManager": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 2.0
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "tetherIndices": [
+              0,
+              1
+            ],
+            "referenceTetherName": "Chain-Green-Smelly"
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                5
+              ]
+            },
+            "tetherIndices": [
+              4,
+              5
+            ],
+            "referenceTetherName": "Chain-Blue-Smelly"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 21.0
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "tetherIndices": [
+              0,
+              1
+            ],
+            "referenceTetherName": "Chain-Green"
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                5
+              ]
+            },
+            "tetherIndices": [
+              4,
+              5
+            ],
+            "referenceTetherName": "Chain-Blue"
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2,
+                3
+              ]
+            },
+            "tetherIndices": [
+              2,
+              3
+            ],
+            "referenceTetherName": "Chain-Green-Smelly"
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6,
+                7
+              ]
+            },
+            "tetherIndices": [
+              6,
+              7
+            ],
+            "referenceTetherName": "Chain-Blue-Smelly"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 21.0
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2,
+                3
+              ]
+            },
+            "tetherIndices": [
+              2,
+              3
+            ],
+            "referenceTetherName": "Chain-Green"
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6,
+                7
+              ]
+            },
+            "tetherIndices": [
+              6,
+              7
+            ],
+            "referenceTetherName": "Chain-Blue"
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                5
+              ]
+            },
+            "tetherIndices": [
+              4,
+              5
+            ],
+            "referenceTetherName": "Chain-Green-Smelly"
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "tetherIndices": [
+              0,
+              1
+            ],
+            "referenceTetherName": "Chain-Blue-Smelly"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 21.0
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                5
+              ]
+            },
+            "tetherIndices": [
+              4,
+              5
+            ],
+            "referenceTetherName": "Chain-Green"
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "tetherIndices": [
+              0,
+              1
+            ],
+            "referenceTetherName": "Chain-Blue"
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6,
+                7
+              ]
+            },
+            "tetherIndices": [
+              6,
+              7
+            ],
+            "referenceTetherName": "Chain-Green-Smelly"
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2,
+                3
+              ]
+            },
+            "tetherIndices": [
+              2,
+              3
+            ],
+            "referenceTetherName": "Chain-Blue-Smelly"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 21.0
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6,
+                7
+              ]
+            },
+            "tetherIndices": [
+              6,
+              7
+            ],
+            "referenceTetherName": "Chain-Green"
+          },
+          {
+            "$type": "SpawnTethersBetweenPlayers",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2,
+                3
+              ]
+            },
+            "tetherIndices": [
+              2,
+              3
+            ],
+            "referenceTetherName": "Chain-Blue"
+          }
+        ]
+      }
+    },
+    "SpawnTowers": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "RedTower",
+            "position": {
+              "x": 4.813,
+              "y": 0.0
+            },
+            "isPositionRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "RedTower",
+            "position": {
+              "x": 0.0,
+              "y": 4.813
+            },
+            "isPositionRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "BlueTower",
+            "position": {
+              "x": -4.813,
+              "y": 0.0
+            },
+            "isPositionRelative": true
+          },
+          {
+            "$type": "SpawnMechanicEvent",
+            "referenceMechanicName": "BlueTower",
+            "position": {
+              "x": 0.0,
+              "y": -4.813
+            },
+            "isPositionRelative": true
+          }
+        ]
+      }
+    },
+    "RedTower": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.1,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff1111",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.7
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetInvisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} > 0",
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "PinkRotFail"
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Cascading Latent Defect",
+                "damageType": "Damage",
+                "damageAmount": 10000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PinkDna"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "BlueTower": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 2.1,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#1111ff",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 9.7
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetInvisible"
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
+            "$type": "ModifyMechanicEvent",
+            "referenceMechanicName": "SetVisible"
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} > 0",
+            "failEvent": {
+              "$type": "SpawnMechanicEvent",
+              "referenceMechanicName": "BlueRotFail"
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Latent Performance Defect",
+                "damageType": "Damage",
+                "damageAmount": 10000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "BlueRavioli"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "DefamationExplosion": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 7.3333335,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#000000aa",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Critical Overflow Bug",
+                "damageType": "Magic",
+                "damageAmount": 50000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DefamationDebugger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerIsMechanicTarget"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Critical Overflow Bug",
+                "damageType": "Magic",
+                "damageAmount": 50000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "TryDefamation"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "LatentDna"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "StackExplosion": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.6666666,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#000000aa",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "CheckNumberOfPlayers",
+            "expressionFormat": "{0} > 1",
+            "failEvent": {
+              "$type": "ApplyEffectToPlayers",
+              "effect": {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              }
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effect": {
+              "$type": "DamageEffect",
+              "name": "Critical Synchronization Bug",
+              "damageType": "Magic",
+              "damageAmount": 100000.0,
+              "maxStackAmount": 2
+            }
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "StackDebugger"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "LatentDna"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "LatentStack"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerIsMechanicTarget"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "TryStack"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "LatentDna"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "LatentStack"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "PinkRotExplosion": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.6666666,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#880000aa",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PinkRotDebugger"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "PinkDna"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerIsMechanicTarget"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Critical Underflow Bug",
+                "damageType": "Damage",
+                "damageAmount": 9999999.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "BlueRotExplosion": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 1.6666666,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#000088aa",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "BlueRotDebugger"
+              },
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "BlueRavioli"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerIsMechanicTarget"
+            },
+            "failedConditionEffects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Critical Performance Bug",
+                "damageType": "Damage",
+                "damageAmount": 9999999.0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "PinkRotChaser": {
+      "isTargeted": true,
+      "followSpeed": 10000.0,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 0.0,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/PinkRotSymbol.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 0.5
+            },
+            "colorHtml": "#D47AAB",
+            "spawnOnPlayer": true,
+            "isBillboard": true,
+            "visualDuration": 27.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/RotRing.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.1,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 90.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 0.5
+            },
+            "colorHtml": "#D47AAB",
+            "spawnOnPlayer": true,
+            "visualDuration": 27.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 26.9
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetPlayersInsideAoe"
+        },
+        "referenceMechanicName": "ApplyPinkRot"
+      }
+    },
+    "BlueRotChaser": {
+      "isTargeted": true,
+      "followSpeed": 10000.0,
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 0.5,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 0.0,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/BlueRotSymbol.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.8,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 0.5
+            },
+            "colorHtml": "#4CA8FF",
+            "spawnOnPlayer": true,
+            "isBillboard": true,
+            "visualDuration": 27.0
+          },
+          {
+            "$type": "SpawnVisualObject",
+            "textureFilePath": "Mechanics/Resources/RotRing.png",
+            "relativePosition": {
+              "x": 0.0,
+              "y": 0.1,
+              "z": 0.0
+            },
+            "eulerAngles": {
+              "x": 90.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "scale": {
+              "x": 0.5,
+              "y": 0.5,
+              "z": 0.5
+            },
+            "colorHtml": "#4CA8FF",
+            "spawnOnPlayer": true,
+            "visualDuration": 27.0
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 26.9
+          }
+        ]
+      },
+      "persistentMechanic": {
+        "$type": "SpawnTargetedEvents",
+        "targetingScheme": {
+          "$type": "TargetPlayersInsideAoe"
+        },
+        "referenceMechanicName": "ApplyBlueRot"
+      }
+    },
+    "SpawnOmega": {
+      "visible": false,
+      "mechanic": {
+        "$type": "SpawnEnemy",
+        "enemyName": "Omega",
+        "textureFilePath": "Mechanics/Resources/FinalOmega.png",
+        "colorHtml": "#30015d",
+        "maxHp": 2147483647,
+        "hitboxSize": 14.0,
+        "rotation": 180.0,
+        "visualPosition": {
+          "x": 0.0,
+          "y": 1.5,
+          "z": 0.0
+        },
+        "visualScale": {
+          "x": 3.0,
+          "y": 3.0,
+          "z": 3.0
+        },
+        "referenceMechanicName": "OmegaMechanics",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        }
+      }
+    },
+    "SetVisible": {
+      "visible": true
+    },
+    "SetInvisible": {
+      "visible": false
+    },
+    "Patch": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 50.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#00000088",
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "PatchPenalty"
+              }
+            ],
+            "condition": {
+              "$type": "CheckMultipleConditions",
+              "conditions": [
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "Remote Regression",
+                  "invertStatus": true
+                },
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "Local Regression",
+                  "invertStatus": true
+                },
+                {
+                  "$type": "CheckPlayerIsMechanicTarget"
+                }
+              ],
+              "requireAll": true
+            },
+            "failedConditionEffects": []
+          },
+          {
+            "$type": "WaitEvent",
+            "timeToWait": 0.2
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Patch",
+                "damageType": "Magic",
+                "damageAmount": 5000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "MagicVuln"
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "DoomStack"
+              }
+            ]
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "FarTether"
+              }
+            ],
+            "condition": {
+              "$type": "CheckMultipleConditions",
+              "conditions": [
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "Remote Regression"
+                },
+                {
+                  "$type": "CheckPlayerIsMechanicTarget"
+                }
+              ],
+              "requireAll": true
+            },
+            "failedConditionEffects": []
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "NearTether"
+              }
+            ],
+            "condition": {
+              "$type": "CheckMultipleConditions",
+              "conditions": [
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "Local Regression"
+                },
+                {
+                  "$type": "CheckPlayerIsMechanicTarget"
+                }
+              ],
+              "requireAll": true
+            },
+            "failedConditionEffects": []
+          }
+        ]
+      }
+    },
+    "Raidwide": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Hello World",
+          "damageType": "Magic",
+          "damageAmount": 80000.0
+        }
+      }
+    },
+    "GlobalVuln": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "MagicVuln"
+        }
+      }
+    },
+    "BlueRotFail": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#1111ff",
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Blue Explosion",
+          "damageType": "Damage",
+          "damageAmount": 9999999.0
+        }
+      }
+    },
+    "PinkRotFail": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "colorHtml": "#ff3333",
+      "mechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Red Explosion",
+          "damageType": "Damage",
+          "damageAmount": 9999999.0
+        }
+      }
+    },
+    "CriticalError": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 100.0,
+        "y": 360.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Critical Error",
+                "damageType": "Magic",
+                "damageAmount": 80000.0
+              },
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "TryDefamation"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ApplyNear1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "SmellyNear",
+          "overrideDuration": 23.0
+        }
+      }
+    },
+    "ApplyNear2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "SmellyNear",
+          "overrideDuration": 44.0
+        }
+      }
+    },
+    "ApplyNear3": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "SmellyNear",
+          "overrideDuration": 65.0
+        }
+      }
+    },
+    "ApplyNear4": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "SmellyNear",
+          "overrideDuration": 86.0
+        }
+      }
+    },
+    "ApplyFar1": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "SmellyFar",
+          "overrideDuration": 23.0
+        }
+      }
+    },
+    "ApplyFar2": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "SmellyFar",
+          "overrideDuration": 44.0
+        }
+      }
+    },
+    "ApplyFar3": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "SmellyFar",
+          "overrideDuration": 65.0
+        }
+      }
+    },
+    "ApplyFar4": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "SmellyFar",
+          "overrideDuration": 86.0
+        }
+      }
+    },
+    "ApplyNear": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "NearTether"
+        }
+      }
+    },
+    "ApplyFar": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "FarTether"
+        }
+      }
+    },
+    "ApplyLatent": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "LatentStack"
+        }
+      }
+    },
+    "ApplyLatentDna": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "LatentDna"
+        }
+      }
+    },
+    "ApplyPinkDna": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "PinkDna"
+        }
+      }
+    },
+    "ApplyBlueRavioli": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "BlueRavioli"
+        }
+      }
+    },
+    "ApplySmellyDefamation": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "SmellyDefamation"
+        }
+      }
+    },
+    "ApplySmellyStack": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "SmellyStack"
+        }
+      }
+    },
+    "ApplySmellyPinkRot": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "SmellyPinkRot"
+        }
+      }
+    },
+    "ApplySmellyBlueRot": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "ApplyStatusEffect",
+          "referenceStatusName": "SmellyBlueRot"
+        }
+      }
+    },
+    "ApplyDefamation": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Double Defamation",
+                "damageType": "Damage",
+                "damageAmount": 9999999.0
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Critical Overflow Bug"
+            },
+            "failedConditionEffects": []
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Defamation"
+              }
+            ],
+            "condition": {
+              "$type": "CheckMultipleConditions",
+              "conditions": [
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "Critical Overflow Bug",
+                  "invertStatus": true
+                },
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "Overflow Debugger",
+                  "invertStatus": true
+                }
+              ],
+              "requireAll": true
+            },
+            "failedConditionEffects": []
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "DefamationDebugger"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Overflow Debugger"
+            },
+            "failedConditionEffects": []
+          }
+        ]
+      }
+    },
+    "ApplyStack": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "DamageEffect",
+                "name": "Double Stack",
+                "damageType": "Damage",
+                "damageAmount": 9999999.0
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Critical Synchronization Bug"
+            },
+            "failedConditionEffects": []
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "ApplyStatusEffect",
+                "referenceStatusName": "Stack"
+              }
+            ],
+            "condition": {
+              "$type": "CheckMultipleConditions",
+              "conditions": [
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "Critical Synchronization Bug",
+                  "invertStatus": true
+                },
+                {
+                  "$type": "CheckPlayerStatus",
+                  "statusName": "Synchronization Debugger",
+                  "invertStatus": true
+                }
+              ],
+              "requireAll": true
+            },
+            "failedConditionEffects": []
+          },
+          {
+            "$type": "ApplyEffectToPlayers",
+            "effects": [
+              {
+                "$type": "RemoveStatusEffect",
+                "referenceStatusName": "StackDebugger"
+              }
+            ],
+            "condition": {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Synchronization Debugger"
+            },
+            "failedConditionEffects": []
+          }
+        ]
+      }
+    },
+    "ApplyPinkRot": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effects": [
+          {
+            "$type": "ApplyStatusEffect",
+            "referenceStatusName": "PinkRot"
+          },
+          {
+            "$type": "ApplyStatusEffect",
+            "referenceStatusName": "PinkRotHelper"
+          }
+        ],
+        "condition": {
+          "$type": "CheckMultipleConditions",
+          "conditions": [
+            {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Critical Underflow Bug",
+              "invertStatus": true
+            },
+            {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Underflow Debugger",
+              "invertStatus": true
+            }
+          ],
+          "requireAll": true
+        },
+        "failedConditionEffects": []
+      }
+    },
+    "ApplyBlueRot": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effects": [
+          {
+            "$type": "ApplyStatusEffect",
+            "referenceStatusName": "BlueRot"
+          },
+          {
+            "$type": "ApplyStatusEffect",
+            "referenceStatusName": "BlueRotHelper"
+          }
+        ],
+        "condition": {
+          "$type": "CheckMultipleConditions",
+          "conditions": [
+            {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Critical Performance Bug",
+              "invertStatus": true
+            },
+            {
+              "$type": "CheckPlayerStatus",
+              "statusName": "Performance Debugger",
+              "invertStatus": true
+            }
+          ],
+          "requireAll": true
+        },
+        "failedConditionEffects": []
+      }
+    },
+    "ApplyDoom": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effects": [
+          {
+            "$type": "ApplyStatusEffect",
+            "referenceStatusName": "Doom"
+          },
+          {
+            "$type": "RemoveStatusEffect",
+            "referenceStatusName": "DoomStack"
+          }
+        ]
+      }
+    },
+    "Doom": {
+      "visible": false,
+      "mechanic": {
+        "$type": "ApplyEffectToTargetOnly",
+        "effect": {
+          "$type": "DamageEffect",
+          "name": "Doom",
+          "damageType": "TrueDamage",
+          "damageAmount": 100000000.0
+        }
+      }
+    },
+    "ArenaBoundary": {
+      "collisionShape": "Round",
+      "collisionShapeParams": {
+        "x": 25.0,
+        "y": 360.0,
+        "z": 7.0,
+        "w": 0.0
+      },
+      "colorHtml": "#8800FF",
+      "persistentTickInterval": 0.2,
+      "persistentMechanic": {
+        "$type": "ApplyEffectToPlayers",
+        "effect": {
+          "$type": "DamageEffect",
+          "damageType": "TrueDamage",
+          "damageAmount": 9999999.0
+        }
+      }
+    }
+  },
+  "referenceTetherProperties": {
+    "Chain-Blue-Smelly": {
+      "colorHtml": "#0000ff55",
+      "tetherDuration": 21.0
+    },
+    "Chain-Blue": {
+      "colorHtml": "#0000ff",
+      "tetherDuration": 10.1,
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 0.1,
+      "breakMechanic": {
+        "$type": "SpawnMechanicOnTetheredPlayers",
+        "referenceMechanicName": "Patch",
+        "spawnOnBoth": true
+      },
+      "persistentMechanic": {
+        "$type": "CheckTetherLength",
+        "maxDistance": 2.66,
+        "minDistance": -1.0,
+        "successEvent": {
+          "$type": "ModifyTetherProperties",
+          "referenceTetherName": "Chain-Blue-Active"
+        },
+        "failEvent": {
+          "$type": "EndTether",
+          "shouldTriggerBreakEvent": true
+        }
+      },
+      "breakOnTetherExpired": true
+    },
+    "Chain-Blue-Active": {
+      "colorHtml": "#0000ff"
+    },
+    "Chain-Green-Smelly": {
+      "colorHtml": "#00ff0055",
+      "tetherDuration": 21.0
+    },
+    "Chain-Green": {
+      "colorHtml": "#00ff00",
+      "tetherDuration": 10.1,
+      "persistentTickInterval": 0.1,
+      "persistentActivationDelay": 0.1,
+      "breakMechanic": {
+        "$type": "SpawnMechanicOnTetheredPlayers",
+        "referenceMechanicName": "Patch",
+        "spawnOnBoth": true
+      },
+      "persistentMechanic": {
+        "$type": "CheckTetherLength",
+        "maxDistance": 999.0,
+        "minDistance": 2.66,
+        "successEvent": {
+          "$type": "ModifyTetherProperties",
+          "referenceTetherName": "Chain-Green-Active"
+        },
+        "failEvent": {
+          "$type": "EndTether",
+          "shouldTriggerBreakEvent": true
+        }
+      },
+      "breakOnTetherExpired": true
+    },
+    "Chain-Green-Active": {
+      "colorHtml": "#00ff00"
+    }
+  },
+  "mechanicPools": {
+    "RotPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "RedIsDefamation"
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "BlueIsDefamation"
+      }
+    ],
+    "TowerPool": [
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnTowers",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnTowers",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 45.0,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnTowers",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 90.0,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnTowers",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 135.0,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnTowers",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 180.0,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnTowers",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 225.0,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnTowers",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 270.0,
+        "isRotationRelative": true
+      },
+      {
+        "$type": "SpawnMechanicEvent",
+        "referenceMechanicName": "SpawnTowers",
+        "position": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "rotation": 315.0,
+        "isRotationRelative": true
+      }
+    ]
+  },
+  "referenceStatusProperties": {
+    "MagicVuln": {
+      "$type": "DamageModifier",
+      "damageMultiplier": 10.0,
+      "damageType": "Magic",
+      "statusIconPath": "Mechanics/Resources/MagicVuln.png",
+      "statusName": "Magic Vulnerability Up",
+      "statusDescription": "Magic damage taken is increased.",
+      "duration": 1.0,
+      "maxStacks": 16
+    },
+    "DoomStack": {
+      "$type": "SpawnMechanicOnReachStacks",
+      "referenceMechanicName": "ApplyDoom",
+      "requiredStacks": 3,
+      "statusIconPath": "Mechanics/Resources/DoomStack.png",
+      "statusName": "Thrice-come Ruin",
+      "statusDescription": "Too many stacks will result in Doom.",
+      "duration": 1.0,
+      "maxStacks": 3
+    },
+    "Doom": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Doom",
+      "statusIconPath": "Mechanics/Resources/Doom.png",
+      "statusName": "Doom",
+      "statusDescription": "Certain death when counter reaches zero.",
+      "duration": 3.0
+    },
+    "SmellyNear": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "ApplyNear",
+      "statusIconPath": "Mechanics/Resources/NearTether1.png",
+      "statusName": "Local Code Smell",
+      "statusDescription": "Smelling an incoming green tether.",
+      "duration": 22.0,
+      "canOverwriteStatus": false
+    },
+    "SmellyFar": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "ApplyFar",
+      "statusIconPath": "Mechanics/Resources/FarTether1.png",
+      "statusName": "Remote Code Smell",
+      "statusDescription": "Smelling an incoming blue tether.",
+      "duration": 22.0,
+      "canOverwriteStatus": false
+    },
+    "NearTether": {
+      "statusIconPath": "Mechanics/Resources/NearTether2.png",
+      "statusName": "Local Regression",
+      "statusDescription": "Green tether will pop if too close to partner.",
+      "duration": 10.0,
+      "canOverwriteStatus": false
+    },
+    "FarTether": {
+      "statusIconPath": "Mechanics/Resources/FarTether2.png",
+      "statusName": "Remote Regression",
+      "statusDescription": "Blue tether will pop if too far from partner.",
+      "duration": 10.0,
+      "canOverwriteStatus": false
+    },
+    "LatentStack": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Doom",
+      "statusIconPath": "Mechanics/Resources/SharedSentenceL.png",
+      "statusName": "Latent Synchronization Bug",
+      "statusDescription": "Sentenced to share a stack.",
+      "duration": 72.0
+    },
+    "LatentDna": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "Doom",
+      "statusIconPath": "Mechanics/Resources/BlueDna.png",
+      "statusName": "Latent Defect",
+      "statusDescription": "Sentenced to get hit by a mechanic.",
+      "duration": 26.0
+    },
+    "Defamation": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "DefamationExplosion",
+      "statusIconPath": "Mechanics/Resources/Defamation.png",
+      "statusName": "Critical Overflow Bug",
+      "statusDescription": "Exploding in a large radius at the end of this effect.",
+      "duration": 21.0,
+      "shouldKeepOnDeath": true
+    },
+    "Stack": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "StackExplosion",
+      "statusIconPath": "Mechanics/Resources/SharedSentence.png",
+      "statusName": "Critical Synchronization Bug",
+      "statusDescription": "Exploding with shared damage at the end of this effect.",
+      "duration": 21.0,
+      "shouldKeepOnDeath": true
+    },
+    "PinkRot": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "PinkRotExplosion",
+      "statusIconPath": "Mechanics/Resources/PinkRot.png",
+      "statusName": "Critical Underflow Bug",
+      "statusDescription": "Affected by an underflow bug and spreading it to touched allies.",
+      "duration": 27.0,
+      "shouldKeepOnDeath": true
+    },
+    "BlueRot": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "BlueRotExplosion",
+      "statusIconPath": "Mechanics/Resources/BlueRot.png",
+      "statusName": "Critical Performance Bug",
+      "statusDescription": "Affected by a performance bug and spreading it to touched allies.",
+      "duration": 27.0,
+      "shouldKeepOnDeath": true
+    },
+    "PinkRotHelper": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "PinkRotChaser",
+      "statusName": "Pink Rot Spread",
+      "statusDescription": "Helper status to spread rot.",
+      "duration": 0.1
+    },
+    "BlueRotHelper": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "BlueRotChaser",
+      "statusName": "Blue Rot Spread",
+      "statusDescription": "Helper status to spread rot.",
+      "duration": 0.1
+    },
+    "PatchPenalty": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "GlobalVuln",
+      "statusName": "Patch Penalty",
+      "statusDescription": "Didn't pop patch in time.",
+      "duration": 0.1
+    },
+    "SmellyDefamation": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "ApplyDefamation",
+      "statusIconPath": "Mechanics/Resources/DefamationS.png",
+      "statusName": "Overflow Code Smell",
+      "statusDescription": "Smelling an incoming defamation.",
+      "duration": 3.0,
+      "shouldKeepOnDeath": true
+    },
+    "SmellyStack": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "ApplyStack",
+      "statusIconPath": "Mechanics/Resources/SharedSentenceS.png",
+      "statusName": "Synchronization Code Smell",
+      "statusDescription": "Smelling an incoming stack.",
+      "duration": 3.0,
+      "shouldKeepOnDeath": true
+    },
+    "SmellyPinkRot": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "PinkRotChaser",
+      "statusIconPath": "Mechanics/Resources/PinkRotS.png",
+      "statusName": "Underflow Code Smell",
+      "statusDescription": "Smelling pink rot incoming.",
+      "duration": 3.0,
+      "shouldKeepOnDeath": true
+    },
+    "SmellyBlueRot": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "BlueRotChaser",
+      "statusIconPath": "Mechanics/Resources/BlueRotS.png",
+      "statusName": "Performance Code Smell",
+      "statusDescription": "Smelling blue rot incoming.",
+      "duration": 3.0,
+      "shouldKeepOnDeath": true
+    },
+    "DefamationDebugger": {
+      "statusIconPath": "Mechanics/Resources/DefamationD.png",
+      "statusName": "Overflow Debugger",
+      "statusDescription": "Immune to the next overflow bug.",
+      "duration": 99.0
+    },
+    "StackDebugger": {
+      "statusIconPath": "Mechanics/Resources/SharedSentenceD.png",
+      "statusName": "Synchronization Debugger",
+      "statusDescription": "Immune to the next synchronization bug.",
+      "duration": 99.0
+    },
+    "PinkRotDebugger": {
+      "statusIconPath": "Mechanics/Resources/PinkRotD.png",
+      "statusName": "Underflow Debugger",
+      "statusDescription": "Immune to underflow bugs.",
+      "duration": 99.0
+    },
+    "BlueRotDebugger": {
+      "statusIconPath": "Mechanics/Resources/BlueRotD.png",
+      "statusName": "Performance Debugger",
+      "statusDescription": "Immune to performance bugs.",
+      "duration": 99.0
+    },
+    "PinkDna": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "PinkRotFail",
+      "statusIconPath": "Mechanics/Resources/PinkDna.png",
+      "statusName": "Cascading Latent Defect",
+      "statusDescription": "Performing a massive explosion upon effect expiry. Effect can be cleansed via a certain action.",
+      "duration": 10.0
+    },
+    "BlueRavioli": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "BlueRotFail",
+      "statusIconPath": "Mechanics/Resources/BlueRavioli.png",
+      "statusName": "Latent Performance Defect",
+      "statusDescription": "Performing a massive explosion upon effect expiry. Effect can be cleansed via a certain action.",
+      "duration": 10.0
+    },
+    "TryDefamation": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "ApplyDefamation",
+      "statusName": "Defamation Pending",
+      "statusDescription": "Performing defamation application logic.",
+      "duration": 0.01
+    },
+    "TryStack": {
+      "$type": "SpawnMechanicOnExpire",
+      "referenceMechanicName": "ApplyStack",
+      "statusName": "Stack Pending",
+      "statusDescription": "Performing stack application logic.",
+      "duration": 0.01
+    }
+  },
+  "mechanicEvents": [
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "ArenaBoundary"
+    },
+    {
+      "$type": "SpawnVisualObject",
+      "textureFilePath": "Mechanics/Resources/ArenaCircleFinalMarkers.png",
+      "relativePosition": {
+        "x": 0.0,
+        "y": -0.001,
+        "z": 0.0
+      },
+      "eulerAngles": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "scale": {
+        "x": 15.85,
+        "y": 15.85,
+        "z": 1.0
+      },
+      "visualDuration": "Infinity"
+    },
+    {
+      "$type": "WaitEvent",
+      "timeToWait": 1.0
+    },
+    {
+      "$type": "SpawnMechanicEvent",
+      "referenceMechanicName": "SpawnOmega"
+    }
+  ]
+}
