@@ -340,7 +340,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 6.0
+            "timeToWait": 7.5
           },
           {
             "$type": "SetEnemyMovement",
