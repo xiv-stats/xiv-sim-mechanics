@@ -3694,20 +3694,24 @@
       "duration": 11.0
     },
     "Frozen": {
-      "$type": "SpeedModifier",
+      "$type": "DamageOverTime",
+      "damageAmount": 3000.0,
       "statusIconPath": "Mechanics/Resources/Frozen.png",
       "statusName": "Deep Freeze",
       "statusDescription": "Frozen solid and unable to execute actions.",
       "disableType": 7,
-      "duration": 30.0
+      "duration": 30.0,
+      "tickInterval": 3.0
     },
     "Pyretic": {
-      "$type": "SpeedModifier",
+      "$type": "DamageOverTime",
+      "damageAmount": 3000.0,
       "statusIconPath": "Mechanics/Resources/Pyretic.png",
       "statusName": "Pyretic",
       "statusDescription": "Fire-aspected damage is taken with every action.",
       "disableType": 7,
-      "duration": 30.0
+      "duration": 30.0,
+      "tickInterval": 3.0
     },
     "Burns": {
       "$type": "DamageOverTime",
