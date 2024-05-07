@@ -92,105 +92,6 @@
             "referenceMechanicName": "AutoAttack"
           },
           {
-            "$type": "WaitEvent",
-            "timeToWait": 3.0
-          },
-          {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetNthHighestAggro"
-            },
-            "referenceMechanicName": "AutoAttack"
-          },
-          {
-            "$type": "ExecuteRandomEventSequence",
-            "mechanicPoolName": "Blizzard-Wave-Pool"
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 5.0
-          },
-          {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetNthHighestAggro"
-            },
-            "referenceMechanicName": "AutoAttack"
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 3.0
-          },
-          {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetNthHighestAggro"
-            },
-            "referenceMechanicName": "AutoAttack"
-          },
-          {
-            "$type": "StartCastBar",
-            "castName": "Wave Cannon Simulation",
-            "duration": 3.0
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 3.0
-          },
-          {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Oversampled-Pool"
-          },
-          {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetNthHighestAggro"
-            },
-            "referenceMechanicName": "AutoAttack"
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 1.0
-          },
-          {
-            "$type": "ExecuteRandomEventSequence",
-            "mechanicPoolName": "Blizzard-Wave-Pool",
-            "mechanicIndex": 1
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 5.0
-          },
-          {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetNthHighestAggro"
-            },
-            "referenceMechanicName": "AutoAttack"
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 3.0
-          },
-          {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetNthHighestAggro"
-            },
-            "referenceMechanicName": "AutoAttack"
-          },
-          {
-            "$type": "WaitEvent",
-            "timeToWait": 3.0
-          },
-          {
-            "$type": "SpawnTargetedEvents",
-            "targetingScheme": {
-              "$type": "TargetNthHighestAggro"
-            },
-            "referenceMechanicName": "AutoAttack"
-          },
-          {
             "$type": "SetEnemyMovement",
             "movementTime": 0.5
           },
@@ -253,7 +154,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 0.5
           },
           {
             "$type": "StartCastBar",
@@ -382,7 +283,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 0.5
           },
           {
             "$type": "StartCastBar",
@@ -6303,12 +6204,26 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-X-Alpha"
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "referenceMechanicName": "ApplySyncBeta"
           },
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-Circle-Beta"
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                1
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentAlpha"
           }
         ]
       },
@@ -6316,12 +6231,134 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-X-Beta"
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplySyncBeta"
           },
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-Circle-Alpha"
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                2,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentAlpha"
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                2
+              ]
+            },
+            "referenceMechanicName": "ApplySyncBeta"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                2
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentAlpha"
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                1,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplySyncBeta"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                1,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentAlpha"
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplySyncBeta"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentAlpha"
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                1,
+                2
+              ]
+            },
+            "referenceMechanicName": "ApplySyncBeta"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                1,
+                2
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentAlpha"
           }
         ]
       }
@@ -6331,12 +6368,26 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-Square-Alpha"
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                5
+              ]
+            },
+            "referenceMechanicName": "ApplySyncAlpha"
           },
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-Triangle-Beta"
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                5
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentBeta"
           }
         ]
       },
@@ -6344,12 +6395,234 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-Square-Beta"
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplySyncAlpha"
           },
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-Triangle-Alpha"
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                6,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentBeta"
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                6
+              ]
+            },
+            "referenceMechanicName": "ApplySyncAlpha"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                6
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentBeta"
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                5,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplySyncAlpha"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                5,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentBeta"
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplySyncAlpha"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentBeta"
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                5,
+                6
+              ]
+            },
+            "referenceMechanicName": "ApplySyncAlpha"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                5,
+                6
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentBeta"
+          }
+        ]
+      }
+    ],
+    "Delta-Sync-Pool": [
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplySyncAlpha"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentBeta"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplySyncBeta"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentAlpha"
+          }
+        ]
+      },
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplySyncAlpha"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentBeta"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplySyncBeta"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentAlpha"
           }
         ]
       }
