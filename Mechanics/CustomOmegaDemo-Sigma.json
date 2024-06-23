@@ -7580,7 +7580,7 @@
     },
     {
       "$type": "SpawnVisualObject",
-      "textureFilePath": "Mechanics/Resources/ArenaCircle.png",
+      "textureFilePath": "Mechanics/Resources/ArenaCircleCustomOmega.png",
       "relativePosition": {
         "x": 0.0,
         "y": -0.001,
