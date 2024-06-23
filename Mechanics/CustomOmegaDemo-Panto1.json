@@ -82,6 +82,10 @@
             "movementTime": -1000.0
           },
           {
+            "$type": "WaitEvent",
+            "timeToWait": 0.5
+          },
+          {
             "$type": "StartCastBar",
             "castName": "Pantokrater GPT III",
             "duration": 10.0
@@ -107,7 +111,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 34.5
+            "timeToWait": 69.0
           },
           {
             "$type": "SetEnemyMovement"
@@ -155,7 +159,7 @@
               "x": 0.0,
               "y": -1.0
             },
-            "movementTime": -41.0
+            "movementTime": -56.0
           },
           {
             "$type": "StartCastBar",
@@ -179,12 +183,12 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 20.0
+            "timeToWait": 25.0
           },
           {
             "$type": "StartCastBar",
             "castName": "Critical Loop",
-            "duration": 20.0
+            "duration": 30.0
           },
           {
             "$type": "ExecuteRandomEvents",
@@ -192,7 +196,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 20.0
+            "timeToWait": 30.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -208,7 +212,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 5.0
+            "timeToWait": 0.5
           },
           {
             "$type": "StartCastBar",
@@ -238,7 +242,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 36.0
+            "timeToWait": 72.0
           },
           {
             "$type": "SetEnemyMovement"
@@ -286,7 +290,7 @@
               "x": 0.0,
               "y": -1.0
             },
-            "movementTime": -41.0
+            "movementTime": -56.0
           },
           {
             "$type": "StartCastBar",
@@ -1153,7 +1157,7 @@
                 "$type": "DamageEffect",
                 "name": "Patch",
                 "damageType": "Magic",
-                "damageAmount": 35000.0
+                "damageAmount": 15000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1194,7 +1198,7 @@
                 "$type": "DamageEffect",
                 "name": "Patch",
                 "damageType": "Magic",
-                "damageAmount": 35000.0
+                "damageAmount": 15000.0
               },
               {
                 "$type": "ApplyStatusEffect",
@@ -1641,7 +1645,7 @@
         "spawnOnPlayer": true,
         "isRotationRelative": true,
         "isBillboard": true,
-        "visualDuration": 41.0
+        "visualDuration": 56.0
       }
     },
     "Visual-Circle": {
@@ -1663,7 +1667,7 @@
         "spawnOnPlayer": true,
         "isRotationRelative": true,
         "isBillboard": true,
-        "visualDuration": 41.0
+        "visualDuration": 56.0
       }
     },
     "Visual-Triangle": {
@@ -1685,7 +1689,7 @@
         "spawnOnPlayer": true,
         "isRotationRelative": true,
         "isBillboard": true,
-        "visualDuration": 41.0
+        "visualDuration": 56.0
       }
     },
     "Visual-Square": {
@@ -1707,7 +1711,7 @@
         "spawnOnPlayer": true,
         "isRotationRelative": true,
         "isBillboard": true,
-        "visualDuration": 41.0
+        "visualDuration": 56.0
       }
     },
     "Aoe-Green": {
@@ -1830,7 +1834,7 @@
         "events": [
           {
             "$type": "WaitEvent",
-            "timeToWait": 3.0
+            "timeToWait": 6.0
           },
           {
             "$type": "ApplyEffectToPlayers",
@@ -1882,7 +1886,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.3
+            "timeToWait": 2.8
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -1971,7 +1975,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.3
+            "timeToWait": 2.8
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -2074,7 +2078,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.3
+            "timeToWait": 2.8
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -3672,7 +3676,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.3
+            "timeToWait": 2.8
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -3793,7 +3797,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.3
+            "timeToWait": 2.8
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -4117,7 +4121,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.3
+            "timeToWait": 2.8
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -4238,7 +4242,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.3
+            "timeToWait": 2.8
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -4793,7 +4797,7 @@
               },
               {
                 "$type": "WaitEvent",
-                "timeToWait": 1.5
+                "timeToWait": 3.0
               },
               {
                 "$type": "SpawnMechanicEvent",
@@ -4857,7 +4861,7 @@
               },
               {
                 "$type": "WaitEvent",
-                "timeToWait": 1.5
+                "timeToWait": 3.0
               },
               {
                 "$type": "SpawnMechanicEvent",
@@ -4921,7 +4925,7 @@
               },
               {
                 "$type": "WaitEvent",
-                "timeToWait": 1.5
+                "timeToWait": 3.0
               },
               {
                 "$type": "SpawnMechanicEvent",
@@ -4985,7 +4989,7 @@
               },
               {
                 "$type": "WaitEvent",
-                "timeToWait": 1.5
+                "timeToWait": 3.0
               },
               {
                 "$type": "SpawnMechanicEvent",
@@ -5015,7 +5019,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5027,7 +5031,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5039,7 +5043,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -5057,7 +5061,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5069,7 +5073,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5081,7 +5085,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5093,7 +5097,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -5111,7 +5115,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5123,7 +5127,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5135,7 +5139,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5147,7 +5151,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -5165,7 +5169,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5177,7 +5181,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5189,7 +5193,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5201,7 +5205,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -5219,11 +5223,11 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -5247,7 +5251,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -5265,7 +5269,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -5283,7 +5287,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -5301,7 +5305,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnMechanicEvent",
@@ -5319,7 +5323,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           }
         ]
       }
@@ -5339,7 +5343,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5351,7 +5355,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5363,7 +5367,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5375,7 +5379,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5387,7 +5391,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5399,7 +5403,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5411,7 +5415,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5423,7 +5427,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5435,7 +5439,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5447,7 +5451,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5459,7 +5463,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5471,7 +5475,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5483,7 +5487,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5495,7 +5499,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5507,7 +5511,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5519,14 +5523,14 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "ReshufflePlayerIds"
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5544,7 +5548,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5562,7 +5566,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5580,7 +5584,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5598,7 +5602,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.5
+            "timeToWait": 3.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5616,7 +5620,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 3.0
+            "timeToWait": 6.0
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5655,7 +5659,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.2
+            "timeToWait": 2.4
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5673,7 +5677,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.2
+            "timeToWait": 2.4
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5691,7 +5695,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.2
+            "timeToWait": 2.4
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5709,7 +5713,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.2
+            "timeToWait": 2.4
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5727,7 +5731,7 @@
           },
           {
             "$type": "WaitEvent",
-            "timeToWait": 1.2
+            "timeToWait": 2.4
           },
           {
             "$type": "SpawnTargetedEvents",
@@ -5982,7 +5986,7 @@
   "referenceTetherProperties": {
     "Chain-Blue": {
       "colorHtml": "#0000ff55",
-      "tetherDuration": 30.0,
+      "tetherDuration": 40.0,
       "persistentTickInterval": 0.1,
       "persistentActivationDelay": 10.0,
       "breakMechanic": {
@@ -6009,7 +6013,7 @@
     },
     "Chain-Green": {
       "colorHtml": "#00ff0055",
-      "tetherDuration": 30.0,
+      "tetherDuration": 40.0,
       "persistentTickInterval": 0.1,
       "persistentActivationDelay": 10.0,
       "breakMechanic": {
@@ -6036,7 +6040,7 @@
     },
     "PS-Chain-Mid": {
       "colorHtml": "#FFFFFF55",
-      "tetherDuration": 41.0,
+      "tetherDuration": 56.0,
       "persistentTickInterval": 0.1,
       "persistentMechanic": {
         "$type": "CheckTetherLength",
@@ -6056,7 +6060,7 @@
     },
     "PS-Chain-Far": {
       "colorHtml": "#FFFFFF55",
-      "tetherDuration": 41.0,
+      "tetherDuration": 56.0,
       "persistentTickInterval": 0.1,
       "persistentMechanic": {
         "$type": "CheckTetherLength",
@@ -6076,7 +6080,7 @@
     },
     "Chain-Swap": {
       "colorHtml": "#ff6000",
-      "tetherDuration": 36.0,
+      "tetherDuration": 51.0,
       "persistentActivationDelay": 10.0,
       "breakMechanic": {
         "$type": "SpawnMechanicOnTetheredPlayers",
@@ -6129,25 +6133,26 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-X-Alpha"
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                2
+              ]
+            },
+            "referenceMechanicName": "ApplySyncBeta"
           },
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-Circle-Beta"
-          }
-        ]
-      },
-      {
-        "$type": "ExecuteMultipleEvents",
-        "events": [
-          {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-X-Beta"
-          },
-          {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-Circle-Alpha"
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                2
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentAlpha"
           }
         ]
       }
@@ -6157,12 +6162,77 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-Square-Alpha"
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                6
+              ]
+            },
+            "referenceMechanicName": "ApplySyncAlpha"
           },
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-Triangle-Beta"
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                6
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentBeta"
+          }
+        ]
+      }
+    ],
+    "Delta-Sync-Pool": [
+      {
+        "$type": "ExecuteMultipleEvents",
+        "events": [
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplySyncAlpha"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentBeta"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplySyncBeta"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentAlpha"
           }
         ]
       },
@@ -6170,12 +6240,48 @@
         "$type": "ExecuteMultipleEvents",
         "events": [
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-Square-Beta"
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplySyncAlpha"
           },
           {
-            "$type": "ExecuteRandomEvents",
-            "mechanicPoolName": "Delta-Debuffs-Triangle-Alpha"
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                4,
+                7
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentBeta"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplySyncBeta"
+          },
+          {
+            "$type": "SpawnTargetedEvents",
+            "targetingScheme": {
+              "$type": "TargetSpecificPlayerIds",
+              "targetIds": [
+                0,
+                3
+              ]
+            },
+            "referenceMechanicName": "ApplyLatentAlpha"
           }
         ]
       }
@@ -7232,7 +7338,7 @@
       "referenceMechanicName": "PatchEnrage",
       "statusIconPath": "Mechanics/Resources/NearTether2.png",
       "statusName": "Local Regression",
-      "duration": 20.0,
+      "duration": 30.0,
       "allowDuplicates": true
     },
     "BlueTether-Active": {
@@ -7240,31 +7346,30 @@
       "referenceMechanicName": "PatchEnrage",
       "statusIconPath": "Mechanics/Resources/FarTether2.png",
       "statusName": "Remote Regression",
-      "duration": 20.0,
+      "duration": 30.0,
       "allowDuplicates": true
     },
     "MidTether": {
       "statusIconPath": "Mechanics/Resources/MidGlitch.png",
       "statusName": "Mid Glitch",
-      "duration": 41.0,
+      "duration": 56.0,
       "allowDuplicates": true
     },
     "FarTether": {
       "statusIconPath": "Mechanics/Resources/FarGlitch.png",
       "statusName": "Remote Glitch",
-      "duration": 41.0,
+      "duration": 56.0,
       "allowDuplicates": true
     },
     "SwapTether": {
       "statusIconPath": "Mechanics/Resources/SwapPositions.png",
       "statusName": "Position Glitch",
-      "duration": 36.0,
+      "duration": 51.0,
       "allowDuplicates": true
     },
     "Stun": {
       "statusIconPath": "Mechanics/Resources/Stun.png",
       "statusName": "Stun",
-      "disableType": 3,
       "duration": 10.0
     },
     "Oversampled-Status-1": {
@@ -7310,7 +7415,7 @@
       "referenceMechanicName": "SyncAlphaAoe",
       "statusIconPath": "Mechanics/Resources/StackBlueAlpha.png",
       "statusName": "Critical Synchronization Bug Alpha",
-      "duration": 10.0,
+      "duration": 15.0,
       "allowDuplicates": true
     },
     "LatentAlpha": {
@@ -7318,7 +7423,7 @@
       "referenceMechanicName": "Doom",
       "statusIconPath": "Mechanics/Resources/DnaBlue.png",
       "statusName": "Latent Synchronization Defect Alpha",
-      "duration": 31.0
+      "duration": 41.0
     },
     "DebuggerAlpha": {
       "statusIconPath": "Mechanics/Resources/StackBlueDebug.png",
@@ -7328,7 +7433,7 @@
     "PantoVuln-Alpha": {
       "statusIconPath": "Mechanics/Resources/VulnAlpha.png",
       "statusName": "Security Vulnerability Alpha",
-      "duration": 25.0
+      "duration": 49.0
     },
     "SyncBeta": {
       "$type": "SpawnMechanicOnExpire",
@@ -7343,7 +7448,7 @@
       "referenceMechanicName": "SyncBetaAoe",
       "statusIconPath": "Mechanics/Resources/StackYellowBeta.png",
       "statusName": "Critical Synchronization Bug Beta",
-      "duration": 10.0,
+      "duration": 15.0,
       "allowDuplicates": true
     },
     "LatentBeta": {
@@ -7351,7 +7456,7 @@
       "referenceMechanicName": "Doom",
       "statusIconPath": "Mechanics/Resources/DnaYellow.png",
       "statusName": "Latent Synchronization Defect Beta",
-      "duration": 31.0
+      "duration": 41.0
     },
     "DebuggerBeta": {
       "statusIconPath": "Mechanics/Resources/StackYellowDebug.png",
@@ -7361,13 +7466,13 @@
     "PantoVuln-Beta": {
       "statusIconPath": "Mechanics/Resources/VulnBeta.png",
       "statusName": "Security Vulnerability Beta",
-      "duration": 25.0
+      "duration": 49.0
     },
     "Line-1": {
       "statusIconPath": "Mechanics/Resources/Line1.png",
       "statusName": "First in Line",
       "statusDescription": "Marked as target #1.",
-      "duration": 13.0,
+      "duration": 16.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7376,7 +7481,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Alpha",
       "statusIconPath": "Mechanics/Resources/Stack3BlueAlpha.png",
       "statusName": "Tri-Cannon Target Alpha",
-      "duration": 13.0,
+      "duration": 16.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7385,7 +7490,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Alpha",
       "statusIconPath": "Mechanics/Resources/Stack3BlueAlpha.png",
       "statusName": "Tri-Cannon Target Alpha",
-      "duration": 25.0,
+      "duration": 40.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7394,7 +7499,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Beta",
       "statusIconPath": "Mechanics/Resources/Stack3YellowBeta.png",
       "statusName": "Tri-Cannon Target Beta",
-      "duration": 13.0,
+      "duration": 16.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7403,7 +7508,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Beta",
       "statusIconPath": "Mechanics/Resources/Stack3YellowBeta.png",
       "statusName": "Tri-Cannon Target Beta",
-      "duration": 25.0,
+      "duration": 40.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7411,7 +7516,7 @@
       "statusIconPath": "Mechanics/Resources/Line2.png",
       "statusName": "Second in Line",
       "statusDescription": "Marked as target #2.",
-      "duration": 16.0,
+      "duration": 22.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7420,7 +7525,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Alpha",
       "statusIconPath": "Mechanics/Resources/Stack3BlueAlpha.png",
       "statusName": "Tri-Cannon Target Alpha",
-      "duration": 16.0,
+      "duration": 22.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7429,7 +7534,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Alpha",
       "statusIconPath": "Mechanics/Resources/Stack3BlueAlpha.png",
       "statusName": "Tri-Cannon Target Alpha",
-      "duration": 28.0,
+      "duration": 46.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7438,7 +7543,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Beta",
       "statusIconPath": "Mechanics/Resources/Stack3YellowBeta.png",
       "statusName": "Tri-Cannon Target Beta",
-      "duration": 16.0,
+      "duration": 22.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7447,7 +7552,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Beta",
       "statusIconPath": "Mechanics/Resources/Stack3YellowBeta.png",
       "statusName": "Tri-Cannon Target Beta",
-      "duration": 28.0,
+      "duration": 46.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7455,7 +7560,7 @@
       "statusIconPath": "Mechanics/Resources/Line3.png",
       "statusName": "Third in Line",
       "statusDescription": "Marked as target #3.",
-      "duration": 19.0,
+      "duration": 28.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7464,7 +7569,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Alpha",
       "statusIconPath": "Mechanics/Resources/Stack3BlueAlpha.png",
       "statusName": "Tri-Cannon Target Alpha",
-      "duration": 19.0,
+      "duration": 28.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7473,7 +7578,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Alpha",
       "statusIconPath": "Mechanics/Resources/Stack3BlueAlpha.png",
       "statusName": "Tri-Cannon Target Alpha",
-      "duration": 31.0,
+      "duration": 52.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7482,7 +7587,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Beta",
       "statusIconPath": "Mechanics/Resources/Stack3YellowBeta.png",
       "statusName": "Tri-Cannon Target Beta",
-      "duration": 19.0,
+      "duration": 28.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7491,7 +7596,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Beta",
       "statusIconPath": "Mechanics/Resources/Stack3YellowBeta.png",
       "statusName": "Tri-Cannon Target Beta",
-      "duration": 31.0,
+      "duration": 52.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7499,7 +7604,7 @@
       "statusIconPath": "Mechanics/Resources/Line4.png",
       "statusName": "Fourth in Line",
       "statusDescription": "Marked as target #4.",
-      "duration": 22.0,
+      "duration": 34.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7508,7 +7613,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Alpha",
       "statusIconPath": "Mechanics/Resources/Stack3BlueAlpha.png",
       "statusName": "Tri-Cannon Target Alpha",
-      "duration": 22.0,
+      "duration": 34.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7517,7 +7622,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Alpha",
       "statusIconPath": "Mechanics/Resources/Stack3BlueAlpha.png",
       "statusName": "Tri-Cannon Target Alpha",
-      "duration": 34.0,
+      "duration": 58.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7526,7 +7631,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Beta",
       "statusIconPath": "Mechanics/Resources/Stack3YellowBeta.png",
       "statusName": "Tri-Cannon Target Beta",
-      "duration": 22.0,
+      "duration": 34.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     },
@@ -7535,7 +7640,7 @@
       "referenceMechanicName": "Panto-Laser-3stack-Spawn-Beta",
       "statusIconPath": "Mechanics/Resources/Stack3YellowBeta.png",
       "statusName": "Tri-Cannon Target Beta",
-      "duration": 34.0,
+      "duration": 58.0,
       "shouldKeepOnDeath": true,
       "allowDuplicates": true
     }
